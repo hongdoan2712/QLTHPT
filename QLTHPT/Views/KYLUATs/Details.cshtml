@@ -1,0 +1,58 @@
+﻿@model QLTHPT.ModelDB.KYLUAT
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3><strong>Chi Tiết Thông Tin Kỷ Luật</strong></h3>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Mã Kỷ Luật
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KL_MA)
+        </dd>
+        <dt>
+            Hình Thức
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KL_HINHTHUC)
+        </dd>
+
+        <dt>
+            Ngày Kỷ Luật
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KL_NGAYKYLUAT)
+        </dd>
+
+        <dt>
+            Tên Cán Bộ
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CANBO.CB_HOTEN)
+        </dd>
+
+        @*<dt>
+            Tên Học Sinh
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HOCSINH.HS_HOTEN)
+        </dd>*@
+
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Chỉnh Sửa", "Edit", new { id = Model.KL_MA }) |
+    @Html.ActionLink("Quay Lại", "Index")
+</p>

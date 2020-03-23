@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2634fc1d76b84c51ab68b048ff5ead0f" Name="Diagram1" ZoomLevel="55">
+        <EntityTypeShape EntityType="acomptec_qlthptModel.KHENTHUONG" Width="1.5" PointX="10.5" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.KHOIs" Width="1.5" PointX="10.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.KYLUAT" Width="1.5" PointX="13.5" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.LOP" Width="1.5" PointX="13" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.NAMHOC" Width="1.5" PointX="10.75" PointY="24.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.THOIKHOABIEU" Width="1.5" PointX="3" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.BACLUONG" Width="1.5" PointX="3.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.CANBO" Width="1.5" PointX="0.75" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.CHUCVU" Width="1.5" PointX="1.5" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.CHUYENNGANH" Width="1.5" PointX="0.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.COQUAN" Width="1.5" PointX="1.5" PointY="15.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.COSOVATCHAT" Width="1.5" PointX="11" PointY="13.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.DANTOC" Width="1.5" PointX="6" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.HINHTHUC" Width="1.5" PointX="0.75" PointY="26.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.HOCKy" Width="1.5" PointX="3.75" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.HOCSINH" Width="1.5" PointX="8.25" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.MONHOC" Width="1.5" PointX="0.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.NGACHLUONG" Width="1.5" PointX="3.75" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.PHONGHOC" Width="1.5" PointX="8.75" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.QUANHUYEN" Width="1.5" PointX="6" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.SODANHGIA" Width="1.5" PointX="6" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.THIETBIDAYHOC" Width="1.5" PointX="8.75" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.THIETBIGIANGDAY" Width="1.5" PointX="8.75" PointY="19.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.THONGTINDAOTAO" Width="1.5" PointX="3" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.THONGTINLUONG" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.THU" Width="1.5" PointX="0.75" PointY="18.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.TIETHOC" Width="1.5" PointX="0.75" PointY="21.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.TINHTHANH" Width="1.5" PointX="6" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.TINHTRANG" Width="1.5" PointX="8.75" PointY="21.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.VANBANG" Width="1.5" PointX="0.75" PointY="28.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.XAPHUONG" Width="1.5" PointX="6" PointY="16.25" IsExpanded="true" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK__KHENTHUON__CB_MA__68336F3E" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK__KHENTHUON__HS_MA__69279377" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK__LOPs__KHOI_MA__57FD0775" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK__KYLUATs__CB_MA__6C040022" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK__KYLUATs__HS_MA__6CF8245B" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK__LOPs__NH_MA__58F12BAE" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK__THOIKHOAB__CB_MA__5EAA0504" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK__THOIKHOAB__MH_MA__5F9E293D" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK__THOIKHOAB__TH_MA__618671AF" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK__THOIKHOAB__THU_M__60924D76" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK__THONGTINL__BL_MA__7D439ABD" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK__CANBO__CQ_MA__778AC167" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK__CANBO__CV_MA__787EE5A0" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK__THONGTIND__CB_MA__02084FDA" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK__THONGTINL__CB_MA__7B5B524B" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK__THONGTIND__CN_MA__00200768" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK__COSOVATCH__PH_MA__6C190EBB" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK__COSOVATCH__TBDH___693CA210" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK__COSOVATCH__TBGD___6A30C649" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK__COSOVATCH__TT_MA__6B24EA82" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK__HOCSINH__DT_MA__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK__THONGTIND__HT_MA__02FC7413" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK_HOCKYSODANHGIA" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK__HOCSINH__QH_MA__47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK__HOCSINH__TT_MA__46E78A0C" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK__HOCSINH__XP_MA__48CFD27E" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK_CHITIETDANHGIA" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK__SODANHGIA__MH_MA__17036CC0" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK__THONGTINL__NL_MA__7C4F7684" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK__THONGTIND__VB_MA__01142BA1" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.UpdateImage" Width="1.5" PointX="8.375" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

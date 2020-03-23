@@ -1,0 +1,37 @@
+﻿@model QLTHPT.ModelDB.BACLUONG
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <h3>
+        <strong>
+            Chi Tiết Thông Tin Bậc Lương
+        </strong>
+    </h3>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Mã Bậc Lương
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BL_MA)
+        </dd>
+        <dt>
+            Tên Bậc Lương
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BL_TEN)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Chỉnh Sửa", "Edit", new { id = Model.BL_MA }) |
+    @Html.ActionLink("Quay Lại", "Index")
+</p>

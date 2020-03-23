@@ -1,0 +1,35 @@
+﻿@model QLTHPT.ModelDB.CHUCVU
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <h3><strong>Chi Tiết Thông Tin Chức Vụ</strong></h3>
+
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Mã Chức Vụ
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CV_MA)
+        </dd>
+
+        <dt>
+            Tên Chức Vụ
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CV_TEN)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Chỉnh Sửa", "Edit", new { id = Model.CV_MA }) |
+    @Html.ActionLink("Quay Lại", "Index")
+</p>

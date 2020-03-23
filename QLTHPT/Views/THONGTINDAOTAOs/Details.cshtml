@@ -1,0 +1,57 @@
+﻿@model QLTHPT.ModelDB.THONGTINDAOTAO
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <h3><strong>Chi Tiết Thông Tin Đào Tạo</strong></h3>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Mã Thông Tin Đào Tạo
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TTDT_MA)
+        </dd>
+        <dt>
+            Cán Bộ
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CANBO.CB_HOTEN)
+        </dd>
+
+        <dt>
+            Chuyên Ngành
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CHUYENNGANH.CN_TEN)
+        </dd>
+
+        <dt>
+            Hình Thức
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HINHTHUC.HT_TEN)
+        </dd>
+
+        <dt>
+            Văn Bằng
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VANBANG.VB_TEN)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Chỉnh Sửa", "Edit", new { id = Model.TTDT_MA }) |
+    @Html.ActionLink("Quay Lại", "Index")
+</p>

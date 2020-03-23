@@ -1,0 +1,97 @@
+﻿@model QLTHPT.ModelDB.HOCSINH
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <h3><strong>Chi Tiết Thông Tin Học Sinh</strong></h3>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Mã Học Sinh
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HS_MA)
+        </dd>
+        <dt>
+            Tên Học Sinh
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HS_HOTEN)
+        </dd>
+
+        <dt>
+            Giới tính
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HS_GIOITINH)
+        </dd>
+
+        <dt>
+            Ngày Sinh
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HS_NGAYSINH)
+        </dd>
+
+        <dt>
+            Tôn Giáo
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HS_TONGIAO)
+        </dd>
+
+        <dt>
+            Dân Tộc
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DANTOC.DT_TEN)
+        </dd>
+
+        <dt>
+            Quận Huyện
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QUANHUYEN.QH_TEN)
+        </dd>
+
+        <dt>
+            Tỉnh Thành
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TINHTHANH.TT_TEN)
+        </dd>
+
+        <dt>
+            Xã Phường
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.XAPHUONG.XP_TEN)
+        </dd>
+
+        <dt>
+            Sổ Đánh Gía
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SODANHGIA.SDG_DIEM)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Chỉnh Sửa", "Edit", new { id = Model.HS_MA }) |
+    @Html.ActionLink("Quay Lại", "Index")
+</p>

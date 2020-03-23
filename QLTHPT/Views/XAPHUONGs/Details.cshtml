@@ -1,0 +1,34 @@
+﻿@model QLTHPT.ModelDB.XAPHUONG
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3><strong>CHI TIẾT</strong></h3>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Mã Xã Phường
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.XP_MA)
+        </dd>
+
+        <dt>
+            Tên Xã Phường
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.XP_TEN)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Chỉnh sửa", "Edit", new { id = Model.XP_MA }) |
+    @Html.ActionLink("Quay lại", "Index")
+</p>

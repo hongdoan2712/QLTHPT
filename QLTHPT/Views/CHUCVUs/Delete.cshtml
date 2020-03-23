@@ -1,0 +1,40 @@
+﻿@model QLTHPT.ModelDB.CHUCVU
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <h3><strong>Xóa Thông Tin Chức Vụ</strong></h3>
+
+    <h5>Bạn có chắc muốn xóa ?</h5>
+<div>
+   
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Mã Chức Vụ
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CV_MA)
+        </dd>
+        <dt>
+            Tên Chức Vụ
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CV_TEN)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-default" /> |
+            @Html.ActionLink("Quay Lại", "Index")
+        </div>
+    }
+</div>

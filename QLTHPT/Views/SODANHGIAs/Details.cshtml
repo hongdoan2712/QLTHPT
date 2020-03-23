@@ -1,0 +1,56 @@
+﻿@model QLTHPT.ModelDB.SODANHGIA
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3><strong>Chi Tiết Sổ Đánh Gía</strong></h3>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Mã Sổ Đánh Gía
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SDG_MA)
+        </dd>
+        <dt>
+            Điểm
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SDG_DIEM)
+        </dd>
+
+        <dt>
+            Ghi Chú
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SDG_GHICHU)
+        </dd>
+
+        <dt>
+            Học Kỳ
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HOCKy.HK_TEN)
+        </dd>
+
+        <dt>
+            Môn Học
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MONHOC.MH_TEN)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Chỉnh Sửa", "Edit", new { id = Model.SDG_MA }) |
+    @Html.ActionLink("Quay Lại", "Index")
+</p>

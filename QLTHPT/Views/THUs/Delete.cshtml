@@ -1,0 +1,40 @@
+﻿@model QLTHPT.ModelDB.THU
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3><strong>Xóa Thông Tin Thứ</strong></h3>
+
+<h5>Bạn có chắc muốn xóa ?</h5>
+<div>
+ 
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Mã Thứ
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.THU_MA)
+        </dd>
+        <dt>
+            Thứ
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.THU_TEN)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-default" /> |
+            @Html.ActionLink("Quay Lại", "Index")
+        </div>
+    }
+</div>

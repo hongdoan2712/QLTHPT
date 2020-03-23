@@ -1,0 +1,56 @@
+﻿@model QLTHPT.ModelDB.LOP
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3><strong>Xóa Thông Tin Lớp</strong></h3>
+
+<h5>Bạn có chắc muốn xóa ?</h5>
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Mã Lớp
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LOP_MA)
+        </dd>
+        <dt>
+            Lớp
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LOP_TEN)
+        </dd>
+
+        <dt>
+            Khối
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KHOIs.KHOI_TEN)
+        </dd>
+
+        <dt>
+            Năm Học
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NAMHOC.NH_NAMHOC)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-default" /> |
+            @Html.ActionLink("Quay Lại", "Index")
+        </div>
+    }
+</div>

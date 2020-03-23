@@ -1,0 +1,36 @@
+﻿@model QLTHPT.ModelDB.VANBANG
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3><strong>CHI TIẾT</strong></h3>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            Mã Văn Bằng
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VB_MA)
+        </dd>
+
+
+        <dt>
+            Tên Văn Bằng
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VB_TEN)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Chỉnh sửa", "Edit", new { id = Model.VB_MA }) |
+    @Html.ActionLink("Quay lại", "Index")
+</p>

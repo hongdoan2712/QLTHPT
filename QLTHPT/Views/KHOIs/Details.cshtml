@@ -1,0 +1,33 @@
+﻿@model QLTHPT.ModelDB.KHOIs
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3><strong>CHI TIẾT</strong></h3>
+
+<div>
+  
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+           Mã Khối
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KHOI_MA)
+        </dd>
+        <dt>
+            Tên Khối
+
+        <dd>
+            @Html.DisplayFor(model => model.KHOI_TEN)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Chỉnh Sửa", "Edit", new { id = Model.KHOI_MA }) |
+    @Html.ActionLink("Quay Lại", "Index")
+</p>

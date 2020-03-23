@@ -1,0 +1,33 @@
+﻿@model QLTHPT.ModelDB.NGACHLUONG
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <h3><strong>Chi Tiết Thông Tin Bậc Lương</strong></h3>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Mã Ngạch Lương
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NL_MA)
+        </dd>
+        <dt>
+            Ngạch Lương
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NL_TEN)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Chỉnh Sửa", "Edit", new { id = Model.NL_MA }) |
+    @Html.ActionLink("Quay Lại", "Index")
+</p>

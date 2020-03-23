@@ -1,0 +1,33 @@
+﻿@model QLTHPT.ModelDB.TINHTHANH
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3><strong>CHI TIẾT</strong></h3>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Mã Tỉnh Thành
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TT_MA)
+        </dd>
+
+        <dt>
+            Tên Tỉnh Thành
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TT_TEN)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Chỉnh Sửa", "Edit", new { id = Model.TT_MA }) |
+    @Html.ActionLink("Quay lại", "Index")
+</p>

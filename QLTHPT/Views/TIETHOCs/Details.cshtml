@@ -1,0 +1,34 @@
+﻿@model QLTHPT.ModelDB.TIETHOC
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <h3><strong>Chi Tiết Thông Tin Tiết Học</strong></h3>
+
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Mã Tiết Học
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TH_MA)
+        </dd>
+        <dt>
+            Tiết Học
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TH_TEN)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Chỉnh Sửa", "Edit", new { id = Model.TH_MA }) |
+    @Html.ActionLink("Quay Lại", "Index")
+</p>

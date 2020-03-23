@@ -1,0 +1,36 @@
+﻿@model QLTHPT.ModelDB.HINHTHUC
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3><strong>CHI TIẾT</strong></h3>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            Mã Hình Thức
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HT_MA)
+        </dd>
+
+
+        <dt>
+            Tên Hình Thức
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HT_TEN)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Chỉnh sửa", "Edit", new { id = Model.HT_MA }) |
+    @Html.ActionLink("Quay lại", "Index")
+</p>

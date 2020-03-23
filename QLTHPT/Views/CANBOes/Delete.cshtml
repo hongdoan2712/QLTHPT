@@ -1,0 +1,88 @@
+﻿@model QLTHPT.ModelDB.CANBO
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <h3>
+        <strong>Xóa Thông Tin Cán Bộ</strong>
+    </h3>
+
+    <h5>Bạn có chắc muốn xóa ?</h5>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Mã Cán Bộ
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CB_MA)
+        </dd>
+        <dt>
+            Họ Tên Cán Bộ
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CB_HOTEN)
+        </dd>
+
+        <dt>
+            Giới Tính
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CB_GIOITINH)
+        </dd>
+
+        <dt>
+            Địa Chỉ
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CB_DIACHI)
+        </dd>
+
+        <dt>
+            Ngày Sinh
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CB_NGAYSINH)
+        </dd>
+
+        <dt>
+            CMND
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CB_CMND)
+        </dd>
+
+        <dt>
+            Cơ Quan
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COQUAN.CQ_TEN)
+        </dd>
+
+        <dt>
+            Chúc Vụ
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CHUCVU.CV_TEN)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-default" /> |
+            @Html.ActionLink("Quay Lại", "Index")
+        </div>
+    }
+

@@ -1,0 +1,64 @@
+﻿@model QLTHPT.ModelDB.THONGTINDAOTAO
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3><strong>Xóa Thông Tin Đào Tạo</strong></h3>
+
+<h5>Bạn có chắc muốn xóa ?</h5>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Mã Thông Tin Đào Tạo
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TTDT_MA)
+        </dd>
+
+        <dt>
+            Cán Bộ
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CANBO.CB_HOTEN)
+        </dd>
+
+        <dt>
+            Chuyên Ngành
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CHUYENNGANH.CN_TEN)
+        </dd>
+
+        <dt>
+            Hình Thức
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HINHTHUC.HT_TEN)
+        </dd>
+
+        <dt>
+            Văn Bằng
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VANBANG.VB_TEN)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-default" /> |
+            @Html.ActionLink("Quay Lại", "Index")
+        </div>
+    }
+</div>

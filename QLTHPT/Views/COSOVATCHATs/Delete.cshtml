@@ -1,0 +1,71 @@
+﻿@model QLTHPT.ModelDB.COSOVATCHAT
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3><strong>Xóa Thông Tin Cơ Sở Vật Chất</strong></h3>
+
+<h5>Bạn có chắc muốn xóa ?</h5>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Mã CSVC
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CSVC_MA)
+        </dd>
+        <dt>
+            Số Lượng
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CSVC_SOLUONG)
+        </dd>
+
+        <dt>
+            Phòng
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PHONGHOC.PH_TEN)
+        </dd>
+
+        <dt>
+            Thiết Bị Dạy Học
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.THIETBIDAYHOC.TBDH_TEN)
+        </dd>
+
+        <dt>
+            Thiết Bị Giảng Dạy
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.THIETBIGIANGDAY.TBGD_TEN)
+        </dd>
+
+        <dt>
+            Mô Tả
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TINHTRANG.TT_MOTA)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-default" /> |
+            @Html.ActionLink("Quay Lại", "Index")
+        </div>
+    }
+</div>

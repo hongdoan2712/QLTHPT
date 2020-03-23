@@ -1,0 +1,59 @@
+﻿@model QLTHPT.ModelDB.THOIKHOABIEU
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <h3><strong>Chi Tiết Thông Tin Thời Khóa Biểu</strong></h3>
+
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Mã Thời Khóa Biểu
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TKB_MA)
+
+        </dd>
+        <dt>
+            Cán Bộ
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CANBO.CB_HOTEN)
+        </dd>
+
+        <dt>
+            Môn Học
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MONHOC.MH_TEN)
+        </dd>
+
+        <dt>
+            Tiết Học
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TIETHOC.TH_TEN)
+        </dd>
+
+        <dt>
+            Thứ
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.THU.THU_TEN)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Chỉnh Sửa", "Edit", new { id = Model.TKB_MA }) |
+    @Html.ActionLink("Quay Lại", "Index")
+</p>
