@@ -53,18 +53,15 @@
                                                     @Html.DisplayFor(modelItem => item.BL_TEN)
                                                 </td>
                                                 <td>
-                                                    <a href="@Url.Action("Edit", "BACLUONGs", new { id = item.BL_MA })" class="btn btn-custon-rounded-three btn-danger"><i class="fa fa-pencil"></i></a>
-                                                    <button class="btn btn-custon-rounded-three btn-danger" onclick="return confirm('Bạn có chắc chắn muốn xóa?');"><i class="fa fa-eraser"></i></button>
-
+                                                    <a href="@Url.Action("Details", "BACLUONGs", new { id = item.BL_MA })" class="btn btn-custon-rounded-three btn-success"><i class="fa fa-info-circle"></i></a>
+                                                    <a href="@Url.Action("Edit", "BACLUONGs", new { id = item.BL_MA })" class="btn btn-custon-rounded-three btn-warning"><i class="fa fa-edit"></i></a>
+                                                    <a href="@Url.Action("Delete", "BACLUONGs", new { id = item.BL_MA })" class="btn btn-custon-rounded-three btn-danger"><i class="fa fa-trash"></i></a>
                                                 </td>
                                             </tr>
                                         }
-
                                     </tbody>
-                                </table>
-
-</div>
-
+                             </table>
+                         </div>
                      </div>
                  </div>
             </div>
