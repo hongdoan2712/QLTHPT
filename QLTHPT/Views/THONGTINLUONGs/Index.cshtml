@@ -13,10 +13,6 @@
                     <div class="sparkline13-hd">
                         <div class="main-sparkline13-hd">
                             <h4><strong>THÔNG TIN LƯƠNG</strong></h4>
-                            <div class="sparkline13-outline-icon">
-                                <span class="sparkline13-collapse-link"><i class="fa fa-chevron-up"></i></span>
-                                <span class="sparkline13-collapse-close"><i class="fa fa-times"></i></span>
-                            </div>
                         </div>
                     </div>
                     <div class="sparkline13-graph">
@@ -28,9 +24,9 @@
                             <table id="table" data-toggle="table" data-search="true" data-key-events="true" data-resizable="true" data-cookie="true" data-cookie-id-table="saveId" data-click-to-select="true" data-toolbar="#toolbar">
                                 <thead>
                                     <tr>
-                                        <th>
+                                        @*<th>
                                             Mã
-                                        </th>
+                                        </th>*@
                                         <th>
                                             Ngày Nhận Lương
                                         </th>
@@ -43,12 +39,12 @@
                                         <th>
                                             Cán Bộ
                                         </th>
-                                        <th>
+                                        @*<th>
                                             Ngạch Lương
                                         </th>
                                         <th>
                                             Tùy Chọn
-                                        </th>
+                                        </th>*@
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -56,9 +52,9 @@
                                     @foreach (var item in Model)
                                     {
                                     <tr>
-                                        <td>
+                                        @*<td>
                                             @Html.DisplayFor(modelItem => item.TTL_MA)
-                                        </td>
+                                        </td>*@
                                         <td>
                                             @Html.DisplayFor(modelItem => item.TTL_NGAYNHANLUONG)
                                         </td>
@@ -71,14 +67,15 @@
                                         <td>
                                             @Html.DisplayFor(modelItem => item.CANBO.CB_HOTEN)
                                         </td>
-                                        <td>
+                                        @*<td>
                                             @Html.DisplayFor(modelItem => item.NGACHLUONG.NL_TEN)
-                                        </td>
-                                        <td>
-                                            <a href="@Url.Action("Edit", "THONGTINLUONGs", new { id = item.TTL_MA })" class="btn btn-custon-rounded-three btn-danger"><i class="fa fa-pencil"></i></a>
-                                            <button class="btn btn-custon-rounded-three btn-danger" onclick="return confirm('Bạn có chắc chắn muốn xóa?');"><i class="fa fa-eraser"></i></button>
+                                        </td>*@
+                                    <td>
+                                        <a href="@Url.Action("Details", "THONGTINLUONGs", new { id = item.TTL_MA })" class="btn btn-custon-rounded-three btn-success"><i class="fa fa-info-circle"></i></a>
+                                        <a href="@Url.Action("Edit", "THONGTINLUONGs", new { id = item.TTL_MA })" class="btn btn-custon-rounded-three btn-warning"><i class="fa fa-edit"></i></a>
+                                        <a href="@Url.Action("Delete", "THONGTINLUONGs", new { id = item.TTL_MA })" class="btn btn-custon-rounded-three btn-danger"><i class="fa fa-trash"></i></a>
 
-                                        </td>
+                                    </td>
                                     </tr>
                                     }
 

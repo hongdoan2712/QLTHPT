@@ -13,10 +13,6 @@
                     <div class="sparkline13-hd">
                         <div class="main-sparkline13-hd">
                             <h4><strong>CÁN BỘ</strong></h4>
-                            <div class="sparkline13-outline-icon">
-                                <span class="sparkline13-collapse-link"><i class="fa fa-chevron-up"></i></span>
-                                <span class="sparkline13-collapse-close"><i class="fa fa-times"></i></span>
-                            </div>
                         </div>
                     </div>
                     <div class="sparkline13-graph">
@@ -27,24 +23,25 @@
                             <table id="table" data-toggle="table" data-search="true" data-key-events="true" data-resizable="true" data-cookie="true" data-cookie-id-table="saveId" data-click-to-select="true" data-toolbar="#toolbar">
                                 <thead>
                                     <tr>
+                                        phần index quá nhiều thuộc tính xóa bớt để 4 cái thôi, nào cần thiết á, còn lại phần chi tiết hả để đủ
                                         <th>
                                             Mã Cán Bộ
                                         </th>
                                         <th>
                                             Tên Cán Bộ
                                         </th>
-                                        <th>
+                                        @*<th>
                                             Giới Tính
-                                        </th>
-                                        <th>
+                                        </th>*@
+                                        @*<th>
                                             Địa Chỉ
-                                        </th>
-                                        <th>
+                                        </th>*@
+                                        @*<th>
                                             Ngày Sinh
-                                        </th>
-                                        <th>
+                                        </th>*@
+                                        @*<th>
                                             CMND
-                                        </th>
+                                        </th>*@
                                         <th>
                                             Cơ Quan
                                         </th>
@@ -65,7 +62,7 @@
                                             <td>
                                                 @Html.DisplayFor(modelItem => item.CB_HOTEN)
                                             </td>
-                                            <td>
+                                            @*<td>
                                                 @Html.DisplayFor(modelItem => item.CB_GIOITINH)
                                             </td>
                                             <td>
@@ -76,17 +73,16 @@
                                             </td>
                                             <td>
                                                 @Html.DisplayFor(modelItem => item.CB_CMND)
-                                            </td>
+                                            </td>*@
                                             <td>
                                                 @Html.DisplayFor(modelItem => item.COQUAN.CQ_TEN)
                                             </td>
-                                            <td>
-                                                @Html.DisplayFor(modelItem => item.CHUCVU.CV_TEN)
-                                            </td>
+                                           
                                             <td>
 
-                                                <a href="@Url.Action("Edit", "CANBOes", new { id = item.CB_MA })" class="btn btn-custon-rounded-three btn-danger"><i class="fa fa-pencil"></i></a>
-                                                <button class="btn btn-custon-rounded-three btn-danger" onclick="return confirm('Bạn có chắc chắn muốn xóa?');"><i class="fa fa-eraser"></i></button>
+                                                <a href="@Url.Action("Details", "CANBOes", new { id = item.CB_MA })" class="btn btn-custon-rounded-three btn-success"><i class="fa fa-info-circle"></i></a>
+                                                <a href="@Url.Action("Edit", "CANBOes", new { id = item.CB_MA })" class="btn btn-custon-rounded-three btn-warning"><i class="fa fa-edit"></i></a>
+                                                <a href="@Url.Action("Delete", "CANBOes", new { id = item.CB_MA })" class="btn btn-custon-rounded-three btn-danger"><i class="fa fa-trash"></i></a>
 
                                             </td>
                                         </tr>

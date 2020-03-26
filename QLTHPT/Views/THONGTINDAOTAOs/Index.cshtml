@@ -13,10 +13,7 @@
                     <div class="sparkline13-hd">
                         <div class="main-sparkline13-hd">
                             <h4><strong>THÔNG TIN ĐÀO TẠO</strong></h4>
-                            <div class="sparkline13-outline-icon">
-                                <span class="sparkline13-collapse-link"><i class="fa fa-chevron-up"></i></span>
-                                <span class="sparkline13-collapse-close"><i class="fa fa-times"></i></span>
-                            </div>
+
                         </div>
                     </div>
                     <div class="sparkline13-graph">
@@ -29,7 +26,7 @@
                                 <thead>
                                     <tr>
                                         <th>
-                                            Mã
+                                            Mã Thông Tin Đào Tạo
                                         </th>
                                         <th>
                                             Cán Bộ
@@ -43,9 +40,7 @@
                                         <th>
                                             Văn Bằng
                                         </th>
-                                        <th>
-                                              Tùy Chọn
-                                         </th>
+                                        <th style="left: 743.8px;height: 194px;"></th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -54,23 +49,24 @@
                                     {
                                     <tr>
                                         <td>
-                                            @Html.DisplayFor(modelItem => item.TTDT_MA)
+                                            @Html.DisplayFor(model => model.TTDT_MA)
                                         </td>
                                         <td>
-                                            @Html.DisplayFor(modelItem => item.CANBO.CB_HOTEN)
+                                            @Html.DisplayFor(model => model.CB_MA)
                                         </td>
                                         <td>
-                                            @Html.DisplayFor(modelItem => item.CHUYENNGANH.CN_TEN)
+                                            @Html.DisplayFor(model => model.CN_MA)
                                         </td>
                                         <td>
-                                            @Html.DisplayFor(modelItem => item.HINHTHUC.HT_TEN)
+                                            @Html.DisplayFor(model => model.HT_MA)
                                         </td>
                                         <td>
-                                            @Html.DisplayFor(modelItem => item.VANBANG.VB_TEN)
+                                            @Html.DisplayFor(model => model.VB_MA)
                                         </td>
                                         <td>
-                                            <a href="@Url.Action("Edit", "THONGTINDAOTAOs", new { id = item.TTDT_MA })" class="btn btn-custon-rounded-three btn-danger"><i class="fa fa-pencil"></i></a>
-                                            <button class="btn btn-custon-rounded-three btn-danger" onclick="return confirm('Bạn có chắc chắn muốn xóa?');"><i class="fa fa-eraser"></i></button>
+                                            <a href="@Url.Action("Details", "THONGTINDAOTAOs", new { id = item.TTDT_MA })" class="btn btn-custon-rounded-three btn-success"><i class="fa fa-info-circle"></i></a>
+                                            <a href="@Url.Action("Edit", "THONGTINDAOTAOs", new { id = item.TTDT_MA })" class="btn btn-custon-rounded-three btn-warning"><i class="fa fa-edit"></i></a>
+                                            <a href="@Url.Action("Delete", "THONGTINDAOTAOs", new { id = item.TTDT_MA })" class="btn btn-custon-rounded-three btn-danger"><i class="fa fa-trash"></i></a>
 
                                         </td>
                                     </tr>
