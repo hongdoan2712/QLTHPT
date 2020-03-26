@@ -13,10 +13,7 @@
                     <div class="sparkline13-hd">
                         <div class="main-sparkline13-hd">
                             <h4><strong>NĂM HỌC</strong></h4>
-                            <div class="sparkline13-outline-icon">
-                                <span class="sparkline13-collapse-link"><i class="fa fa-chevron-up"></i></span>
-                                <span class="sparkline13-collapse-close"><i class="fa fa-times"></i></span>
-                            </div>
+                           
                         </div>
                     </div>
                     <div class="sparkline13-graph">
@@ -35,7 +32,6 @@
                                             Năm Học
                                         </th>
                                         <th>
-                                            Tùy Chọn
                                         </th>
                                     </tr>
                                 </thead>
@@ -51,8 +47,9 @@
                                             @Html.DisplayFor(modelItem => item.NH_NAMHOC)
                                         </td>
                                         <td>
-                                            <a href="@Url.Action("Edit", "NAMHOCs", new { id = item.NH_MA })" class="btn btn-custon-rounded-three btn-danger"><i class="fa fa-pencil"></i></a>
-                                            <button class="btn btn-custon-rounded-three btn-danger" onclick="return confirm('Bạn có chắc chắn muốn xóa?');"><i class="fa fa-eraser"></i></button>
+                                            <a href="@Url.Action("Details", "NAMHOCs", new { id = item.NH_MA })" class="btn btn-custon-rounded-three btn-success"><i class="fa fa-info-circle"></i></a>
+                                            <a href="@Url.Action("Edit", "NAMHOCs", new { id = item.NH_MA })" class="btn btn-custon-rounded-three btn-warning"><i class="fa fa-edit"></i></a>
+                                            <a href="@Url.Action("Delete", "NAMHOCs", new { id = item.NH_MA })" class="btn btn-custon-rounded-three btn-danger"><i class="fa fa-trash"></i></a>
 
                                         </td>
                                     </tr>

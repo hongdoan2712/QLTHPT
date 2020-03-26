@@ -23,7 +23,6 @@
                         <div class="datatable-dashv1-list custom-datatable-overright">
                             <div id="toolbar">
                                 <strong>@Html.ActionLink("Tạo Mới", "Create")</strong>
-
                             </div>
                             <table id="table" data-toggle="table" data-search="true" data-key-events="true" data-resizable="true" data-cookie="true" data-cookie-id-table="saveId" data-click-to-select="true" data-toolbar="#toolbar">
                                 <thead>
@@ -52,7 +51,7 @@
                                         <th>
                                             Chức Vụ
                                         </th>
-                                        <th>Tùy Chọn</th>
+                                        <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -85,6 +84,7 @@
                                                 @Html.DisplayFor(modelItem => item.CHUCVU.CV_TEN)
                                             </td>
                                             <td>
+
                                                 <a href="@Url.Action("Edit", "CANBOes", new { id = item.CB_MA })" class="btn btn-custon-rounded-three btn-danger"><i class="fa fa-pencil"></i></a>
                                                 <button class="btn btn-custon-rounded-three btn-danger" onclick="return confirm('Bạn có chắc chắn muốn xóa?');"><i class="fa fa-eraser"></i></button>
 
