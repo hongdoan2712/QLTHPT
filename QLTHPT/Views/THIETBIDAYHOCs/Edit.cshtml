@@ -5,6 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+
 <div class="data-table-area mg-b-15">
     <div class="container-fluid">
         <div class="row">
@@ -35,6 +36,7 @@
                                     @Html.ValidationMessageFor(model => model.TBDH_TEN, "", new { @class = "text-danger" })
                                 </div>
                             </div>
+
                             <div class="form-group-inner">
                                 @Html.LabelFor(model => model.TBDH_TEN, "Tên Thiết Bị Dạy Học", htmlAttributes: new { @class = "control-label col-md-2" })
                                 <div class="col-md-10">

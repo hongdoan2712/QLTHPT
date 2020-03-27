@@ -52,8 +52,9 @@
                                             @Html.DisplayFor(modelItem => item.KHOI_TEN)
                                         </td>
                                         <td>
-                                            <a href="@Url.Action("Edit", "KHOIs", new { id = item.KHOI_MA })" class="btn btn-custon-rounded-three btn-danger"><i class="fa fa-pencil"></i></a>
-                                            <button class="btn btn-custon-rounded-three btn-danger" onclick="return confirm('Bạn có chắc chắn muốn xóa?');"><i class="fa fa-eraser"></i></button>
+                                            <a href="@Url.Action("Details", "KHOIs", new { id = item.KHOI_MA })" class="btn btn-custon-rounded-three btn-success"><i class="fa fa-info-circle"></i></a>
+                                            <a href="@Url.Action("Edit", "KHOIs", new { id = item.KHOI_MA })" class="btn btn-custon-rounded-three btn-warning"><i class="fa fa-edit"></i></a>
+                                            <a href="@Url.Action("Delete", "KHOIs", new { id = item.KHOI_MA })" class="btn btn-custon-rounded-three btn-danger"><i class="fa fa-trash"></i></a>
 
                                         </td>
                                     </tr>

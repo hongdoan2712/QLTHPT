@@ -28,35 +28,23 @@
                                 <thead>
                                     <tr>
                                         <th>
-                                            Mã Học Sinh
+                                            Mã
                                         </th>
                                         <th>
-                                            Tên Học Sinh
+                                            Họ & Tên
                                         </th>
                                         <th>
-                                            Giới tính
+                                            Giới Tính
                                         </th>
                                         <th>
                                             Ngày Sinh
-                                        </th>
-                                        <th>
-                                            Tôn Giáo
-                                        </th>
-                                        <th>
-                                            Dân Tộc
-                                        </th>
-                                        <th>
-                                            Xã Phường
-                                        </th>
-                                        <th>
-                                            Quận Huyện
                                         </th>
                                         <th>
                                             Tỉnh Thành
                                         </th>
 
                                         <th>
-                                            Sổ Đánh Gía
+                                            Sổ Đánh Giá
                                         </th>
                                         <th>Tùy Chọn</th>
                                     </tr>
@@ -79,18 +67,6 @@
                                             @Html.DisplayFor(modelItem => item.HS_NGAYSINH)
                                         </td>
                                         <td>
-                                            @Html.DisplayFor(modelItem => item.HS_TONGIAO)
-                                        </td>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.DANTOC.DT_TEN)
-                                        </td>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.XAPHUONG.XP_TEN)
-                                        </td>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.QUANHUYEN.QH_TEN)
-                                        </td>
-                                        <td>
                                             @Html.DisplayFor(modelItem => item.TINHTHANH.TT_TEN)
                                         </td>
 
@@ -98,8 +74,9 @@
                                             @Html.DisplayFor(modelItem => item.SODANHGIA.SDG_DIEM)
                                         </td>
                                         <td>
-                                            <a href="@Url.Action("Edit", "HOCSINHs", new { id = item.HS_MA })" class="btn btn-custon-rounded-three btn-danger"><i class="fa fa-pencil"></i></a>
-                                            <button class="btn btn-custon-rounded-three btn-danger" onclick="return confirm('Bạn có chắc chắn muốn xóa?');"><i class="fa fa-eraser"></i></button>
+                                            <a href="@Url.Action("Details", "HOCSINHs", new { id = item.HS_MA })" class="btn btn-custon-rounded-three btn-success"><i class="fa fa-info-circle"></i></a>
+                                            <a href="@Url.Action("Edit", "HOCSINHs", new { id = item.HS_MA })" class="btn btn-custon-rounded-three btn-warning"><i class="fa fa-edit"></i></a>
+                                            <a href="@Url.Action("Delete", "HOCSINHs", new { id = item.HS_MA })" class="btn btn-custon-rounded-three btn-danger"><i class="fa fa-trash"></i></a>
 
                                         </td>
                                     </tr>
