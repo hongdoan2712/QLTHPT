@@ -29,19 +29,7 @@
                                         </th>
                                         <th>
                                             Tên Cán Bộ
-                                        </th>
-                                        @*<th>
-                                            Giới Tính
-                                        </th>*@
-                                        @*<th>
-                                            Địa Chỉ
-                                        </th>*@
-                                        @*<th>
-                                            Ngày Sinh
-                                        </th>*@
-                                        @*<th>
-                                            CMND
-                                        </th>*@
+                                        </th>                                    
                                         <th>
                                             Cơ Quan
                                         </th>
@@ -61,26 +49,13 @@
                                         </td>
                                         <td>
                                             @Html.DisplayFor(modelItem => item.CB_HOTEN)
-                                        </td>
-                                        @*<td>
-                                            @Html.DisplayFor(modelItem => item.CB_GIOITINH)
-                                        </td>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.CB_DIACHI)
-                                        </td>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.CB_NGAYSINH)
-                                        </td>
-                                        <td>
-                                             @Html.DisplayFor(modelItem => item.CB_CMND)
-                                        </td>*@
+                                        </td>                                      
                                         <td>
                                             @Html.DisplayFor(modelItem => item.COQUAN.CQ_TEN)
                                         </td>
                                         <td>
                                             @Html.DisplayFor(modelItem => item.CV_MA)
                                         </td>
-                                        <td></td>
 
                                         <td>
                                             <a href="@Url.Action("Details", "CANBOes", new { id = item.CB_MA })" class="btn btn-custon-rounded-three btn-success"><i class="fa fa-info-circle"></i></a>

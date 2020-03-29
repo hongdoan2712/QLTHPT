@@ -17,7 +17,10 @@
     <div> TÊN HÌNH ẢNH </div>
     <div> <input type="text" id="txt_name" name="Name" /> </div>
     <br/>
-    <div><input type="submit" title="save" /> | @Html.ActionLink("Quay Lại", "Index") </div>
+    <div>
+        <input type="submit" value="Lưu" class="btn btn-default" /> |
+        <a href="@Url.Action("Index", "UpdateImages")" class=" btn btn-custon-rounded-three btn-primary"><i class="fa fa-undo"></i></a>
+    </div>
 }
 <script src="~/Scripts/jquery-1.7.1.min.js"></script>
 <script type="text/javascript">
