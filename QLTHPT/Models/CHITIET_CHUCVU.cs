@@ -12,11 +12,12 @@ namespace QLTHPT.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class TINHTRANG
+    public partial class CHITIET_CHUCVU
     {
-        public string TT_MA { get; set; }
-        public string TT_MOTA { get; set; }
+        public System.TimeSpan CT_CV_ID { get; set; }
+        public string CT_CV_TEN { get; set; }
     
-        public virtual COSOVATCHAT COSOVATCHAT { get; set; }
+        public virtual CANBO CANBO { get; set; }
+        public virtual CHUCVU CHUCVU { get; set; }
     }
 }
