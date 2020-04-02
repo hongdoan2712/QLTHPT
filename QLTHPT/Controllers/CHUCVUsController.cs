@@ -7,13 +7,13 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using QLTHPT.App_Start;
-using QLTHPT.ModelDB;
+using QLTHPT.Models;
 
 namespace QLTHPT.Controllers
 {
     public class CHUCVUsController : Controller
     {
-        private ModelDB.acomptec_qlthptEntities2 db = new ModelDB.acomptec_qlthptEntities2();
+        private acomptec_qlthptEntities db = new acomptec_qlthptEntities();
 
         // GET: CHUCVUs
         public ActionResult Index()

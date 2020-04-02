@@ -143,32 +143,22 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\BACLUONGsController.cs" />
-    <Compile Include="Controllers\CANBOesController.cs" />
     <Compile Include="Controllers\CHUCVUsController.cs" />
     <Compile Include="Controllers\CHUYENNGANHsController.cs" />
     <Compile Include="Controllers\COQUANsController.cs" />
-    <Compile Include="Controllers\COSOVATCHATsController.cs" />
     <Compile Include="Controllers\DANTOCsController.cs" />
     <Compile Include="Controllers\EmployeeBusinessLayer.cs" />
     <Compile Include="Controllers\HINHTHUCsController.cs" />
     <Compile Include="Controllers\HOCKiesController.cs" />
-    <Compile Include="Controllers\HOCSINHsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\KHENTHUONGsController.cs" />
     <Compile Include="Controllers\KHOIsController.cs" />
-    <Compile Include="Controllers\KYLUATsController.cs" />
-    <Compile Include="Controllers\LOPsController.cs" />
     <Compile Include="Controllers\MONHOCsController.cs" />
     <Compile Include="Controllers\NAMHOCsController.cs" />
     <Compile Include="Controllers\NGACHLUONGsController.cs" />
     <Compile Include="Controllers\PHONGHOCsController.cs" />
     <Compile Include="Controllers\QUANHUYENsController.cs" />
-    <Compile Include="Controllers\SODANHGIAsController.cs" />
     <Compile Include="Controllers\THIETBIDAYHOCsController.cs" />
     <Compile Include="Controllers\THIETBIGIANGDAYsController.cs" />
-    <Compile Include="Controllers\THOIKHOABIEUxController.cs" />
-    <Compile Include="Controllers\THONGTINDAOTAOsController.cs" />
-    <Compile Include="Controllers\THONGTINLUONGsController.cs" />
     <Compile Include="Controllers\THUsController.cs" />
     <Compile Include="Controllers\TIETHOCsController.cs" />
     <Compile Include="Controllers\TINHTHANHsController.cs" />
@@ -179,25 +169,16 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="ModelDB.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelDB.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ModelDB.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ModelDB.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelDB.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Models\BACLUONG.cs">
       <DependentUpon>ModelDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\CANBO.cs">
+      <DependentUpon>ModelDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CHITIETDANHGIA.cs">
+      <DependentUpon>ModelDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CHITIET_CHUCVU.cs">
       <DependentUpon>ModelDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\CHUCVU.cs">
@@ -240,6 +221,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelDB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelDB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ModelDB.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -600,20 +586,10 @@
     <Content Include="js\owl.carousel.min.js" />
     <Content Include="js\popper.min.js" />
     <Content Include="js\scrollax.min.js" />
-    <Content Include="ModelDB.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelDB.edmx</DependentUpon>
-      <LastGenOutput>ModelDB.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="ModelDB.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelDB.edmx</DependentUpon>
-      <LastGenOutput>ModelDB.cs</LastGenOutput>
-    </Content>
     <Content Include="Models\ModelDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ModelDB.Context.cs</LastGenOutput>
       <DependentUpon>ModelDB.edmx</DependentUpon>
+      <LastGenOutput>ModelDB.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Models\ModelDB.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -622,13 +598,6 @@
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="Models\ModelDB.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModelDB.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\ModelDB.edmx.diagram">
-      <DependentUpon>ModelDB.edmx</DependentUpon>
-    </Content>
     <Content Include="css\.DS_Store" />
     <Content Include="css\bootstrap\.DS_Store" />
     <Content Include="css\css\.DS_Store" />
@@ -679,11 +648,11 @@
     <Content Include="Asset\img\notification\Thumbs.db" />
     <Content Include="Asset\img\profile\Thumbs.db" />
     <Content Include="Asset\img\Thumbs.db" />
-    <EntityDeploy Include="ModelDB.edmx">
+    <EntityDeploy Include="Models\ModelDB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ModelDB.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="ModelDB.edmx.diagram">
+    <Content Include="Models\ModelDB.edmx.diagram">
       <DependentUpon>ModelDB.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />

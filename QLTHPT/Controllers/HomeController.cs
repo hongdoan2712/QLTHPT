@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLTHPT.Models;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace QLTHPT.Controllers
 {
     public class HomeController : Controller
     {
-        ModelDB.acomptec_qlthptEntities2 obj = new ModelDB.acomptec_qlthptEntities2();
+       acomptec_qlthptEntities obj = new acomptec_qlthptEntities();
 
         public ActionResult Index()
         {
@@ -18,7 +19,7 @@ namespace QLTHPT.Controllers
         [HttpPost]
         public ActionResult Index(FormCollection fc, HttpPostedFileBase file)
         {
-            ModelDB.UpdateImage updateImage = new ModelDB.UpdateImage();
+            UpdateImage updateImage = new UpdateImage();
             var allowedExtensions = new[] {
             ".Jpg", ".png", ".jpg", "jpeg"
         };

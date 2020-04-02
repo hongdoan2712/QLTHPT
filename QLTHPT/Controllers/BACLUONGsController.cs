@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLTHPT.Models;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -6,13 +7,13 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using QLTHPT.ModelDB;
+
 
 namespace QLTHPT.Controllers
 {
     public class BACLUONGsController : Controller
     {
-        private ModelDB.acomptec_qlthptEntities2 db = new ModelDB.acomptec_qlthptEntities2();
+        private acomptec_qlthptEntities db = new acomptec_qlthptEntities();
 
         // GET: BACLUONGs
         public ActionResult Index()
