@@ -5,63 +5,77 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-    <h3><strong>Chi Tiết Thông Tin Cơ Sở Vật Chất</strong></h3>
+    <div class="data-table-area mg-b-15">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="sparkline13-list shadow-reset">
+                        <div class="sparkline13-hd">
+                            <div class="main-sparkline13-hd">
+                                <h3>
+                                <strong>
+                                    Chi Tiết Thông Tin Cơ Sở Vật Chất
+                                    </strong>
+                                </h3>
 
-<div>
-   
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            Mã Cơ Sở Vật Chất
-        </dt>
+                                <div>
+                                    <div>
+                                        <div class="sparkline10-graph">
+                                            <div class="card-body">
+                                                <table id="bootstrap-data-table" class="table table-striped table-bordered">
+                                           <thead>
 
-        <dd>
-            @Html.DisplayFor(model => model.CSVC_MA)
-        </dd>
+                                          </dt>
+                                                    Mã Cơ Sở Vật Chất
+                                                </dt>
 
-        <dt>
-            Số Lượng
-        </dt>
+                                                <dd>
+                                                    @Html.DisplayFor(model => model.CSVC_MA)
+                                                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.CSVC_SOLUONG)
-        </dd>
+                                                <dt>
+                                                    Số Lượng
+                                                </dt>
 
-        <dt>
-            Phòng
-        </dt>
+                                                <dd>
+                                                    @Html.DisplayFor(model => model.CSVC_SOLUONG)
+                                                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.PHONGHOC.PH_TEN)
-        </dd>
+                                                <dt>
+                                                    Phòng
+                                                </dt>
 
-        <dt>
-            Thiết Bị Dạy Học
-        </dt>
+                                                <dd>
+                                                    @Html.DisplayFor(model => model.PHONGHOC.PH_TEN)
+                                                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.THIETBIDAYHOC.TBDH_TEN)
-        </dd>
+                                                <dt>
+                                                    Thiết Bị Dạy Học
+                                                </dt>
 
-        <dt>
-            Thiết Bị Giảng Dạy
-        </dt>
+                                                <dd>
+                                                    @Html.DisplayFor(model => model.THIETBIDAYHOC.TBDH_TEN)
+                                                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.THIETBIGIANGDAY.TBGD_TEN)
-        </dd>
+                                                <dt>
+                                                    Thiết Bị Giảng Dạy
+                                                </dt>
 
-        <dt>
-            Mô Tả
-        </dt>
+                                                <dd>
+                                                    @Html.DisplayFor(model => model.THIETBIGIANGDAY.TBGD_TEN)
+                                                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.TINHTRANG.TT_MOTA)
-        </dd>
+                                                <dt>
+                                                    Mô Tả
+                                                </dt>
 
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Chỉnh Sửa", "Edit", new { id = Model.CSVC_MA }) |
-    @Html.ActionLink("Quay Lại", "Index")
-</p>
+                                                <dd>
+                                                    @Html.DisplayFor(model => model.TINHTRANG.TT_MOTA)
+                                                </dd>
+
+                                            </dl>
+                                        </div>
+                                        <p>
+                                            @Html.ActionLink("Chỉnh Sửa", "Edit", new { id = Model.CSVC_MA }) |
+                                            @Html.ActionLink("Quay Lại", "Index")
+                                        </p>
