@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using QLTHPT.App_Start;
 using QLTHPT.ModelDB;
 
 namespace QLTHPT.Controllers
@@ -38,7 +39,9 @@ namespace QLTHPT.Controllers
         // GET: CHUCVUs/Create
         public ActionResult Create()
         {
-            return View();
+            CHUCVU obj = new CHUCVU();
+            obj.CV_MA = CreateID.CreateID_ByteText(); 
+            return View(obj);
         }
 
         // POST: CHUCVUs/Create
