@@ -13,11 +13,8 @@
                 <div class="sparkline13-list shadow-reset">
                     <div class="sparkline13-hd">
                         <div class="main-sparkline13-hd">
-                            <h4><strong>Tạo Mới Thông Tin Cơ Sở Vật Chất</strong></h4>
-                            <div class="sparkline13-outline-icon">
-                                <span class="sparkline13-collapse-link"><i class="fa fa-chevron-up"></i></span>
-                                <span class="sparkline13-collapse-close"><i class="fa fa-times"></i></span>
-                            </div>
+                            <h4><strong>Tạo Mới Cơ Sở Vật Chất</strong></h4>
+                          
                         </div>
                     </div>
                     <div class="sparkline13-graph">
@@ -84,7 +81,8 @@
                             <div class="form-group">
                                 <div class="col-md-offset-2 col-md-10">
                                     <input type="submit" value="Tạo" class="btn btn-default" />
-                                    @Html.ActionLink("Quay Lại", "Index")
+                                    <a href="@Url.Action("Index", "COSOVATCHATs")" class=" btn btn-custon-rounded-three btn-primary"><i class="fa fa-undo"></i></a>
+
                                 </div>
                             </div>
                         </div>
