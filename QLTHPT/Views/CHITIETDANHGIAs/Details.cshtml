@@ -1,0 +1,43 @@
+﻿@model QLTHPT.Models.CHITIETDANHGIA
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CHITIETDANHGIA</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CTDG_NGAYDG)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CTDG_NGAYDG)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HOCSINH.HS_HOTEN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HOCSINH.HS_HOTEN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SODANHGIA.SDG_DIEM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SODANHGIA.SDG_DIEM)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CTDG_MA }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

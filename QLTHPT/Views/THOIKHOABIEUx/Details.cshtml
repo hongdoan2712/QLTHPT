@@ -1,4 +1,4 @@
-﻿@model QLTHPT.ModelDB.THOIKHOABIEU
+﻿@model QLTHPT.Models.THOIKHOABIEU
 
 @{
     ViewBag.Title = "Details";
@@ -29,6 +29,9 @@
                                             Mã TKB
                                         </th>
                                         <th>
+                                            Lớp
+                                        </th>
+                                        <th>
                                             Cán Bộ
                                         </th>
                                         <th>Môn Học</th>
@@ -37,15 +40,18 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            @Html.DisplayFor(model => model.THU_MA)
+                                            @Html.DisplayFor(model => model.TKB_MA)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(model => model.LOP_LOP_MA)
                                         </td>
                                         <td>
                                             @Html.DisplayFor(model => model.CANBO.CB_HOTEN)
                                         </td>
-                                        <td>@Html.DisplayFor(model => model.MONHOC.MH_TEN)</td>
-                                        <td>@Html.DisplayFor(model => model.TIETHOC.TH_TEN)</td>
-                                        <td>@Html.DisplayFor(model => model.THU.THU_TEN)</td>
-                                   
+                                        <td>@Html.DisplayFor(model => model.MONHOCs)</td>
+                                        <td>@Html.DisplayFor(model => model.TIETHOCs)</td>
+                                        <td>@Html.DisplayFor(model => model.THUs)</td>
+
                                     </tr>
                                 </thead>
 

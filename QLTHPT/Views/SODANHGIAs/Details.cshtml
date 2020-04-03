@@ -1,0 +1,43 @@
+﻿@model QLTHPT.Models.SODANHGIA
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SODANHGIA</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SDG_DIEM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SDG_DIEM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SDG_GHICHU)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SDG_GHICHU)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HOCKy.HK_TEN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HOCKy.HK_TEN)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SDG_MA }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

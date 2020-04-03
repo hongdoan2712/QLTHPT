@@ -1,4 +1,5 @@
-﻿using QLTHPT.Models;
+﻿using QLTHPT.App_Start;
+using QLTHPT.Models;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -39,7 +40,9 @@ namespace QLTHPT.Controllers
         // GET: MONHOCs/Create
         public ActionResult Create()
         {
-            return View();
+            MONHOC obj = new MONHOC();
+            obj.MH_MA = CreateID.CreateID_ByteText();
+            return View(obj);
         }
 
         // POST: MONHOCs/Create

@@ -59,5 +59,7 @@ namespace QLTHPT.Models
         public virtual DbSet<UpdateImage> UpdateImages { get; set; }
         public virtual DbSet<VANBANG> VANBANGs { get; set; }
         public virtual DbSet<XAPHUONG> XAPHUONGs { get; set; }
+        public virtual DbSet<KHENTHUONGCB> KHENTHUONGCBs { get; set; }
+        public virtual DbSet<KYLUATCB> KYLUATCBs { get; set; }
     }
 }

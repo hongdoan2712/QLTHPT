@@ -1,4 +1,5 @@
-﻿using QLTHPT.Models;
+﻿using QLTHPT.App_Start;
+using QLTHPT.Models;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -39,7 +40,9 @@ namespace QLTHPT.Controllers
         // GET: TIETHOCs/Create
         public ActionResult Create()
         {
-            return View();
+            TIETHOC obj = new TIETHOC();
+            obj.TH_MA = CreateID.CreateID_ByteText();
+            return View(obj);
         }
 
         // POST: TIETHOCs/Create

@@ -32,5 +32,6 @@ namespace QLTHPT.Models
         public virtual ICollection<THU> THUs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TIETHOC> TIETHOCs { get; set; }
+        public virtual CANBO CANBO { get; set; }
     }
 }

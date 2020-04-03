@@ -9,7 +9,7 @@
         <EntityTypeShape EntityType="acomptec_qlthptModel.CANBO" Width="1.5" PointX="14.25" PointY="14.125" IsExpanded="true" />
         <EntityTypeShape EntityType="acomptec_qlthptModel.CHITIET_CHUCVU" Width="1.5" PointX="16.5" PointY="14.75" IsExpanded="true" />
         <EntityTypeShape EntityType="acomptec_qlthptModel.CHITIETDANHGIA" Width="1.5" PointX="10.5" PointY="8.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="acomptec_qlthptModel.CHUCVU" Width="1.5" PointX="14.25" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.CHUCVU" Width="1.5" PointX="18.875" PointY="17.75" IsExpanded="true" />
         <EntityTypeShape EntityType="acomptec_qlthptModel.CHUYENNGANH" Width="1.5" PointX="18.75" PointY="10.625" IsExpanded="true" />
         <EntityTypeShape EntityType="acomptec_qlthptModel.COQUAN" Width="1.5" PointX="12" PointY="12" IsExpanded="true" />
         <EntityTypeShape EntityType="acomptec_qlthptModel.COSOVATCHAT" Width="1.5" PointX="15" PointY="3.375" IsExpanded="true" />
@@ -69,6 +69,11 @@
         <AssociationConnector Association="acomptec_qlthptModel.FK_THOIKHOABIEUTHU" ManuallyRouted="false" />
         <AssociationConnector Association="acomptec_qlthptModel.FK_THOIKHOABIEUTIETHOC" ManuallyRouted="false" />
         <AssociationConnector Association="acomptec_qlthptModel.FK_THONGTINDAOTAOVANBANG" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.KHENTHUONGCB" Width="1.5" PointX="12.125" PointY="18.125" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.KYLUATCB" Width="1.5" PointX="15.625" PointY="18.875" />
+        <AssociationConnector Association="acomptec_qlthptModel.CANBOKHENTHUONGCB" />
+        <AssociationConnector Association="acomptec_qlthptModel.CANBOKYLUATCB" />
+        <AssociationConnector Association="acomptec_qlthptModel.CANBOTHOIKHOABIEU" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

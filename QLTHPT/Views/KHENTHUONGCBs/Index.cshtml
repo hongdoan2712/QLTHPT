@@ -1,0 +1,46 @@
+﻿@model IEnumerable<QLTHPT.Models.KHENTHUONGCB>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.KTCB_NGAY)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KTCB_THANHTICH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CANBO_CB_MA)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.KTCB_NGAY)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KTCB_THANHTICH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CANBO_CB_MA)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.KTCB_MA }) |
+            @Html.ActionLink("Details", "Details", new { id=item.KTCB_MA }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.KTCB_MA })
+        </td>
+    </tr>
+}
+
+</table>
