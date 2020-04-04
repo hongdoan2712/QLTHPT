@@ -6,162 +6,172 @@
     <edmx:StorageModels>
     <Schema Namespace="acomptec_qlthptModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityContainer Name="acomptec_qlthptModelStoreContainer">
-    <EntitySet Name="CHITIETDANHGIAs" EntityType="acomptec_qlthptModel.Store.CHITIETDANHGIAs" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="KHENTHUONGs" EntityType="acomptec_qlthptModel.Store.KHENTHUONGs" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="KHOIs" EntityType="acomptec_qlthptModel.Store.KHOIs" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="KYLUATs" EntityType="acomptec_qlthptModel.Store.KYLUATs" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="LOPs" EntityType="acomptec_qlthptModel.Store.LOPs" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="NAMHOCs" EntityType="acomptec_qlthptModel.Store.NAMHOCs" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="THOIKHOABIEUs" EntityType="acomptec_qlthptModel.Store.THOIKHOABIEUs" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CHITIETDANHGIA" EntityType="acomptec_qlthptModel.Store.CHITIETDANHGIA" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="KHENTHUONG" EntityType="acomptec_qlthptModel.Store.KHENTHUONG" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="KHOI" EntityType="acomptec_qlthptModel.Store.KHOI" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="KYLUAT" EntityType="acomptec_qlthptModel.Store.KYLUAT" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LOP" EntityType="acomptec_qlthptModel.Store.LOP" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="NAMHOC" EntityType="acomptec_qlthptModel.Store.NAMHOC" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="THOIKHOABIEU" EntityType="acomptec_qlthptModel.Store.THOIKHOABIEU" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="UpdateImages" EntityType="acomptec_qlthptModel.Store.UpdateImages" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="BACLUONGs" EntityType="acomptec_qlthptModel.Store.BACLUONGs" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="CANBOes" EntityType="acomptec_qlthptModel.Store.CANBOes" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="CHUCVUs" EntityType="acomptec_qlthptModel.Store.CHUCVUs" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="CHUYENNGANHs" EntityType="acomptec_qlthptModel.Store.CHUYENNGANHs" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="COQUANs" EntityType="acomptec_qlthptModel.Store.COQUANs" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="COSOVATCHATs" EntityType="acomptec_qlthptModel.Store.COSOVATCHATs" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="DANTOCs" EntityType="acomptec_qlthptModel.Store.DANTOCs" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="HINHTHUCs" EntityType="acomptec_qlthptModel.Store.HINHTHUCs" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="HOCKies" EntityType="acomptec_qlthptModel.Store.HOCKies" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="HOCSINHs" EntityType="acomptec_qlthptModel.Store.HOCSINHs" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="MONHOCs" EntityType="acomptec_qlthptModel.Store.MONHOCs" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="NGACHLUONGs" EntityType="acomptec_qlthptModel.Store.NGACHLUONGs" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="PHONGHOCs" EntityType="acomptec_qlthptModel.Store.PHONGHOCs" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="QUANHUYENs" EntityType="acomptec_qlthptModel.Store.QUANHUYENs" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="SODANHGIAs" EntityType="acomptec_qlthptModel.Store.SODANHGIAs" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="THIETBIDAYHOCs" EntityType="acomptec_qlthptModel.Store.THIETBIDAYHOCs" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="THIETBIGIANGDAYs" EntityType="acomptec_qlthptModel.Store.THIETBIGIANGDAYs" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="THONGTINDAOTAOs" EntityType="acomptec_qlthptModel.Store.THONGTINDAOTAOs" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="THONGTINLUONGs" EntityType="acomptec_qlthptModel.Store.THONGTINLUONGs" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="THUs" EntityType="acomptec_qlthptModel.Store.THUs" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="TIETHOCs" EntityType="acomptec_qlthptModel.Store.TIETHOCs" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="TINHTHANHs" EntityType="acomptec_qlthptModel.Store.TINHTHANHs" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="TINHTRANGs" EntityType="acomptec_qlthptModel.Store.TINHTRANGs" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="VANBANGs" EntityType="acomptec_qlthptModel.Store.VANBANGs" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="XAPHUONGs" EntityType="acomptec_qlthptModel.Store.XAPHUONGs" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BACLUONG" EntityType="acomptec_qlthptModel.Store.BACLUONG" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CANBO" EntityType="acomptec_qlthptModel.Store.CANBO" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CHUCVU" EntityType="acomptec_qlthptModel.Store.CHUCVU" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CHUYENNGANH" EntityType="acomptec_qlthptModel.Store.CHUYENNGANH" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="COQUAN" EntityType="acomptec_qlthptModel.Store.COQUAN" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="COSOVATCHAT" EntityType="acomptec_qlthptModel.Store.COSOVATCHAT" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DANTOC" EntityType="acomptec_qlthptModel.Store.DANTOC" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HINHTHUC" EntityType="acomptec_qlthptModel.Store.HINHTHUC" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HOCSINH" EntityType="acomptec_qlthptModel.Store.HOCSINH" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MONHOC" EntityType="acomptec_qlthptModel.Store.MONHOC" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="NGACHLUONG" EntityType="acomptec_qlthptModel.Store.NGACHLUONG" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PHONGHOC" EntityType="acomptec_qlthptModel.Store.PHONGHOC" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="QUANHUYEN" EntityType="acomptec_qlthptModel.Store.QUANHUYEN" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SODANHGIA" EntityType="acomptec_qlthptModel.Store.SODANHGIA" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="THIETBIDAYHOC" EntityType="acomptec_qlthptModel.Store.THIETBIDAYHOC" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="THIETBIGIANGDAY" EntityType="acomptec_qlthptModel.Store.THIETBIGIANGDAY" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="THONGTINDAOTAO" EntityType="acomptec_qlthptModel.Store.THONGTINDAOTAO" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="THONGTINLUONG" EntityType="acomptec_qlthptModel.Store.THONGTINLUONG" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="THU" EntityType="acomptec_qlthptModel.Store.THU" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TIETHOC" EntityType="acomptec_qlthptModel.Store.TIETHOC" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TINHTHANH" EntityType="acomptec_qlthptModel.Store.TINHTHANH" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TINHTRANG" EntityType="acomptec_qlthptModel.Store.TINHTRANG" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="VANBANG" EntityType="acomptec_qlthptModel.Store.VANBANG" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="XAPHUONG" EntityType="acomptec_qlthptModel.Store.XAPHUONG" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="CHITIET_CHUCVU" EntityType="acomptec_qlthptModel.Store.CHITIET_CHUCVU" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HOCKY" EntityType="acomptec_qlthptModel.Store.HOCKY" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="KHENTHUONGCB" EntityType="acomptec_qlthptModel.Store.KHENTHUONGCB" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="KYLUATCB" EntityType="acomptec_qlthptModel.Store.KYLUATCB" store:Type="Tables" Schema="dbo" />
     <AssociationSet Name="TINHTHANHHOCSINH" Association="acomptec_qlthptModel.Store.TINHTHANHHOCSINH">
-      <End Role="TINHTHANH" EntitySet="TINHTHANHs" />
-      <End Role="HOCSINH" EntitySet="HOCSINHs" />
+      <End Role="TINHTHANH" EntitySet="TINHTHANH" />
+      <End Role="HOCSINH" EntitySet="HOCSINH" />
     </AssociationSet>
     <AssociationSet Name="XAPHUONGHOCSINH" Association="acomptec_qlthptModel.Store.XAPHUONGHOCSINH">
-      <End Role="XAPHUONG" EntitySet="XAPHUONGs" />
-      <End Role="HOCSINH" EntitySet="HOCSINHs" />
+      <End Role="XAPHUONG" EntitySet="XAPHUONG" />
+      <End Role="HOCSINH" EntitySet="HOCSINH" />
     </AssociationSet>
     <AssociationSet Name="QUANHUYENHOCSINH" Association="acomptec_qlthptModel.Store.QUANHUYENHOCSINH">
-      <End Role="QUANHUYEN" EntitySet="QUANHUYENs" />
-      <End Role="HOCSINH" EntitySet="HOCSINHs" />
+      <End Role="QUANHUYEN" EntitySet="QUANHUYEN" />
+      <End Role="HOCSINH" EntitySet="HOCSINH" />
     </AssociationSet>
     <AssociationSet Name="HOCSINHKYLUAT" Association="acomptec_qlthptModel.Store.HOCSINHKYLUAT">
-      <End Role="HOCSINH" EntitySet="HOCSINHs" />
-      <End Role="KYLUAT" EntitySet="KYLUATs" />
+      <End Role="HOCSINH" EntitySet="HOCSINH" />
+      <End Role="KYLUAT" EntitySet="KYLUAT" />
     </AssociationSet>
     <AssociationSet Name="HOCSINHCHITIETDANHGIA" Association="acomptec_qlthptModel.Store.HOCSINHCHITIETDANHGIA">
-      <End Role="HOCSINH" EntitySet="HOCSINHs" />
-      <End Role="CHITIETDANHGIA" EntitySet="CHITIETDANHGIAs" />
+      <End Role="HOCSINH" EntitySet="HOCSINH" />
+      <End Role="CHITIETDANHGIA" EntitySet="CHITIETDANHGIA" />
     </AssociationSet>
     <AssociationSet Name="SODANHGIACHITIETDANHGIA" Association="acomptec_qlthptModel.Store.SODANHGIACHITIETDANHGIA">
-      <End Role="SODANHGIA" EntitySet="SODANHGIAs" />
-      <End Role="CHITIETDANHGIA" EntitySet="CHITIETDANHGIAs" />
+      <End Role="SODANHGIA" EntitySet="SODANHGIA" />
+      <End Role="CHITIETDANHGIA" EntitySet="CHITIETDANHGIA" />
     </AssociationSet>
     <AssociationSet Name="HOCSINHKHENTHUONG" Association="acomptec_qlthptModel.Store.HOCSINHKHENTHUONG">
-      <End Role="HOCSINH" EntitySet="HOCSINHs" />
-      <End Role="KHENTHUONG" EntitySet="KHENTHUONGs" />
+      <End Role="HOCSINH" EntitySet="HOCSINH" />
+      <End Role="KHENTHUONG" EntitySet="KHENTHUONG" />
     </AssociationSet>
     <AssociationSet Name="KHOIsLOP" Association="acomptec_qlthptModel.Store.KHOIsLOP">
-      <End Role="KHOIs" EntitySet="KHOIs" />
-      <End Role="LOP" EntitySet="LOPs" />
+      <End Role="KHOIs" EntitySet="KHOI" />
+      <End Role="LOP" EntitySet="LOP" />
     </AssociationSet>
     <AssociationSet Name="NAMHOCLOP" Association="acomptec_qlthptModel.Store.NAMHOCLOP">
-      <End Role="NAMHOC" EntitySet="NAMHOCs" />
-      <End Role="LOP" EntitySet="LOPs" />
+      <End Role="NAMHOC" EntitySet="NAMHOC" />
+      <End Role="LOP" EntitySet="LOP" />
     </AssociationSet>
     <AssociationSet Name="LOPHOCSINH" Association="acomptec_qlthptModel.Store.LOPHOCSINH">
-      <End Role="LOP" EntitySet="LOPs" />
-      <End Role="HOCSINH" EntitySet="HOCSINHs" />
+      <End Role="LOP" EntitySet="LOP" />
+      <End Role="HOCSINH" EntitySet="HOCSINH" />
     </AssociationSet>
     <AssociationSet Name="COSOVATCHATTHIETBIGIANGDAY" Association="acomptec_qlthptModel.Store.COSOVATCHATTHIETBIGIANGDAY">
-      <End Role="COSOVATCHAT" EntitySet="COSOVATCHATs" />
-      <End Role="THIETBIGIANGDAY" EntitySet="THIETBIGIANGDAYs" />
+      <End Role="COSOVATCHAT" EntitySet="COSOVATCHAT" />
+      <End Role="THIETBIGIANGDAY" EntitySet="THIETBIGIANGDAY" />
     </AssociationSet>
     <AssociationSet Name="COSOVATCHATTHIETBIDAYHOC" Association="acomptec_qlthptModel.Store.COSOVATCHATTHIETBIDAYHOC">
-      <End Role="COSOVATCHAT" EntitySet="COSOVATCHATs" />
-      <End Role="THIETBIDAYHOC" EntitySet="THIETBIDAYHOCs" />
+      <End Role="COSOVATCHAT" EntitySet="COSOVATCHAT" />
+      <End Role="THIETBIDAYHOC" EntitySet="THIETBIDAYHOC" />
     </AssociationSet>
     <AssociationSet Name="COSOVATCHATTINHTRANG" Association="acomptec_qlthptModel.Store.COSOVATCHATTINHTRANG">
-      <End Role="COSOVATCHAT" EntitySet="COSOVATCHATs" />
-      <End Role="TINHTRANG" EntitySet="TINHTRANGs" />
+      <End Role="COSOVATCHAT" EntitySet="COSOVATCHAT" />
+      <End Role="TINHTRANG" EntitySet="TINHTRANG" />
     </AssociationSet>
     <AssociationSet Name="PHONGHOCCOSOVATCHAT" Association="acomptec_qlthptModel.Store.PHONGHOCCOSOVATCHAT">
-      <End Role="PHONGHOC" EntitySet="PHONGHOCs" />
-      <End Role="COSOVATCHAT" EntitySet="COSOVATCHATs" />
+      <End Role="PHONGHOC" EntitySet="PHONGHOC" />
+      <End Role="COSOVATCHAT" EntitySet="COSOVATCHAT" />
     </AssociationSet>
     <AssociationSet Name="DANTOCHOCSINH" Association="acomptec_qlthptModel.Store.DANTOCHOCSINH">
-      <End Role="DANTOC" EntitySet="DANTOCs" />
-      <End Role="HOCSINH" EntitySet="HOCSINHs" />
+      <End Role="DANTOC" EntitySet="DANTOC" />
+      <End Role="HOCSINH" EntitySet="HOCSINH" />
     </AssociationSet>
     <AssociationSet Name="BACLUONGTHONGTINLUONG" Association="acomptec_qlthptModel.Store.BACLUONGTHONGTINLUONG">
-      <End Role="BACLUONG" EntitySet="BACLUONGs" />
-      <End Role="THONGTINLUONG" EntitySet="THONGTINLUONGs" />
-    </AssociationSet>
-    <AssociationSet Name="CANBOTHONGTINLUONG" Association="acomptec_qlthptModel.Store.CANBOTHONGTINLUONG">
-      <End Role="CANBO" EntitySet="CANBOes" />
-      <End Role="THONGTINLUONG" EntitySet="THONGTINLUONGs" />
+      <End Role="BACLUONG" EntitySet="BACLUONG" />
+      <End Role="THONGTINLUONG" EntitySet="THONGTINLUONG" />
     </AssociationSet>
     <AssociationSet Name="COQUANCANBO" Association="acomptec_qlthptModel.Store.COQUANCANBO">
-      <End Role="COQUAN" EntitySet="COQUANs" />
-      <End Role="CANBO" EntitySet="CANBOes" />
+      <End Role="COQUAN" EntitySet="COQUAN" />
+      <End Role="CANBO" EntitySet="CANBO" />
     </AssociationSet>
     <AssociationSet Name="NGACHLUONGTHONGTINLUONG" Association="acomptec_qlthptModel.Store.NGACHLUONGTHONGTINLUONG">
-      <End Role="NGACHLUONG" EntitySet="NGACHLUONGs" />
-      <End Role="THONGTINLUONG" EntitySet="THONGTINLUONGs" />
+      <End Role="NGACHLUONG" EntitySet="NGACHLUONG" />
+      <End Role="THONGTINLUONG" EntitySet="THONGTINLUONG" />
     </AssociationSet>
     <AssociationSet Name="THOIKHOABIEUMONHOC" Association="acomptec_qlthptModel.Store.THOIKHOABIEUMONHOC">
-      <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEUs" />
-      <End Role="MONHOC" EntitySet="MONHOCs" />
+      <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEU" />
+      <End Role="MONHOC" EntitySet="MONHOC" />
     </AssociationSet>
     <AssociationSet Name="THOIKHOABIEUTIETHOC" Association="acomptec_qlthptModel.Store.THOIKHOABIEUTIETHOC">
-      <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEUs" />
-      <End Role="TIETHOC" EntitySet="TIETHOCs" />
+      <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEU" />
+      <End Role="TIETHOC" EntitySet="TIETHOC" />
     </AssociationSet>
     <AssociationSet Name="THOIKHOABIEUTHU" Association="acomptec_qlthptModel.Store.THOIKHOABIEUTHU">
-      <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEUs" />
-      <End Role="THU" EntitySet="THUs" />
-    </AssociationSet>
-    <AssociationSet Name="HOCKySODANHGIA" Association="acomptec_qlthptModel.Store.HOCKySODANHGIA">
-      <End Role="HOCKy" EntitySet="HOCKies" />
-      <End Role="SODANHGIA" EntitySet="SODANHGIAs" />
+      <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEU" />
+      <End Role="THU" EntitySet="THU" />
     </AssociationSet>
     <AssociationSet Name="LOPTHOIKHOABIEU" Association="acomptec_qlthptModel.Store.LOPTHOIKHOABIEU">
-      <End Role="LOP" EntitySet="LOPs" />
-      <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEUs" />
+      <End Role="LOP" EntitySet="LOP" />
+      <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEU" />
     </AssociationSet>
     <AssociationSet Name="CANBOTHONGTINDAOTAO" Association="acomptec_qlthptModel.Store.CANBOTHONGTINDAOTAO">
-      <End Role="CANBO" EntitySet="CANBOes" />
-      <End Role="THONGTINDAOTAO" EntitySet="THONGTINDAOTAOs" />
+      <End Role="CANBO" EntitySet="CANBO" />
+      <End Role="THONGTINDAOTAO" EntitySet="THONGTINDAOTAO" />
     </AssociationSet>
     <AssociationSet Name="THONGTINDAOTAOCHUYENNGANH" Association="acomptec_qlthptModel.Store.THONGTINDAOTAOCHUYENNGANH">
-      <End Role="THONGTINDAOTAO" EntitySet="THONGTINDAOTAOs" />
-      <End Role="CHUYENNGANH" EntitySet="CHUYENNGANHs" />
+      <End Role="THONGTINDAOTAO" EntitySet="THONGTINDAOTAO" />
+      <End Role="CHUYENNGANH" EntitySet="CHUYENNGANH" />
     </AssociationSet>
     <AssociationSet Name="THONGTINDAOTAOHINHTHUC" Association="acomptec_qlthptModel.Store.THONGTINDAOTAOHINHTHUC">
-      <End Role="THONGTINDAOTAO" EntitySet="THONGTINDAOTAOs" />
-      <End Role="HINHTHUC" EntitySet="HINHTHUCs" />
+      <End Role="THONGTINDAOTAO" EntitySet="THONGTINDAOTAO" />
+      <End Role="HINHTHUC" EntitySet="HINHTHUC" />
     </AssociationSet>
     <AssociationSet Name="CANBOCHITIET_CHUCVU" Association="acomptec_qlthptModel.Store.CANBOCHITIET_CHUCVU">
-      <End Role="CANBO" EntitySet="CANBOes" />
+      <End Role="CANBO" EntitySet="CANBO" />
       <End Role="CHITIET_CHUCVU" EntitySet="CHITIET_CHUCVU" />
     </AssociationSet>
     <AssociationSet Name="CHUCVUCHITIET_CHUCVU" Association="acomptec_qlthptModel.Store.CHUCVUCHITIET_CHUCVU">
-      <End Role="CHUCVU" EntitySet="CHUCVUs" />
+      <End Role="CHUCVU" EntitySet="CHUCVU" />
       <End Role="CHITIET_CHUCVU" EntitySet="CHITIET_CHUCVU" />
     </AssociationSet>
     <AssociationSet Name="THONGTINDAOTAOVANBANG" Association="acomptec_qlthptModel.Store.THONGTINDAOTAOVANBANG">
-      <End Role="THONGTINDAOTAO" EntitySet="THONGTINDAOTAOs" />
-      <End Role="VANBANG" EntitySet="VANBANGs" />
+      <End Role="THONGTINDAOTAO" EntitySet="THONGTINDAOTAO" />
+      <End Role="VANBANG" EntitySet="VANBANG" />
+    </AssociationSet>
+    <AssociationSet Name="CANBOTHONGTINLUONG" Association="acomptec_qlthptModel.Store.CANBOTHONGTINLUONG">
+      <End Role="CANBO" EntitySet="CANBO" />
+      <End Role="THONGTINLUONG" EntitySet="THONGTINLUONG" />
+    </AssociationSet>
+    <AssociationSet Name="HOCKYSODANHGIA" Association="acomptec_qlthptModel.Store.HOCKYSODANHGIA">
+      <End Role="HOCKY" EntitySet="HOCKY" />
+      <End Role="SODANHGIA" EntitySet="SODANHGIA" />
+    </AssociationSet>
+    <AssociationSet Name="CANBOKHENTHUONGCB" Association="acomptec_qlthptModel.Store.CANBOKHENTHUONGCB">
+      <End Role="CANBO" EntitySet="CANBO" />
+      <End Role="KHENTHUONGCB" EntitySet="KHENTHUONGCB" />
+    </AssociationSet>
+    <AssociationSet Name="CANBOKYLUATCB" Association="acomptec_qlthptModel.Store.CANBOKYLUATCB">
+      <End Role="CANBO" EntitySet="CANBO" />
+      <End Role="KYLUATCB" EntitySet="KYLUATCB" />
     </AssociationSet>
   </EntityContainer>
-  <EntityType Name="CHITIETDANHGIAs">
+  <EntityType Name="CHITIETDANHGIA">
     <Key>
       <PropertyRef Name="CTDG_MA" />
     </Key>
@@ -170,7 +180,7 @@
     <Property Name="HOCSINH_HS_MA" Type="varchar" MaxLength="10" Nullable="false" />
     <Property Name="SODANHGIA_SDG_MA" Type="varchar" MaxLength="10" Nullable="false" />
   </EntityType>
-  <EntityType Name="KHENTHUONGs">
+  <EntityType Name="KHENTHUONG">
     <Key>
       <PropertyRef Name="KT_MA" />
     </Key>
@@ -180,14 +190,14 @@
     <Property Name="KT_GHICHU" Type="nvarchar" Nullable="true" MaxLength="100" />
     <Property Name="HOCSINH_HS_MA" Type="varchar" MaxLength="10" Nullable="false" />
   </EntityType>
-  <EntityType Name="KHOIs">
+  <EntityType Name="KHOI">
     <Key>
       <PropertyRef Name="KHOI_MA" />
     </Key>
     <Property Name="KHOI_MA" Type="varchar" Nullable="false" MaxLength="10" />
     <Property Name="KHOI_TEN" Type="nvarchar" Nullable="true" MaxLength="50" />
   </EntityType>
-  <EntityType Name="KYLUATs">
+  <EntityType Name="KYLUAT">
     <Key>
       <PropertyRef Name="KL_MA" />
     </Key>
@@ -196,7 +206,7 @@
     <Property Name="KL_NGAYKYLUAT" Type="datetime" Nullable="true" />
     <Property Name="HOCSINH_HS_MA" Type="varchar" MaxLength="10" Nullable="false" />
   </EntityType>
-  <EntityType Name="LOPs">
+  <EntityType Name="LOP">
     <Key>
       <PropertyRef Name="LOP_MA" />
     </Key>
@@ -205,14 +215,14 @@
     <Property Name="KHOIs_KHOI_MA" Type="varchar" MaxLength="10" Nullable="false" />
     <Property Name="NAMHOC_NH_MA" Type="varchar" MaxLength="10" Nullable="false" />
   </EntityType>
-  <EntityType Name="NAMHOCs">
+  <EntityType Name="NAMHOC">
     <Key>
       <PropertyRef Name="NH_MA" />
     </Key>
     <Property Name="NH_MA" Type="varchar" Nullable="false" MaxLength="10" />
     <Property Name="NH_NAMHOC" Type="nvarchar" Nullable="true" MaxLength="50" />
   </EntityType>
-  <EntityType Name="THOIKHOABIEUs">
+  <EntityType Name="THOIKHOABIEU">
     <Key>
       <PropertyRef Name="TKB_MA" />
     </Key>
@@ -227,14 +237,14 @@
     <Property Name="Image_url" Type="nvarchar" Nullable="true" MaxLength="100" />
     <Property Name="Name_im" Type="nvarchar" Nullable="true" MaxLength="100" />
   </EntityType>
-  <EntityType Name="BACLUONGs">
+  <EntityType Name="BACLUONG">
     <Key>
       <PropertyRef Name="BL_MA" />
     </Key>
     <Property Name="BL_MA" Type="varchar" Nullable="false" MaxLength="10" />
     <Property Name="BL_TEN" Type="nvarchar" Nullable="true" MaxLength="50" />
   </EntityType>
-  <EntityType Name="CANBOes">
+  <EntityType Name="CANBO">
     <Key>
       <PropertyRef Name="CB_MA" />
     </Key>
@@ -244,17 +254,16 @@
     <Property Name="CB_DIACHI" Type="nvarchar" Nullable="true" MaxLength="200" />
     <Property Name="CB_NGAYSINH" Type="datetime" Nullable="true" />
     <Property Name="CB_CMND" Type="varchar" Nullable="false" MaxLength="20" />
-    <Property Name="THONGTINLUONGs_TTL_MA" Type="varchar" MaxLength="10" Nullable="false" />
     <Property Name="COQUAN_CQ_MA" Type="varchar" MaxLength="10" Nullable="false" />
   </EntityType>
-  <EntityType Name="CHUCVUs">
+  <EntityType Name="CHUCVU">
     <Key>
       <PropertyRef Name="CV_MA" />
     </Key>
     <Property Name="CV_MA" Type="varchar" Nullable="false" MaxLength="10" />
     <Property Name="CV_TEN" Type="nvarchar" Nullable="true" MaxLength="50" />
   </EntityType>
-  <EntityType Name="CHUYENNGANHs">
+  <EntityType Name="CHUYENNGANH">
     <Key>
       <PropertyRef Name="CN_MA" />
     </Key>
@@ -262,14 +271,14 @@
     <Property Name="CN_TEN" Type="nvarchar" Nullable="true" MaxLength="50" />
     <Property Name="THONGTINDAOTAO_TTDT_MA" Type="varchar" MaxLength="10" Nullable="false" />
   </EntityType>
-  <EntityType Name="COQUANs">
+  <EntityType Name="COQUAN">
     <Key>
       <PropertyRef Name="CQ_MA" />
     </Key>
     <Property Name="CQ_MA" Type="varchar" Nullable="false" MaxLength="10" />
     <Property Name="CQ_TEN" Type="nvarchar" Nullable="true" MaxLength="50" />
   </EntityType>
-  <EntityType Name="COSOVATCHATs">
+  <EntityType Name="COSOVATCHAT">
     <Key>
       <PropertyRef Name="CSVC_MA" />
     </Key>
@@ -277,28 +286,21 @@
     <Property Name="CSVC_SOLUONG" Type="int" Nullable="false" />
     <Property Name="PHONGHOC_PH_MA" Type="varchar" MaxLength="10" Nullable="false" />
   </EntityType>
-  <EntityType Name="DANTOCs">
+  <EntityType Name="DANTOC">
     <Key>
       <PropertyRef Name="DT_MA" />
     </Key>
     <Property Name="DT_MA" Type="varchar" Nullable="false" MaxLength="10" />
     <Property Name="DT_TEN" Type="nvarchar" Nullable="false" MaxLength="50" />
   </EntityType>
-  <EntityType Name="HINHTHUCs">
+  <EntityType Name="HINHTHUC">
     <Key>
       <PropertyRef Name="HT_MA" />
     </Key>
     <Property Name="HT_MA" Type="varchar" Nullable="false" MaxLength="10" />
     <Property Name="HT_TEN" Type="nvarchar" Nullable="true" MaxLength="50" />
   </EntityType>
-  <EntityType Name="HOCKies">
-    <Key>
-      <PropertyRef Name="HK_MA" />
-    </Key>
-    <Property Name="HK_MA" Type="varchar" Nullable="false" MaxLength="10" />
-    <Property Name="HK_TEN" Type="nvarchar" Nullable="false" MaxLength="50" />
-  </EntityType>
-  <EntityType Name="HOCSINHs">
+  <EntityType Name="HOCSINH">
     <Key>
       <PropertyRef Name="HS_MA" />
     </Key>
@@ -313,7 +315,7 @@
     <Property Name="LOP_LOP_MA" Type="varchar" MaxLength="10" Nullable="false" />
     <Property Name="DANTOC_DT_MA" Type="varchar" MaxLength="10" Nullable="false" />
   </EntityType>
-  <EntityType Name="MONHOCs">
+  <EntityType Name="MONHOC">
     <Key>
       <PropertyRef Name="MH_MA" />
     </Key>
@@ -321,37 +323,37 @@
     <Property Name="MH_TEN" Type="nvarchar" Nullable="true" MaxLength="50" />
     <Property Name="THOIKHOABIEU_TKB_MA" Type="varchar" MaxLength="10" Nullable="false" />
   </EntityType>
-  <EntityType Name="NGACHLUONGs">
+  <EntityType Name="NGACHLUONG">
     <Key>
       <PropertyRef Name="NL_MA" />
     </Key>
     <Property Name="NL_MA" Type="varchar" Nullable="false" MaxLength="10" />
     <Property Name="NL_TEN" Type="nvarchar" Nullable="true" MaxLength="50" />
   </EntityType>
-  <EntityType Name="PHONGHOCs">
+  <EntityType Name="PHONGHOC">
     <Key>
       <PropertyRef Name="PH_MA" />
     </Key>
     <Property Name="PH_MA" Type="varchar" Nullable="false" MaxLength="10" />
     <Property Name="PH_TEN" Type="nvarchar" Nullable="false" MaxLength="50" />
   </EntityType>
-  <EntityType Name="QUANHUYENs">
+  <EntityType Name="QUANHUYEN">
     <Key>
       <PropertyRef Name="QH_MA" />
     </Key>
     <Property Name="QH_MA" Type="varchar" Nullable="false" MaxLength="10" />
     <Property Name="QH_TEN" Type="nvarchar" Nullable="false" MaxLength="50" />
   </EntityType>
-  <EntityType Name="SODANHGIAs">
+  <EntityType Name="SODANHGIA">
     <Key>
       <PropertyRef Name="SDG_MA" />
     </Key>
     <Property Name="SDG_MA" Type="varchar" Nullable="false" MaxLength="10" />
     <Property Name="SDG_DIEM" Type="varchar" Nullable="true" MaxLength="10" />
     <Property Name="SDG_GHICHU" Type="nvarchar" Nullable="true" MaxLength="50" />
-    <Property Name="HOCKy_HK_MA" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="HOCKY_HK_MA" Type="varchar" MaxLength="200" Nullable="false" />
   </EntityType>
-  <EntityType Name="THIETBIDAYHOCs">
+  <EntityType Name="THIETBIDAYHOC">
     <Key>
       <PropertyRef Name="TBDH_MA" />
     </Key>
@@ -359,7 +361,7 @@
     <Property Name="TBDH_TEN" Type="nvarchar" Nullable="false" MaxLength="50" />
     <Property Name="COSOVATCHAT_CSVC_MA" Type="varchar" MaxLength="10" Nullable="false" />
   </EntityType>
-  <EntityType Name="THIETBIGIANGDAYs">
+  <EntityType Name="THIETBIGIANGDAY">
     <Key>
       <PropertyRef Name="TBGD_MA" />
     </Key>
@@ -367,7 +369,7 @@
     <Property Name="TBGD_TEN" Type="nvarchar" Nullable="false" MaxLength="50" />
     <Property Name="COSOVATCHAT_CSVC_MA" Type="varchar" MaxLength="10" Nullable="false" />
   </EntityType>
-  <EntityType Name="THONGTINDAOTAOs">
+  <EntityType Name="THONGTINDAOTAO">
     <Key>
       <PropertyRef Name="TTDT_MA" />
     </Key>
@@ -375,7 +377,7 @@
     <Property Name="CANBO_CB_MA" Type="varchar" MaxLength="10" Nullable="false" />
     <Property Name="HINHTHUCs_HT_MA" Type="varchar" MaxLength="10" Nullable="false" />
   </EntityType>
-  <EntityType Name="THONGTINLUONGs">
+  <EntityType Name="THONGTINLUONG">
     <Key>
       <PropertyRef Name="TTL_MA" />
     </Key>
@@ -384,8 +386,9 @@
     <Property Name="TTL_HESOLUONG" Type="varchar" Nullable="true" MaxLength="10" />
     <Property Name="BACLUONG_BL_MA" Type="varchar" MaxLength="10" Nullable="false" />
     <Property Name="NGACHLUONG_NL_MA" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="CANBO_CB_MA" Type="varchar" MaxLength="10" Nullable="false" />
   </EntityType>
-  <EntityType Name="THUs">
+  <EntityType Name="THU">
     <Key>
       <PropertyRef Name="THU_MA" />
     </Key>
@@ -393,7 +396,7 @@
     <Property Name="THU_TEN" Type="nvarchar" Nullable="false" MaxLength="50" />
     <Property Name="THOIKHOABIEU_TKB_MA" Type="varchar" MaxLength="10" Nullable="false" />
   </EntityType>
-  <EntityType Name="TIETHOCs">
+  <EntityType Name="TIETHOC">
     <Key>
       <PropertyRef Name="TH_MA" />
     </Key>
@@ -401,14 +404,14 @@
     <Property Name="TH_TEN" Type="nvarchar" Nullable="false" MaxLength="50" />
     <Property Name="THOIKHOABIEU_TKB_MA" Type="varchar" MaxLength="10" Nullable="false" />
   </EntityType>
-  <EntityType Name="TINHTHANHs">
+  <EntityType Name="TINHTHANH">
     <Key>
       <PropertyRef Name="TT_MA" />
     </Key>
     <Property Name="TT_MA" Type="varchar" Nullable="false" MaxLength="10" />
     <Property Name="TT_TEN" Type="nvarchar" Nullable="false" MaxLength="50" />
   </EntityType>
-  <EntityType Name="TINHTRANGs">
+  <EntityType Name="TINHTRANG">
     <Key>
       <PropertyRef Name="TT_MA" />
     </Key>
@@ -416,7 +419,7 @@
     <Property Name="TT_MOTA" Type="nvarchar" Nullable="true" MaxLength="200" />
     <Property Name="COSOVATCHAT_CSVC_MA" Type="varchar" MaxLength="10" Nullable="false" />
   </EntityType>
-  <EntityType Name="VANBANGs">
+  <EntityType Name="VANBANG">
     <Key>
       <PropertyRef Name="VB_MA" />
     </Key>
@@ -424,7 +427,7 @@
     <Property Name="VB_TEN" Type="nvarchar" Nullable="true" MaxLength="50" />
     <Property Name="THONGTINDAOTAO_TTDT_MA" Type="varchar" MaxLength="10" Nullable="false" />
   </EntityType>
-  <EntityType Name="XAPHUONGs">
+  <EntityType Name="XAPHUONG">
     <Key>
       <PropertyRef Name="XP_MA" />
     </Key>
@@ -440,9 +443,34 @@
     <Property Name="CANBO_CB_MA" Type="varchar" MaxLength="10" Nullable="false" />
     <Property Name="CHUCVU_CV_MA" Type="varchar" MaxLength="10" Nullable="false" />
   </EntityType>
+  <EntityType Name="HOCKY">
+    <Key>
+      <PropertyRef Name="HK_MA" />
+    </Key>
+    <Property Name="HK_MA" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="HK_TEN" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="KHENTHUONGCB">
+    <Key>
+      <PropertyRef Name="KTCB_MA" />
+    </Key>
+    <Property Name="KTCB_MA" Type="varchar" StoreGeneratedPattern="Identity" Nullable="false" MaxLength="200" />
+    <Property Name="KTCB_NGAY" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="KTCB_THANHTICH" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CANBO_CB_MA" Type="varchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="KYLUATCB">
+    <Key>
+      <PropertyRef Name="KLCB_MA" />
+    </Key>
+    <Property Name="KLCB_MA" Type="varchar" StoreGeneratedPattern="Identity" Nullable="false" MaxLength="200" />
+    <Property Name="KLCB_NGAY" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="KLCB_HT" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CANBO_CB_MA" Type="varchar" MaxLength="10" Nullable="false" />
+  </EntityType>
   <Association Name="TINHTHANHHOCSINH">
-    <End Role="TINHTHANH" Type="acomptec_qlthptModel.Store.TINHTHANHs" Multiplicity="1" />
-    <End Role="HOCSINH" Type="acomptec_qlthptModel.Store.HOCSINHs" Multiplicity="*" />
+    <End Role="TINHTHANH" Type="acomptec_qlthptModel.Store.TINHTHANH" Multiplicity="1" />
+    <End Role="HOCSINH" Type="acomptec_qlthptModel.Store.HOCSINH" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="TINHTHANH">
         <PropertyRef Name="TT_MA" />
@@ -453,8 +481,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="XAPHUONGHOCSINH">
-    <End Role="XAPHUONG" Type="acomptec_qlthptModel.Store.XAPHUONGs" Multiplicity="1" />
-    <End Role="HOCSINH" Type="acomptec_qlthptModel.Store.HOCSINHs" Multiplicity="*" />
+    <End Role="XAPHUONG" Type="acomptec_qlthptModel.Store.XAPHUONG" Multiplicity="1" />
+    <End Role="HOCSINH" Type="acomptec_qlthptModel.Store.HOCSINH" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="XAPHUONG">
         <PropertyRef Name="XP_MA" />
@@ -465,8 +493,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="QUANHUYENHOCSINH">
-    <End Role="QUANHUYEN" Type="acomptec_qlthptModel.Store.QUANHUYENs" Multiplicity="1" />
-    <End Role="HOCSINH" Type="acomptec_qlthptModel.Store.HOCSINHs" Multiplicity="*" />
+    <End Role="QUANHUYEN" Type="acomptec_qlthptModel.Store.QUANHUYEN" Multiplicity="1" />
+    <End Role="HOCSINH" Type="acomptec_qlthptModel.Store.HOCSINH" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="QUANHUYEN">
         <PropertyRef Name="QH_MA" />
@@ -477,8 +505,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="HOCSINHKYLUAT">
-    <End Role="HOCSINH" Type="acomptec_qlthptModel.Store.HOCSINHs" Multiplicity="1" />
-    <End Role="KYLUAT" Type="acomptec_qlthptModel.Store.KYLUATs" Multiplicity="*" />
+    <End Role="HOCSINH" Type="acomptec_qlthptModel.Store.HOCSINH" Multiplicity="1" />
+    <End Role="KYLUAT" Type="acomptec_qlthptModel.Store.KYLUAT" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="HOCSINH">
         <PropertyRef Name="HS_MA" />
@@ -489,8 +517,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="HOCSINHCHITIETDANHGIA">
-    <End Role="HOCSINH" Type="acomptec_qlthptModel.Store.HOCSINHs" Multiplicity="1" />
-    <End Role="CHITIETDANHGIA" Type="acomptec_qlthptModel.Store.CHITIETDANHGIAs" Multiplicity="*" />
+    <End Role="HOCSINH" Type="acomptec_qlthptModel.Store.HOCSINH" Multiplicity="1" />
+    <End Role="CHITIETDANHGIA" Type="acomptec_qlthptModel.Store.CHITIETDANHGIA" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="HOCSINH">
         <PropertyRef Name="HS_MA" />
@@ -501,8 +529,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="SODANHGIACHITIETDANHGIA">
-    <End Role="SODANHGIA" Type="acomptec_qlthptModel.Store.SODANHGIAs" Multiplicity="1" />
-    <End Role="CHITIETDANHGIA" Type="acomptec_qlthptModel.Store.CHITIETDANHGIAs" Multiplicity="*" />
+    <End Role="SODANHGIA" Type="acomptec_qlthptModel.Store.SODANHGIA" Multiplicity="1" />
+    <End Role="CHITIETDANHGIA" Type="acomptec_qlthptModel.Store.CHITIETDANHGIA" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="SODANHGIA">
         <PropertyRef Name="SDG_MA" />
@@ -513,8 +541,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="HOCSINHKHENTHUONG">
-    <End Role="HOCSINH" Type="acomptec_qlthptModel.Store.HOCSINHs" Multiplicity="1" />
-    <End Role="KHENTHUONG" Type="acomptec_qlthptModel.Store.KHENTHUONGs" Multiplicity="*" />
+    <End Role="HOCSINH" Type="acomptec_qlthptModel.Store.HOCSINH" Multiplicity="1" />
+    <End Role="KHENTHUONG" Type="acomptec_qlthptModel.Store.KHENTHUONG" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="HOCSINH">
         <PropertyRef Name="HS_MA" />
@@ -525,8 +553,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="KHOIsLOP">
-    <End Role="KHOIs" Type="acomptec_qlthptModel.Store.KHOIs" Multiplicity="1" />
-    <End Role="LOP" Type="acomptec_qlthptModel.Store.LOPs" Multiplicity="*" />
+    <End Role="KHOIs" Type="acomptec_qlthptModel.Store.KHOI" Multiplicity="1" />
+    <End Role="LOP" Type="acomptec_qlthptModel.Store.LOP" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="KHOIs">
         <PropertyRef Name="KHOI_MA" />
@@ -537,8 +565,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="NAMHOCLOP">
-    <End Role="NAMHOC" Type="acomptec_qlthptModel.Store.NAMHOCs" Multiplicity="1" />
-    <End Role="LOP" Type="acomptec_qlthptModel.Store.LOPs" Multiplicity="*" />
+    <End Role="NAMHOC" Type="acomptec_qlthptModel.Store.NAMHOC" Multiplicity="1" />
+    <End Role="LOP" Type="acomptec_qlthptModel.Store.LOP" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="NAMHOC">
         <PropertyRef Name="NH_MA" />
@@ -549,8 +577,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="LOPHOCSINH">
-    <End Role="LOP" Type="acomptec_qlthptModel.Store.LOPs" Multiplicity="1" />
-    <End Role="HOCSINH" Type="acomptec_qlthptModel.Store.HOCSINHs" Multiplicity="*" />
+    <End Role="LOP" Type="acomptec_qlthptModel.Store.LOP" Multiplicity="1" />
+    <End Role="HOCSINH" Type="acomptec_qlthptModel.Store.HOCSINH" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="LOP">
         <PropertyRef Name="LOP_MA" />
@@ -561,8 +589,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="COSOVATCHATTHIETBIGIANGDAY">
-    <End Role="COSOVATCHAT" Type="acomptec_qlthptModel.Store.COSOVATCHATs" Multiplicity="1" />
-    <End Role="THIETBIGIANGDAY" Type="acomptec_qlthptModel.Store.THIETBIGIANGDAYs" Multiplicity="*" />
+    <End Role="COSOVATCHAT" Type="acomptec_qlthptModel.Store.COSOVATCHAT" Multiplicity="1" />
+    <End Role="THIETBIGIANGDAY" Type="acomptec_qlthptModel.Store.THIETBIGIANGDAY" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="COSOVATCHAT">
         <PropertyRef Name="CSVC_MA" />
@@ -573,8 +601,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="COSOVATCHATTHIETBIDAYHOC">
-    <End Role="COSOVATCHAT" Type="acomptec_qlthptModel.Store.COSOVATCHATs" Multiplicity="1" />
-    <End Role="THIETBIDAYHOC" Type="acomptec_qlthptModel.Store.THIETBIDAYHOCs" Multiplicity="*" />
+    <End Role="COSOVATCHAT" Type="acomptec_qlthptModel.Store.COSOVATCHAT" Multiplicity="1" />
+    <End Role="THIETBIDAYHOC" Type="acomptec_qlthptModel.Store.THIETBIDAYHOC" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="COSOVATCHAT">
         <PropertyRef Name="CSVC_MA" />
@@ -585,8 +613,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="COSOVATCHATTINHTRANG">
-    <End Role="COSOVATCHAT" Type="acomptec_qlthptModel.Store.COSOVATCHATs" Multiplicity="1" />
-    <End Role="TINHTRANG" Type="acomptec_qlthptModel.Store.TINHTRANGs" Multiplicity="*" />
+    <End Role="COSOVATCHAT" Type="acomptec_qlthptModel.Store.COSOVATCHAT" Multiplicity="1" />
+    <End Role="TINHTRANG" Type="acomptec_qlthptModel.Store.TINHTRANG" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="COSOVATCHAT">
         <PropertyRef Name="CSVC_MA" />
@@ -597,8 +625,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="PHONGHOCCOSOVATCHAT">
-    <End Role="PHONGHOC" Type="acomptec_qlthptModel.Store.PHONGHOCs" Multiplicity="1" />
-    <End Role="COSOVATCHAT" Type="acomptec_qlthptModel.Store.COSOVATCHATs" Multiplicity="*" />
+    <End Role="PHONGHOC" Type="acomptec_qlthptModel.Store.PHONGHOC" Multiplicity="1" />
+    <End Role="COSOVATCHAT" Type="acomptec_qlthptModel.Store.COSOVATCHAT" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="PHONGHOC">
         <PropertyRef Name="PH_MA" />
@@ -609,8 +637,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="DANTOCHOCSINH">
-    <End Role="DANTOC" Type="acomptec_qlthptModel.Store.DANTOCs" Multiplicity="1" />
-    <End Role="HOCSINH" Type="acomptec_qlthptModel.Store.HOCSINHs" Multiplicity="*" />
+    <End Role="DANTOC" Type="acomptec_qlthptModel.Store.DANTOC" Multiplicity="1" />
+    <End Role="HOCSINH" Type="acomptec_qlthptModel.Store.HOCSINH" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="DANTOC">
         <PropertyRef Name="DT_MA" />
@@ -621,8 +649,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="BACLUONGTHONGTINLUONG">
-    <End Role="BACLUONG" Type="acomptec_qlthptModel.Store.BACLUONGs" Multiplicity="1" />
-    <End Role="THONGTINLUONG" Type="acomptec_qlthptModel.Store.THONGTINLUONGs" Multiplicity="*" />
+    <End Role="BACLUONG" Type="acomptec_qlthptModel.Store.BACLUONG" Multiplicity="1" />
+    <End Role="THONGTINLUONG" Type="acomptec_qlthptModel.Store.THONGTINLUONG" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="BACLUONG">
         <PropertyRef Name="BL_MA" />
@@ -632,21 +660,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="CANBOTHONGTINLUONG">
-    <End Role="CANBO" Type="acomptec_qlthptModel.Store.CANBOes" Multiplicity="*" />
-    <End Role="THONGTINLUONG" Type="acomptec_qlthptModel.Store.THONGTINLUONGs" Multiplicity="1" />
-    <ReferentialConstraint>
-      <Principal Role="THONGTINLUONG">
-        <PropertyRef Name="TTL_MA" />
-      </Principal>
-      <Dependent Role="CANBO">
-        <PropertyRef Name="THONGTINLUONGs_TTL_MA" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="COQUANCANBO">
-    <End Role="COQUAN" Type="acomptec_qlthptModel.Store.COQUANs" Multiplicity="1" />
-    <End Role="CANBO" Type="acomptec_qlthptModel.Store.CANBOes" Multiplicity="*" />
+    <End Role="COQUAN" Type="acomptec_qlthptModel.Store.COQUAN" Multiplicity="1" />
+    <End Role="CANBO" Type="acomptec_qlthptModel.Store.CANBO" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="COQUAN">
         <PropertyRef Name="CQ_MA" />
@@ -657,8 +673,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="NGACHLUONGTHONGTINLUONG">
-    <End Role="NGACHLUONG" Type="acomptec_qlthptModel.Store.NGACHLUONGs" Multiplicity="1" />
-    <End Role="THONGTINLUONG" Type="acomptec_qlthptModel.Store.THONGTINLUONGs" Multiplicity="*" />
+    <End Role="NGACHLUONG" Type="acomptec_qlthptModel.Store.NGACHLUONG" Multiplicity="1" />
+    <End Role="THONGTINLUONG" Type="acomptec_qlthptModel.Store.THONGTINLUONG" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="NGACHLUONG">
         <PropertyRef Name="NL_MA" />
@@ -669,8 +685,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="THOIKHOABIEUMONHOC">
-    <End Role="THOIKHOABIEU" Type="acomptec_qlthptModel.Store.THOIKHOABIEUs" Multiplicity="1" />
-    <End Role="MONHOC" Type="acomptec_qlthptModel.Store.MONHOCs" Multiplicity="*" />
+    <End Role="THOIKHOABIEU" Type="acomptec_qlthptModel.Store.THOIKHOABIEU" Multiplicity="1" />
+    <End Role="MONHOC" Type="acomptec_qlthptModel.Store.MONHOC" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="THOIKHOABIEU">
         <PropertyRef Name="TKB_MA" />
@@ -681,8 +697,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="THOIKHOABIEUTIETHOC">
-    <End Role="THOIKHOABIEU" Type="acomptec_qlthptModel.Store.THOIKHOABIEUs" Multiplicity="1" />
-    <End Role="TIETHOC" Type="acomptec_qlthptModel.Store.TIETHOCs" Multiplicity="*" />
+    <End Role="THOIKHOABIEU" Type="acomptec_qlthptModel.Store.THOIKHOABIEU" Multiplicity="1" />
+    <End Role="TIETHOC" Type="acomptec_qlthptModel.Store.TIETHOC" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="THOIKHOABIEU">
         <PropertyRef Name="TKB_MA" />
@@ -693,8 +709,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="THOIKHOABIEUTHU">
-    <End Role="THOIKHOABIEU" Type="acomptec_qlthptModel.Store.THOIKHOABIEUs" Multiplicity="1" />
-    <End Role="THU" Type="acomptec_qlthptModel.Store.THUs" Multiplicity="*" />
+    <End Role="THOIKHOABIEU" Type="acomptec_qlthptModel.Store.THOIKHOABIEU" Multiplicity="1" />
+    <End Role="THU" Type="acomptec_qlthptModel.Store.THU" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="THOIKHOABIEU">
         <PropertyRef Name="TKB_MA" />
@@ -704,21 +720,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="HOCKySODANHGIA">
-    <End Role="HOCKy" Type="acomptec_qlthptModel.Store.HOCKies" Multiplicity="1" />
-    <End Role="SODANHGIA" Type="acomptec_qlthptModel.Store.SODANHGIAs" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="HOCKy">
-        <PropertyRef Name="HK_MA" />
-      </Principal>
-      <Dependent Role="SODANHGIA">
-        <PropertyRef Name="HOCKy_HK_MA" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="LOPTHOIKHOABIEU">
-    <End Role="LOP" Type="acomptec_qlthptModel.Store.LOPs" Multiplicity="1" />
-    <End Role="THOIKHOABIEU" Type="acomptec_qlthptModel.Store.THOIKHOABIEUs" Multiplicity="*" />
+    <End Role="LOP" Type="acomptec_qlthptModel.Store.LOP" Multiplicity="1" />
+    <End Role="THOIKHOABIEU" Type="acomptec_qlthptModel.Store.THOIKHOABIEU" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="LOP">
         <PropertyRef Name="LOP_MA" />
@@ -729,8 +733,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="CANBOTHONGTINDAOTAO">
-    <End Role="CANBO" Type="acomptec_qlthptModel.Store.CANBOes" Multiplicity="1" />
-    <End Role="THONGTINDAOTAO" Type="acomptec_qlthptModel.Store.THONGTINDAOTAOs" Multiplicity="*" />
+    <End Role="CANBO" Type="acomptec_qlthptModel.Store.CANBO" Multiplicity="1" />
+    <End Role="THONGTINDAOTAO" Type="acomptec_qlthptModel.Store.THONGTINDAOTAO" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="CANBO">
         <PropertyRef Name="CB_MA" />
@@ -741,8 +745,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="THONGTINDAOTAOCHUYENNGANH">
-    <End Role="THONGTINDAOTAO" Type="acomptec_qlthptModel.Store.THONGTINDAOTAOs" Multiplicity="1" />
-    <End Role="CHUYENNGANH" Type="acomptec_qlthptModel.Store.CHUYENNGANHs" Multiplicity="*" />
+    <End Role="THONGTINDAOTAO" Type="acomptec_qlthptModel.Store.THONGTINDAOTAO" Multiplicity="1" />
+    <End Role="CHUYENNGANH" Type="acomptec_qlthptModel.Store.CHUYENNGANH" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="THONGTINDAOTAO">
         <PropertyRef Name="TTDT_MA" />
@@ -753,8 +757,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="THONGTINDAOTAOHINHTHUC">
-    <End Role="THONGTINDAOTAO" Type="acomptec_qlthptModel.Store.THONGTINDAOTAOs" Multiplicity="*" />
-    <End Role="HINHTHUC" Type="acomptec_qlthptModel.Store.HINHTHUCs" Multiplicity="1" />
+    <End Role="THONGTINDAOTAO" Type="acomptec_qlthptModel.Store.THONGTINDAOTAO" Multiplicity="*" />
+    <End Role="HINHTHUC" Type="acomptec_qlthptModel.Store.HINHTHUC" Multiplicity="1" />
     <ReferentialConstraint>
       <Principal Role="HINHTHUC">
         <PropertyRef Name="HT_MA" />
@@ -765,7 +769,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="CANBOCHITIET_CHUCVU">
-    <End Role="CANBO" Type="acomptec_qlthptModel.Store.CANBOes" Multiplicity="1" />
+    <End Role="CANBO" Type="acomptec_qlthptModel.Store.CANBO" Multiplicity="1" />
     <End Role="CHITIET_CHUCVU" Type="acomptec_qlthptModel.Store.CHITIET_CHUCVU" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="CANBO">
@@ -777,7 +781,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="CHUCVUCHITIET_CHUCVU">
-    <End Role="CHUCVU" Type="acomptec_qlthptModel.Store.CHUCVUs" Multiplicity="1" />
+    <End Role="CHUCVU" Type="acomptec_qlthptModel.Store.CHUCVU" Multiplicity="1" />
     <End Role="CHITIET_CHUCVU" Type="acomptec_qlthptModel.Store.CHITIET_CHUCVU" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="CHUCVU">
@@ -789,8 +793,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="THONGTINDAOTAOVANBANG">
-    <End Role="THONGTINDAOTAO" Type="acomptec_qlthptModel.Store.THONGTINDAOTAOs" Multiplicity="1" />
-    <End Role="VANBANG" Type="acomptec_qlthptModel.Store.VANBANGs" Multiplicity="*" />
+    <End Role="THONGTINDAOTAO" Type="acomptec_qlthptModel.Store.THONGTINDAOTAO" Multiplicity="1" />
+    <End Role="VANBANG" Type="acomptec_qlthptModel.Store.VANBANG" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="THONGTINDAOTAO">
         <PropertyRef Name="TTDT_MA" />
@@ -800,164 +804,222 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="CANBOTHONGTINLUONG">
+    <End Role="CANBO" Type="acomptec_qlthptModel.Store.CANBO" Multiplicity="1" />
+    <End Role="THONGTINLUONG" Type="acomptec_qlthptModel.Store.THONGTINLUONG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CANBO">
+        <PropertyRef Name="CB_MA" />
+      </Principal>
+      <Dependent Role="THONGTINLUONG">
+        <PropertyRef Name="CANBO_CB_MA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HOCKYSODANHGIA">
+    <End Role="HOCKY" Type="acomptec_qlthptModel.Store.HOCKY" Multiplicity="1" />
+    <End Role="SODANHGIA" Type="acomptec_qlthptModel.Store.SODANHGIA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HOCKY">
+        <PropertyRef Name="HK_MA" />
+      </Principal>
+      <Dependent Role="SODANHGIA">
+        <PropertyRef Name="HOCKY_HK_MA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CANBOKHENTHUONGCB">
+    <End Role="CANBO" Type="acomptec_qlthptModel.Store.CANBO" Multiplicity="1" />
+    <End Role="KHENTHUONGCB" Type="acomptec_qlthptModel.Store.KHENTHUONGCB" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CANBO">
+        <PropertyRef Name="CB_MA" />
+      </Principal>
+      <Dependent Role="KHENTHUONGCB">
+        <PropertyRef Name="CANBO_CB_MA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CANBOKYLUATCB">
+    <End Role="CANBO" Type="acomptec_qlthptModel.Store.CANBO" Multiplicity="1" />
+    <End Role="KYLUATCB" Type="acomptec_qlthptModel.Store.KYLUATCB" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CANBO">
+        <PropertyRef Name="CB_MA" />
+      </Principal>
+      <Dependent Role="KYLUATCB">
+        <PropertyRef Name="CANBO_CB_MA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="acomptec_qlthptModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="acomptec_qlthptEntities3" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="CHITIETDANHGIAs" EntityType="acomptec_qlthptModel.CHITIETDANHGIA" />
-          <EntitySet Name="KHENTHUONGs" EntityType="acomptec_qlthptModel.KHENTHUONG" />
-          <EntitySet Name="KHOIs" EntityType="acomptec_qlthptModel.KHOIs" />
-          <EntitySet Name="KYLUATs" EntityType="acomptec_qlthptModel.KYLUAT" />
-          <EntitySet Name="LOPs" EntityType="acomptec_qlthptModel.LOP" />
-          <EntitySet Name="NAMHOCs" EntityType="acomptec_qlthptModel.NAMHOC" />
-          <EntitySet Name="THOIKHOABIEUs" EntityType="acomptec_qlthptModel.THOIKHOABIEU" />
+          <EntitySet Name="CHITIETDANHGIA" EntityType="acomptec_qlthptModel.CHITIETDANHGIA" />
+          <EntitySet Name="KHENTHUONG" EntityType="acomptec_qlthptModel.KHENTHUONG" />
+          <EntitySet Name="KHOI" EntityType="acomptec_qlthptModel.KHOI" />
+          <EntitySet Name="KYLUAT" EntityType="acomptec_qlthptModel.KYLUAT" />
+          <EntitySet Name="LOP" EntityType="acomptec_qlthptModel.LOP" />
+          <EntitySet Name="NAMHOC" EntityType="acomptec_qlthptModel.NAMHOC" />
+          <EntitySet Name="THOIKHOABIEU" EntityType="acomptec_qlthptModel.THOIKHOABIEU" />
           <EntitySet Name="UpdateImages" EntityType="acomptec_qlthptModel.UpdateImage" />
-          <EntitySet Name="BACLUONGs" EntityType="acomptec_qlthptModel.BACLUONG" />
-          <EntitySet Name="CANBOes" EntityType="acomptec_qlthptModel.CANBO" />
-          <EntitySet Name="CHUCVUs" EntityType="acomptec_qlthptModel.CHUCVU" />
-          <EntitySet Name="CHUYENNGANHs" EntityType="acomptec_qlthptModel.CHUYENNGANH" />
-          <EntitySet Name="COQUANs" EntityType="acomptec_qlthptModel.COQUAN" />
-          <EntitySet Name="COSOVATCHATs" EntityType="acomptec_qlthptModel.COSOVATCHAT" />
-          <EntitySet Name="DANTOCs" EntityType="acomptec_qlthptModel.DANTOC" />
-          <EntitySet Name="HINHTHUCs" EntityType="acomptec_qlthptModel.HINHTHUC" />
-          <EntitySet Name="HOCKies" EntityType="acomptec_qlthptModel.HOCKy" />
-          <EntitySet Name="HOCSINHs" EntityType="acomptec_qlthptModel.HOCSINH" />
-          <EntitySet Name="MONHOCs" EntityType="acomptec_qlthptModel.MONHOC" />
-          <EntitySet Name="NGACHLUONGs" EntityType="acomptec_qlthptModel.NGACHLUONG" />
-          <EntitySet Name="PHONGHOCs" EntityType="acomptec_qlthptModel.PHONGHOC" />
-          <EntitySet Name="QUANHUYENs" EntityType="acomptec_qlthptModel.QUANHUYEN" />
-          <EntitySet Name="SODANHGIAs" EntityType="acomptec_qlthptModel.SODANHGIA" />
-          <EntitySet Name="THIETBIDAYHOCs" EntityType="acomptec_qlthptModel.THIETBIDAYHOC" />
-          <EntitySet Name="THIETBIGIANGDAYs" EntityType="acomptec_qlthptModel.THIETBIGIANGDAY" />
-          <EntitySet Name="THONGTINDAOTAOs" EntityType="acomptec_qlthptModel.THONGTINDAOTAO" />
-          <EntitySet Name="THONGTINLUONGs" EntityType="acomptec_qlthptModel.THONGTINLUONG" />
-          <EntitySet Name="THUs" EntityType="acomptec_qlthptModel.THU" />
-          <EntitySet Name="TIETHOCs" EntityType="acomptec_qlthptModel.TIETHOC" />
-          <EntitySet Name="TINHTHANHs" EntityType="acomptec_qlthptModel.TINHTHANH" />
-          <EntitySet Name="TINHTRANGs" EntityType="acomptec_qlthptModel.TINHTRANG" />
-          <EntitySet Name="VANBANGs" EntityType="acomptec_qlthptModel.VANBANG" />
-          <EntitySet Name="XAPHUONGs" EntityType="acomptec_qlthptModel.XAPHUONG" />
+          <EntitySet Name="BACLUONG" EntityType="acomptec_qlthptModel.BACLUONG" />
+          <EntitySet Name="CANBO" EntityType="acomptec_qlthptModel.CANBO" />
+          <EntitySet Name="CHUCVU" EntityType="acomptec_qlthptModel.CHUCVU" />
+          <EntitySet Name="CHUYENNGANH" EntityType="acomptec_qlthptModel.CHUYENNGANH" />
+          <EntitySet Name="COQUAN" EntityType="acomptec_qlthptModel.COQUAN" />
+          <EntitySet Name="COSOVATCHAT" EntityType="acomptec_qlthptModel.COSOVATCHAT" />
+          <EntitySet Name="DANTOC" EntityType="acomptec_qlthptModel.DANTOC" />
+          <EntitySet Name="HINHTHUC" EntityType="acomptec_qlthptModel.HINHTHUC" />
+          <EntitySet Name="HOCSINH" EntityType="acomptec_qlthptModel.HOCSINH" />
+          <EntitySet Name="MONHOC" EntityType="acomptec_qlthptModel.MONHOC" />
+          <EntitySet Name="NGACHLUONG" EntityType="acomptec_qlthptModel.NGACHLUONG" />
+          <EntitySet Name="PHONGHOC" EntityType="acomptec_qlthptModel.PHONGHOC" />
+          <EntitySet Name="QUANHUYEN" EntityType="acomptec_qlthptModel.QUANHUYEN" />
+          <EntitySet Name="SODANHGIA" EntityType="acomptec_qlthptModel.SODANHGIA" />
+          <EntitySet Name="THIETBIDAYHOC" EntityType="acomptec_qlthptModel.THIETBIDAYHOC" />
+          <EntitySet Name="THIETBIGIANGDAY" EntityType="acomptec_qlthptModel.THIETBIGIANGDAY" />
+          <EntitySet Name="THONGTINDAOTAO" EntityType="acomptec_qlthptModel.THONGTINDAOTAO" />
+          <EntitySet Name="THONGTINLUONG" EntityType="acomptec_qlthptModel.THONGTINLUONG" />
+          <EntitySet Name="THU" EntityType="acomptec_qlthptModel.THU" />
+          <EntitySet Name="TIETHOC" EntityType="acomptec_qlthptModel.TIETHOC" />
+          <EntitySet Name="TINHTHANH" EntityType="acomptec_qlthptModel.TINHTHANH" />
+          <EntitySet Name="TINHTRANG" EntityType="acomptec_qlthptModel.TINHTRANG" />
+          <EntitySet Name="VANBANG" EntityType="acomptec_qlthptModel.VANBANG" />
+          <EntitySet Name="XAPHUONG" EntityType="acomptec_qlthptModel.XAPHUONG" />
           <AssociationSet Name="TINHTHANHHOCSINH" Association="acomptec_qlthptModel.TINHTHANHHOCSINH">
-            <End Role="TINHTHANH" EntitySet="TINHTHANHs" />
-            <End Role="HOCSINH" EntitySet="HOCSINHs" />
+            <End Role="TINHTHANH" EntitySet="TINHTHANH" />
+            <End Role="HOCSINH" EntitySet="HOCSINH" />
           </AssociationSet>
           <AssociationSet Name="XAPHUONGHOCSINH" Association="acomptec_qlthptModel.XAPHUONGHOCSINH">
-            <End Role="XAPHUONG" EntitySet="XAPHUONGs" />
-            <End Role="HOCSINH" EntitySet="HOCSINHs" />
+            <End Role="XAPHUONG" EntitySet="XAPHUONG" />
+            <End Role="HOCSINH" EntitySet="HOCSINH" />
           </AssociationSet>
           <AssociationSet Name="QUANHUYENHOCSINH" Association="acomptec_qlthptModel.QUANHUYENHOCSINH">
-            <End Role="QUANHUYEN" EntitySet="QUANHUYENs" />
-            <End Role="HOCSINH" EntitySet="HOCSINHs" />
+            <End Role="QUANHUYEN" EntitySet="QUANHUYEN" />
+            <End Role="HOCSINH" EntitySet="HOCSINH" />
           </AssociationSet>
           <AssociationSet Name="HOCSINHKYLUAT" Association="acomptec_qlthptModel.HOCSINHKYLUAT">
-            <End Role="HOCSINH" EntitySet="HOCSINHs" />
-            <End Role="KYLUAT" EntitySet="KYLUATs" />
+            <End Role="HOCSINH" EntitySet="HOCSINH" />
+            <End Role="KYLUAT" EntitySet="KYLUAT" />
           </AssociationSet>
           <AssociationSet Name="HOCSINHCHITIETDANHGIA" Association="acomptec_qlthptModel.HOCSINHCHITIETDANHGIA">
-            <End Role="HOCSINH" EntitySet="HOCSINHs" />
-            <End Role="CHITIETDANHGIA" EntitySet="CHITIETDANHGIAs" />
+            <End Role="HOCSINH" EntitySet="HOCSINH" />
+            <End Role="CHITIETDANHGIA" EntitySet="CHITIETDANHGIA" />
           </AssociationSet>
           <AssociationSet Name="SODANHGIACHITIETDANHGIA" Association="acomptec_qlthptModel.SODANHGIACHITIETDANHGIA">
-            <End Role="SODANHGIA" EntitySet="SODANHGIAs" />
-            <End Role="CHITIETDANHGIA" EntitySet="CHITIETDANHGIAs" />
+            <End Role="SODANHGIA" EntitySet="SODANHGIA" />
+            <End Role="CHITIETDANHGIA" EntitySet="CHITIETDANHGIA" />
           </AssociationSet>
           <AssociationSet Name="HOCSINHKHENTHUONG" Association="acomptec_qlthptModel.HOCSINHKHENTHUONG">
-            <End Role="HOCSINH" EntitySet="HOCSINHs" />
-            <End Role="KHENTHUONG" EntitySet="KHENTHUONGs" />
+            <End Role="HOCSINH" EntitySet="HOCSINH" />
+            <End Role="KHENTHUONG" EntitySet="KHENTHUONG" />
           </AssociationSet>
           <AssociationSet Name="KHOIsLOP" Association="acomptec_qlthptModel.KHOIsLOP">
-            <End Role="KHOIs" EntitySet="KHOIs" />
-            <End Role="LOP" EntitySet="LOPs" />
+            <End Role="KHOIs" EntitySet="KHOI" />
+            <End Role="LOP" EntitySet="LOP" />
           </AssociationSet>
           <AssociationSet Name="NAMHOCLOP" Association="acomptec_qlthptModel.NAMHOCLOP">
-            <End Role="NAMHOC" EntitySet="NAMHOCs" />
-            <End Role="LOP" EntitySet="LOPs" />
+            <End Role="NAMHOC" EntitySet="NAMHOC" />
+            <End Role="LOP" EntitySet="LOP" />
           </AssociationSet>
           <AssociationSet Name="LOPHOCSINH" Association="acomptec_qlthptModel.LOPHOCSINH">
-            <End Role="LOP" EntitySet="LOPs" />
-            <End Role="HOCSINH" EntitySet="HOCSINHs" />
+            <End Role="LOP" EntitySet="LOP" />
+            <End Role="HOCSINH" EntitySet="HOCSINH" />
           </AssociationSet>
           <AssociationSet Name="COSOVATCHATTHIETBIGIANGDAY" Association="acomptec_qlthptModel.COSOVATCHATTHIETBIGIANGDAY">
-            <End Role="COSOVATCHAT" EntitySet="COSOVATCHATs" />
-            <End Role="THIETBIGIANGDAY" EntitySet="THIETBIGIANGDAYs" />
+            <End Role="COSOVATCHAT" EntitySet="COSOVATCHAT" />
+            <End Role="THIETBIGIANGDAY" EntitySet="THIETBIGIANGDAY" />
           </AssociationSet>
           <AssociationSet Name="COSOVATCHATTHIETBIDAYHOC" Association="acomptec_qlthptModel.COSOVATCHATTHIETBIDAYHOC">
-            <End Role="COSOVATCHAT" EntitySet="COSOVATCHATs" />
-            <End Role="THIETBIDAYHOC" EntitySet="THIETBIDAYHOCs" />
+            <End Role="COSOVATCHAT" EntitySet="COSOVATCHAT" />
+            <End Role="THIETBIDAYHOC" EntitySet="THIETBIDAYHOC" />
           </AssociationSet>
           <AssociationSet Name="COSOVATCHATTINHTRANG" Association="acomptec_qlthptModel.COSOVATCHATTINHTRANG">
-            <End Role="COSOVATCHAT" EntitySet="COSOVATCHATs" />
-            <End Role="TINHTRANG" EntitySet="TINHTRANGs" />
+            <End Role="COSOVATCHAT" EntitySet="COSOVATCHAT" />
+            <End Role="TINHTRANG" EntitySet="TINHTRANG" />
           </AssociationSet>
           <AssociationSet Name="PHONGHOCCOSOVATCHAT" Association="acomptec_qlthptModel.PHONGHOCCOSOVATCHAT">
-            <End Role="PHONGHOC" EntitySet="PHONGHOCs" />
-            <End Role="COSOVATCHAT" EntitySet="COSOVATCHATs" />
+            <End Role="PHONGHOC" EntitySet="PHONGHOC" />
+            <End Role="COSOVATCHAT" EntitySet="COSOVATCHAT" />
           </AssociationSet>
           <AssociationSet Name="DANTOCHOCSINH" Association="acomptec_qlthptModel.DANTOCHOCSINH">
-            <End Role="DANTOC" EntitySet="DANTOCs" />
-            <End Role="HOCSINH" EntitySet="HOCSINHs" />
+            <End Role="DANTOC" EntitySet="DANTOC" />
+            <End Role="HOCSINH" EntitySet="HOCSINH" />
           </AssociationSet>
           <AssociationSet Name="BACLUONGTHONGTINLUONG" Association="acomptec_qlthptModel.BACLUONGTHONGTINLUONG">
-            <End Role="BACLUONG" EntitySet="BACLUONGs" />
-            <End Role="THONGTINLUONG" EntitySet="THONGTINLUONGs" />
-          </AssociationSet>
-          <AssociationSet Name="CANBOTHONGTINLUONG" Association="acomptec_qlthptModel.CANBOTHONGTINLUONG">
-            <End Role="CANBO" EntitySet="CANBOes" />
-            <End Role="THONGTINLUONG" EntitySet="THONGTINLUONGs" />
+            <End Role="BACLUONG" EntitySet="BACLUONG" />
+            <End Role="THONGTINLUONG" EntitySet="THONGTINLUONG" />
           </AssociationSet>
           <AssociationSet Name="COQUANCANBO" Association="acomptec_qlthptModel.COQUANCANBO">
-            <End Role="COQUAN" EntitySet="COQUANs" />
-            <End Role="CANBO" EntitySet="CANBOes" />
+            <End Role="COQUAN" EntitySet="COQUAN" />
+            <End Role="CANBO" EntitySet="CANBO" />
           </AssociationSet>
           <AssociationSet Name="NGACHLUONGTHONGTINLUONG" Association="acomptec_qlthptModel.NGACHLUONGTHONGTINLUONG">
-            <End Role="NGACHLUONG" EntitySet="NGACHLUONGs" />
-            <End Role="THONGTINLUONG" EntitySet="THONGTINLUONGs" />
+            <End Role="NGACHLUONG" EntitySet="NGACHLUONG" />
+            <End Role="THONGTINLUONG" EntitySet="THONGTINLUONG" />
           </AssociationSet>
           <AssociationSet Name="THOIKHOABIEUMONHOC" Association="acomptec_qlthptModel.THOIKHOABIEUMONHOC">
-            <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEUs" />
-            <End Role="MONHOC" EntitySet="MONHOCs" />
+            <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEU" />
+            <End Role="MONHOC" EntitySet="MONHOC" />
           </AssociationSet>
           <AssociationSet Name="THOIKHOABIEUTIETHOC" Association="acomptec_qlthptModel.THOIKHOABIEUTIETHOC">
-            <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEUs" />
-            <End Role="TIETHOC" EntitySet="TIETHOCs" />
+            <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEU" />
+            <End Role="TIETHOC" EntitySet="TIETHOC" />
           </AssociationSet>
           <AssociationSet Name="THOIKHOABIEUTHU" Association="acomptec_qlthptModel.THOIKHOABIEUTHU">
-            <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEUs" />
-            <End Role="THU" EntitySet="THUs" />
-          </AssociationSet>
-          <AssociationSet Name="HOCKySODANHGIA" Association="acomptec_qlthptModel.HOCKySODANHGIA">
-            <End Role="HOCKy" EntitySet="HOCKies" />
-            <End Role="SODANHGIA" EntitySet="SODANHGIAs" />
+            <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEU" />
+            <End Role="THU" EntitySet="THU" />
           </AssociationSet>
           <AssociationSet Name="LOPTHOIKHOABIEU" Association="acomptec_qlthptModel.LOPTHOIKHOABIEU">
-            <End Role="LOP" EntitySet="LOPs" />
-            <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEUs" />
+            <End Role="LOP" EntitySet="LOP" />
+            <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEU" />
           </AssociationSet>
           <EntitySet Name="CHITIET_CHUCVU" EntityType="acomptec_qlthptModel.CHITIET_CHUCVU" />
           <AssociationSet Name="CANBOTHONGTINDAOTAO" Association="acomptec_qlthptModel.CANBOTHONGTINDAOTAO">
-            <End Role="CANBO" EntitySet="CANBOes" />
-            <End Role="THONGTINDAOTAO" EntitySet="THONGTINDAOTAOs" />
+            <End Role="CANBO" EntitySet="CANBO" />
+            <End Role="THONGTINDAOTAO" EntitySet="THONGTINDAOTAO" />
           </AssociationSet>
           <AssociationSet Name="THONGTINDAOTAOCHUYENNGANH" Association="acomptec_qlthptModel.THONGTINDAOTAOCHUYENNGANH">
-            <End Role="THONGTINDAOTAO" EntitySet="THONGTINDAOTAOs" />
-            <End Role="CHUYENNGANH" EntitySet="CHUYENNGANHs" />
+            <End Role="THONGTINDAOTAO" EntitySet="THONGTINDAOTAO" />
+            <End Role="CHUYENNGANH" EntitySet="CHUYENNGANH" />
           </AssociationSet>
           <AssociationSet Name="THONGTINDAOTAOHINHTHUC" Association="acomptec_qlthptModel.THONGTINDAOTAOHINHTHUC">
-            <End Role="THONGTINDAOTAO" EntitySet="THONGTINDAOTAOs" />
-            <End Role="HINHTHUC" EntitySet="HINHTHUCs" />
+            <End Role="THONGTINDAOTAO" EntitySet="THONGTINDAOTAO" />
+            <End Role="HINHTHUC" EntitySet="HINHTHUC" />
           </AssociationSet>
           <AssociationSet Name="CANBOCHITIET_CHUCVU" Association="acomptec_qlthptModel.CANBOCHITIET_CHUCVU">
-            <End Role="CANBO" EntitySet="CANBOes" />
+            <End Role="CANBO" EntitySet="CANBO" />
             <End Role="CHITIET_CHUCVU" EntitySet="CHITIET_CHUCVU" />
           </AssociationSet>
           <AssociationSet Name="CHUCVUCHITIET_CHUCVU" Association="acomptec_qlthptModel.CHUCVUCHITIET_CHUCVU">
-            <End Role="CHUCVU" EntitySet="CHUCVUs" />
+            <End Role="CHUCVU" EntitySet="CHUCVU" />
             <End Role="CHITIET_CHUCVU" EntitySet="CHITIET_CHUCVU" />
           </AssociationSet>
           <AssociationSet Name="THONGTINDAOTAOVANBANG" Association="acomptec_qlthptModel.THONGTINDAOTAOVANBANG">
-            <End Role="THONGTINDAOTAO" EntitySet="THONGTINDAOTAOs" />
-            <End Role="VANBANG" EntitySet="VANBANGs" />
+            <End Role="THONGTINDAOTAO" EntitySet="THONGTINDAOTAO" />
+            <End Role="VANBANG" EntitySet="VANBANG" />
+          </AssociationSet>
+          <AssociationSet Name="CANBOTHONGTINLUONG" Association="acomptec_qlthptModel.CANBOTHONGTINLUONG">
+            <End Role="CANBO" EntitySet="CANBO" />
+            <End Role="THONGTINLUONG" EntitySet="THONGTINLUONG" />
+          </AssociationSet>
+          <EntitySet Name="HOCKY" EntityType="acomptec_qlthptModel.HOCKY" />
+          <AssociationSet Name="HOCKYSODANHGIA" Association="acomptec_qlthptModel.HOCKYSODANHGIA">
+            <End Role="HOCKY" EntitySet="HOCKY" />
+            <End Role="SODANHGIA" EntitySet="SODANHGIA" />
+          </AssociationSet>
+          <EntitySet Name="KHENTHUONGCB" EntityType="acomptec_qlthptModel.KHENTHUONGCB" />
+          <EntitySet Name="KYLUATCB" EntityType="acomptec_qlthptModel.KYLUATCB" />
+          <AssociationSet Name="CANBOKHENTHUONGCB" Association="acomptec_qlthptModel.CANBOKHENTHUONGCB">
+            <End Role="CANBO" EntitySet="CANBO" />
+            <End Role="KHENTHUONGCB" EntitySet="KHENTHUONGCB" />
+          </AssociationSet>
+          <AssociationSet Name="CANBOKYLUATCB" Association="acomptec_qlthptModel.CANBOKYLUATCB">
+            <End Role="CANBO" EntitySet="CANBO" />
+            <End Role="KYLUATCB" EntitySet="KYLUATCB" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="CHITIETDANHGIA">
@@ -979,7 +1041,7 @@
           <Property Name="KT_GHICHU" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="HOCSINH" Relationship="acomptec_qlthptModel.HOCSINHKHENTHUONG" FromRole="KHENTHUONG" ToRole="HOCSINH" />
         </EntityType>
-        <EntityType Name="KHOIs">
+        <EntityType Name="KHOI">
           <Key>
             <PropertyRef Name="KHOI_MA" />
           </Key>
@@ -1029,9 +1091,9 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Image_url" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="Name_im" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" Type="String" />
+          <Property Name="Image_url" MaxLength="100" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="Name_im" MaxLength="100" FixedLength="false" Unicode="true" Type="String" />
         </EntityType>
         <EntityType Name="BACLUONG">
           <Key>
@@ -1051,10 +1113,12 @@
           <Property Name="CB_DIACHI" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="CB_NGAYSINH" Type="DateTime" Precision="3" />
           <Property Name="CB_CMND" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="THONGTINLUONGs" Relationship="acomptec_qlthptModel.CANBOTHONGTINLUONG" FromRole="CANBO" ToRole="THONGTINLUONG" />
           <NavigationProperty Name="COQUAN" Relationship="acomptec_qlthptModel.COQUANCANBO" FromRole="CANBO" ToRole="COQUAN" />
           <NavigationProperty Name="THONGTINDAOTAOs" Relationship="acomptec_qlthptModel.CANBOTHONGTINDAOTAO" FromRole="CANBO" ToRole="THONGTINDAOTAO" />
           <NavigationProperty Name="CHITIET_CHUCVU" Relationship="acomptec_qlthptModel.CANBOCHITIET_CHUCVU" FromRole="CANBO" ToRole="CHITIET_CHUCVU" />
+          <NavigationProperty Name="THONGTINLUONGs" Relationship="acomptec_qlthptModel.CANBOTHONGTINLUONG" FromRole="CANBO" ToRole="THONGTINLUONG" />
+          <NavigationProperty Name="KHENTHUONGCBs" Relationship="acomptec_qlthptModel.CANBOKHENTHUONGCB" FromRole="CANBO" ToRole="KHENTHUONGCB" />
+          <NavigationProperty Name="KYLUATCBs" Relationship="acomptec_qlthptModel.CANBOKYLUATCB" FromRole="CANBO" ToRole="KYLUATCB" />
         </EntityType>
         <EntityType Name="CHUCVU">
           <Key>
@@ -1106,14 +1170,6 @@
           <Property Name="HT_MA" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="HT_TEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="THONGTINDAOTAO" Relationship="acomptec_qlthptModel.THONGTINDAOTAOHINHTHUC" FromRole="HINHTHUC" ToRole="THONGTINDAOTAO" />
-        </EntityType>
-        <EntityType Name="HOCKy">
-          <Key>
-            <PropertyRef Name="HK_MA" />
-          </Key>
-          <Property Name="HK_MA" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Name="HK_TEN" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="SODANHGIAs" Relationship="acomptec_qlthptModel.HOCKySODANHGIA" FromRole="HOCKy" ToRole="SODANHGIA" />
         </EntityType>
         <EntityType Name="HOCSINH">
           <Key>
@@ -1173,7 +1229,7 @@
           <Property Name="SDG_DIEM" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="SDG_GHICHU" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="CHITIETDANHGIAs" Relationship="acomptec_qlthptModel.SODANHGIACHITIETDANHGIA" FromRole="SODANHGIA" ToRole="CHITIETDANHGIA" />
-          <NavigationProperty Name="HOCKy" Relationship="acomptec_qlthptModel.HOCKySODANHGIA" FromRole="SODANHGIA" ToRole="HOCKy" />
+          <NavigationProperty Name="HOCKY" Relationship="acomptec_qlthptModel.HOCKYSODANHGIA" FromRole="SODANHGIA" ToRole="HOCKY" />
         </EntityType>
         <EntityType Name="THIETBIDAYHOC">
           <Key>
@@ -1209,8 +1265,8 @@
           <Property Name="TTL_NGAYNHANLUONG" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="TTL_HESOLUONG" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="BACLUONG" Relationship="acomptec_qlthptModel.BACLUONGTHONGTINLUONG" FromRole="THONGTINLUONG" ToRole="BACLUONG" />
-          <NavigationProperty Name="CANBO" Relationship="acomptec_qlthptModel.CANBOTHONGTINLUONG" FromRole="THONGTINLUONG" ToRole="CANBO" />
           <NavigationProperty Name="NGACHLUONG" Relationship="acomptec_qlthptModel.NGACHLUONGTHONGTINLUONG" FromRole="THONGTINLUONG" ToRole="NGACHLUONG" />
+          <NavigationProperty Name="CANBO" Relationship="acomptec_qlthptModel.CANBOTHONGTINLUONG" FromRole="THONGTINLUONG" ToRole="CANBO" />
         </EntityType>
         <EntityType Name="THU">
           <Key>
@@ -1289,7 +1345,7 @@
           <End Type="acomptec_qlthptModel.KHENTHUONG" Role="KHENTHUONG" Multiplicity="*" />
         </Association>
         <Association Name="KHOIsLOP">
-          <End Type="acomptec_qlthptModel.KHOIs" Role="KHOIs" Multiplicity="1" />
+          <End Type="acomptec_qlthptModel.KHOI" Role="KHOIs" Multiplicity="1" />
           <End Type="acomptec_qlthptModel.LOP" Role="LOP" Multiplicity="*" />
         </Association>
         <Association Name="NAMHOCLOP">
@@ -1324,10 +1380,6 @@
           <End Type="acomptec_qlthptModel.BACLUONG" Role="BACLUONG" Multiplicity="1" />
           <End Type="acomptec_qlthptModel.THONGTINLUONG" Role="THONGTINLUONG" Multiplicity="*" />
         </Association>
-        <Association Name="CANBOTHONGTINLUONG">
-          <End Type="acomptec_qlthptModel.CANBO" Role="CANBO" Multiplicity="1" />
-          <End Type="acomptec_qlthptModel.THONGTINLUONG" Role="THONGTINLUONG" Multiplicity="1" />
-        </Association>
         <Association Name="COQUANCANBO">
           <End Type="acomptec_qlthptModel.COQUAN" Role="COQUAN" Multiplicity="1" />
           <End Type="acomptec_qlthptModel.CANBO" Role="CANBO" Multiplicity="*" />
@@ -1347,10 +1399,6 @@
         <Association Name="THOIKHOABIEUTHU">
           <End Type="acomptec_qlthptModel.THOIKHOABIEU" Role="THOIKHOABIEU" Multiplicity="1" />
           <End Type="acomptec_qlthptModel.THU" Role="THU" Multiplicity="*" />
-        </Association>
-        <Association Name="HOCKySODANHGIA">
-          <End Type="acomptec_qlthptModel.HOCKy" Role="HOCKy" Multiplicity="1" />
-          <End Type="acomptec_qlthptModel.SODANHGIA" Role="SODANHGIA" Multiplicity="*" />
         </Association>
         <Association Name="LOPTHOIKHOABIEU">
           <End Type="acomptec_qlthptModel.LOP" Role="LOP" Multiplicity="1" />
@@ -1389,23 +1437,65 @@
           <End Type="acomptec_qlthptModel.THONGTINDAOTAO" Role="THONGTINDAOTAO" Multiplicity="1" />
           <End Type="acomptec_qlthptModel.VANBANG" Role="VANBANG" Multiplicity="*" />
         </Association>
+        <Association Name="CANBOTHONGTINLUONG">
+          <End Type="acomptec_qlthptModel.CANBO" Role="CANBO" Multiplicity="1" />
+          <End Type="acomptec_qlthptModel.THONGTINLUONG" Role="THONGTINLUONG" Multiplicity="*" />
+        </Association>
+        <EntityType Name="HOCKY">
+          <Key>
+            <PropertyRef Name="HK_MA" />
+          </Key>
+          <Property Name="HK_MA" Type="String" Nullable="false" annotation:StoreGeneratedPattern="None" Unicode="false" MaxLength="200" />
+          <NavigationProperty Name="SODANHGIAs" Relationship="acomptec_qlthptModel.HOCKYSODANHGIA" FromRole="HOCKY" ToRole="SODANHGIA" />
+          <Property Name="HK_TEN" Type="String" Nullable="false" />
+        </EntityType>
+        <Association Name="HOCKYSODANHGIA">
+          <End Type="acomptec_qlthptModel.HOCKY" Role="HOCKY" Multiplicity="1" />
+          <End Type="acomptec_qlthptModel.SODANHGIA" Role="SODANHGIA" Multiplicity="*" />
+        </Association>
+        <EntityType Name="KHENTHUONGCB">
+          <Key>
+            <PropertyRef Name="KTCB_MA" />
+          </Key>
+          <Property Name="KTCB_MA" Type="String" Nullable="false" annotation:StoreGeneratedPattern="Identity" Unicode="false" MaxLength="200" />
+          <Property Name="KTCB_NGAY" Type="String" Nullable="false" />
+          <Property Name="KTCB_THANHTICH" Type="String" Nullable="false" />
+          <NavigationProperty Name="CANBO" Relationship="acomptec_qlthptModel.CANBOKHENTHUONGCB" FromRole="KHENTHUONGCB" ToRole="CANBO" />
+        </EntityType>
+        <EntityType Name="KYLUATCB">
+          <Key>
+            <PropertyRef Name="KLCB_MA" />
+          </Key>
+          <Property Name="KLCB_MA" Type="String" Nullable="false" annotation:StoreGeneratedPattern="Identity" Unicode="false" MaxLength="200" />
+          <Property Name="KLCB_NGAY" Type="String" Nullable="false" />
+          <Property Name="KLCB_HT" Type="String" Nullable="false" />
+          <NavigationProperty Name="CANBO" Relationship="acomptec_qlthptModel.CANBOKYLUATCB" FromRole="KYLUATCB" ToRole="CANBO" />
+        </EntityType>
+        <Association Name="CANBOKHENTHUONGCB">
+          <End Type="acomptec_qlthptModel.CANBO" Role="CANBO" Multiplicity="1" />
+          <End Type="acomptec_qlthptModel.KHENTHUONGCB" Role="KHENTHUONGCB" Multiplicity="*" />
+        </Association>
+        <Association Name="CANBOKYLUATCB">
+          <End Type="acomptec_qlthptModel.CANBO" Role="CANBO" Multiplicity="1" />
+          <End Type="acomptec_qlthptModel.KYLUATCB" Role="KYLUATCB" Multiplicity="*" />
+        </Association>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
     <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="acomptec_qlthptModelStoreContainer" CdmEntityContainer="acomptec_qlthptEntities3">
-    <EntitySetMapping Name="CHITIETDANHGIAs">
+    <EntitySetMapping Name="CHITIETDANHGIA">
       <EntityTypeMapping TypeName="IsTypeOf(acomptec_qlthptModel.CHITIETDANHGIA)">
-        <MappingFragment StoreEntitySet="CHITIETDANHGIAs">
+        <MappingFragment StoreEntitySet="CHITIETDANHGIA">
           <ScalarProperty Name="CTDG_MA" ColumnName="CTDG_MA" />
           <ScalarProperty Name="CTDG_NGAYDG" ColumnName="CTDG_NGAYDG" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="KHENTHUONGs">
+    <EntitySetMapping Name="KHENTHUONG">
       <EntityTypeMapping TypeName="IsTypeOf(acomptec_qlthptModel.KHENTHUONG)">
-        <MappingFragment StoreEntitySet="KHENTHUONGs">
+        <MappingFragment StoreEntitySet="KHENTHUONG">
           <ScalarProperty Name="KT_MA" ColumnName="KT_MA" />
           <ScalarProperty Name="KT_THANHTICH" ColumnName="KT_THANHTICH" />
           <ScalarProperty Name="KT_NGAYKHENTHUONG" ColumnName="KT_NGAYKHENTHUONG" />
@@ -1413,42 +1503,42 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="KHOIs">
-      <EntityTypeMapping TypeName="IsTypeOf(acomptec_qlthptModel.KHOIs)">
-        <MappingFragment StoreEntitySet="KHOIs">
+    <EntitySetMapping Name="KHOI">
+      <EntityTypeMapping TypeName="IsTypeOf(acomptec_qlthptModel.KHOI)">
+        <MappingFragment StoreEntitySet="KHOI">
           <ScalarProperty Name="KHOI_MA" ColumnName="KHOI_MA" />
           <ScalarProperty Name="KHOI_TEN" ColumnName="KHOI_TEN" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="KYLUATs">
+    <EntitySetMapping Name="KYLUAT">
       <EntityTypeMapping TypeName="IsTypeOf(acomptec_qlthptModel.KYLUAT)">
-        <MappingFragment StoreEntitySet="KYLUATs">
+        <MappingFragment StoreEntitySet="KYLUAT">
           <ScalarProperty Name="KL_MA" ColumnName="KL_MA" />
           <ScalarProperty Name="KL_HINHTHUC" ColumnName="KL_HINHTHUC" />
           <ScalarProperty Name="KL_NGAYKYLUAT" ColumnName="KL_NGAYKYLUAT" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="LOPs">
+    <EntitySetMapping Name="LOP">
       <EntityTypeMapping TypeName="IsTypeOf(acomptec_qlthptModel.LOP)">
-        <MappingFragment StoreEntitySet="LOPs">
+        <MappingFragment StoreEntitySet="LOP">
           <ScalarProperty Name="LOP_MA" ColumnName="LOP_MA" />
           <ScalarProperty Name="LOP_TEN" ColumnName="LOP_TEN" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="NAMHOCs">
+    <EntitySetMapping Name="NAMHOC">
       <EntityTypeMapping TypeName="IsTypeOf(acomptec_qlthptModel.NAMHOC)">
-        <MappingFragment StoreEntitySet="NAMHOCs">
+        <MappingFragment StoreEntitySet="NAMHOC">
           <ScalarProperty Name="NH_MA" ColumnName="NH_MA" />
           <ScalarProperty Name="NH_NAMHOC" ColumnName="NH_NAMHOC" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="THOIKHOABIEUs">
+    <EntitySetMapping Name="THOIKHOABIEU">
       <EntityTypeMapping TypeName="IsTypeOf(acomptec_qlthptModel.THOIKHOABIEU)">
-        <MappingFragment StoreEntitySet="THOIKHOABIEUs">
+        <MappingFragment StoreEntitySet="THOIKHOABIEU">
           <ScalarProperty Name="TKB_MA" ColumnName="TKB_MA" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -1462,17 +1552,17 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="BACLUONGs">
+    <EntitySetMapping Name="BACLUONG">
       <EntityTypeMapping TypeName="IsTypeOf(acomptec_qlthptModel.BACLUONG)">
-        <MappingFragment StoreEntitySet="BACLUONGs">
+        <MappingFragment StoreEntitySet="BACLUONG">
           <ScalarProperty Name="BL_MA" ColumnName="BL_MA" />
           <ScalarProperty Name="BL_TEN" ColumnName="BL_TEN" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="CANBOes">
+    <EntitySetMapping Name="CANBO">
       <EntityTypeMapping TypeName="IsTypeOf(acomptec_qlthptModel.CANBO)">
-        <MappingFragment StoreEntitySet="CANBOes">
+        <MappingFragment StoreEntitySet="CANBO">
           <ScalarProperty Name="CB_MA" ColumnName="CB_MA" />
           <ScalarProperty Name="CB_HOTEN" ColumnName="CB_HOTEN" />
           <ScalarProperty Name="CB_GIOITINH" ColumnName="CB_GIOITINH" />
@@ -1482,65 +1572,57 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="CHUCVUs">
+    <EntitySetMapping Name="CHUCVU">
       <EntityTypeMapping TypeName="IsTypeOf(acomptec_qlthptModel.CHUCVU)">
-        <MappingFragment StoreEntitySet="CHUCVUs">
+        <MappingFragment StoreEntitySet="CHUCVU">
           <ScalarProperty Name="CV_MA" ColumnName="CV_MA" />
           <ScalarProperty Name="CV_TEN" ColumnName="CV_TEN" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="CHUYENNGANHs">
+    <EntitySetMapping Name="CHUYENNGANH">
       <EntityTypeMapping TypeName="IsTypeOf(acomptec_qlthptModel.CHUYENNGANH)">
-        <MappingFragment StoreEntitySet="CHUYENNGANHs">
+        <MappingFragment StoreEntitySet="CHUYENNGANH">
           <ScalarProperty Name="CN_MA" ColumnName="CN_MA" />
           <ScalarProperty Name="CN_TEN" ColumnName="CN_TEN" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="COQUANs">
+    <EntitySetMapping Name="COQUAN">
       <EntityTypeMapping TypeName="IsTypeOf(acomptec_qlthptModel.COQUAN)">
-        <MappingFragment StoreEntitySet="COQUANs">
+        <MappingFragment StoreEntitySet="COQUAN">
           <ScalarProperty Name="CQ_MA" ColumnName="CQ_MA" />
           <ScalarProperty Name="CQ_TEN" ColumnName="CQ_TEN" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="COSOVATCHATs">
+    <EntitySetMapping Name="COSOVATCHAT">
       <EntityTypeMapping TypeName="IsTypeOf(acomptec_qlthptModel.COSOVATCHAT)">
-        <MappingFragment StoreEntitySet="COSOVATCHATs">
+        <MappingFragment StoreEntitySet="COSOVATCHAT">
           <ScalarProperty Name="CSVC_MA" ColumnName="CSVC_MA" />
           <ScalarProperty Name="CSVC_SOLUONG" ColumnName="CSVC_SOLUONG" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="DANTOCs">
+    <EntitySetMapping Name="DANTOC">
       <EntityTypeMapping TypeName="IsTypeOf(acomptec_qlthptModel.DANTOC)">
-        <MappingFragment StoreEntitySet="DANTOCs">
+        <MappingFragment StoreEntitySet="DANTOC">
           <ScalarProperty Name="DT_MA" ColumnName="DT_MA" />
           <ScalarProperty Name="DT_TEN" ColumnName="DT_TEN" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="HINHTHUCs">
+    <EntitySetMapping Name="HINHTHUC">
       <EntityTypeMapping TypeName="IsTypeOf(acomptec_qlthptModel.HINHTHUC)">
-        <MappingFragment StoreEntitySet="HINHTHUCs">
+        <MappingFragment StoreEntitySet="HINHTHUC">
           <ScalarProperty Name="HT_MA" ColumnName="HT_MA" />
           <ScalarProperty Name="HT_TEN" ColumnName="HT_TEN" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="HOCKies">
-      <EntityTypeMapping TypeName="IsTypeOf(acomptec_qlthptModel.HOCKy)">
-        <MappingFragment StoreEntitySet="HOCKies">
-          <ScalarProperty Name="HK_MA" ColumnName="HK_MA" />
-          <ScalarProperty Name="HK_TEN" ColumnName="HK_TEN" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="HOCSINHs">
+    <EntitySetMapping Name="HOCSINH">
       <EntityTypeMapping TypeName="IsTypeOf(acomptec_qlthptModel.HOCSINH)">
-        <MappingFragment StoreEntitySet="HOCSINHs">
+        <MappingFragment StoreEntitySet="HOCSINH">
           <ScalarProperty Name="HS_MA" ColumnName="HS_MA" />
           <ScalarProperty Name="HS_HOTEN" ColumnName="HS_HOTEN" />
           <ScalarProperty Name="HS_GIOITINH" ColumnName="HS_GIOITINH" />
@@ -1549,122 +1631,122 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="MONHOCs">
+    <EntitySetMapping Name="MONHOC">
       <EntityTypeMapping TypeName="IsTypeOf(acomptec_qlthptModel.MONHOC)">
-        <MappingFragment StoreEntitySet="MONHOCs">
+        <MappingFragment StoreEntitySet="MONHOC">
           <ScalarProperty Name="MH_MA" ColumnName="MH_MA" />
           <ScalarProperty Name="MH_TEN" ColumnName="MH_TEN" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="NGACHLUONGs">
+    <EntitySetMapping Name="NGACHLUONG">
       <EntityTypeMapping TypeName="IsTypeOf(acomptec_qlthptModel.NGACHLUONG)">
-        <MappingFragment StoreEntitySet="NGACHLUONGs">
+        <MappingFragment StoreEntitySet="NGACHLUONG">
           <ScalarProperty Name="NL_MA" ColumnName="NL_MA" />
           <ScalarProperty Name="NL_TEN" ColumnName="NL_TEN" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="PHONGHOCs">
+    <EntitySetMapping Name="PHONGHOC">
       <EntityTypeMapping TypeName="IsTypeOf(acomptec_qlthptModel.PHONGHOC)">
-        <MappingFragment StoreEntitySet="PHONGHOCs">
+        <MappingFragment StoreEntitySet="PHONGHOC">
           <ScalarProperty Name="PH_MA" ColumnName="PH_MA" />
           <ScalarProperty Name="PH_TEN" ColumnName="PH_TEN" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="QUANHUYENs">
+    <EntitySetMapping Name="QUANHUYEN">
       <EntityTypeMapping TypeName="IsTypeOf(acomptec_qlthptModel.QUANHUYEN)">
-        <MappingFragment StoreEntitySet="QUANHUYENs">
+        <MappingFragment StoreEntitySet="QUANHUYEN">
           <ScalarProperty Name="QH_MA" ColumnName="QH_MA" />
           <ScalarProperty Name="QH_TEN" ColumnName="QH_TEN" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="SODANHGIAs">
+    <EntitySetMapping Name="SODANHGIA">
       <EntityTypeMapping TypeName="IsTypeOf(acomptec_qlthptModel.SODANHGIA)">
-        <MappingFragment StoreEntitySet="SODANHGIAs">
+        <MappingFragment StoreEntitySet="SODANHGIA">
           <ScalarProperty Name="SDG_MA" ColumnName="SDG_MA" />
           <ScalarProperty Name="SDG_DIEM" ColumnName="SDG_DIEM" />
           <ScalarProperty Name="SDG_GHICHU" ColumnName="SDG_GHICHU" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="THIETBIDAYHOCs">
+    <EntitySetMapping Name="THIETBIDAYHOC">
       <EntityTypeMapping TypeName="IsTypeOf(acomptec_qlthptModel.THIETBIDAYHOC)">
-        <MappingFragment StoreEntitySet="THIETBIDAYHOCs">
+        <MappingFragment StoreEntitySet="THIETBIDAYHOC">
           <ScalarProperty Name="TBDH_MA" ColumnName="TBDH_MA" />
           <ScalarProperty Name="TBDH_TEN" ColumnName="TBDH_TEN" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="THIETBIGIANGDAYs">
+    <EntitySetMapping Name="THIETBIGIANGDAY">
       <EntityTypeMapping TypeName="IsTypeOf(acomptec_qlthptModel.THIETBIGIANGDAY)">
-        <MappingFragment StoreEntitySet="THIETBIGIANGDAYs">
+        <MappingFragment StoreEntitySet="THIETBIGIANGDAY">
           <ScalarProperty Name="TBGD_MA" ColumnName="TBGD_MA" />
           <ScalarProperty Name="TBGD_TEN" ColumnName="TBGD_TEN" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="THONGTINDAOTAOs">
+    <EntitySetMapping Name="THONGTINDAOTAO">
       <EntityTypeMapping TypeName="IsTypeOf(acomptec_qlthptModel.THONGTINDAOTAO)">
-        <MappingFragment StoreEntitySet="THONGTINDAOTAOs">
+        <MappingFragment StoreEntitySet="THONGTINDAOTAO">
           <ScalarProperty Name="TTDT_MA" ColumnName="TTDT_MA" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="THONGTINLUONGs">
+    <EntitySetMapping Name="THONGTINLUONG">
       <EntityTypeMapping TypeName="IsTypeOf(acomptec_qlthptModel.THONGTINLUONG)">
-        <MappingFragment StoreEntitySet="THONGTINLUONGs">
+        <MappingFragment StoreEntitySet="THONGTINLUONG">
           <ScalarProperty Name="TTL_MA" ColumnName="TTL_MA" />
           <ScalarProperty Name="TTL_NGAYNHANLUONG" ColumnName="TTL_NGAYNHANLUONG" />
           <ScalarProperty Name="TTL_HESOLUONG" ColumnName="TTL_HESOLUONG" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="THUs">
+    <EntitySetMapping Name="THU">
       <EntityTypeMapping TypeName="IsTypeOf(acomptec_qlthptModel.THU)">
-        <MappingFragment StoreEntitySet="THUs">
+        <MappingFragment StoreEntitySet="THU">
           <ScalarProperty Name="THU_MA" ColumnName="THU_MA" />
           <ScalarProperty Name="THU_TEN" ColumnName="THU_TEN" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="TIETHOCs">
+    <EntitySetMapping Name="TIETHOC">
       <EntityTypeMapping TypeName="IsTypeOf(acomptec_qlthptModel.TIETHOC)">
-        <MappingFragment StoreEntitySet="TIETHOCs">
+        <MappingFragment StoreEntitySet="TIETHOC">
           <ScalarProperty Name="TH_MA" ColumnName="TH_MA" />
           <ScalarProperty Name="TH_TEN" ColumnName="TH_TEN" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="TINHTHANHs">
+    <EntitySetMapping Name="TINHTHANH">
       <EntityTypeMapping TypeName="IsTypeOf(acomptec_qlthptModel.TINHTHANH)">
-        <MappingFragment StoreEntitySet="TINHTHANHs">
+        <MappingFragment StoreEntitySet="TINHTHANH">
           <ScalarProperty Name="TT_MA" ColumnName="TT_MA" />
           <ScalarProperty Name="TT_TEN" ColumnName="TT_TEN" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="TINHTRANGs">
+    <EntitySetMapping Name="TINHTRANG">
       <EntityTypeMapping TypeName="IsTypeOf(acomptec_qlthptModel.TINHTRANG)">
-        <MappingFragment StoreEntitySet="TINHTRANGs">
+        <MappingFragment StoreEntitySet="TINHTRANG">
           <ScalarProperty Name="TT_MA" ColumnName="TT_MA" />
           <ScalarProperty Name="TT_MOTA" ColumnName="TT_MOTA" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="VANBANGs">
+    <EntitySetMapping Name="VANBANG">
       <EntityTypeMapping TypeName="IsTypeOf(acomptec_qlthptModel.VANBANG)">
-        <MappingFragment StoreEntitySet="VANBANGs">
+        <MappingFragment StoreEntitySet="VANBANG">
           <ScalarProperty Name="VB_MA" ColumnName="VB_MA" />
           <ScalarProperty Name="VB_TEN" ColumnName="VB_TEN" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="XAPHUONGs">
+    <EntitySetMapping Name="XAPHUONG">
       <EntityTypeMapping TypeName="IsTypeOf(acomptec_qlthptModel.XAPHUONG)">
-        <MappingFragment StoreEntitySet="XAPHUONGs">
+        <MappingFragment StoreEntitySet="XAPHUONG">
           <ScalarProperty Name="XP_MA" ColumnName="XP_MA" />
           <ScalarProperty Name="XP_TEN" ColumnName="XP_TEN" />
         </MappingFragment>
@@ -1678,7 +1760,33 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <AssociationSetMapping Name="TINHTHANHHOCSINH" TypeName="acomptec_qlthptModel.TINHTHANHHOCSINH" StoreEntitySet="HOCSINHs">
+    <EntitySetMapping Name="HOCKY">
+      <EntityTypeMapping TypeName="IsTypeOf(acomptec_qlthptModel.HOCKY)">
+        <MappingFragment StoreEntitySet="HOCKY">
+          <ScalarProperty Name="HK_MA" ColumnName="HK_MA" />
+          <ScalarProperty Name="HK_TEN" ColumnName="HK_TEN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KHENTHUONGCB">
+      <EntityTypeMapping TypeName="IsTypeOf(acomptec_qlthptModel.KHENTHUONGCB)">
+        <MappingFragment StoreEntitySet="KHENTHUONGCB">
+          <ScalarProperty Name="KTCB_MA" ColumnName="KTCB_MA" />
+          <ScalarProperty Name="KTCB_NGAY" ColumnName="KTCB_NGAY" />
+          <ScalarProperty Name="KTCB_THANHTICH" ColumnName="KTCB_THANHTICH" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KYLUATCB">
+      <EntityTypeMapping TypeName="IsTypeOf(acomptec_qlthptModel.KYLUATCB)">
+        <MappingFragment StoreEntitySet="KYLUATCB">
+          <ScalarProperty Name="KLCB_MA" ColumnName="KLCB_MA" />
+          <ScalarProperty Name="KLCB_NGAY" ColumnName="KLCB_NGAY" />
+          <ScalarProperty Name="KLCB_HT" ColumnName="KLCB_HT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="TINHTHANHHOCSINH" TypeName="acomptec_qlthptModel.TINHTHANHHOCSINH" StoreEntitySet="HOCSINH">
       <EndProperty Name="TINHTHANH">
         <ScalarProperty Name="TT_MA" ColumnName="TINHTHANH_TT_MA" />
       </EndProperty>
@@ -1686,7 +1794,7 @@
         <ScalarProperty Name="HS_MA" ColumnName="HS_MA" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="XAPHUONGHOCSINH" TypeName="acomptec_qlthptModel.XAPHUONGHOCSINH" StoreEntitySet="HOCSINHs">
+    <AssociationSetMapping Name="XAPHUONGHOCSINH" TypeName="acomptec_qlthptModel.XAPHUONGHOCSINH" StoreEntitySet="HOCSINH">
       <EndProperty Name="XAPHUONG">
         <ScalarProperty Name="XP_MA" ColumnName="XAPHUONG_XP_MA" />
       </EndProperty>
@@ -1694,7 +1802,7 @@
         <ScalarProperty Name="HS_MA" ColumnName="HS_MA" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="QUANHUYENHOCSINH" TypeName="acomptec_qlthptModel.QUANHUYENHOCSINH" StoreEntitySet="HOCSINHs">
+    <AssociationSetMapping Name="QUANHUYENHOCSINH" TypeName="acomptec_qlthptModel.QUANHUYENHOCSINH" StoreEntitySet="HOCSINH">
       <EndProperty Name="QUANHUYEN">
         <ScalarProperty Name="QH_MA" ColumnName="QUANHUYEN_QH_MA" />
       </EndProperty>
@@ -1702,7 +1810,7 @@
         <ScalarProperty Name="HS_MA" ColumnName="HS_MA" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="HOCSINHKYLUAT" TypeName="acomptec_qlthptModel.HOCSINHKYLUAT" StoreEntitySet="KYLUATs">
+    <AssociationSetMapping Name="HOCSINHKYLUAT" TypeName="acomptec_qlthptModel.HOCSINHKYLUAT" StoreEntitySet="KYLUAT">
       <EndProperty Name="HOCSINH">
         <ScalarProperty Name="HS_MA" ColumnName="HOCSINH_HS_MA" />
       </EndProperty>
@@ -1710,7 +1818,7 @@
         <ScalarProperty Name="KL_MA" ColumnName="KL_MA" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="HOCSINHCHITIETDANHGIA" TypeName="acomptec_qlthptModel.HOCSINHCHITIETDANHGIA" StoreEntitySet="CHITIETDANHGIAs">
+    <AssociationSetMapping Name="HOCSINHCHITIETDANHGIA" TypeName="acomptec_qlthptModel.HOCSINHCHITIETDANHGIA" StoreEntitySet="CHITIETDANHGIA">
       <EndProperty Name="HOCSINH">
         <ScalarProperty Name="HS_MA" ColumnName="HOCSINH_HS_MA" />
       </EndProperty>
@@ -1718,7 +1826,7 @@
         <ScalarProperty Name="CTDG_MA" ColumnName="CTDG_MA" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="SODANHGIACHITIETDANHGIA" TypeName="acomptec_qlthptModel.SODANHGIACHITIETDANHGIA" StoreEntitySet="CHITIETDANHGIAs">
+    <AssociationSetMapping Name="SODANHGIACHITIETDANHGIA" TypeName="acomptec_qlthptModel.SODANHGIACHITIETDANHGIA" StoreEntitySet="CHITIETDANHGIA">
       <EndProperty Name="SODANHGIA">
         <ScalarProperty Name="SDG_MA" ColumnName="SODANHGIA_SDG_MA" />
       </EndProperty>
@@ -1726,7 +1834,7 @@
         <ScalarProperty Name="CTDG_MA" ColumnName="CTDG_MA" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="HOCSINHKHENTHUONG" TypeName="acomptec_qlthptModel.HOCSINHKHENTHUONG" StoreEntitySet="KHENTHUONGs">
+    <AssociationSetMapping Name="HOCSINHKHENTHUONG" TypeName="acomptec_qlthptModel.HOCSINHKHENTHUONG" StoreEntitySet="KHENTHUONG">
       <EndProperty Name="HOCSINH">
         <ScalarProperty Name="HS_MA" ColumnName="HOCSINH_HS_MA" />
       </EndProperty>
@@ -1734,7 +1842,7 @@
         <ScalarProperty Name="KT_MA" ColumnName="KT_MA" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="KHOIsLOP" TypeName="acomptec_qlthptModel.KHOIsLOP" StoreEntitySet="LOPs">
+    <AssociationSetMapping Name="KHOIsLOP" TypeName="acomptec_qlthptModel.KHOIsLOP" StoreEntitySet="LOP">
       <EndProperty Name="KHOIs">
         <ScalarProperty Name="KHOI_MA" ColumnName="KHOIs_KHOI_MA" />
       </EndProperty>
@@ -1742,7 +1850,7 @@
         <ScalarProperty Name="LOP_MA" ColumnName="LOP_MA" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="NAMHOCLOP" TypeName="acomptec_qlthptModel.NAMHOCLOP" StoreEntitySet="LOPs">
+    <AssociationSetMapping Name="NAMHOCLOP" TypeName="acomptec_qlthptModel.NAMHOCLOP" StoreEntitySet="LOP">
       <EndProperty Name="NAMHOC">
         <ScalarProperty Name="NH_MA" ColumnName="NAMHOC_NH_MA" />
       </EndProperty>
@@ -1750,7 +1858,7 @@
         <ScalarProperty Name="LOP_MA" ColumnName="LOP_MA" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="LOPHOCSINH" TypeName="acomptec_qlthptModel.LOPHOCSINH" StoreEntitySet="HOCSINHs">
+    <AssociationSetMapping Name="LOPHOCSINH" TypeName="acomptec_qlthptModel.LOPHOCSINH" StoreEntitySet="HOCSINH">
       <EndProperty Name="LOP">
         <ScalarProperty Name="LOP_MA" ColumnName="LOP_LOP_MA" />
       </EndProperty>
@@ -1758,7 +1866,7 @@
         <ScalarProperty Name="HS_MA" ColumnName="HS_MA" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="COSOVATCHATTHIETBIGIANGDAY" TypeName="acomptec_qlthptModel.COSOVATCHATTHIETBIGIANGDAY" StoreEntitySet="THIETBIGIANGDAYs">
+    <AssociationSetMapping Name="COSOVATCHATTHIETBIGIANGDAY" TypeName="acomptec_qlthptModel.COSOVATCHATTHIETBIGIANGDAY" StoreEntitySet="THIETBIGIANGDAY">
       <EndProperty Name="COSOVATCHAT">
         <ScalarProperty Name="CSVC_MA" ColumnName="COSOVATCHAT_CSVC_MA" />
       </EndProperty>
@@ -1766,7 +1874,7 @@
         <ScalarProperty Name="TBGD_MA" ColumnName="TBGD_MA" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="COSOVATCHATTHIETBIDAYHOC" TypeName="acomptec_qlthptModel.COSOVATCHATTHIETBIDAYHOC" StoreEntitySet="THIETBIDAYHOCs">
+    <AssociationSetMapping Name="COSOVATCHATTHIETBIDAYHOC" TypeName="acomptec_qlthptModel.COSOVATCHATTHIETBIDAYHOC" StoreEntitySet="THIETBIDAYHOC">
       <EndProperty Name="COSOVATCHAT">
         <ScalarProperty Name="CSVC_MA" ColumnName="COSOVATCHAT_CSVC_MA" />
       </EndProperty>
@@ -1774,7 +1882,7 @@
         <ScalarProperty Name="TBDH_MA" ColumnName="TBDH_MA" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="COSOVATCHATTINHTRANG" TypeName="acomptec_qlthptModel.COSOVATCHATTINHTRANG" StoreEntitySet="TINHTRANGs">
+    <AssociationSetMapping Name="COSOVATCHATTINHTRANG" TypeName="acomptec_qlthptModel.COSOVATCHATTINHTRANG" StoreEntitySet="TINHTRANG">
       <EndProperty Name="COSOVATCHAT">
         <ScalarProperty Name="CSVC_MA" ColumnName="COSOVATCHAT_CSVC_MA" />
       </EndProperty>
@@ -1782,7 +1890,7 @@
         <ScalarProperty Name="TT_MA" ColumnName="TT_MA" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="PHONGHOCCOSOVATCHAT" TypeName="acomptec_qlthptModel.PHONGHOCCOSOVATCHAT" StoreEntitySet="COSOVATCHATs">
+    <AssociationSetMapping Name="PHONGHOCCOSOVATCHAT" TypeName="acomptec_qlthptModel.PHONGHOCCOSOVATCHAT" StoreEntitySet="COSOVATCHAT">
       <EndProperty Name="PHONGHOC">
         <ScalarProperty Name="PH_MA" ColumnName="PHONGHOC_PH_MA" />
       </EndProperty>
@@ -1790,7 +1898,7 @@
         <ScalarProperty Name="CSVC_MA" ColumnName="CSVC_MA" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="DANTOCHOCSINH" TypeName="acomptec_qlthptModel.DANTOCHOCSINH" StoreEntitySet="HOCSINHs">
+    <AssociationSetMapping Name="DANTOCHOCSINH" TypeName="acomptec_qlthptModel.DANTOCHOCSINH" StoreEntitySet="HOCSINH">
       <EndProperty Name="DANTOC">
         <ScalarProperty Name="DT_MA" ColumnName="DANTOC_DT_MA" />
       </EndProperty>
@@ -1798,7 +1906,7 @@
         <ScalarProperty Name="HS_MA" ColumnName="HS_MA" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="BACLUONGTHONGTINLUONG" TypeName="acomptec_qlthptModel.BACLUONGTHONGTINLUONG" StoreEntitySet="THONGTINLUONGs">
+    <AssociationSetMapping Name="BACLUONGTHONGTINLUONG" TypeName="acomptec_qlthptModel.BACLUONGTHONGTINLUONG" StoreEntitySet="THONGTINLUONG">
       <EndProperty Name="BACLUONG">
         <ScalarProperty Name="BL_MA" ColumnName="BACLUONG_BL_MA" />
       </EndProperty>
@@ -1806,15 +1914,7 @@
         <ScalarProperty Name="TTL_MA" ColumnName="TTL_MA" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="CANBOTHONGTINLUONG" TypeName="acomptec_qlthptModel.CANBOTHONGTINLUONG" StoreEntitySet="CANBOes">
-      <EndProperty Name="THONGTINLUONG">
-        <ScalarProperty Name="TTL_MA" ColumnName="THONGTINLUONGs_TTL_MA" />
-      </EndProperty>
-      <EndProperty Name="CANBO">
-        <ScalarProperty Name="CB_MA" ColumnName="CB_MA" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="COQUANCANBO" TypeName="acomptec_qlthptModel.COQUANCANBO" StoreEntitySet="CANBOes">
+    <AssociationSetMapping Name="COQUANCANBO" TypeName="acomptec_qlthptModel.COQUANCANBO" StoreEntitySet="CANBO">
       <EndProperty Name="COQUAN">
         <ScalarProperty Name="CQ_MA" ColumnName="COQUAN_CQ_MA" />
       </EndProperty>
@@ -1822,7 +1922,7 @@
         <ScalarProperty Name="CB_MA" ColumnName="CB_MA" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="NGACHLUONGTHONGTINLUONG" TypeName="acomptec_qlthptModel.NGACHLUONGTHONGTINLUONG" StoreEntitySet="THONGTINLUONGs">
+    <AssociationSetMapping Name="NGACHLUONGTHONGTINLUONG" TypeName="acomptec_qlthptModel.NGACHLUONGTHONGTINLUONG" StoreEntitySet="THONGTINLUONG">
       <EndProperty Name="NGACHLUONG">
         <ScalarProperty Name="NL_MA" ColumnName="NGACHLUONG_NL_MA" />
       </EndProperty>
@@ -1830,7 +1930,7 @@
         <ScalarProperty Name="TTL_MA" ColumnName="TTL_MA" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="THOIKHOABIEUMONHOC" TypeName="acomptec_qlthptModel.THOIKHOABIEUMONHOC" StoreEntitySet="MONHOCs">
+    <AssociationSetMapping Name="THOIKHOABIEUMONHOC" TypeName="acomptec_qlthptModel.THOIKHOABIEUMONHOC" StoreEntitySet="MONHOC">
       <EndProperty Name="THOIKHOABIEU">
         <ScalarProperty Name="TKB_MA" ColumnName="THOIKHOABIEU_TKB_MA" />
       </EndProperty>
@@ -1838,7 +1938,7 @@
         <ScalarProperty Name="MH_MA" ColumnName="MH_MA" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="THOIKHOABIEUTIETHOC" TypeName="acomptec_qlthptModel.THOIKHOABIEUTIETHOC" StoreEntitySet="TIETHOCs">
+    <AssociationSetMapping Name="THOIKHOABIEUTIETHOC" TypeName="acomptec_qlthptModel.THOIKHOABIEUTIETHOC" StoreEntitySet="TIETHOC">
       <EndProperty Name="THOIKHOABIEU">
         <ScalarProperty Name="TKB_MA" ColumnName="THOIKHOABIEU_TKB_MA" />
       </EndProperty>
@@ -1846,7 +1946,7 @@
         <ScalarProperty Name="TH_MA" ColumnName="TH_MA" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="THOIKHOABIEUTHU" TypeName="acomptec_qlthptModel.THOIKHOABIEUTHU" StoreEntitySet="THUs">
+    <AssociationSetMapping Name="THOIKHOABIEUTHU" TypeName="acomptec_qlthptModel.THOIKHOABIEUTHU" StoreEntitySet="THU">
       <EndProperty Name="THOIKHOABIEU">
         <ScalarProperty Name="TKB_MA" ColumnName="THOIKHOABIEU_TKB_MA" />
       </EndProperty>
@@ -1854,15 +1954,7 @@
         <ScalarProperty Name="THU_MA" ColumnName="THU_MA" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="HOCKySODANHGIA" TypeName="acomptec_qlthptModel.HOCKySODANHGIA" StoreEntitySet="SODANHGIAs">
-      <EndProperty Name="HOCKy">
-        <ScalarProperty Name="HK_MA" ColumnName="HOCKy_HK_MA" />
-      </EndProperty>
-      <EndProperty Name="SODANHGIA">
-        <ScalarProperty Name="SDG_MA" ColumnName="SDG_MA" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="LOPTHOIKHOABIEU" TypeName="acomptec_qlthptModel.LOPTHOIKHOABIEU" StoreEntitySet="THOIKHOABIEUs">
+    <AssociationSetMapping Name="LOPTHOIKHOABIEU" TypeName="acomptec_qlthptModel.LOPTHOIKHOABIEU" StoreEntitySet="THOIKHOABIEU">
       <EndProperty Name="LOP">
         <ScalarProperty Name="LOP_MA" ColumnName="LOP_LOP_MA" />
       </EndProperty>
@@ -1870,7 +1962,7 @@
         <ScalarProperty Name="TKB_MA" ColumnName="TKB_MA" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="CANBOTHONGTINDAOTAO" TypeName="acomptec_qlthptModel.CANBOTHONGTINDAOTAO" StoreEntitySet="THONGTINDAOTAOs">
+    <AssociationSetMapping Name="CANBOTHONGTINDAOTAO" TypeName="acomptec_qlthptModel.CANBOTHONGTINDAOTAO" StoreEntitySet="THONGTINDAOTAO">
       <EndProperty Name="CANBO">
         <ScalarProperty Name="CB_MA" ColumnName="CANBO_CB_MA" />
       </EndProperty>
@@ -1878,7 +1970,7 @@
         <ScalarProperty Name="TTDT_MA" ColumnName="TTDT_MA" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="THONGTINDAOTAOCHUYENNGANH" TypeName="acomptec_qlthptModel.THONGTINDAOTAOCHUYENNGANH" StoreEntitySet="CHUYENNGANHs">
+    <AssociationSetMapping Name="THONGTINDAOTAOCHUYENNGANH" TypeName="acomptec_qlthptModel.THONGTINDAOTAOCHUYENNGANH" StoreEntitySet="CHUYENNGANH">
       <EndProperty Name="THONGTINDAOTAO">
         <ScalarProperty Name="TTDT_MA" ColumnName="THONGTINDAOTAO_TTDT_MA" />
       </EndProperty>
@@ -1886,7 +1978,7 @@
         <ScalarProperty Name="CN_MA" ColumnName="CN_MA" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="THONGTINDAOTAOHINHTHUC" TypeName="acomptec_qlthptModel.THONGTINDAOTAOHINHTHUC" StoreEntitySet="THONGTINDAOTAOs">
+    <AssociationSetMapping Name="THONGTINDAOTAOHINHTHUC" TypeName="acomptec_qlthptModel.THONGTINDAOTAOHINHTHUC" StoreEntitySet="THONGTINDAOTAO">
       <EndProperty Name="HINHTHUC">
         <ScalarProperty Name="HT_MA" ColumnName="HINHTHUCs_HT_MA" />
       </EndProperty>
@@ -1910,12 +2002,44 @@
         <ScalarProperty Name="CT_CV_ID" ColumnName="CT_CV_ID" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="THONGTINDAOTAOVANBANG" TypeName="acomptec_qlthptModel.THONGTINDAOTAOVANBANG" StoreEntitySet="VANBANGs">
+    <AssociationSetMapping Name="THONGTINDAOTAOVANBANG" TypeName="acomptec_qlthptModel.THONGTINDAOTAOVANBANG" StoreEntitySet="VANBANG">
       <EndProperty Name="THONGTINDAOTAO">
         <ScalarProperty Name="TTDT_MA" ColumnName="THONGTINDAOTAO_TTDT_MA" />
       </EndProperty>
       <EndProperty Name="VANBANG">
         <ScalarProperty Name="VB_MA" ColumnName="VB_MA" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="CANBOTHONGTINLUONG" TypeName="acomptec_qlthptModel.CANBOTHONGTINLUONG" StoreEntitySet="THONGTINLUONG">
+      <EndProperty Name="CANBO">
+        <ScalarProperty Name="CB_MA" ColumnName="CANBO_CB_MA" />
+      </EndProperty>
+      <EndProperty Name="THONGTINLUONG">
+        <ScalarProperty Name="TTL_MA" ColumnName="TTL_MA" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="HOCKYSODANHGIA" TypeName="acomptec_qlthptModel.HOCKYSODANHGIA" StoreEntitySet="SODANHGIA">
+      <EndProperty Name="HOCKY">
+        <ScalarProperty Name="HK_MA" ColumnName="HOCKY_HK_MA" />
+      </EndProperty>
+      <EndProperty Name="SODANHGIA">
+        <ScalarProperty Name="SDG_MA" ColumnName="SDG_MA" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="CANBOKHENTHUONGCB" TypeName="acomptec_qlthptModel.CANBOKHENTHUONGCB" StoreEntitySet="KHENTHUONGCB">
+      <EndProperty Name="CANBO">
+        <ScalarProperty Name="CB_MA" ColumnName="CANBO_CB_MA" />
+      </EndProperty>
+      <EndProperty Name="KHENTHUONGCB">
+        <ScalarProperty Name="KTCB_MA" ColumnName="KTCB_MA" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="CANBOKYLUATCB" TypeName="acomptec_qlthptModel.CANBOKYLUATCB" StoreEntitySet="KYLUATCB">
+      <EndProperty Name="CANBO">
+        <ScalarProperty Name="CB_MA" ColumnName="CANBO_CB_MA" />
+      </EndProperty>
+      <EndProperty Name="KYLUATCB">
+        <ScalarProperty Name="KLCB_MA" ColumnName="KLCB_MA" />
       </EndProperty>
     </AssociationSetMapping>
   </EntityContainerMapping>

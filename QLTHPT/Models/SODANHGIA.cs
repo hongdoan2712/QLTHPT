@@ -26,6 +26,6 @@ namespace QLTHPT.Models
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CHITIETDANHGIA> CHITIETDANHGIAs { get; set; }
-        public virtual HOCKy HOCKy { get; set; }
+        public virtual HOCKY HOCKY { get; set; }
     }
 }

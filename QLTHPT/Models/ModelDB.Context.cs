@@ -25,39 +25,41 @@ namespace QLTHPT.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<CHITIETDANHGIA> CHITIETDANHGIAs { get; set; }
-        public virtual DbSet<KHENTHUONG> KHENTHUONGs { get; set; }
-        public virtual DbSet<KHOIs> KHOIs { get; set; }
-        public virtual DbSet<KYLUAT> KYLUATs { get; set; }
-        public virtual DbSet<LOP> LOPs { get; set; }
-        public virtual DbSet<NAMHOC> NAMHOCs { get; set; }
-        public virtual DbSet<THOIKHOABIEU> THOIKHOABIEUs { get; set; }
+        public virtual DbSet<CHITIETDANHGIA> CHITIETDANHGIA { get; set; }
+        public virtual DbSet<KHENTHUONG> KHENTHUONG { get; set; }
+        public virtual DbSet<KHOI> KHOI { get; set; }
+        public virtual DbSet<KYLUAT> KYLUAT { get; set; }
+        public virtual DbSet<LOP> LOP { get; set; }
+        public virtual DbSet<NAMHOC> NAMHOC { get; set; }
+        public virtual DbSet<THOIKHOABIEU> THOIKHOABIEU { get; set; }
         public virtual DbSet<UpdateImage> UpdateImages { get; set; }
-        public virtual DbSet<BACLUONG> BACLUONGs { get; set; }
-        public virtual DbSet<CANBO> CANBOes { get; set; }
-        public virtual DbSet<CHUCVU> CHUCVUs { get; set; }
-        public virtual DbSet<CHUYENNGANH> CHUYENNGANHs { get; set; }
-        public virtual DbSet<COQUAN> COQUANs { get; set; }
-        public virtual DbSet<COSOVATCHAT> COSOVATCHATs { get; set; }
-        public virtual DbSet<DANTOC> DANTOCs { get; set; }
-        public virtual DbSet<HINHTHUC> HINHTHUCs { get; set; }
-        public virtual DbSet<HOCKy> HOCKies { get; set; }
-        public virtual DbSet<HOCSINH> HOCSINHs { get; set; }
-        public virtual DbSet<MONHOC> MONHOCs { get; set; }
-        public virtual DbSet<NGACHLUONG> NGACHLUONGs { get; set; }
-        public virtual DbSet<PHONGHOC> PHONGHOCs { get; set; }
-        public virtual DbSet<QUANHUYEN> QUANHUYENs { get; set; }
-        public virtual DbSet<SODANHGIA> SODANHGIAs { get; set; }
-        public virtual DbSet<THIETBIDAYHOC> THIETBIDAYHOCs { get; set; }
-        public virtual DbSet<THIETBIGIANGDAY> THIETBIGIANGDAYs { get; set; }
-        public virtual DbSet<THONGTINDAOTAO> THONGTINDAOTAOs { get; set; }
-        public virtual DbSet<THONGTINLUONG> THONGTINLUONGs { get; set; }
-        public virtual DbSet<THU> THUs { get; set; }
-        public virtual DbSet<TIETHOC> TIETHOCs { get; set; }
-        public virtual DbSet<TINHTHANH> TINHTHANHs { get; set; }
-        public virtual DbSet<TINHTRANG> TINHTRANGs { get; set; }
-        public virtual DbSet<VANBANG> VANBANGs { get; set; }
-        public virtual DbSet<XAPHUONG> XAPHUONGs { get; set; }
+        public virtual DbSet<BACLUONG> BACLUONG { get; set; }
+        public virtual DbSet<CANBO> CANBO { get; set; }
+        public virtual DbSet<CHUCVU> CHUCVU { get; set; }
+        public virtual DbSet<CHUYENNGANH> CHUYENNGANH { get; set; }
+        public virtual DbSet<COQUAN> COQUAN { get; set; }
+        public virtual DbSet<COSOVATCHAT> COSOVATCHAT { get; set; }
+        public virtual DbSet<DANTOC> DANTOC { get; set; }
+        public virtual DbSet<HINHTHUC> HINHTHUC { get; set; }
+        public virtual DbSet<HOCSINH> HOCSINH { get; set; }
+        public virtual DbSet<MONHOC> MONHOC { get; set; }
+        public virtual DbSet<NGACHLUONG> NGACHLUONG { get; set; }
+        public virtual DbSet<PHONGHOC> PHONGHOC { get; set; }
+        public virtual DbSet<QUANHUYEN> QUANHUYEN { get; set; }
+        public virtual DbSet<SODANHGIA> SODANHGIA { get; set; }
+        public virtual DbSet<THIETBIDAYHOC> THIETBIDAYHOC { get; set; }
+        public virtual DbSet<THIETBIGIANGDAY> THIETBIGIANGDAY { get; set; }
+        public virtual DbSet<THONGTINDAOTAO> THONGTINDAOTAO { get; set; }
+        public virtual DbSet<THONGTINLUONG> THONGTINLUONG { get; set; }
+        public virtual DbSet<THU> THU { get; set; }
+        public virtual DbSet<TIETHOC> TIETHOC { get; set; }
+        public virtual DbSet<TINHTHANH> TINHTHANH { get; set; }
+        public virtual DbSet<TINHTRANG> TINHTRANG { get; set; }
+        public virtual DbSet<VANBANG> VANBANG { get; set; }
+        public virtual DbSet<XAPHUONG> XAPHUONG { get; set; }
         public virtual DbSet<CHITIET_CHUCVU> CHITIET_CHUCVU { get; set; }
+        public virtual DbSet<HOCKY> HOCKY { get; set; }
+        public virtual DbSet<KHENTHUONGCB> KHENTHUONGCB { get; set; }
+        public virtual DbSet<KYLUATCB> KYLUATCB { get; set; }
     }
 }

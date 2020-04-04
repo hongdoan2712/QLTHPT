@@ -19,6 +19,9 @@ namespace QLTHPT.Models
         {
             this.THONGTINDAOTAOs = new HashSet<THONGTINDAOTAO>();
             this.CHITIET_CHUCVU = new HashSet<CHITIET_CHUCVU>();
+            this.THONGTINLUONGs = new HashSet<THONGTINLUONG>();
+            this.KHENTHUONGCBs = new HashSet<KHENTHUONGCB>();
+            this.KYLUATCBs = new HashSet<KYLUATCB>();
         }
     
         public string CB_MA { get; set; }
@@ -28,11 +31,16 @@ namespace QLTHPT.Models
         public Nullable<System.DateTime> CB_NGAYSINH { get; set; }
         public string CB_CMND { get; set; }
     
-        public virtual THONGTINLUONG THONGTINLUONGs { get; set; }
         public virtual COQUAN COQUAN { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<THONGTINDAOTAO> THONGTINDAOTAOs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CHITIET_CHUCVU> CHITIET_CHUCVU { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<THONGTINLUONG> THONGTINLUONGs { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<KHENTHUONGCB> KHENTHUONGCBs { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<KYLUATCB> KYLUATCBs { get; set; }
     }
 }

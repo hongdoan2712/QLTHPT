@@ -12,14 +12,12 @@ namespace QLTHPT.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class THONGTINLUONG
+    public partial class KYLUATCB
     {
-        public string TTL_MA { get; set; }
-        public string TTL_NGAYNHANLUONG { get; set; }
-        public string TTL_HESOLUONG { get; set; }
+        public string KLCB_MA { get; set; }
+        public string KLCB_NGAY { get; set; }
+        public string KLCB_HT { get; set; }
     
-        public virtual BACLUONG BACLUONG { get; set; }
-        public virtual NGACHLUONG NGACHLUONG { get; set; }
         public virtual CANBO CANBO { get; set; }
     }
 }

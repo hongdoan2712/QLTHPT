@@ -175,7 +175,7 @@
     <Compile Include="Models\HINHTHUC.cs">
       <DependentUpon>ModelDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\HOCKy.cs">
+    <Compile Include="Models\HOCKY.cs">
       <DependentUpon>ModelDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\HOCSINH.cs">
@@ -184,10 +184,16 @@
     <Compile Include="Models\KHENTHUONG.cs">
       <DependentUpon>ModelDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\KHOIs.cs">
+    <Compile Include="Models\KHENTHUONGCB.cs">
+      <DependentUpon>ModelDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\KHOI.cs">
       <DependentUpon>ModelDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\KYLUAT.cs">
+      <DependentUpon>ModelDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\KYLUATCB.cs">
       <DependentUpon>ModelDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\LOP.cs">

@@ -7,21 +7,20 @@
       <Diagram DiagramId="06d5f207dd3d4d929e98dbd4de599d76" Name="Diagram1" ZoomLevel="66">
         <EntityTypeShape EntityType="acomptec_qlthptModel.CHITIETDANHGIA" Width="2.125" PointX="11.375" PointY="6.125" FillColor="128, 128, 255" />
         <EntityTypeShape EntityType="acomptec_qlthptModel.KHENTHUONG" Width="1.5" PointX="14.5" PointY="6.5" FillColor="128, 128, 255" />
-        <EntityTypeShape EntityType="acomptec_qlthptModel.KHOIs" Width="1.5" PointX="11.875" PointY="0.875" FillColor="255, 128, 255" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.KHOI" Width="1.5" PointX="11.875" PointY="0.875" FillColor="255, 128, 255" />
         <EntityTypeShape EntityType="acomptec_qlthptModel.KYLUAT" Width="1.5" PointX="11.375" PointY="3.5" FillColor="128, 128, 255" />
         <EntityTypeShape EntityType="acomptec_qlthptModel.LOP" Width="1.5" PointX="15" PointY="1.125" FillColor="255, 128, 255" />
         <EntityTypeShape EntityType="acomptec_qlthptModel.NAMHOC" Width="1.5" PointX="14.125" PointY="4.25" FillColor="255, 128, 255" />
         <EntityTypeShape EntityType="acomptec_qlthptModel.THOIKHOABIEU" Width="1.75" PointX="3.375" PointY="3.25" IsExpanded="true" FillColor="255, 128, 0" />
-        <EntityTypeShape EntityType="acomptec_qlthptModel.UpdateImage" Width="1.5" PointX="4.125" PointY="0.625" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.UpdateImage" PointX="3.25" PointY="1" Width="1.5" />
         <EntityTypeShape EntityType="acomptec_qlthptModel.BACLUONG" Width="1.5" PointX="2.5" PointY="8.375" FillColor="255, 128, 128" />
         <EntityTypeShape EntityType="acomptec_qlthptModel.CANBO" Width="1.5" PointX="0.75" PointY="9.625" FillColor="Aqua" />
         <EntityTypeShape EntityType="acomptec_qlthptModel.CHUCVU" Width="1.5" PointX="0.625" PointY="19.25" FillColor="Aqua" />
-        <EntityTypeShape EntityType="acomptec_qlthptModel.CHUYENNGANH" Width="2.875" PointX="1.75" PointY="20.375" FillColor="ForestGreen" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.CHUYENNGANH" Width="2.875" PointX="2.875" PointY="19.125" FillColor="ForestGreen" />
         <EntityTypeShape EntityType="acomptec_qlthptModel.COQUAN" Width="1.5" PointX="1.5" PointY="14.75" FillColor="Aqua" />
         <EntityTypeShape EntityType="acomptec_qlthptModel.COSOVATCHAT" Width="1.5" PointX="14" PointY="13.125" FillColor="255, 192, 128" />
         <EntityTypeShape EntityType="acomptec_qlthptModel.DANTOC" Width="1.5" PointX="8.75" PointY="12.375" FillColor="128, 128, 255" />
-        <EntityTypeShape EntityType="acomptec_qlthptModel.HINHTHUC" Width="4" PointX="5.75" PointY="19.875" FillColor="ForestGreen" />
-        <EntityTypeShape EntityType="acomptec_qlthptModel.HOCKy" Width="1.5" PointX="6.875" PointY="10.75" FillColor="128, 128, 255" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.HINHTHUC" Width="4" PointX="7.375" PointY="19.875" FillColor="ForestGreen" />
         <EntityTypeShape EntityType="acomptec_qlthptModel.HOCSINH" Width="1.5" PointX="8.375" PointY="4.625" FillColor="128, 128, 255" />
         <EntityTypeShape EntityType="acomptec_qlthptModel.MONHOC" Width="1.5" PointX="0.5" PointY="1" FillColor="255, 128, 0" />
         <EntityTypeShape EntityType="acomptec_qlthptModel.NGACHLUONG" Width="1.5" PointX="4.75" PointY="9.5" FillColor="255, 128, 128" />
@@ -36,7 +35,7 @@
         <EntityTypeShape EntityType="acomptec_qlthptModel.TIETHOC" Width="1.5" PointX="2.625" PointY="6.25" FillColor="255, 128, 0" />
         <EntityTypeShape EntityType="acomptec_qlthptModel.TINHTHANH" Width="1.5" PointX="6" PointY="0.75" FillColor="128, 128, 255" />
         <EntityTypeShape EntityType="acomptec_qlthptModel.TINHTRANG" Width="1.5" PointX="11.125" PointY="14.125" FillColor="255, 192, 128" />
-        <EntityTypeShape EntityType="acomptec_qlthptModel.VANBANG" Width="1.5" PointX="10.625" PointY="21.75" FillColor="ForestGreen" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.VANBANG" Width="1.5" PointX="4.625" PointY="21.625" FillColor="ForestGreen" />
         <EntityTypeShape EntityType="acomptec_qlthptModel.XAPHUONG" Width="1.5" PointX="6" PointY="3.375" FillColor="128, 128, 255" />
         <AssociationConnector Association="acomptec_qlthptModel.TINHTHANHHOCSINH" />
         <AssociationConnector Association="acomptec_qlthptModel.XAPHUONGHOCSINH" />
@@ -54,13 +53,11 @@
         <AssociationConnector Association="acomptec_qlthptModel.PHONGHOCCOSOVATCHAT" />
         <AssociationConnector Association="acomptec_qlthptModel.DANTOCHOCSINH" />
         <AssociationConnector Association="acomptec_qlthptModel.BACLUONGTHONGTINLUONG" />
-        <AssociationConnector Association="acomptec_qlthptModel.CANBOTHONGTINLUONG" />
         <AssociationConnector Association="acomptec_qlthptModel.COQUANCANBO" />
         <AssociationConnector Association="acomptec_qlthptModel.NGACHLUONGTHONGTINLUONG" />
         <AssociationConnector Association="acomptec_qlthptModel.THOIKHOABIEUMONHOC" />
         <AssociationConnector Association="acomptec_qlthptModel.THOIKHOABIEUTIETHOC" />
         <AssociationConnector Association="acomptec_qlthptModel.THOIKHOABIEUTHU" />
-        <AssociationConnector Association="acomptec_qlthptModel.HOCKySODANHGIA" />
         <AssociationConnector Association="acomptec_qlthptModel.LOPTHOIKHOABIEU" />
         <EntityTypeShape EntityType="acomptec_qlthptModel.CHITIET_CHUCVU" Width="2.125" PointX="1.5" PointY="16.75" FillColor="Aqua" />
         <AssociationConnector Association="acomptec_qlthptModel.CANBOTHONGTINDAOTAO" />
@@ -69,6 +66,13 @@
         <AssociationConnector Association="acomptec_qlthptModel.CANBOCHITIET_CHUCVU" />
         <AssociationConnector Association="acomptec_qlthptModel.CHUCVUCHITIET_CHUCVU" />
         <AssociationConnector Association="acomptec_qlthptModel.THONGTINDAOTAOVANBANG" />
+        <AssociationConnector Association="acomptec_qlthptModel.CANBOTHONGTINLUONG" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.HOCKY" Width="1.5" PointX="6.5" PointY="11.375" />
+        <AssociationConnector Association="acomptec_qlthptModel.HOCKYSODANHGIA" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.KHENTHUONGCB" Width="1.5" PointX="0.5" PointY="21.875" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.KYLUATCB" Width="1.5" PointX="2.625" PointY="22.125" />
+        <AssociationConnector Association="acomptec_qlthptModel.CANBOKHENTHUONGCB" />
+        <AssociationConnector Association="acomptec_qlthptModel.CANBOKYLUATCB" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
