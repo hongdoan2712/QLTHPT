@@ -41,6 +41,8 @@ namespace QLTHPT.Controllers
         {
             ViewBag.THONGTINLUONGs_TTL_MA = new SelectList(db.THONGTINLUONGs, "TTL_MA", "TTL_NGAYNHANLUONG");
             ViewBag.COQUAN_CQ_MA = new SelectList(db.COQUANs, "CQ_MA", "CQ_TEN");
+            //THOIKHOABIEU obj = new THOIKHOABIEU();
+            //obj.TKB_MA = CreateID.CreateID_ByteText();
             return View();
         }
 
