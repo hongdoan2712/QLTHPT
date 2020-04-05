@@ -17,7 +17,6 @@ namespace QLTHPT.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public THOIKHOABIEU()
         {
-            this.MONHOCs = new HashSet<MONHOC>();
             this.TIETHOCs = new HashSet<TIETHOC>();
             this.THUs = new HashSet<THU>();
         }
@@ -25,11 +24,11 @@ namespace QLTHPT.Models
         public string TKB_MA { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<MONHOC> MONHOCs { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TIETHOC> TIETHOCs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<THU> THUs { get; set; }
         public virtual LOP LOP { get; set; }
+        public virtual MONHOC MONHOC { get; set; }
+        public virtual CANBO CANBO { get; set; }
     }
 }

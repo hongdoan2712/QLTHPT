@@ -73,6 +73,7 @@
         <AssociationConnector Association="acomptec_qlthptModel.CANBOKYLUATCB" />
         <AssociationConnector Association="acomptec_qlthptModel.MONHOCTHOIKHOABIEU" />
         <AssociationConnector Association="acomptec_qlthptModel.CHUYENNGANHTHONGTINDAOTAO" />
+        <AssociationConnector Association="acomptec_qlthptModel.CANBOTHOIKHOABIEU" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

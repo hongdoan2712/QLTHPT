@@ -17,17 +17,15 @@ namespace QLTHPT.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public THONGTINDAOTAO()
         {
-            this.CHUYENNGANHs = new HashSet<CHUYENNGANH>();
             this.VANBANGs = new HashSet<VANBANG>();
         }
     
         public string TTDT_MA { get; set; }
     
         public virtual CANBO CANBO { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CHUYENNGANH> CHUYENNGANHs { get; set; }
         public virtual HINHTHUC HINHTHUCs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<VANBANG> VANBANGs { get; set; }
+        public virtual CHUYENNGANH CHUYENNGANH { get; set; }
     }
 }

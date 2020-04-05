@@ -170,6 +170,10 @@
       <End Role="CHUYENNGANH" EntitySet="CHUYENNGANH" />
       <End Role="THONGTINDAOTAO" EntitySet="THONGTINDAOTAO" />
     </AssociationSet>
+    <AssociationSet Name="CANBOTHOIKHOABIEU" Association="acomptec_qlthptModel.Store.CANBOTHOIKHOABIEU">
+      <End Role="CANBO" EntitySet="CANBO" />
+      <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEU" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="CHITIETDANHGIA">
     <Key>
@@ -229,6 +233,7 @@
     <Property Name="TKB_MA" Type="varchar" Nullable="false" MaxLength="10" />
     <Property Name="LOP_LOP_MA" Type="varchar" MaxLength="10" Nullable="false" />
     <Property Name="MONHOC_MH_MA" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="CANBO_CB_MA" Type="varchar" MaxLength="10" Nullable="false" />
   </EntityType>
   <EntityType Name="UpdateImages">
     <Key>
@@ -852,6 +857,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="CANBOTHOIKHOABIEU">
+    <End Role="CANBO" Type="acomptec_qlthptModel.Store.CANBO" Multiplicity="1" />
+    <End Role="THOIKHOABIEU" Type="acomptec_qlthptModel.Store.THOIKHOABIEU" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CANBO">
+        <PropertyRef Name="CB_MA" />
+      </Principal>
+      <Dependent Role="THOIKHOABIEU">
+        <PropertyRef Name="CANBO_CB_MA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
@@ -1021,6 +1038,10 @@
             <End Role="CHUYENNGANH" EntitySet="CHUYENNGANH" />
             <End Role="THONGTINDAOTAO" EntitySet="THONGTINDAOTAO" />
           </AssociationSet>
+          <AssociationSet Name="CANBOTHOIKHOABIEU" Association="acomptec_qlthptModel.CANBOTHOIKHOABIEU">
+            <End Role="CANBO" EntitySet="CANBO" />
+            <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEU" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="CHITIETDANHGIA">
           <Key>
@@ -1086,6 +1107,7 @@
           <NavigationProperty Name="THUs" Relationship="acomptec_qlthptModel.THOIKHOABIEUTHU" FromRole="THOIKHOABIEU" ToRole="THU" />
           <NavigationProperty Name="LOP" Relationship="acomptec_qlthptModel.LOPTHOIKHOABIEU" FromRole="THOIKHOABIEU" ToRole="LOP" />
           <NavigationProperty Name="MONHOC" Relationship="acomptec_qlthptModel.MONHOCTHOIKHOABIEU" FromRole="THOIKHOABIEU" ToRole="MONHOC" />
+          <NavigationProperty Name="CANBO" Relationship="acomptec_qlthptModel.CANBOTHOIKHOABIEU" FromRole="THOIKHOABIEU" ToRole="CANBO" />
         </EntityType>
         <EntityType Name="UpdateImage">
           <Key>
@@ -1119,6 +1141,7 @@
           <NavigationProperty Name="THONGTINLUONGs" Relationship="acomptec_qlthptModel.CANBOTHONGTINLUONG" FromRole="CANBO" ToRole="THONGTINLUONG" />
           <NavigationProperty Name="KHENTHUONGCBs" Relationship="acomptec_qlthptModel.CANBOKHENTHUONGCB" FromRole="CANBO" ToRole="KHENTHUONGCB" />
           <NavigationProperty Name="KYLUATCBs" Relationship="acomptec_qlthptModel.CANBOKYLUATCB" FromRole="CANBO" ToRole="KYLUATCB" />
+          <NavigationProperty Name="THOIKHOABIEUx" Relationship="acomptec_qlthptModel.CANBOTHOIKHOABIEU" FromRole="CANBO" ToRole="THOIKHOABIEU" />
         </EntityType>
         <EntityType Name="CHUCVU">
           <Key>
@@ -1478,6 +1501,10 @@
         <Association Name="CHUYENNGANHTHONGTINDAOTAO">
           <End Type="acomptec_qlthptModel.CHUYENNGANH" Role="CHUYENNGANH" Multiplicity="1" />
           <End Type="acomptec_qlthptModel.THONGTINDAOTAO" Role="THONGTINDAOTAO" Multiplicity="*" />
+        </Association>
+        <Association Name="CANBOTHOIKHOABIEU">
+          <End Type="acomptec_qlthptModel.CANBO" Role="CANBO" Multiplicity="1" />
+          <End Type="acomptec_qlthptModel.THOIKHOABIEU" Role="THOIKHOABIEU" Multiplicity="*" />
         </Association>
         </Schema>
     </edmx:ConceptualModels>
@@ -2040,6 +2067,14 @@
       </EndProperty>
       <EndProperty Name="THONGTINDAOTAO">
         <ScalarProperty Name="TTDT_MA" ColumnName="TTDT_MA" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="CANBOTHOIKHOABIEU" TypeName="acomptec_qlthptModel.CANBOTHOIKHOABIEU" StoreEntitySet="THOIKHOABIEU">
+      <EndProperty Name="CANBO">
+        <ScalarProperty Name="CB_MA" ColumnName="CANBO_CB_MA" />
+      </EndProperty>
+      <EndProperty Name="THOIKHOABIEU">
+        <ScalarProperty Name="TKB_MA" ColumnName="TKB_MA" />
       </EndProperty>
     </AssociationSetMapping>
   </EntityContainerMapping>
