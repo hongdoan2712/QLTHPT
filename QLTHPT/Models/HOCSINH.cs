@@ -14,14 +14,6 @@ namespace QLTHPT.Models
     
     public partial class HOCSINH
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public HOCSINH()
-        {
-            this.KYLUATs = new HashSet<KYLUAT>();
-            this.CHITIETDANHGIAs = new HashSet<CHITIETDANHGIA>();
-            this.KHENTHUONGs = new HashSet<KHENTHUONG>();
-        }
-    
         public string HS_MA { get; set; }
         public string HS_HOTEN { get; set; }
         public string HS_GIOITINH { get; set; }
@@ -30,14 +22,11 @@ namespace QLTHPT.Models
     
         public virtual TINHTHANH TINHTHANH { get; set; }
         public virtual XAPHUONG XAPHUONG { get; set; }
+        public virtual KYLUAT KYLUAT { get; set; }
+        public virtual KHENTHUONG KHENTHUONG { get; set; }
+        public virtual CHITIETDANHGIA CHITIETDANHGIA { get; set; }
         public virtual QUANHUYEN QUANHUYEN { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<KYLUAT> KYLUATs { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CHITIETDANHGIA> CHITIETDANHGIAs { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<KHENTHUONG> KHENTHUONGs { get; set; }
-        public virtual LOP LOP { get; set; }
         public virtual DANTOC DANTOC { get; set; }
+        public virtual LOP LOP { get; set; }
     }
 }

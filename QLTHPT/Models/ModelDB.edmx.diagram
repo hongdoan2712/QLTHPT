@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="06d5f207dd3d4d929e98dbd4de599d76" Name="Diagram1" ZoomLevel="48">
+      <Diagram DiagramId="06d5f207dd3d4d929e98dbd4de599d76" Name="Diagram1" ZoomLevel="55">
         <EntityTypeShape EntityType="acomptec_qlthptModel.CHITIETDANHGIA" Width="2.125" PointX="11.375" PointY="6.125" FillColor="128, 128, 255" />
         <EntityTypeShape EntityType="acomptec_qlthptModel.KHENTHUONG" Width="1.5" PointX="14.5" PointY="6.5" FillColor="128, 128, 255" />
         <EntityTypeShape EntityType="acomptec_qlthptModel.KHOI" Width="1.5" PointX="11.875" PointY="0.875" FillColor="255, 128, 255" />
@@ -19,13 +19,13 @@
         <EntityTypeShape EntityType="acomptec_qlthptModel.CHUYENNGANH" Width="2.375" PointX="2.875" PointY="19.125" FillColor="ForestGreen" />
         <EntityTypeShape EntityType="acomptec_qlthptModel.COQUAN" Width="1.5" PointX="1.5" PointY="14.75" FillColor="Aqua" />
         <EntityTypeShape EntityType="acomptec_qlthptModel.COSOVATCHAT" Width="1.5" PointX="14" PointY="13.125" FillColor="255, 192, 128" />
-        <EntityTypeShape EntityType="acomptec_qlthptModel.DANTOC" Width="1.5" PointX="8.75" PointY="12.375" FillColor="128, 128, 255" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.DANTOC" Width="1.5" PointX="6.125" PointY="6" FillColor="128, 128, 255" />
         <EntityTypeShape EntityType="acomptec_qlthptModel.HINHTHUC" Width="2.5" PointX="7.375" PointY="19.875" FillColor="ForestGreen" />
-        <EntityTypeShape EntityType="acomptec_qlthptModel.HOCSINH" Width="1.5" PointX="8.375" PointY="4.625" FillColor="128, 128, 255" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.HOCSINH" Width="1.5" PointX="8.5" PointY="4.25" FillColor="Blue" />
         <EntityTypeShape EntityType="acomptec_qlthptModel.MONHOC" Width="1.5" PointX="0.5" PointY="1" FillColor="255, 128, 0" />
         <EntityTypeShape EntityType="acomptec_qlthptModel.NGACHLUONG" Width="1.5" PointX="4.75" PointY="9.5" FillColor="255, 128, 128" />
         <EntityTypeShape EntityType="acomptec_qlthptModel.PHONGHOC" Width="1.5" PointX="8.75" PointY="16.875" FillColor="255, 192, 128" />
-        <EntityTypeShape EntityType="acomptec_qlthptModel.QUANHUYEN" Width="1.5" PointX="9.75" PointY="10.25" FillColor="128, 128, 255" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.QUANHUYEN" Width="1.5" PointX="9.5" PointY="1" FillColor="128, 128, 255" />
         <EntityTypeShape EntityType="acomptec_qlthptModel.SODANHGIA" Width="1.5" PointX="6.5" PointY="8" FillColor="128, 128, 255" />
         <EntityTypeShape EntityType="acomptec_qlthptModel.THIETBIDAYHOC" Width="2.375" PointX="11.125" PointY="16.125" FillColor="255, 192, 128" />
         <EntityTypeShape EntityType="acomptec_qlthptModel.THIETBIGIANGDAY" Width="1.75" PointX="12.5" PointY="10" FillColor="255, 192, 128" />
@@ -33,22 +33,14 @@
         <EntityTypeShape EntityType="acomptec_qlthptModel.THONGTINLUONG" Width="2.75" PointX="3.5" PointY="12.5" FillColor="255, 128, 128" />
         <EntityTypeShape EntityType="acomptec_qlthptModel.THU" Width="1.5" PointX="0.5" PointY="6.5" FillColor="255, 128, 0" />
         <EntityTypeShape EntityType="acomptec_qlthptModel.TIETHOC" Width="1.5" PointX="2.625" PointY="6.25" FillColor="255, 128, 0" />
-        <EntityTypeShape EntityType="acomptec_qlthptModel.TINHTHANH" Width="1.5" PointX="6" PointY="0.75" FillColor="128, 128, 255" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.TINHTHANH" Width="1.5" PointX="7" PointY="0.75" FillColor="128, 128, 255" />
         <EntityTypeShape EntityType="acomptec_qlthptModel.TINHTRANG" Width="1.5" PointX="11.125" PointY="13.125" FillColor="255, 192, 128" />
         <EntityTypeShape EntityType="acomptec_qlthptModel.VANBANG" Width="1.5" PointX="4.625" PointY="21.625" FillColor="ForestGreen" />
-        <EntityTypeShape EntityType="acomptec_qlthptModel.XAPHUONG" Width="1.5" PointX="6" PointY="3.375" FillColor="128, 128, 255" />
-        <AssociationConnector Association="acomptec_qlthptModel.TINHTHANHHOCSINH" />
-        <AssociationConnector Association="acomptec_qlthptModel.XAPHUONGHOCSINH" />
-        <AssociationConnector Association="acomptec_qlthptModel.QUANHUYENHOCSINH" />
-        <AssociationConnector Association="acomptec_qlthptModel.HOCSINHKYLUAT" />
-        <AssociationConnector Association="acomptec_qlthptModel.HOCSINHCHITIETDANHGIA" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.XAPHUONG" Width="1.5" PointX="5.75" PointY="3.625" FillColor="128, 128, 255" />
         <AssociationConnector Association="acomptec_qlthptModel.SODANHGIACHITIETDANHGIA" />
-        <AssociationConnector Association="acomptec_qlthptModel.HOCSINHKHENTHUONG" />
         <AssociationConnector Association="acomptec_qlthptModel.KHOIsLOP" />
         <AssociationConnector Association="acomptec_qlthptModel.NAMHOCLOP" />
-        <AssociationConnector Association="acomptec_qlthptModel.LOPHOCSINH" />
         <AssociationConnector Association="acomptec_qlthptModel.PHONGHOCCOSOVATCHAT" />
-        <AssociationConnector Association="acomptec_qlthptModel.DANTOCHOCSINH" />
         <AssociationConnector Association="acomptec_qlthptModel.BACLUONGTHONGTINLUONG" />
         <AssociationConnector Association="acomptec_qlthptModel.COQUANCANBO" />
         <AssociationConnector Association="acomptec_qlthptModel.NGACHLUONGTHONGTINLUONG" />
@@ -74,6 +66,14 @@
         <AssociationConnector Association="acomptec_qlthptModel.THIETBIGIANGDAYCOSOVATCHAT" />
         <AssociationConnector Association="acomptec_qlthptModel.THIETBIDAYHOCCOSOVATCHAT" />
         <AssociationConnector Association="acomptec_qlthptModel.TINHTRANGCOSOVATCHAT" />
+        <AssociationConnector Association="acomptec_qlthptModel.TINHTHANHHOCSINH" />
+        <AssociationConnector Association="acomptec_qlthptModel.XAPHUONGHOCSINH" />
+        <AssociationConnector Association="acomptec_qlthptModel.KYLUATHOCSINH" />
+        <AssociationConnector Association="acomptec_qlthptModel.KHENTHUONGHOCSINH" />
+        <AssociationConnector Association="acomptec_qlthptModel.CHITIETDANHGIAHOCSINH" />
+        <AssociationConnector Association="acomptec_qlthptModel.QUANHUYENHOCSINH" />
+        <AssociationConnector Association="acomptec_qlthptModel.DANTOCHOCSINH" />
+        <AssociationConnector Association="acomptec_qlthptModel.LOPHOCSINH" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

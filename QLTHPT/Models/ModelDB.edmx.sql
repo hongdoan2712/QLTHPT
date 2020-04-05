@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 04/05/2020 13:07:06
+-- Date Created: 04/05/2020 14:06:08
 -- Generated from EDMX file: C:\Users\OS\Documents\QLTHPT\QLTHPT\Models\ModelDB.edmx
 -- --------------------------------------------------
 
@@ -238,7 +238,6 @@ GO
 CREATE TABLE [dbo].[CHITIETDANHGIA] (
     [CTDG_MA] varchar(10)  NOT NULL,
     [CTDG_NGAYDG] datetime  NULL,
-    [HOCSINH_HS_MA] varchar(10)  NOT NULL,
     [SODANHGIA_SDG_MA] varchar(10)  NOT NULL
 );
 GO
@@ -248,8 +247,7 @@ CREATE TABLE [dbo].[KHENTHUONG] (
     [KT_MA] varchar(10)  NOT NULL,
     [KT_THANHTICH] nvarchar(50)  NULL,
     [KT_NGAYKHENTHUONG] datetime  NULL,
-    [KT_GHICHU] nvarchar(100)  NULL,
-    [HOCSINH_HS_MA] varchar(10)  NOT NULL
+    [KT_GHICHU] nvarchar(100)  NULL
 );
 GO
 
@@ -264,8 +262,7 @@ GO
 CREATE TABLE [dbo].[KYLUAT] (
     [KL_MA] varchar(10)  NOT NULL,
     [KL_HINHTHUC] nvarchar(50)  NULL,
-    [KL_NGAYKYLUAT] datetime  NULL,
-    [HOCSINH_HS_MA] varchar(10)  NOT NULL
+    [KL_NGAYKYLUAT] datetime  NULL
 );
 GO
 
@@ -378,9 +375,12 @@ CREATE TABLE [dbo].[HOCSINH] (
     [HS_TONGIAO] nvarchar(20)  NULL,
     [TINHTHANH_TT_MA] varchar(10)  NOT NULL,
     [XAPHUONG_XP_MA] varchar(10)  NOT NULL,
+    [KYLUAT_KL_MA] varchar(10)  NOT NULL,
+    [KHENTHUONG_KT_MA] varchar(10)  NOT NULL,
+    [CHITIETDANHGIA_CTDG_MA] varchar(10)  NOT NULL,
     [QUANHUYEN_QH_MA] varchar(10)  NOT NULL,
-    [LOP_LOP_MA] varchar(10)  NOT NULL,
-    [DANTOC_DT_MA] varchar(10)  NOT NULL
+    [DANTOC_DT_MA] varchar(10)  NOT NULL,
+    [LOP_LOP_MA] varchar(10)  NOT NULL
 );
 GO
 
@@ -756,81 +756,6 @@ GO
 -- Creating all FOREIGN KEY constraints
 -- --------------------------------------------------
 
--- Creating foreign key on [TINHTHANH_TT_MA] in table 'HOCSINH'
-ALTER TABLE [dbo].[HOCSINH]
-ADD CONSTRAINT [FK_TINHTHANHHOCSINH]
-    FOREIGN KEY ([TINHTHANH_TT_MA])
-    REFERENCES [dbo].[TINHTHANH]
-        ([TT_MA])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-GO
-
--- Creating non-clustered index for FOREIGN KEY 'FK_TINHTHANHHOCSINH'
-CREATE INDEX [IX_FK_TINHTHANHHOCSINH]
-ON [dbo].[HOCSINH]
-    ([TINHTHANH_TT_MA]);
-GO
-
--- Creating foreign key on [XAPHUONG_XP_MA] in table 'HOCSINH'
-ALTER TABLE [dbo].[HOCSINH]
-ADD CONSTRAINT [FK_XAPHUONGHOCSINH]
-    FOREIGN KEY ([XAPHUONG_XP_MA])
-    REFERENCES [dbo].[XAPHUONG]
-        ([XP_MA])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-GO
-
--- Creating non-clustered index for FOREIGN KEY 'FK_XAPHUONGHOCSINH'
-CREATE INDEX [IX_FK_XAPHUONGHOCSINH]
-ON [dbo].[HOCSINH]
-    ([XAPHUONG_XP_MA]);
-GO
-
--- Creating foreign key on [QUANHUYEN_QH_MA] in table 'HOCSINH'
-ALTER TABLE [dbo].[HOCSINH]
-ADD CONSTRAINT [FK_QUANHUYENHOCSINH]
-    FOREIGN KEY ([QUANHUYEN_QH_MA])
-    REFERENCES [dbo].[QUANHUYEN]
-        ([QH_MA])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-GO
-
--- Creating non-clustered index for FOREIGN KEY 'FK_QUANHUYENHOCSINH'
-CREATE INDEX [IX_FK_QUANHUYENHOCSINH]
-ON [dbo].[HOCSINH]
-    ([QUANHUYEN_QH_MA]);
-GO
-
--- Creating foreign key on [HOCSINH_HS_MA] in table 'KYLUAT'
-ALTER TABLE [dbo].[KYLUAT]
-ADD CONSTRAINT [FK_HOCSINHKYLUAT]
-    FOREIGN KEY ([HOCSINH_HS_MA])
-    REFERENCES [dbo].[HOCSINH]
-        ([HS_MA])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-GO
-
--- Creating non-clustered index for FOREIGN KEY 'FK_HOCSINHKYLUAT'
-CREATE INDEX [IX_FK_HOCSINHKYLUAT]
-ON [dbo].[KYLUAT]
-    ([HOCSINH_HS_MA]);
-GO
-
--- Creating foreign key on [HOCSINH_HS_MA] in table 'CHITIETDANHGIA'
-ALTER TABLE [dbo].[CHITIETDANHGIA]
-ADD CONSTRAINT [FK_HOCSINHCHITIETDANHGIA]
-    FOREIGN KEY ([HOCSINH_HS_MA])
-    REFERENCES [dbo].[HOCSINH]
-        ([HS_MA])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-GO
-
--- Creating non-clustered index for FOREIGN KEY 'FK_HOCSINHCHITIETDANHGIA'
-CREATE INDEX [IX_FK_HOCSINHCHITIETDANHGIA]
-ON [dbo].[CHITIETDANHGIA]
-    ([HOCSINH_HS_MA]);
-GO
-
 -- Creating foreign key on [SODANHGIA_SDG_MA] in table 'CHITIETDANHGIA'
 ALTER TABLE [dbo].[CHITIETDANHGIA]
 ADD CONSTRAINT [FK_SODANHGIACHITIETDANHGIA]
@@ -844,21 +769,6 @@ GO
 CREATE INDEX [IX_FK_SODANHGIACHITIETDANHGIA]
 ON [dbo].[CHITIETDANHGIA]
     ([SODANHGIA_SDG_MA]);
-GO
-
--- Creating foreign key on [HOCSINH_HS_MA] in table 'KHENTHUONG'
-ALTER TABLE [dbo].[KHENTHUONG]
-ADD CONSTRAINT [FK_HOCSINHKHENTHUONG]
-    FOREIGN KEY ([HOCSINH_HS_MA])
-    REFERENCES [dbo].[HOCSINH]
-        ([HS_MA])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-GO
-
--- Creating non-clustered index for FOREIGN KEY 'FK_HOCSINHKHENTHUONG'
-CREATE INDEX [IX_FK_HOCSINHKHENTHUONG]
-ON [dbo].[KHENTHUONG]
-    ([HOCSINH_HS_MA]);
 GO
 
 -- Creating foreign key on [KHOIs_KHOI_MA] in table 'LOP'
@@ -891,21 +801,6 @@ ON [dbo].[LOP]
     ([NAMHOC_NH_MA]);
 GO
 
--- Creating foreign key on [LOP_LOP_MA] in table 'HOCSINH'
-ALTER TABLE [dbo].[HOCSINH]
-ADD CONSTRAINT [FK_LOPHOCSINH]
-    FOREIGN KEY ([LOP_LOP_MA])
-    REFERENCES [dbo].[LOP]
-        ([LOP_MA])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-GO
-
--- Creating non-clustered index for FOREIGN KEY 'FK_LOPHOCSINH'
-CREATE INDEX [IX_FK_LOPHOCSINH]
-ON [dbo].[HOCSINH]
-    ([LOP_LOP_MA]);
-GO
-
 -- Creating foreign key on [PHONGHOC_PH_MA] in table 'COSOVATCHAT'
 ALTER TABLE [dbo].[COSOVATCHAT]
 ADD CONSTRAINT [FK_PHONGHOCCOSOVATCHAT]
@@ -919,21 +814,6 @@ GO
 CREATE INDEX [IX_FK_PHONGHOCCOSOVATCHAT]
 ON [dbo].[COSOVATCHAT]
     ([PHONGHOC_PH_MA]);
-GO
-
--- Creating foreign key on [DANTOC_DT_MA] in table 'HOCSINH'
-ALTER TABLE [dbo].[HOCSINH]
-ADD CONSTRAINT [FK_DANTOCHOCSINH]
-    FOREIGN KEY ([DANTOC_DT_MA])
-    REFERENCES [dbo].[DANTOC]
-        ([DT_MA])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-GO
-
--- Creating non-clustered index for FOREIGN KEY 'FK_DANTOCHOCSINH'
-CREATE INDEX [IX_FK_DANTOCHOCSINH]
-ON [dbo].[HOCSINH]
-    ([DANTOC_DT_MA]);
 GO
 
 -- Creating foreign key on [BACLUONG_BL_MA] in table 'THONGTINLUONG'
@@ -1249,6 +1129,126 @@ GO
 CREATE INDEX [IX_FK_TINHTRANGCOSOVATCHAT]
 ON [dbo].[COSOVATCHAT]
     ([TINHTRANG_TT_MA]);
+GO
+
+-- Creating foreign key on [TINHTHANH_TT_MA] in table 'HOCSINH'
+ALTER TABLE [dbo].[HOCSINH]
+ADD CONSTRAINT [FK_TINHTHANHHOCSINH]
+    FOREIGN KEY ([TINHTHANH_TT_MA])
+    REFERENCES [dbo].[TINHTHANH]
+        ([TT_MA])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_TINHTHANHHOCSINH'
+CREATE INDEX [IX_FK_TINHTHANHHOCSINH]
+ON [dbo].[HOCSINH]
+    ([TINHTHANH_TT_MA]);
+GO
+
+-- Creating foreign key on [XAPHUONG_XP_MA] in table 'HOCSINH'
+ALTER TABLE [dbo].[HOCSINH]
+ADD CONSTRAINT [FK_XAPHUONGHOCSINH]
+    FOREIGN KEY ([XAPHUONG_XP_MA])
+    REFERENCES [dbo].[XAPHUONG]
+        ([XP_MA])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_XAPHUONGHOCSINH'
+CREATE INDEX [IX_FK_XAPHUONGHOCSINH]
+ON [dbo].[HOCSINH]
+    ([XAPHUONG_XP_MA]);
+GO
+
+-- Creating foreign key on [KYLUAT_KL_MA] in table 'HOCSINH'
+ALTER TABLE [dbo].[HOCSINH]
+ADD CONSTRAINT [FK_KYLUATHOCSINH]
+    FOREIGN KEY ([KYLUAT_KL_MA])
+    REFERENCES [dbo].[KYLUAT]
+        ([KL_MA])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_KYLUATHOCSINH'
+CREATE INDEX [IX_FK_KYLUATHOCSINH]
+ON [dbo].[HOCSINH]
+    ([KYLUAT_KL_MA]);
+GO
+
+-- Creating foreign key on [KHENTHUONG_KT_MA] in table 'HOCSINH'
+ALTER TABLE [dbo].[HOCSINH]
+ADD CONSTRAINT [FK_KHENTHUONGHOCSINH]
+    FOREIGN KEY ([KHENTHUONG_KT_MA])
+    REFERENCES [dbo].[KHENTHUONG]
+        ([KT_MA])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_KHENTHUONGHOCSINH'
+CREATE INDEX [IX_FK_KHENTHUONGHOCSINH]
+ON [dbo].[HOCSINH]
+    ([KHENTHUONG_KT_MA]);
+GO
+
+-- Creating foreign key on [CHITIETDANHGIA_CTDG_MA] in table 'HOCSINH'
+ALTER TABLE [dbo].[HOCSINH]
+ADD CONSTRAINT [FK_CHITIETDANHGIAHOCSINH]
+    FOREIGN KEY ([CHITIETDANHGIA_CTDG_MA])
+    REFERENCES [dbo].[CHITIETDANHGIA]
+        ([CTDG_MA])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_CHITIETDANHGIAHOCSINH'
+CREATE INDEX [IX_FK_CHITIETDANHGIAHOCSINH]
+ON [dbo].[HOCSINH]
+    ([CHITIETDANHGIA_CTDG_MA]);
+GO
+
+-- Creating foreign key on [QUANHUYEN_QH_MA] in table 'HOCSINH'
+ALTER TABLE [dbo].[HOCSINH]
+ADD CONSTRAINT [FK_QUANHUYENHOCSINH]
+    FOREIGN KEY ([QUANHUYEN_QH_MA])
+    REFERENCES [dbo].[QUANHUYEN]
+        ([QH_MA])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_QUANHUYENHOCSINH'
+CREATE INDEX [IX_FK_QUANHUYENHOCSINH]
+ON [dbo].[HOCSINH]
+    ([QUANHUYEN_QH_MA]);
+GO
+
+-- Creating foreign key on [DANTOC_DT_MA] in table 'HOCSINH'
+ALTER TABLE [dbo].[HOCSINH]
+ADD CONSTRAINT [FK_DANTOCHOCSINH]
+    FOREIGN KEY ([DANTOC_DT_MA])
+    REFERENCES [dbo].[DANTOC]
+        ([DT_MA])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_DANTOCHOCSINH'
+CREATE INDEX [IX_FK_DANTOCHOCSINH]
+ON [dbo].[HOCSINH]
+    ([DANTOC_DT_MA]);
+GO
+
+-- Creating foreign key on [LOP_LOP_MA] in table 'HOCSINH'
+ALTER TABLE [dbo].[HOCSINH]
+ADD CONSTRAINT [FK_LOPHOCSINH]
+    FOREIGN KEY ([LOP_LOP_MA])
+    REFERENCES [dbo].[LOP]
+        ([LOP_MA])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_LOPHOCSINH'
+CREATE INDEX [IX_FK_LOPHOCSINH]
+ON [dbo].[HOCSINH]
+    ([LOP_LOP_MA]);
 GO
 
 -- --------------------------------------------------
