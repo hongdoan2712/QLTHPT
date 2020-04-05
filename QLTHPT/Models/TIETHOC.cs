@@ -14,9 +14,16 @@ namespace QLTHPT.Models
     
     public partial class TIETHOC
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public TIETHOC()
+        {
+            this.THOIKHOABIEUx = new HashSet<THOIKHOABIEU>();
+        }
+    
         public string TH_MA { get; set; }
         public string TH_TEN { get; set; }
     
-        public virtual THOIKHOABIEU THOIKHOABIEU { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<THOIKHOABIEU> THOIKHOABIEUx { get; set; }
     }
 }

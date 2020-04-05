@@ -14,23 +14,12 @@ namespace QLTHPT.Models
     
     public partial class COSOVATCHAT
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public COSOVATCHAT()
-        {
-            this.THIETBIGIANGDAYs = new HashSet<THIETBIGIANGDAY>();
-            this.THIETBIDAYHOCs = new HashSet<THIETBIDAYHOC>();
-            this.TINHTRANGs = new HashSet<TINHTRANG>();
-        }
-    
         public string CSVC_MA { get; set; }
         public int CSVC_SOLUONG { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<THIETBIGIANGDAY> THIETBIGIANGDAYs { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<THIETBIDAYHOC> THIETBIDAYHOCs { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TINHTRANG> TINHTRANGs { get; set; }
         public virtual PHONGHOC PHONGHOC { get; set; }
+        public virtual THIETBIGIANGDAY THIETBIGIANGDAY { get; set; }
+        public virtual THIETBIDAYHOC THIETBIDAYHOC { get; set; }
+        public virtual TINHTRANG TINHTRANG { get; set; }
     }
 }
