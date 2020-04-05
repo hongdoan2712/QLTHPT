@@ -114,10 +114,6 @@
       <End Role="NGACHLUONG" EntitySet="NGACHLUONG" />
       <End Role="THONGTINLUONG" EntitySet="THONGTINLUONG" />
     </AssociationSet>
-    <AssociationSet Name="THOIKHOABIEUMONHOC" Association="acomptec_qlthptModel.Store.THOIKHOABIEUMONHOC">
-      <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEU" />
-      <End Role="MONHOC" EntitySet="MONHOC" />
-    </AssociationSet>
     <AssociationSet Name="THOIKHOABIEUTIETHOC" Association="acomptec_qlthptModel.Store.THOIKHOABIEUTIETHOC">
       <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEU" />
       <End Role="TIETHOC" EntitySet="TIETHOC" />
@@ -133,10 +129,6 @@
     <AssociationSet Name="CANBOTHONGTINDAOTAO" Association="acomptec_qlthptModel.Store.CANBOTHONGTINDAOTAO">
       <End Role="CANBO" EntitySet="CANBO" />
       <End Role="THONGTINDAOTAO" EntitySet="THONGTINDAOTAO" />
-    </AssociationSet>
-    <AssociationSet Name="THONGTINDAOTAOCHUYENNGANH" Association="acomptec_qlthptModel.Store.THONGTINDAOTAOCHUYENNGANH">
-      <End Role="THONGTINDAOTAO" EntitySet="THONGTINDAOTAO" />
-      <End Role="CHUYENNGANH" EntitySet="CHUYENNGANH" />
     </AssociationSet>
     <AssociationSet Name="THONGTINDAOTAOHINHTHUC" Association="acomptec_qlthptModel.Store.THONGTINDAOTAOHINHTHUC">
       <End Role="THONGTINDAOTAO" EntitySet="THONGTINDAOTAO" />
@@ -169,6 +161,14 @@
     <AssociationSet Name="CANBOKYLUATCB" Association="acomptec_qlthptModel.Store.CANBOKYLUATCB">
       <End Role="CANBO" EntitySet="CANBO" />
       <End Role="KYLUATCB" EntitySet="KYLUATCB" />
+    </AssociationSet>
+    <AssociationSet Name="MONHOCTHOIKHOABIEU" Association="acomptec_qlthptModel.Store.MONHOCTHOIKHOABIEU">
+      <End Role="MONHOC" EntitySet="MONHOC" />
+      <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEU" />
+    </AssociationSet>
+    <AssociationSet Name="CHUYENNGANHTHONGTINDAOTAO" Association="acomptec_qlthptModel.Store.CHUYENNGANHTHONGTINDAOTAO">
+      <End Role="CHUYENNGANH" EntitySet="CHUYENNGANH" />
+      <End Role="THONGTINDAOTAO" EntitySet="THONGTINDAOTAO" />
     </AssociationSet>
   </EntityContainer>
   <EntityType Name="CHITIETDANHGIA">
@@ -228,6 +228,7 @@
     </Key>
     <Property Name="TKB_MA" Type="varchar" Nullable="false" MaxLength="10" />
     <Property Name="LOP_LOP_MA" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="MONHOC_MH_MA" Type="varchar" MaxLength="10" Nullable="false" />
   </EntityType>
   <EntityType Name="UpdateImages">
     <Key>
@@ -269,7 +270,6 @@
     </Key>
     <Property Name="CN_MA" Type="varchar" Nullable="false" MaxLength="10" />
     <Property Name="CN_TEN" Type="nvarchar" Nullable="true" MaxLength="50" />
-    <Property Name="THONGTINDAOTAO_TTDT_MA" Type="varchar" MaxLength="10" Nullable="false" />
   </EntityType>
   <EntityType Name="COQUAN">
     <Key>
@@ -321,7 +321,6 @@
     </Key>
     <Property Name="MH_MA" Type="varchar" Nullable="false" MaxLength="10" />
     <Property Name="MH_TEN" Type="nvarchar" Nullable="true" MaxLength="50" />
-    <Property Name="THOIKHOABIEU_TKB_MA" Type="varchar" MaxLength="10" Nullable="false" />
   </EntityType>
   <EntityType Name="NGACHLUONG">
     <Key>
@@ -376,6 +375,7 @@
     <Property Name="TTDT_MA" Type="varchar" Nullable="false" MaxLength="10" />
     <Property Name="CANBO_CB_MA" Type="varchar" MaxLength="10" Nullable="false" />
     <Property Name="HINHTHUCs_HT_MA" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="CHUYENNGANH_CN_MA" Type="varchar" MaxLength="10" Nullable="false" />
   </EntityType>
   <EntityType Name="THONGTINLUONG">
     <Key>
@@ -684,18 +684,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="THOIKHOABIEUMONHOC">
-    <End Role="THOIKHOABIEU" Type="acomptec_qlthptModel.Store.THOIKHOABIEU" Multiplicity="1" />
-    <End Role="MONHOC" Type="acomptec_qlthptModel.Store.MONHOC" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="THOIKHOABIEU">
-        <PropertyRef Name="TKB_MA" />
-      </Principal>
-      <Dependent Role="MONHOC">
-        <PropertyRef Name="THOIKHOABIEU_TKB_MA" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="THOIKHOABIEUTIETHOC">
     <End Role="THOIKHOABIEU" Type="acomptec_qlthptModel.Store.THOIKHOABIEU" Multiplicity="1" />
     <End Role="TIETHOC" Type="acomptec_qlthptModel.Store.TIETHOC" Multiplicity="*" />
@@ -741,18 +729,6 @@
       </Principal>
       <Dependent Role="THONGTINDAOTAO">
         <PropertyRef Name="CANBO_CB_MA" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="THONGTINDAOTAOCHUYENNGANH">
-    <End Role="THONGTINDAOTAO" Type="acomptec_qlthptModel.Store.THONGTINDAOTAO" Multiplicity="1" />
-    <End Role="CHUYENNGANH" Type="acomptec_qlthptModel.Store.CHUYENNGANH" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="THONGTINDAOTAO">
-        <PropertyRef Name="TTDT_MA" />
-      </Principal>
-      <Dependent Role="CHUYENNGANH">
-        <PropertyRef Name="THONGTINDAOTAO_TTDT_MA" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -849,6 +825,30 @@
       </Principal>
       <Dependent Role="KYLUATCB">
         <PropertyRef Name="CANBO_CB_MA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="MONHOCTHOIKHOABIEU">
+    <End Role="MONHOC" Type="acomptec_qlthptModel.Store.MONHOC" Multiplicity="1" />
+    <End Role="THOIKHOABIEU" Type="acomptec_qlthptModel.Store.THOIKHOABIEU" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MONHOC">
+        <PropertyRef Name="MH_MA" />
+      </Principal>
+      <Dependent Role="THOIKHOABIEU">
+        <PropertyRef Name="MONHOC_MH_MA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CHUYENNGANHTHONGTINDAOTAO">
+    <End Role="CHUYENNGANH" Type="acomptec_qlthptModel.Store.CHUYENNGANH" Multiplicity="1" />
+    <End Role="THONGTINDAOTAO" Type="acomptec_qlthptModel.Store.THONGTINDAOTAO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CHUYENNGANH">
+        <PropertyRef Name="CN_MA" />
+      </Principal>
+      <Dependent Role="THONGTINDAOTAO">
+        <PropertyRef Name="CHUYENNGANH_CN_MA" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -961,10 +961,6 @@
             <End Role="NGACHLUONG" EntitySet="NGACHLUONG" />
             <End Role="THONGTINLUONG" EntitySet="THONGTINLUONG" />
           </AssociationSet>
-          <AssociationSet Name="THOIKHOABIEUMONHOC" Association="acomptec_qlthptModel.THOIKHOABIEUMONHOC">
-            <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEU" />
-            <End Role="MONHOC" EntitySet="MONHOC" />
-          </AssociationSet>
           <AssociationSet Name="THOIKHOABIEUTIETHOC" Association="acomptec_qlthptModel.THOIKHOABIEUTIETHOC">
             <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEU" />
             <End Role="TIETHOC" EntitySet="TIETHOC" />
@@ -981,10 +977,6 @@
           <AssociationSet Name="CANBOTHONGTINDAOTAO" Association="acomptec_qlthptModel.CANBOTHONGTINDAOTAO">
             <End Role="CANBO" EntitySet="CANBO" />
             <End Role="THONGTINDAOTAO" EntitySet="THONGTINDAOTAO" />
-          </AssociationSet>
-          <AssociationSet Name="THONGTINDAOTAOCHUYENNGANH" Association="acomptec_qlthptModel.THONGTINDAOTAOCHUYENNGANH">
-            <End Role="THONGTINDAOTAO" EntitySet="THONGTINDAOTAO" />
-            <End Role="CHUYENNGANH" EntitySet="CHUYENNGANH" />
           </AssociationSet>
           <AssociationSet Name="THONGTINDAOTAOHINHTHUC" Association="acomptec_qlthptModel.THONGTINDAOTAOHINHTHUC">
             <End Role="THONGTINDAOTAO" EntitySet="THONGTINDAOTAO" />
@@ -1020,6 +1012,14 @@
           <AssociationSet Name="CANBOKYLUATCB" Association="acomptec_qlthptModel.CANBOKYLUATCB">
             <End Role="CANBO" EntitySet="CANBO" />
             <End Role="KYLUATCB" EntitySet="KYLUATCB" />
+          </AssociationSet>
+          <AssociationSet Name="MONHOCTHOIKHOABIEU" Association="acomptec_qlthptModel.MONHOCTHOIKHOABIEU">
+            <End Role="MONHOC" EntitySet="MONHOC" />
+            <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEU" />
+          </AssociationSet>
+          <AssociationSet Name="CHUYENNGANHTHONGTINDAOTAO" Association="acomptec_qlthptModel.CHUYENNGANHTHONGTINDAOTAO">
+            <End Role="CHUYENNGANH" EntitySet="CHUYENNGANH" />
+            <End Role="THONGTINDAOTAO" EntitySet="THONGTINDAOTAO" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="CHITIETDANHGIA">
@@ -1082,10 +1082,10 @@
             <PropertyRef Name="TKB_MA" />
           </Key>
           <Property Name="TKB_MA" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="MONHOCs" Relationship="acomptec_qlthptModel.THOIKHOABIEUMONHOC" FromRole="THOIKHOABIEU" ToRole="MONHOC" />
           <NavigationProperty Name="TIETHOCs" Relationship="acomptec_qlthptModel.THOIKHOABIEUTIETHOC" FromRole="THOIKHOABIEU" ToRole="TIETHOC" />
           <NavigationProperty Name="THUs" Relationship="acomptec_qlthptModel.THOIKHOABIEUTHU" FromRole="THOIKHOABIEU" ToRole="THU" />
           <NavigationProperty Name="LOP" Relationship="acomptec_qlthptModel.LOPTHOIKHOABIEU" FromRole="THOIKHOABIEU" ToRole="LOP" />
+          <NavigationProperty Name="MONHOC" Relationship="acomptec_qlthptModel.MONHOCTHOIKHOABIEU" FromRole="THOIKHOABIEU" ToRole="MONHOC" />
         </EntityType>
         <EntityType Name="UpdateImage">
           <Key>
@@ -1134,7 +1134,7 @@
           </Key>
           <Property Name="CN_MA" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="CN_TEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="THONGTINDAOTAO" Relationship="acomptec_qlthptModel.THONGTINDAOTAOCHUYENNGANH" FromRole="CHUYENNGANH" ToRole="THONGTINDAOTAO" />
+          <NavigationProperty Name="THONGTINDAOTAOs" Relationship="acomptec_qlthptModel.CHUYENNGANHTHONGTINDAOTAO" FromRole="CHUYENNGANH" ToRole="THONGTINDAOTAO" />
         </EntityType>
         <EntityType Name="COQUAN">
           <Key>
@@ -1195,7 +1195,7 @@
           </Key>
           <Property Name="MH_MA" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="MH_TEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="THOIKHOABIEU" Relationship="acomptec_qlthptModel.THOIKHOABIEUMONHOC" FromRole="MONHOC" ToRole="THOIKHOABIEU" />
+          <NavigationProperty Name="THOIKHOABIEUx" Relationship="acomptec_qlthptModel.MONHOCTHOIKHOABIEU" FromRole="MONHOC" ToRole="THOIKHOABIEU" />
         </EntityType>
         <EntityType Name="NGACHLUONG">
           <Key>
@@ -1253,9 +1253,9 @@
           </Key>
           <Property Name="TTDT_MA" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="CANBO" Relationship="acomptec_qlthptModel.CANBOTHONGTINDAOTAO" FromRole="THONGTINDAOTAO" ToRole="CANBO" />
-          <NavigationProperty Name="CHUYENNGANHs" Relationship="acomptec_qlthptModel.THONGTINDAOTAOCHUYENNGANH" FromRole="THONGTINDAOTAO" ToRole="CHUYENNGANH" />
           <NavigationProperty Name="HINHTHUCs" Relationship="acomptec_qlthptModel.THONGTINDAOTAOHINHTHUC" FromRole="THONGTINDAOTAO" ToRole="HINHTHUC" />
           <NavigationProperty Name="VANBANGs" Relationship="acomptec_qlthptModel.THONGTINDAOTAOVANBANG" FromRole="THONGTINDAOTAO" ToRole="VANBANG" />
+          <NavigationProperty Name="CHUYENNGANH" Relationship="acomptec_qlthptModel.CHUYENNGANHTHONGTINDAOTAO" FromRole="THONGTINDAOTAO" ToRole="CHUYENNGANH" />
           </EntityType>
         <EntityType Name="THONGTINLUONG">
           <Key>
@@ -1388,10 +1388,6 @@
           <End Type="acomptec_qlthptModel.NGACHLUONG" Role="NGACHLUONG" Multiplicity="1" />
           <End Type="acomptec_qlthptModel.THONGTINLUONG" Role="THONGTINLUONG" Multiplicity="*" />
         </Association>
-        <Association Name="THOIKHOABIEUMONHOC">
-          <End Type="acomptec_qlthptModel.THOIKHOABIEU" Role="THOIKHOABIEU" Multiplicity="1" />
-          <End Type="acomptec_qlthptModel.MONHOC" Role="MONHOC" Multiplicity="*" />
-        </Association>
         <Association Name="THOIKHOABIEUTIETHOC">
           <End Type="acomptec_qlthptModel.THOIKHOABIEU" Role="THOIKHOABIEU" Multiplicity="1" />
           <End Type="acomptec_qlthptModel.TIETHOC" Role="TIETHOC" Multiplicity="*" />
@@ -1416,10 +1412,6 @@
         <Association Name="CANBOTHONGTINDAOTAO">
           <End Type="acomptec_qlthptModel.CANBO" Role="CANBO" Multiplicity="1" />
           <End Type="acomptec_qlthptModel.THONGTINDAOTAO" Role="THONGTINDAOTAO" Multiplicity="*" />
-        </Association>
-        <Association Name="THONGTINDAOTAOCHUYENNGANH">
-          <End Type="acomptec_qlthptModel.THONGTINDAOTAO" Role="THONGTINDAOTAO" Multiplicity="1" />
-          <End Type="acomptec_qlthptModel.CHUYENNGANH" Role="CHUYENNGANH" Multiplicity="*" />
         </Association>
         <Association Name="THONGTINDAOTAOHINHTHUC">
           <End Type="acomptec_qlthptModel.THONGTINDAOTAO" Role="THONGTINDAOTAO" Multiplicity="1" />
@@ -1478,6 +1470,14 @@
         <Association Name="CANBOKYLUATCB">
           <End Type="acomptec_qlthptModel.CANBO" Role="CANBO" Multiplicity="1" />
           <End Type="acomptec_qlthptModel.KYLUATCB" Role="KYLUATCB" Multiplicity="*" />
+        </Association>
+        <Association Name="MONHOCTHOIKHOABIEU">
+          <End Type="acomptec_qlthptModel.MONHOC" Role="MONHOC" Multiplicity="1" />
+          <End Type="acomptec_qlthptModel.THOIKHOABIEU" Role="THOIKHOABIEU" Multiplicity="*" />
+        </Association>
+        <Association Name="CHUYENNGANHTHONGTINDAOTAO">
+          <End Type="acomptec_qlthptModel.CHUYENNGANH" Role="CHUYENNGANH" Multiplicity="1" />
+          <End Type="acomptec_qlthptModel.THONGTINDAOTAO" Role="THONGTINDAOTAO" Multiplicity="*" />
         </Association>
         </Schema>
     </edmx:ConceptualModels>
@@ -1930,14 +1930,6 @@
         <ScalarProperty Name="TTL_MA" ColumnName="TTL_MA" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="THOIKHOABIEUMONHOC" TypeName="acomptec_qlthptModel.THOIKHOABIEUMONHOC" StoreEntitySet="MONHOC">
-      <EndProperty Name="THOIKHOABIEU">
-        <ScalarProperty Name="TKB_MA" ColumnName="THOIKHOABIEU_TKB_MA" />
-      </EndProperty>
-      <EndProperty Name="MONHOC">
-        <ScalarProperty Name="MH_MA" ColumnName="MH_MA" />
-      </EndProperty>
-    </AssociationSetMapping>
     <AssociationSetMapping Name="THOIKHOABIEUTIETHOC" TypeName="acomptec_qlthptModel.THOIKHOABIEUTIETHOC" StoreEntitySet="TIETHOC">
       <EndProperty Name="THOIKHOABIEU">
         <ScalarProperty Name="TKB_MA" ColumnName="THOIKHOABIEU_TKB_MA" />
@@ -1968,14 +1960,6 @@
       </EndProperty>
       <EndProperty Name="THONGTINDAOTAO">
         <ScalarProperty Name="TTDT_MA" ColumnName="TTDT_MA" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="THONGTINDAOTAOCHUYENNGANH" TypeName="acomptec_qlthptModel.THONGTINDAOTAOCHUYENNGANH" StoreEntitySet="CHUYENNGANH">
-      <EndProperty Name="THONGTINDAOTAO">
-        <ScalarProperty Name="TTDT_MA" ColumnName="THONGTINDAOTAO_TTDT_MA" />
-      </EndProperty>
-      <EndProperty Name="CHUYENNGANH">
-        <ScalarProperty Name="CN_MA" ColumnName="CN_MA" />
       </EndProperty>
     </AssociationSetMapping>
     <AssociationSetMapping Name="THONGTINDAOTAOHINHTHUC" TypeName="acomptec_qlthptModel.THONGTINDAOTAOHINHTHUC" StoreEntitySet="THONGTINDAOTAO">
@@ -2040,6 +2024,22 @@
       </EndProperty>
       <EndProperty Name="KYLUATCB">
         <ScalarProperty Name="KLCB_MA" ColumnName="KLCB_MA" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="MONHOCTHOIKHOABIEU" TypeName="acomptec_qlthptModel.MONHOCTHOIKHOABIEU" StoreEntitySet="THOIKHOABIEU">
+      <EndProperty Name="MONHOC">
+        <ScalarProperty Name="MH_MA" ColumnName="MONHOC_MH_MA" />
+      </EndProperty>
+      <EndProperty Name="THOIKHOABIEU">
+        <ScalarProperty Name="TKB_MA" ColumnName="TKB_MA" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="CHUYENNGANHTHONGTINDAOTAO" TypeName="acomptec_qlthptModel.CHUYENNGANHTHONGTINDAOTAO" StoreEntitySet="THONGTINDAOTAO">
+      <EndProperty Name="CHUYENNGANH">
+        <ScalarProperty Name="CN_MA" ColumnName="CHUYENNGANH_CN_MA" />
+      </EndProperty>
+      <EndProperty Name="THONGTINDAOTAO">
+        <ScalarProperty Name="TTDT_MA" ColumnName="TTDT_MA" />
       </EndProperty>
     </AssociationSetMapping>
   </EntityContainerMapping>

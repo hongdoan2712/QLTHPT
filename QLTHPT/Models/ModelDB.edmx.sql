@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 04/04/2020 23:32:38
+-- Date Created: 04/05/2020 08:35:08
 -- Generated from EDMX file: C:\Users\OS\Documents\QLTHPT\QLTHPT\Models\ModelDB.edmx
 -- --------------------------------------------------
 
@@ -106,6 +106,12 @@ IF OBJECT_ID(N'[dbo].[FK_CANBOTHONGTINLUONG]', 'F') IS NOT NULL
 GO
 IF OBJECT_ID(N'[dbo].[FK_HOCKYSODANHGIA]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[SODANHGIA] DROP CONSTRAINT [FK_HOCKYSODANHGIA];
+GO
+IF OBJECT_ID(N'[dbo].[FK_CANBOKHENTHUONGCB]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[KHENTHUONGCB] DROP CONSTRAINT [FK_CANBOKHENTHUONGCB];
+GO
+IF OBJECT_ID(N'[dbo].[FK_CANBOKYLUATCB]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[KYLUATCB] DROP CONSTRAINT [FK_CANBOKYLUATCB];
 GO
 
 -- --------------------------------------------------
@@ -214,6 +220,12 @@ GO
 IF OBJECT_ID(N'[dbo].[HOCKY]', 'U') IS NOT NULL
     DROP TABLE [dbo].[HOCKY];
 GO
+IF OBJECT_ID(N'[dbo].[KHENTHUONGCB]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[KHENTHUONGCB];
+GO
+IF OBJECT_ID(N'[dbo].[KYLUATCB]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[KYLUATCB];
+GO
 
 -- --------------------------------------------------
 -- Creating all tables
@@ -273,7 +285,8 @@ GO
 -- Creating table 'THOIKHOABIEU'
 CREATE TABLE [dbo].[THOIKHOABIEU] (
     [TKB_MA] varchar(10)  NOT NULL,
-    [LOP_LOP_MA] varchar(10)  NOT NULL
+    [LOP_LOP_MA] varchar(10)  NOT NULL,
+    [MONHOC_MH_MA] varchar(10)  NOT NULL
 );
 GO
 
@@ -314,8 +327,7 @@ GO
 -- Creating table 'CHUYENNGANH'
 CREATE TABLE [dbo].[CHUYENNGANH] (
     [CN_MA] varchar(10)  NOT NULL,
-    [CN_TEN] nvarchar(50)  NULL,
-    [THONGTINDAOTAO_TTDT_MA] varchar(10)  NOT NULL
+    [CN_TEN] nvarchar(50)  NULL
 );
 GO
 
@@ -366,8 +378,7 @@ GO
 -- Creating table 'MONHOC'
 CREATE TABLE [dbo].[MONHOC] (
     [MH_MA] varchar(10)  NOT NULL,
-    [MH_TEN] nvarchar(50)  NULL,
-    [THOIKHOABIEU_TKB_MA] varchar(10)  NOT NULL
+    [MH_TEN] nvarchar(50)  NULL
 );
 GO
 
@@ -421,7 +432,8 @@ GO
 CREATE TABLE [dbo].[THONGTINDAOTAO] (
     [TTDT_MA] varchar(10)  NOT NULL,
     [CANBO_CB_MA] varchar(10)  NOT NULL,
-    [HINHTHUCs_HT_MA] varchar(10)  NOT NULL
+    [HINHTHUCs_HT_MA] varchar(10)  NOT NULL,
+    [CHUYENNGANH_CN_MA] varchar(10)  NOT NULL
 );
 GO
 
@@ -1010,21 +1022,6 @@ ON [dbo].[THONGTINLUONG]
     ([NGACHLUONG_NL_MA]);
 GO
 
--- Creating foreign key on [THOIKHOABIEU_TKB_MA] in table 'MONHOC'
-ALTER TABLE [dbo].[MONHOC]
-ADD CONSTRAINT [FK_THOIKHOABIEUMONHOC]
-    FOREIGN KEY ([THOIKHOABIEU_TKB_MA])
-    REFERENCES [dbo].[THOIKHOABIEU]
-        ([TKB_MA])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-GO
-
--- Creating non-clustered index for FOREIGN KEY 'FK_THOIKHOABIEUMONHOC'
-CREATE INDEX [IX_FK_THOIKHOABIEUMONHOC]
-ON [dbo].[MONHOC]
-    ([THOIKHOABIEU_TKB_MA]);
-GO
-
 -- Creating foreign key on [THOIKHOABIEU_TKB_MA] in table 'TIETHOC'
 ALTER TABLE [dbo].[TIETHOC]
 ADD CONSTRAINT [FK_THOIKHOABIEUTIETHOC]
@@ -1083,21 +1080,6 @@ GO
 CREATE INDEX [IX_FK_CANBOTHONGTINDAOTAO]
 ON [dbo].[THONGTINDAOTAO]
     ([CANBO_CB_MA]);
-GO
-
--- Creating foreign key on [THONGTINDAOTAO_TTDT_MA] in table 'CHUYENNGANH'
-ALTER TABLE [dbo].[CHUYENNGANH]
-ADD CONSTRAINT [FK_THONGTINDAOTAOCHUYENNGANH]
-    FOREIGN KEY ([THONGTINDAOTAO_TTDT_MA])
-    REFERENCES [dbo].[THONGTINDAOTAO]
-        ([TTDT_MA])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-GO
-
--- Creating non-clustered index for FOREIGN KEY 'FK_THONGTINDAOTAOCHUYENNGANH'
-CREATE INDEX [IX_FK_THONGTINDAOTAOCHUYENNGANH]
-ON [dbo].[CHUYENNGANH]
-    ([THONGTINDAOTAO_TTDT_MA]);
 GO
 
 -- Creating foreign key on [HINHTHUCs_HT_MA] in table 'THONGTINDAOTAO'
@@ -1218,6 +1200,36 @@ GO
 CREATE INDEX [IX_FK_CANBOKYLUATCB]
 ON [dbo].[KYLUATCB]
     ([CANBO_CB_MA]);
+GO
+
+-- Creating foreign key on [MONHOC_MH_MA] in table 'THOIKHOABIEU'
+ALTER TABLE [dbo].[THOIKHOABIEU]
+ADD CONSTRAINT [FK_MONHOCTHOIKHOABIEU]
+    FOREIGN KEY ([MONHOC_MH_MA])
+    REFERENCES [dbo].[MONHOC]
+        ([MH_MA])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_MONHOCTHOIKHOABIEU'
+CREATE INDEX [IX_FK_MONHOCTHOIKHOABIEU]
+ON [dbo].[THOIKHOABIEU]
+    ([MONHOC_MH_MA]);
+GO
+
+-- Creating foreign key on [CHUYENNGANH_CN_MA] in table 'THONGTINDAOTAO'
+ALTER TABLE [dbo].[THONGTINDAOTAO]
+ADD CONSTRAINT [FK_CHUYENNGANHTHONGTINDAOTAO]
+    FOREIGN KEY ([CHUYENNGANH_CN_MA])
+    REFERENCES [dbo].[CHUYENNGANH]
+        ([CN_MA])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_CHUYENNGANHTHONGTINDAOTAO'
+CREATE INDEX [IX_FK_CHUYENNGANHTHONGTINDAOTAO]
+ON [dbo].[THONGTINDAOTAO]
+    ([CHUYENNGANH_CN_MA]);
 GO
 
 -- --------------------------------------------------
