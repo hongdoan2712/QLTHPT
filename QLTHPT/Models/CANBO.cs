@@ -22,6 +22,7 @@ namespace QLTHPT.Models
             this.THONGTINLUONGs = new HashSet<THONGTINLUONG>();
             this.KHENTHUONGCBs = new HashSet<KHENTHUONGCB>();
             this.KYLUATCBs = new HashSet<KYLUATCB>();
+            this.THOIKHOABIEUx = new HashSet<THOIKHOABIEU>();
         }
     
         public string CB_MA { get; set; }
@@ -42,5 +43,7 @@ namespace QLTHPT.Models
         public virtual ICollection<KHENTHUONGCB> KHENTHUONGCBs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<KYLUATCB> KYLUATCBs { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<THOIKHOABIEU> THOIKHOABIEUx { get; set; }
     }
 }

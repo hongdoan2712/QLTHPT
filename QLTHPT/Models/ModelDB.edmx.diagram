@@ -47,23 +47,17 @@
         <AssociationConnector Association="acomptec_qlthptModel.KHOIsLOP" />
         <AssociationConnector Association="acomptec_qlthptModel.NAMHOCLOP" />
         <AssociationConnector Association="acomptec_qlthptModel.LOPHOCSINH" />
-        <AssociationConnector Association="acomptec_qlthptModel.COSOVATCHATTHIETBIGIANGDAY" />
-        <AssociationConnector Association="acomptec_qlthptModel.COSOVATCHATTHIETBIDAYHOC" />
-        <AssociationConnector Association="acomptec_qlthptModel.COSOVATCHATTINHTRANG" />
         <AssociationConnector Association="acomptec_qlthptModel.PHONGHOCCOSOVATCHAT" />
         <AssociationConnector Association="acomptec_qlthptModel.DANTOCHOCSINH" />
         <AssociationConnector Association="acomptec_qlthptModel.BACLUONGTHONGTINLUONG" />
         <AssociationConnector Association="acomptec_qlthptModel.COQUANCANBO" />
         <AssociationConnector Association="acomptec_qlthptModel.NGACHLUONGTHONGTINLUONG" />
-        <AssociationConnector Association="acomptec_qlthptModel.THOIKHOABIEUTIETHOC" />
-        <AssociationConnector Association="acomptec_qlthptModel.THOIKHOABIEUTHU" />
         <AssociationConnector Association="acomptec_qlthptModel.LOPTHOIKHOABIEU" />
         <EntityTypeShape EntityType="acomptec_qlthptModel.CHITIET_CHUCVU" Width="2.125" PointX="1.5" PointY="16.75" FillColor="Aqua" />
         <AssociationConnector Association="acomptec_qlthptModel.CANBOTHONGTINDAOTAO" />
         <AssociationConnector Association="acomptec_qlthptModel.THONGTINDAOTAOHINHTHUC" />
         <AssociationConnector Association="acomptec_qlthptModel.CANBOCHITIET_CHUCVU" />
         <AssociationConnector Association="acomptec_qlthptModel.CHUCVUCHITIET_CHUCVU" />
-        <AssociationConnector Association="acomptec_qlthptModel.THONGTINDAOTAOVANBANG" />
         <AssociationConnector Association="acomptec_qlthptModel.CANBOTHONGTINLUONG" />
         <EntityTypeShape EntityType="acomptec_qlthptModel.HOCKY" Width="1.5" PointX="6.5" PointY="11.375" />
         <AssociationConnector Association="acomptec_qlthptModel.HOCKYSODANHGIA" />
@@ -74,6 +68,12 @@
         <AssociationConnector Association="acomptec_qlthptModel.MONHOCTHOIKHOABIEU" />
         <AssociationConnector Association="acomptec_qlthptModel.CHUYENNGANHTHONGTINDAOTAO" />
         <AssociationConnector Association="acomptec_qlthptModel.CANBOTHOIKHOABIEU" />
+        <AssociationConnector Association="acomptec_qlthptModel.THUTHOIKHOABIEU" />
+        <AssociationConnector Association="acomptec_qlthptModel.TIETHOCTHOIKHOABIEU" />
+        <AssociationConnector Association="acomptec_qlthptModel.VANBANGTHONGTINDAOTAO" />
+        <AssociationConnector Association="acomptec_qlthptModel.THIETBIGIANGDAYCOSOVATCHAT" />
+        <AssociationConnector Association="acomptec_qlthptModel.THIETBIDAYHOCCOSOVATCHAT" />
+        <AssociationConnector Association="acomptec_qlthptModel.TINHTRANGCOSOVATCHAT" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
