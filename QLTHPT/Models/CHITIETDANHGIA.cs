@@ -14,12 +14,18 @@ namespace QLTHPT.Models
     
     public partial class CHITIETDANHGIA
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public CHITIETDANHGIA()
+        {
+            this.HOCSINHs = new HashSet<HOCSINH>();
+        }
+    
         public string CTDG_MA { get; set; }
         public Nullable<System.DateTime> CTDG_NGAYDG { get; set; }
-        public string HOCSINH_HS_MA { get; set; }
         public string SODANHGIA_SDG_MA { get; set; }
     
-        public virtual HOCSINH HOCSINH { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HOCSINH> HOCSINHs { get; set; }
         public virtual SODANHGIA SODANHGIA { get; set; }
     }
 }

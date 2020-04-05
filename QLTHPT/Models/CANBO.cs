@@ -18,10 +18,11 @@ namespace QLTHPT.Models
         public CANBO()
         {
             this.CHITIET_CHUCVU = new HashSet<CHITIET_CHUCVU>();
-            this.THONGTINDAOTAOs = new HashSet<THONGTINDAOTAO>();
             this.KHENTHUONGCBs = new HashSet<KHENTHUONGCB>();
             this.KYLUATCBs = new HashSet<KYLUATCB>();
             this.THOIKHOABIEUx = new HashSet<THOIKHOABIEU>();
+            this.THONGTINDAOTAOs = new HashSet<THONGTINDAOTAO>();
+            this.THONGTINLUONGs = new HashSet<THONGTINLUONG>();
         }
     
         public string CB_MA { get; set; }
@@ -30,22 +31,20 @@ namespace QLTHPT.Models
         public string CB_DIACHI { get; set; }
         public Nullable<System.DateTime> CB_NGAYSINH { get; set; }
         public string CB_CMND { get; set; }
-        public string THONGTINLUONGs_TTL_MA { get; set; }
         public string COQUAN_CQ_MA { get; set; }
-        public string KHENTHUONGCB_KTCB_MA { get; set; }
-        public string KYLUATCB_KLCB_MA { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CHITIET_CHUCVU> CHITIET_CHUCVU { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<THONGTINDAOTAO> THONGTINDAOTAOs { get; set; }
-        public virtual THONGTINLUONG THONGTINLUONG { get; set; }
-        public virtual COQUAN COQUAN { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<KHENTHUONGCB> KHENTHUONGCBs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<KYLUATCB> KYLUATCBs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<THOIKHOABIEU> THOIKHOABIEUx { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<THONGTINDAOTAO> THONGTINDAOTAOs { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<THONGTINLUONG> THONGTINLUONGs { get; set; }
+        public virtual COQUAN COQUAN { get; set; }
     }
 }

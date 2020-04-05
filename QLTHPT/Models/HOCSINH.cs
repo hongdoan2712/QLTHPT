@@ -14,14 +14,6 @@ namespace QLTHPT.Models
     
     public partial class HOCSINH
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public HOCSINH()
-        {
-            this.CHITIETDANHGIAs = new HashSet<CHITIETDANHGIA>();
-            this.KHENTHUONGs = new HashSet<KHENTHUONG>();
-            this.KYLUATs = new HashSet<KYLUAT>();
-        }
-    
         public string HS_MA { get; set; }
         public string HS_HOTEN { get; set; }
         public string HS_GIOITINH { get; set; }
@@ -29,17 +21,17 @@ namespace QLTHPT.Models
         public string HS_TONGIAO { get; set; }
         public string TINHTHANH_TT_MA { get; set; }
         public string XAPHUONG_XP_MA { get; set; }
+        public string KYLUAT_KL_MA { get; set; }
+        public string KHENTHUONG_KT_MA { get; set; }
+        public string CHITIETDANHGIA_CTDG_MA { get; set; }
         public string QUANHUYEN_QH_MA { get; set; }
-        public string LOP_LOP_MA { get; set; }
         public string DANTOC_DT_MA { get; set; }
+        public string LOP_LOP_MA { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CHITIETDANHGIA> CHITIETDANHGIAs { get; set; }
+        public virtual CHITIETDANHGIA CHITIETDANHGIA { get; set; }
         public virtual DANTOC DANTOC { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<KHENTHUONG> KHENTHUONGs { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<KYLUAT> KYLUATs { get; set; }
+        public virtual KHENTHUONG KHENTHUONG { get; set; }
+        public virtual KYLUAT KYLUAT { get; set; }
         public virtual LOP LOP { get; set; }
         public virtual QUANHUYEN QUANHUYEN { get; set; }
         public virtual TINHTHANH TINHTHANH { get; set; }

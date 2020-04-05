@@ -14,11 +14,11 @@ namespace QLTHPT.Models
     
     public partial class KHENTHUONGCB
     {
-        public int KTCB_MA { get; set; }
+        public string KTCB_MA { get; set; }
         public string KTCB_NGAY { get; set; }
         public string KTCB_THANHTICH { get; set; }
         public string CANBO_CB_MA { get; set; }
     
-        public virtual CANBO CANBOes { get; set; }
+        public virtual CANBO CANBO { get; set; }
     }
 }

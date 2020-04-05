@@ -14,10 +14,16 @@ namespace QLTHPT.Models
     
     public partial class CHUYENNGANH
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public CHUYENNGANH()
+        {
+            this.THONGTINDAOTAOs = new HashSet<THONGTINDAOTAO>();
+        }
+    
         public string CN_MA { get; set; }
         public string CN_TEN { get; set; }
-        public string THONGTINDAOTAO_TTDT_MA { get; set; }
     
-        public virtual THONGTINDAOTAO THONGTINDAOTAO { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<THONGTINDAOTAO> THONGTINDAOTAOs { get; set; }
     }
 }

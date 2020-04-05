@@ -13,10 +13,10 @@ namespace QLTHPT.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class acomptec_qlthptEntities : DbContext
+    public partial class acomptec_qlthptEntities1 : DbContext
     {
-        public acomptec_qlthptEntities()
-            : base("name=acomptec_qlthptEntities")
+        public acomptec_qlthptEntities1()
+            : base("name=acomptec_qlthptEntities1")
         {
         }
     
@@ -35,11 +35,13 @@ namespace QLTHPT.Models
         public virtual DbSet<COSOVATCHAT> COSOVATCHATs { get; set; }
         public virtual DbSet<DANTOC> DANTOCs { get; set; }
         public virtual DbSet<HINHTHUC> HINHTHUCs { get; set; }
-        public virtual DbSet<HOCKy> HOCKies { get; set; }
+        public virtual DbSet<HOCKY> HOCKies { get; set; }
         public virtual DbSet<HOCSINH> HOCSINHs { get; set; }
         public virtual DbSet<KHENTHUONG> KHENTHUONGs { get; set; }
-        public virtual DbSet<KHOIs> KHOIs { get; set; }
+        public virtual DbSet<KHENTHUONGCB> KHENTHUONGCBs { get; set; }
+        public virtual DbSet<KHOI> KHOIs { get; set; }
         public virtual DbSet<KYLUAT> KYLUATs { get; set; }
+        public virtual DbSet<KYLUATCB> KYLUATCBs { get; set; }
         public virtual DbSet<LOP> LOPs { get; set; }
         public virtual DbSet<MONHOC> MONHOCs { get; set; }
         public virtual DbSet<NAMHOC> NAMHOCs { get; set; }
@@ -49,7 +51,7 @@ namespace QLTHPT.Models
         public virtual DbSet<SODANHGIA> SODANHGIAs { get; set; }
         public virtual DbSet<THIETBIDAYHOC> THIETBIDAYHOCs { get; set; }
         public virtual DbSet<THIETBIGIANGDAY> THIETBIGIANGDAYs { get; set; }
-        public virtual DbSet<THOIKHOABIEU> THOIKHOABIEUs { get; set; }
+        public virtual DbSet<THOIKHOABIEU> THOIKHOABIEUx { get; set; }
         public virtual DbSet<THONGTINDAOTAO> THONGTINDAOTAOs { get; set; }
         public virtual DbSet<THONGTINLUONG> THONGTINLUONGs { get; set; }
         public virtual DbSet<THU> THUs { get; set; }
@@ -59,7 +61,5 @@ namespace QLTHPT.Models
         public virtual DbSet<UpdateImage> UpdateImages { get; set; }
         public virtual DbSet<VANBANG> VANBANGs { get; set; }
         public virtual DbSet<XAPHUONG> XAPHUONGs { get; set; }
-        public virtual DbSet<KHENTHUONGCB> KHENTHUONGCBs { get; set; }
-        public virtual DbSet<KYLUATCB> KYLUATCBs { get; set; }
     }
 }

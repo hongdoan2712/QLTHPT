@@ -14,10 +14,16 @@ namespace QLTHPT.Models
     
     public partial class MONHOC
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public MONHOC()
+        {
+            this.THOIKHOABIEUx = new HashSet<THOIKHOABIEU>();
+        }
+    
         public string MH_MA { get; set; }
         public string MH_TEN { get; set; }
-        public string THOIKHOABIEU_TKB_MA { get; set; }
     
-        public virtual THOIKHOABIEU THOIKHOABIEU { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<THOIKHOABIEU> THOIKHOABIEUx { get; set; }
     }
 }

@@ -14,12 +14,18 @@ namespace QLTHPT.Models
     
     public partial class KHENTHUONG
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public KHENTHUONG()
+        {
+            this.HOCSINHs = new HashSet<HOCSINH>();
+        }
+    
         public string KT_MA { get; set; }
         public string KT_THANHTICH { get; set; }
         public Nullable<System.DateTime> KT_NGAYKHENTHUONG { get; set; }
         public string KT_GHICHU { get; set; }
-        public string HOCSINH_HS_MA { get; set; }
     
-        public virtual HOCSINH HOCSINH { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HOCSINH> HOCSINHs { get; set; }
     }
 }

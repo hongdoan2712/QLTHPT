@@ -14,10 +14,16 @@ namespace QLTHPT.Models
     
     public partial class THIETBIGIANGDAY
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public THIETBIGIANGDAY()
+        {
+            this.COSOVATCHATs = new HashSet<COSOVATCHAT>();
+        }
+    
         public string TBGD_MA { get; set; }
         public string TBGD_TEN { get; set; }
-        public string COSOVATCHAT_CSVC_MA { get; set; }
     
-        public virtual COSOVATCHAT COSOVATCHAT { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<COSOVATCHAT> COSOVATCHATs { get; set; }
     }
 }

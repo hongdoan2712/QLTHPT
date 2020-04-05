@@ -14,24 +14,17 @@ namespace QLTHPT.Models
     
     public partial class THOIKHOABIEU
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public THOIKHOABIEU()
-        {
-            this.MONHOCs = new HashSet<MONHOC>();
-            this.THUs = new HashSet<THU>();
-            this.TIETHOCs = new HashSet<TIETHOC>();
-        }
-    
         public string TKB_MA { get; set; }
         public string LOP_LOP_MA { get; set; }
+        public string MONHOC_MH_MA { get; set; }
+        public string CANBO_CB_MA { get; set; }
+        public string THU_THU_MA { get; set; }
+        public string TIETHOC_TH_MA { get; set; }
     
-        public virtual LOP LOP { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<MONHOC> MONHOCs { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<THU> THUs { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TIETHOC> TIETHOCs { get; set; }
         public virtual CANBO CANBO { get; set; }
+        public virtual LOP LOP { get; set; }
+        public virtual MONHOC MONHOC { get; set; }
+        public virtual THU THU { get; set; }
+        public virtual TIETHOC TIETHOC { get; set; }
     }
 }

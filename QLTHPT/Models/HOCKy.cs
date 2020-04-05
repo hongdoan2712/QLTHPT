@@ -12,10 +12,10 @@ namespace QLTHPT.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class HOCKy
+    public partial class HOCKY
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public HOCKy()
+        public HOCKY()
         {
             this.SODANHGIAs = new HashSet<SODANHGIA>();
         }
