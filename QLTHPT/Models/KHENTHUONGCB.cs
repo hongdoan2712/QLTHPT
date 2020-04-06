@@ -14,10 +14,17 @@ namespace QLTHPT.Models
     
     public partial class KHENTHUONGCB
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public KHENTHUONGCB()
+        {
+            this.CANBOes = new HashSet<CANBO>();
+        }
+    
         public string KTCB_MA { get; set; }
         public string KTCB_NGAY { get; set; }
         public string KTCB_THANHTICH { get; set; }
     
-        public virtual CANBO CANBO { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CANBO> CANBOes { get; set; }
     }
 }

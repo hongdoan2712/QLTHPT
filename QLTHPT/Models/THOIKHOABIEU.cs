@@ -18,8 +18,8 @@ namespace QLTHPT.Models
     
         public virtual LOP LOP { get; set; }
         public virtual MONHOC MONHOC { get; set; }
-        public virtual CANBO CANBO { get; set; }
         public virtual THU THU { get; set; }
         public virtual TIETHOC TIETHOC { get; set; }
+        public virtual CANBO CANBO { get; set; }
     }
 }

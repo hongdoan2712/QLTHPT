@@ -14,10 +14,17 @@ namespace QLTHPT.Models
     
     public partial class KYLUATCB
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public KYLUATCB()
+        {
+            this.CANBOes = new HashSet<CANBO>();
+        }
+    
         public string KLCB_MA { get; set; }
         public string KLCB_NGAY { get; set; }
         public string KLCB_HT { get; set; }
     
-        public virtual CANBO CANBO { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CANBO> CANBOes { get; set; }
     }
 }

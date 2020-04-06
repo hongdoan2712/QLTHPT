@@ -20,6 +20,5 @@ namespace QLTHPT.Models
     
         public virtual BACLUONG BACLUONG { get; set; }
         public virtual NGACHLUONG NGACHLUONG { get; set; }
-        public virtual CANBO CANBO { get; set; }
     }
 }

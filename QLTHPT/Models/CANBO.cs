@@ -17,11 +17,6 @@ namespace QLTHPT.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public CANBO()
         {
-            this.THONGTINDAOTAOs = new HashSet<THONGTINDAOTAO>();
-            this.CHITIET_CHUCVU = new HashSet<CHITIET_CHUCVU>();
-            this.THONGTINLUONGs = new HashSet<THONGTINLUONG>();
-            this.KHENTHUONGCBs = new HashSet<KHENTHUONGCB>();
-            this.KYLUATCBs = new HashSet<KYLUATCB>();
             this.THOIKHOABIEUx = new HashSet<THOIKHOABIEU>();
         }
     
@@ -33,17 +28,11 @@ namespace QLTHPT.Models
         public string CB_CMND { get; set; }
     
         public virtual COQUAN COQUAN { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<THONGTINDAOTAO> THONGTINDAOTAOs { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CHITIET_CHUCVU> CHITIET_CHUCVU { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<THONGTINLUONG> THONGTINLUONGs { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<KHENTHUONGCB> KHENTHUONGCBs { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<KYLUATCB> KYLUATCBs { get; set; }
+        public virtual CHITIET_CHUCVU CHITIET_CHUCVU { get; set; }
+        public virtual KYLUATCB KYLUATCB { get; set; }
+        public virtual KHENTHUONGCB KHENTHUONGCB { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<THOIKHOABIEU> THOIKHOABIEUx { get; set; }
+        public virtual THONGTINDAOTAO THONGTINDAOTAO { get; set; }
     }
 }
