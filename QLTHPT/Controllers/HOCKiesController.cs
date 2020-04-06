@@ -6,111 +6,114 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using QLTHPT.App_Start;
 using QLTHPT.Models;
 
 namespace QLTHPT.Controllers
 {
-    public class QUANHUYENsController : Controller
+    public class HOCKiesController : Controller
     {
-        private acomptec_qlthptEntities1 db = new acomptec_qlthptEntities1();
+        private acomptec_qlthptEntities db = new acomptec_qlthptEntities();
 
-        // GET: QUANHUYENs
+        // GET: HOCKies
         public ActionResult Index()
         {
-            return View(db.QUANHUYENs.ToList());
+            return View(db.HOCKies.ToList());
         }
 
-        // GET: QUANHUYENs/Details/5
+        // GET: HOCKies/Details/5
         public ActionResult Details(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            QUANHUYEN qUANHUYEN = db.QUANHUYENs.Find(id);
-            if (qUANHUYEN == null)
+            HOCKY hOCKY = db.HOCKies.Find(id);
+            if (hOCKY == null)
             {
                 return HttpNotFound();
             }
-            return View(qUANHUYEN);
+            return View(hOCKY);
         }
 
-        // GET: QUANHUYENs/Create
+        // GET: HOCKies/Create
         public ActionResult Create()
         {
-            return View();
+            HOCKY obj = new HOCKY();
+            obj.HK_MA = CreateID.CreateID_ByteText();
+            return View(obj);
         }
 
-        // POST: QUANHUYENs/Create
+        // POST: HOCKies/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "QH_MA,QH_TEN")] QUANHUYEN qUANHUYEN)
+        public ActionResult Create([Bind(Include = "HK_MA,HK_TEN")] HOCKY hOCKY)
         {
             if (ModelState.IsValid)
             {
-                db.QUANHUYENs.Add(qUANHUYEN);
+                db.HOCKies.Add(hOCKY);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(qUANHUYEN);
+            return View(hOCKY);
         }
 
-        // GET: QUANHUYENs/Edit/5
+        // GET: HOCKies/Edit/5
         public ActionResult Edit(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            QUANHUYEN qUANHUYEN = db.QUANHUYENs.Find(id);
-            if (qUANHUYEN == null)
+            HOCKY hOCKY = db.HOCKies.Find(id);
+            if (hOCKY == null)
             {
                 return HttpNotFound();
             }
-            return View(qUANHUYEN);
+            return View(hOCKY);
         }
 
-        // POST: QUANHUYENs/Edit/5
+        // POST: HOCKies/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "QH_MA,QH_TEN")] QUANHUYEN qUANHUYEN)
+        public ActionResult Edit([Bind(Include = "HK_MA,HK_TEN")] HOCKY hOCKY)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(qUANHUYEN).State = EntityState.Modified;
+                db.Entry(hOCKY).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(qUANHUYEN);
+            return View(hOCKY);
         }
 
-        // GET: QUANHUYENs/Delete/5
+        // GET: HOCKies/Delete/5
         public ActionResult Delete(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            QUANHUYEN qUANHUYEN = db.QUANHUYENs.Find(id);
-            if (qUANHUYEN == null)
+            HOCKY hOCKY = db.HOCKies.Find(id);
+            if (hOCKY == null)
             {
                 return HttpNotFound();
             }
-            return View(qUANHUYEN);
+            return View(hOCKY);
         }
 
-        // POST: QUANHUYENs/Delete/5
+        // POST: HOCKies/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string id)
         {
-            QUANHUYEN qUANHUYEN = db.QUANHUYENs.Find(id);
-            db.QUANHUYENs.Remove(qUANHUYEN);
+            HOCKY hOCKY = db.HOCKies.Find(id);
+            db.HOCKies.Remove(hOCKY);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

@@ -17,13 +17,17 @@ namespace QLTHPT.Models
         public string TKB_MA { get; set; }
         public string LOP_LOP_MA { get; set; }
         public string MONHOC_MH_MA { get; set; }
-        public string CANBO_CB_MA { get; set; }
         public string THU_THU_MA { get; set; }
         public string TIETHOC_TH_MA { get; set; }
+        public string CANBO_CB_MA { get; set; }
+        public string NAMHOC_NH_MA { get; set; }
+        public string HOCKY_HK_MA { get; set; }
     
         public virtual CANBO CANBO { get; set; }
+        public virtual HOCKY HOCKY { get; set; }
         public virtual LOP LOP { get; set; }
         public virtual MONHOC MONHOC { get; set; }
+        public virtual NAMHOC NAMHOC { get; set; }
         public virtual THU THU { get; set; }
         public virtual TIETHOC TIETHOC { get; set; }
     }

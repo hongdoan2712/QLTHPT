@@ -19,10 +19,8 @@ namespace QLTHPT.Models
         public string TTL_HESOLUONG { get; set; }
         public string BACLUONG_BL_MA { get; set; }
         public string NGACHLUONG_NL_MA { get; set; }
-        public string CANBO_CB_MA { get; set; }
     
         public virtual BACLUONG BACLUONG { get; set; }
-        public virtual CANBO CANBO { get; set; }
         public virtual NGACHLUONG NGACHLUONG { get; set; }
     }
 }

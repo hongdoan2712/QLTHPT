@@ -23,14 +23,10 @@ namespace QLTHPT.Models
     
         public string LOP_MA { get; set; }
         public string LOP_TEN { get; set; }
-        public string KHOIs_KHOI_MA { get; set; }
-        public string NAMHOC_NH_MA { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HOCSINH> HOCSINHs { get; set; }
-        public virtual KHOI KHOI { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<THOIKHOABIEU> THOIKHOABIEUx { get; set; }
-        public virtual NAMHOC NAMHOC { get; set; }
     }
 }

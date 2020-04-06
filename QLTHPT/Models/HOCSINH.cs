@@ -27,10 +27,12 @@ namespace QLTHPT.Models
         public string QUANHUYEN_QH_MA { get; set; }
         public string DANTOC_DT_MA { get; set; }
         public string LOP_LOP_MA { get; set; }
+        public string KHOI_KHOI_MA { get; set; }
     
         public virtual CHITIETDANHGIA CHITIETDANHGIA { get; set; }
         public virtual DANTOC DANTOC { get; set; }
         public virtual KHENTHUONG KHENTHUONG { get; set; }
+        public virtual KHOI KHOI { get; set; }
         public virtual KYLUAT KYLUAT { get; set; }
         public virtual LOP LOP { get; set; }
         public virtual QUANHUYEN QUANHUYEN { get; set; }

@@ -5,7 +5,6 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-
 <div class="data-table-area mg-b-15">
     <div class="container-fluid">
         <div class="row">
@@ -15,9 +14,10 @@
                         <div class="main-sparkline13-hd">
                             <h4>
                                 <strong>
-                                    Chi Tiết Năm Học
+                                    Chi Tiết
                                 </strong>
                             </h4>
+
 
                         </div>
                     </div>
@@ -27,11 +27,12 @@
                                 <thead>
                                     <tr>
                                         <th>
-                                            Mã Năm Học
+                                            Mã
                                         </th>
                                         <th>
-                                            Tên Năm Học
+                                            Tên
                                         </th>
+
                                     </tr>
                                     <tr>
                                         <td>
@@ -40,6 +41,7 @@
                                         <td>
                                             @Html.DisplayFor(model => model.NH_NAMHOC)
                                         </td>
+
                                     </tr>
                                 </thead>
 
@@ -51,8 +53,8 @@
         </div>
     </div>
 </div>
-
 <p>
-    <a href="@Url.Action("Edit", "NAMHOCs", new { id = Model.NH_MA })" class="btn btn-custon-rounded-three btn-warning"><i class="fa fa-edit"></i></a> |
+    <a href="@Url.Action("Edit", "NAMHOCs", new { id = Model.NH_MA})" class="btn btn-custon-rounded-three btn-warning"><i class="fa fa-edit"></i></a> |
     <a href="@Url.Action("Index", "NAMHOCs")" class=" btn btn-custon-rounded-three btn-primary"><i class="fa fa-undo"></i></a>
 </p>
+

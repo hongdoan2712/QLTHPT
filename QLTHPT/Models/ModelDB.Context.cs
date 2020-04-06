@@ -13,10 +13,10 @@ namespace QLTHPT.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class acomptec_qlthptEntities1 : DbContext
+    public partial class acomptec_qlthptEntities : DbContext
     {
-        public acomptec_qlthptEntities1()
-            : base("name=acomptec_qlthptEntities1")
+        public acomptec_qlthptEntities()
+            : base("name=acomptec_qlthptEntities")
         {
         }
     

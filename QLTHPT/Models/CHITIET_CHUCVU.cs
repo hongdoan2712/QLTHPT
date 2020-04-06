@@ -14,12 +14,18 @@ namespace QLTHPT.Models
     
     public partial class CHITIET_CHUCVU
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public CHITIET_CHUCVU()
+        {
+            this.CANBOes = new HashSet<CANBO>();
+        }
+    
         public System.TimeSpan CT_CV_ID { get; set; }
         public string CT_CV_TEN { get; set; }
-        public string CANBO_CB_MA { get; set; }
         public string CHUCVU_CV_MA { get; set; }
     
-        public virtual CANBO CANBO { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CANBO> CANBOes { get; set; }
         public virtual CHUCVU CHUCVU { get; set; }
     }
 }

@@ -14,9 +14,10 @@
                         <div class="main-sparkline13-hd">
                             <h4>
                                 <strong>
-                                    Chi Tiết Thứ
+                                    Chi Tiết
                                 </strong>
                             </h4>
+
 
                         </div>
                     </div>
@@ -26,11 +27,12 @@
                                 <thead>
                                     <tr>
                                         <th>
-                                            Mã 
+                                            Mã
                                         </th>
                                         <th>
-                                            Tên Thứ
+                                            Tên
                                         </th>
+
                                     </tr>
                                     <tr>
                                         <td>
@@ -39,6 +41,7 @@
                                         <td>
                                             @Html.DisplayFor(model => model.THU_TEN)
                                         </td>
+
                                     </tr>
                                 </thead>
 
@@ -50,8 +53,7 @@
         </div>
     </div>
 </div>
-
 <p>
-    <a href="@Url.Action("Edit", "THUs", new { id = Model.THU_MA })" class="btn btn-custon-rounded-three btn-warning"><i class="fa fa-edit"></i></a> |
+    <a href="@Url.Action("Edit", "THUs", new { id = Model.THU_MA})" class="btn btn-custon-rounded-three btn-warning"><i class="fa fa-edit"></i></a> |
     <a href="@Url.Action("Index", "THUs")" class=" btn btn-custon-rounded-three btn-primary"><i class="fa fa-undo"></i></a>
 </p>

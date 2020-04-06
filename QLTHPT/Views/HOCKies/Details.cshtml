@@ -1,4 +1,4 @@
-﻿@model QLTHPT.Models.HOCKy
+﻿@model QLTHPT.Models.HOCKY
 
 @{
     ViewBag.Title = "Details";
@@ -14,11 +14,11 @@
                         <div class="main-sparkline13-hd">
                             <h4>
                                 <strong>
-                                    Chi Tiết 
+                                    Chi Tiết
                                 </strong>
                             </h4>
 
-                            
+
                         </div>
                     </div>
                     <div class="sparkline10-graph">
@@ -27,11 +27,12 @@
                                 <thead>
                                     <tr>
                                         <th>
-                                            Mã Học Kỳ
+                                            Mã
                                         </th>
                                         <th>
-                                            Tên Học Kỳ
+                                            Tên
                                         </th>
+
                                     </tr>
                                     <tr>
                                         <td>
@@ -40,6 +41,7 @@
                                         <td>
                                             @Html.DisplayFor(model => model.HK_TEN)
                                         </td>
+
                                     </tr>
                                 </thead>
 
@@ -52,6 +54,6 @@
     </div>
 </div>
 <p>
-    <a href="@Url.Action("Edit", "HOCKies", new { id = Model.HK_MA })" class="btn btn-custon-rounded-three btn-warning"><i class="fa fa-edit"></i></a> |
-    <a href="@Url.Action("Index", "HOCKies")" class=" btn btn-custon-rounded-three btn-primary"><i class="fa fa-undo"></i></a>
+    <a href="@Url.Action("Edit", "HOCKYs", new { id = Model.HK_MA })" class="btn btn-custon-rounded-three btn-warning"><i class="fa fa-edit"></i></a> |
+    <a href="@Url.Action("Index", "HOCKYs")" class=" btn btn-custon-rounded-three btn-primary"><i class="fa fa-undo"></i></a>
 </p>

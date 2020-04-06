@@ -5,7 +5,6 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-
 <div class="data-table-area mg-b-15">
     <div class="container-fluid">
         <div class="row">
@@ -15,10 +14,11 @@
                         <div class="main-sparkline13-hd">
                             <h4>
                                 <strong>
-                                    Chi Tiết Môn Học
+                                    Chi Tiết
                                 </strong>
                             </h4>
-                           
+
+
                         </div>
                     </div>
                     <div class="sparkline10-graph">
@@ -27,11 +27,12 @@
                                 <thead>
                                     <tr>
                                         <th>
-                                            Mã Môn Học
+                                            Mã
                                         </th>
                                         <th>
-                                            Tên Môn Học
+                                            Tên
                                         </th>
+
                                     </tr>
                                     <tr>
                                         <td>
@@ -40,6 +41,7 @@
                                         <td>
                                             @Html.DisplayFor(model => model.MH_TEN)
                                         </td>
+
                                     </tr>
                                 </thead>
 
@@ -52,6 +54,6 @@
     </div>
 </div>
 <p>
-    <a href="@Url.Action("Edit", "MONHOCs", new { id = Model.MH_MA })" class="btn btn-custon-rounded-three btn-warning"><i class="fa fa-edit"></i></a> |
+    <a href="@Url.Action("Edit", "MONHOCs", new { id = Model.MH_MA})" class="btn btn-custon-rounded-three btn-warning"><i class="fa fa-edit"></i></a> |
     <a href="@Url.Action("Index", "MONHOCs")" class=" btn btn-custon-rounded-three btn-primary"><i class="fa fa-undo"></i></a>
 </p>

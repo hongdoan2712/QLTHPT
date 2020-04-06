@@ -14,13 +14,19 @@ namespace QLTHPT.Models
     
     public partial class THONGTINDAOTAO
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public THONGTINDAOTAO()
+        {
+            this.CANBOes = new HashSet<CANBO>();
+        }
+    
         public string TTDT_MA { get; set; }
-        public string CANBO_CB_MA { get; set; }
         public string HINHTHUCs_HT_MA { get; set; }
         public string CHUYENNGANH_CN_MA { get; set; }
         public string VANBANG_VB_MA { get; set; }
     
-        public virtual CANBO CANBO { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CANBO> CANBOes { get; set; }
         public virtual CHUYENNGANH CHUYENNGANH { get; set; }
         public virtual HINHTHUC HINHTHUC { get; set; }
         public virtual VANBANG VANBANG { get; set; }

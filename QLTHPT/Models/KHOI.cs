@@ -17,13 +17,13 @@ namespace QLTHPT.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public KHOI()
         {
-            this.LOPs = new HashSet<LOP>();
+            this.HOCSINHs = new HashSet<HOCSINH>();
         }
     
         public string KHOI_MA { get; set; }
         public string KHOI_TEN { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<LOP> LOPs { get; set; }
+        public virtual ICollection<HOCSINH> HOCSINHs { get; set; }
     }
 }
