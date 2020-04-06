@@ -46,14 +46,6 @@
       <End Role="SODANHGIA" EntitySet="SODANHGIA" />
       <End Role="CHITIETDANHGIA" EntitySet="CHITIETDANHGIA" />
     </AssociationSet>
-    <AssociationSet Name="KHOIsLOP" Association="acomptec_qlthptModel.Store.KHOIsLOP">
-      <End Role="KHOIs" EntitySet="KHOI" />
-      <End Role="LOP" EntitySet="LOP" />
-    </AssociationSet>
-    <AssociationSet Name="NAMHOCLOP" Association="acomptec_qlthptModel.Store.NAMHOCLOP">
-      <End Role="NAMHOC" EntitySet="NAMHOC" />
-      <End Role="LOP" EntitySet="LOP" />
-    </AssociationSet>
     <AssociationSet Name="PHONGHOCCOSOVATCHAT" Association="acomptec_qlthptModel.Store.PHONGHOCCOSOVATCHAT">
       <End Role="PHONGHOC" EntitySet="PHONGHOC" />
       <End Role="COSOVATCHAT" EntitySet="COSOVATCHAT" />
@@ -170,6 +162,18 @@
       <End Role="THONGTINDAOTAO" EntitySet="THONGTINDAOTAO" />
       <End Role="CANBO" EntitySet="CANBO" />
     </AssociationSet>
+    <AssociationSet Name="NAMHOCTHOIKHOABIEU" Association="acomptec_qlthptModel.Store.NAMHOCTHOIKHOABIEU">
+      <End Role="NAMHOC" EntitySet="NAMHOC" />
+      <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEU" />
+    </AssociationSet>
+    <AssociationSet Name="HOCKYTHOIKHOABIEU" Association="acomptec_qlthptModel.Store.HOCKYTHOIKHOABIEU">
+      <End Role="HOCKY" EntitySet="HOCKY" />
+      <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEU" />
+    </AssociationSet>
+    <AssociationSet Name="KHOIHOCSINH" Association="acomptec_qlthptModel.Store.KHOIHOCSINH">
+      <End Role="KHOI" EntitySet="KHOI" />
+      <End Role="HOCSINH" EntitySet="HOCSINH" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="CHITIETDANHGIA">
     <Key>
@@ -209,8 +213,6 @@
     </Key>
     <Property Name="LOP_MA" Type="varchar" Nullable="false" MaxLength="10" />
     <Property Name="LOP_TEN" Type="nvarchar" Nullable="true" MaxLength="50" />
-    <Property Name="KHOIs_KHOI_MA" Type="varchar" MaxLength="10" Nullable="false" />
-    <Property Name="NAMHOC_NH_MA" Type="varchar" MaxLength="10" Nullable="false" />
   </EntityType>
   <EntityType Name="NAMHOC">
     <Key>
@@ -229,6 +231,8 @@
     <Property Name="THU_THU_MA" Type="varchar" MaxLength="10" Nullable="false" />
     <Property Name="TIETHOC_TH_MA" Type="varchar" MaxLength="10" Nullable="false" />
     <Property Name="CANBO_CB_MA" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="NAMHOC_NH_MA" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="HOCKY_HK_MA" Type="varchar" MaxLength="200" Nullable="false" />
   </EntityType>
   <EntityType Name="UpdateImages">
     <Key>
@@ -324,6 +328,7 @@
     <Property Name="QUANHUYEN_QH_MA" Type="varchar" MaxLength="10" Nullable="false" />
     <Property Name="DANTOC_DT_MA" Type="varchar" MaxLength="10" Nullable="false" />
     <Property Name="LOP_LOP_MA" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="KHOI_KHOI_MA" Type="varchar" MaxLength="10" Nullable="false" />
   </EntityType>
   <EntityType Name="MONHOC">
     <Key>
@@ -477,30 +482,6 @@
       </Principal>
       <Dependent Role="CHITIETDANHGIA">
         <PropertyRef Name="SODANHGIA_SDG_MA" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="KHOIsLOP">
-    <End Role="KHOIs" Type="acomptec_qlthptModel.Store.KHOI" Multiplicity="1" />
-    <End Role="LOP" Type="acomptec_qlthptModel.Store.LOP" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="KHOIs">
-        <PropertyRef Name="KHOI_MA" />
-      </Principal>
-      <Dependent Role="LOP">
-        <PropertyRef Name="KHOIs_KHOI_MA" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="NAMHOCLOP">
-    <End Role="NAMHOC" Type="acomptec_qlthptModel.Store.NAMHOC" Multiplicity="1" />
-    <End Role="LOP" Type="acomptec_qlthptModel.Store.LOP" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="NAMHOC">
-        <PropertyRef Name="NH_MA" />
-      </Principal>
-      <Dependent Role="LOP">
-        <PropertyRef Name="NAMHOC_NH_MA" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -852,6 +833,42 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="NAMHOCTHOIKHOABIEU">
+    <End Role="NAMHOC" Type="acomptec_qlthptModel.Store.NAMHOC" Multiplicity="1" />
+    <End Role="THOIKHOABIEU" Type="acomptec_qlthptModel.Store.THOIKHOABIEU" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NAMHOC">
+        <PropertyRef Name="NH_MA" />
+      </Principal>
+      <Dependent Role="THOIKHOABIEU">
+        <PropertyRef Name="NAMHOC_NH_MA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HOCKYTHOIKHOABIEU">
+    <End Role="HOCKY" Type="acomptec_qlthptModel.Store.HOCKY" Multiplicity="1" />
+    <End Role="THOIKHOABIEU" Type="acomptec_qlthptModel.Store.THOIKHOABIEU" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HOCKY">
+        <PropertyRef Name="HK_MA" />
+      </Principal>
+      <Dependent Role="THOIKHOABIEU">
+        <PropertyRef Name="HOCKY_HK_MA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="KHOIHOCSINH">
+    <End Role="KHOI" Type="acomptec_qlthptModel.Store.KHOI" Multiplicity="1" />
+    <End Role="HOCSINH" Type="acomptec_qlthptModel.Store.HOCSINH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KHOI">
+        <PropertyRef Name="KHOI_MA" />
+      </Principal>
+      <Dependent Role="HOCSINH">
+        <PropertyRef Name="KHOI_KHOI_MA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
@@ -892,14 +909,6 @@
           <AssociationSet Name="SODANHGIACHITIETDANHGIA" Association="acomptec_qlthptModel.SODANHGIACHITIETDANHGIA">
             <End Role="SODANHGIA" EntitySet="SODANHGIA" />
             <End Role="CHITIETDANHGIA" EntitySet="CHITIETDANHGIA" />
-          </AssociationSet>
-          <AssociationSet Name="KHOIsLOP" Association="acomptec_qlthptModel.KHOIsLOP">
-            <End Role="KHOIs" EntitySet="KHOI" />
-            <End Role="LOP" EntitySet="LOP" />
-          </AssociationSet>
-          <AssociationSet Name="NAMHOCLOP" Association="acomptec_qlthptModel.NAMHOCLOP">
-            <End Role="NAMHOC" EntitySet="NAMHOC" />
-            <End Role="LOP" EntitySet="LOP" />
           </AssociationSet>
           <AssociationSet Name="PHONGHOCCOSOVATCHAT" Association="acomptec_qlthptModel.PHONGHOCCOSOVATCHAT">
             <End Role="PHONGHOC" EntitySet="PHONGHOC" />
@@ -1021,6 +1030,18 @@
             <End Role="THONGTINDAOTAO" EntitySet="THONGTINDAOTAO" />
             <End Role="CANBO" EntitySet="CANBO" />
           </AssociationSet>
+          <AssociationSet Name="NAMHOCTHOIKHOABIEU" Association="acomptec_qlthptModel.NAMHOCTHOIKHOABIEU">
+            <End Role="NAMHOC" EntitySet="NAMHOC" />
+            <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEU" />
+          </AssociationSet>
+          <AssociationSet Name="HOCKYTHOIKHOABIEU" Association="acomptec_qlthptModel.HOCKYTHOIKHOABIEU">
+            <End Role="HOCKY" EntitySet="HOCKY" />
+            <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEU" />
+          </AssociationSet>
+          <AssociationSet Name="KHOIHOCSINH" Association="acomptec_qlthptModel.KHOIHOCSINH">
+            <End Role="KHOI" EntitySet="KHOI" />
+            <End Role="HOCSINH" EntitySet="HOCSINH" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="CHITIETDANHGIA">
           <Key>
@@ -1047,7 +1068,7 @@
           </Key>
           <Property Name="KHOI_MA" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="KHOI_TEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="LOPs" Relationship="acomptec_qlthptModel.KHOIsLOP" FromRole="KHOIs" ToRole="LOP" />
+          <NavigationProperty Name="HOCSINHs" Relationship="acomptec_qlthptModel.KHOIHOCSINH" FromRole="KHOI" ToRole="HOCSINH" />
         </EntityType>
         <EntityType Name="KYLUAT">
           <Key>
@@ -1064,8 +1085,6 @@
           </Key>
           <Property Name="LOP_MA" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="LOP_TEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="KHOIs" Relationship="acomptec_qlthptModel.KHOIsLOP" FromRole="LOP" ToRole="KHOIs" />
-          <NavigationProperty Name="NAMHOC" Relationship="acomptec_qlthptModel.NAMHOCLOP" FromRole="LOP" ToRole="NAMHOC" />
           <NavigationProperty Name="THOIKHOABIEUx" Relationship="acomptec_qlthptModel.LOPTHOIKHOABIEU" FromRole="LOP" ToRole="THOIKHOABIEU" />
           <NavigationProperty Name="HOCSINHs" Relationship="acomptec_qlthptModel.LOPHOCSINH" FromRole="LOP" ToRole="HOCSINH" />
         </EntityType>
@@ -1075,7 +1094,7 @@
           </Key>
           <Property Name="NH_MA" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="NH_NAMHOC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="LOPs" Relationship="acomptec_qlthptModel.NAMHOCLOP" FromRole="NAMHOC" ToRole="LOP" />
+          <NavigationProperty Name="THOIKHOABIEUx" Relationship="acomptec_qlthptModel.NAMHOCTHOIKHOABIEU" FromRole="NAMHOC" ToRole="THOIKHOABIEU" />
         </EntityType>
         <EntityType Name="THOIKHOABIEU">
           <Key>
@@ -1087,6 +1106,8 @@
           <NavigationProperty Name="THU" Relationship="acomptec_qlthptModel.THUTHOIKHOABIEU" FromRole="THOIKHOABIEU" ToRole="THU" />
           <NavigationProperty Name="TIETHOC" Relationship="acomptec_qlthptModel.TIETHOCTHOIKHOABIEU" FromRole="THOIKHOABIEU" ToRole="TIETHOC" />
           <NavigationProperty Name="CANBO" Relationship="acomptec_qlthptModel.CANBOTHOIKHOABIEU" FromRole="THOIKHOABIEU" ToRole="CANBO" />
+          <NavigationProperty Name="NAMHOC" Relationship="acomptec_qlthptModel.NAMHOCTHOIKHOABIEU" FromRole="THOIKHOABIEU" ToRole="NAMHOC" />
+          <NavigationProperty Name="HOCKY" Relationship="acomptec_qlthptModel.HOCKYTHOIKHOABIEU" FromRole="THOIKHOABIEU" ToRole="HOCKY" />
         </EntityType>
         <EntityType Name="UpdateImage">
           <Key>
@@ -1189,6 +1210,7 @@
           <NavigationProperty Name="QUANHUYEN" Relationship="acomptec_qlthptModel.QUANHUYENHOCSINH" FromRole="HOCSINH" ToRole="QUANHUYEN" />
           <NavigationProperty Name="DANTOC" Relationship="acomptec_qlthptModel.DANTOCHOCSINH" FromRole="HOCSINH" ToRole="DANTOC" />
           <NavigationProperty Name="LOP" Relationship="acomptec_qlthptModel.LOPHOCSINH" FromRole="HOCSINH" ToRole="LOP" />
+          <NavigationProperty Name="KHOI" Relationship="acomptec_qlthptModel.KHOIHOCSINH" FromRole="HOCSINH" ToRole="KHOI" />
         </EntityType>
         <EntityType Name="MONHOC">
           <Key>
@@ -1320,14 +1342,6 @@
           <End Type="acomptec_qlthptModel.SODANHGIA" Role="SODANHGIA" Multiplicity="1" />
           <End Type="acomptec_qlthptModel.CHITIETDANHGIA" Role="CHITIETDANHGIA" Multiplicity="*" />
         </Association>
-        <Association Name="KHOIsLOP">
-          <End Type="acomptec_qlthptModel.KHOI" Role="KHOIs" Multiplicity="1" />
-          <End Type="acomptec_qlthptModel.LOP" Role="LOP" Multiplicity="*" />
-        </Association>
-        <Association Name="NAMHOCLOP">
-          <End Type="acomptec_qlthptModel.NAMHOC" Role="NAMHOC" Multiplicity="1" />
-          <End Type="acomptec_qlthptModel.LOP" Role="LOP" Multiplicity="*" />
-        </Association>
         <Association Name="PHONGHOCCOSOVATCHAT">
           <End Type="acomptec_qlthptModel.PHONGHOC" Role="PHONGHOC" Multiplicity="1" />
           <End Type="acomptec_qlthptModel.COSOVATCHAT" Role="COSOVATCHAT" Multiplicity="*" />
@@ -1368,6 +1382,7 @@
           <Property Name="HK_MA" Type="String" Nullable="false" annotation:StoreGeneratedPattern="None" Unicode="false" MaxLength="200" />
           <NavigationProperty Name="SODANHGIAs" Relationship="acomptec_qlthptModel.HOCKYSODANHGIA" FromRole="HOCKY" ToRole="SODANHGIA" />
           <Property Name="HK_TEN" Type="String" Nullable="false" />
+          <NavigationProperty Name="THOIKHOABIEUx" Relationship="acomptec_qlthptModel.HOCKYTHOIKHOABIEU" FromRole="HOCKY" ToRole="THOIKHOABIEU" />
         </EntityType>
         <Association Name="HOCKYSODANHGIA">
           <End Type="acomptec_qlthptModel.HOCKY" Role="HOCKY" Multiplicity="1" />
@@ -1478,6 +1493,18 @@
         <Association Name="THONGTINDAOTAOCANBO">
           <End Type="acomptec_qlthptModel.THONGTINDAOTAO" Role="THONGTINDAOTAO" Multiplicity="1" />
           <End Type="acomptec_qlthptModel.CANBO" Role="CANBO" Multiplicity="*" />
+        </Association>
+        <Association Name="NAMHOCTHOIKHOABIEU">
+          <End Type="acomptec_qlthptModel.NAMHOC" Role="NAMHOC" Multiplicity="1" />
+          <End Type="acomptec_qlthptModel.THOIKHOABIEU" Role="THOIKHOABIEU" Multiplicity="*" />
+        </Association>
+        <Association Name="HOCKYTHOIKHOABIEU">
+          <End Type="acomptec_qlthptModel.HOCKY" Role="HOCKY" Multiplicity="1" />
+          <End Type="acomptec_qlthptModel.THOIKHOABIEU" Role="THOIKHOABIEU" Multiplicity="*" />
+        </Association>
+        <Association Name="KHOIHOCSINH">
+          <End Type="acomptec_qlthptModel.KHOI" Role="KHOI" Multiplicity="1" />
+          <End Type="acomptec_qlthptModel.HOCSINH" Role="HOCSINH" Multiplicity="*" />
         </Association>
         </Schema>
     </edmx:ConceptualModels>
@@ -1794,22 +1821,6 @@
         <ScalarProperty Name="CTDG_MA" ColumnName="CTDG_MA" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="KHOIsLOP" TypeName="acomptec_qlthptModel.KHOIsLOP" StoreEntitySet="LOP">
-      <EndProperty Name="KHOIs">
-        <ScalarProperty Name="KHOI_MA" ColumnName="KHOIs_KHOI_MA" />
-      </EndProperty>
-      <EndProperty Name="LOP">
-        <ScalarProperty Name="LOP_MA" ColumnName="LOP_MA" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="NAMHOCLOP" TypeName="acomptec_qlthptModel.NAMHOCLOP" StoreEntitySet="LOP">
-      <EndProperty Name="NAMHOC">
-        <ScalarProperty Name="NH_MA" ColumnName="NAMHOC_NH_MA" />
-      </EndProperty>
-      <EndProperty Name="LOP">
-        <ScalarProperty Name="LOP_MA" ColumnName="LOP_MA" />
-      </EndProperty>
-    </AssociationSetMapping>
     <AssociationSetMapping Name="PHONGHOCCOSOVATCHAT" TypeName="acomptec_qlthptModel.PHONGHOCCOSOVATCHAT" StoreEntitySet="COSOVATCHAT">
       <EndProperty Name="PHONGHOC">
         <ScalarProperty Name="PH_MA" ColumnName="PHONGHOC_PH_MA" />
@@ -2040,6 +2051,30 @@
       </EndProperty>
       <EndProperty Name="CANBO">
         <ScalarProperty Name="CB_MA" ColumnName="CB_MA" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="NAMHOCTHOIKHOABIEU" TypeName="acomptec_qlthptModel.NAMHOCTHOIKHOABIEU" StoreEntitySet="THOIKHOABIEU">
+      <EndProperty Name="NAMHOC">
+        <ScalarProperty Name="NH_MA" ColumnName="NAMHOC_NH_MA" />
+      </EndProperty>
+      <EndProperty Name="THOIKHOABIEU">
+        <ScalarProperty Name="TKB_MA" ColumnName="TKB_MA" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="HOCKYTHOIKHOABIEU" TypeName="acomptec_qlthptModel.HOCKYTHOIKHOABIEU" StoreEntitySet="THOIKHOABIEU">
+      <EndProperty Name="HOCKY">
+        <ScalarProperty Name="HK_MA" ColumnName="HOCKY_HK_MA" />
+      </EndProperty>
+      <EndProperty Name="THOIKHOABIEU">
+        <ScalarProperty Name="TKB_MA" ColumnName="TKB_MA" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="KHOIHOCSINH" TypeName="acomptec_qlthptModel.KHOIHOCSINH" StoreEntitySet="HOCSINH">
+      <EndProperty Name="KHOI">
+        <ScalarProperty Name="KHOI_MA" ColumnName="KHOI_KHOI_MA" />
+      </EndProperty>
+      <EndProperty Name="HOCSINH">
+        <ScalarProperty Name="HS_MA" ColumnName="HS_MA" />
       </EndProperty>
     </AssociationSetMapping>
   </EntityContainerMapping>
