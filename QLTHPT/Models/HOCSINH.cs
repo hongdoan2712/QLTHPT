@@ -28,5 +28,6 @@ namespace QLTHPT.Models
         public virtual QUANHUYEN QUANHUYEN { get; set; }
         public virtual DANTOC DANTOC { get; set; }
         public virtual LOP LOP { get; set; }
+        public virtual KHOI KHOI { get; set; }
     }
 }

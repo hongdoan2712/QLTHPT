@@ -34,5 +34,6 @@ namespace QLTHPT.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<THOIKHOABIEU> THOIKHOABIEUx { get; set; }
         public virtual THONGTINDAOTAO THONGTINDAOTAO { get; set; }
+        public virtual THONGTINLUONG THONGTINLUONG { get; set; }
     }
 }

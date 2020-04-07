@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="06d5f207dd3d4d929e98dbd4de599d76" Name="Diagram1" ZoomLevel="63">
+      <Diagram DiagramId="06d5f207dd3d4d929e98dbd4de599d76" Name="Diagram1" ZoomLevel="54">
         <EntityTypeShape EntityType="acomptec_qlthptModel.CHITIETDANHGIA" Width="2.125" PointX="11.375" PointY="6.125" FillColor="128, 128, 255" />
         <EntityTypeShape EntityType="acomptec_qlthptModel.KHENTHUONG" Width="1.5" PointX="14.5" PointY="6.5" FillColor="128, 128, 255" />
         <EntityTypeShape EntityType="acomptec_qlthptModel.KHOI" Width="1.5" PointX="7.5" PointY="2" FillColor="255, 128, 255" />
@@ -74,6 +74,7 @@
         <AssociationConnector Association="acomptec_qlthptModel.NAMHOCTHOIKHOABIEU" />
         <AssociationConnector Association="acomptec_qlthptModel.HOCKYTHOIKHOABIEU" />
         <AssociationConnector Association="acomptec_qlthptModel.KHOIHOCSINH" />
+        <AssociationConnector Association="acomptec_qlthptModel.THONGTINLUONGCANBO" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

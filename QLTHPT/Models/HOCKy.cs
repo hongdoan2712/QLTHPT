@@ -18,6 +18,7 @@ namespace QLTHPT.Models
         public HOCKY()
         {
             this.SODANHGIAs = new HashSet<SODANHGIA>();
+            this.THOIKHOABIEUx = new HashSet<THOIKHOABIEU>();
         }
     
         public string HK_MA { get; set; }
@@ -25,5 +26,7 @@ namespace QLTHPT.Models
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SODANHGIA> SODANHGIAs { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<THOIKHOABIEU> THOIKHOABIEUx { get; set; }
     }
 }

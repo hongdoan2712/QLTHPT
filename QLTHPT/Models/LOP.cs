@@ -24,8 +24,6 @@ namespace QLTHPT.Models
         public string LOP_MA { get; set; }
         public string LOP_TEN { get; set; }
     
-        public virtual KHOI KHOIs { get; set; }
-        public virtual NAMHOC NAMHOC { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<THOIKHOABIEU> THOIKHOABIEUx { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

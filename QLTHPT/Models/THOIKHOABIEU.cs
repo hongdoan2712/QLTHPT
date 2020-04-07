@@ -21,5 +21,7 @@ namespace QLTHPT.Models
         public virtual THU THU { get; set; }
         public virtual TIETHOC TIETHOC { get; set; }
         public virtual CANBO CANBO { get; set; }
+        public virtual NAMHOC NAMHOC { get; set; }
+        public virtual HOCKY HOCKY { get; set; }
     }
 }
