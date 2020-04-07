@@ -144,8 +144,10 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HOCKiesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LOPsController.cs" />
     <Compile Include="Controllers\MONHOCsController.cs" />
     <Compile Include="Controllers\NAMHOCsController.cs" />
+    <Compile Include="Controllers\THOIKHOABIEUxController.cs" />
     <Compile Include="Controllers\THUsController.cs" />
     <Compile Include="Controllers\TIETHOCsController.cs" />
     <Compile Include="Global.asax.cs">
@@ -787,6 +789,16 @@
     <Content Include="Views\TIETHOCs\Details.cshtml" />
     <Content Include="Views\TIETHOCs\Edit.cshtml" />
     <Content Include="Views\TIETHOCs\Index.cshtml" />
+    <Content Include="Views\LOPs\Create.cshtml" />
+    <Content Include="Views\LOPs\Delete.cshtml" />
+    <Content Include="Views\LOPs\Details.cshtml" />
+    <Content Include="Views\LOPs\Edit.cshtml" />
+    <Content Include="Views\LOPs\Index.cshtml" />
+    <Content Include="Views\THOIKHOABIEUx\Create.cshtml" />
+    <Content Include="Views\THOIKHOABIEUx\Delete.cshtml" />
+    <Content Include="Views\THOIKHOABIEUx\Details.cshtml" />
+    <Content Include="Views\THOIKHOABIEUx\Edit.cshtml" />
+    <Content Include="Views\THOIKHOABIEUx\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
