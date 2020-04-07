@@ -10,7 +10,7 @@
         <EntityTypeShape EntityType="acomptec_qlthptModel.KHOI" Width="1.5" PointX="7.5" PointY="2" FillColor="255, 128, 255" />
         <EntityTypeShape EntityType="acomptec_qlthptModel.KYLUAT" Width="1.5" PointX="11.375" PointY="3.5" FillColor="128, 128, 255" />
         <EntityTypeShape EntityType="acomptec_qlthptModel.LOP" Width="1.5" PointX="5.625" PointY="0.5" FillColor="255, 128, 255" />
-        <EntityTypeShape EntityType="acomptec_qlthptModel.NAMHOC" Width="1.5" PointX="5.25" PointY="5.5" FillColor="255, 128, 255" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.NAMHOC" Width="1.5" PointX="5.25" PointY="5.25" FillColor="255, 128, 255" />
         <EntityTypeShape EntityType="acomptec_qlthptModel.THOIKHOABIEU" Width="1.75" PointX="1.75" PointY="6.375" IsExpanded="true" FillColor="255, 128, 0" />
         <EntityTypeShape EntityType="acomptec_qlthptModel.UpdateImage" PointX="3.25" PointY="1" Width="1.5" />
         <EntityTypeShape EntityType="acomptec_qlthptModel.BACLUONG" Width="1.5" PointX="4.25" PointY="7.375" FillColor="255, 128, 128" />
@@ -46,7 +46,6 @@
         <AssociationConnector Association="acomptec_qlthptModel.THONGTINDAOTAOHINHTHUC" />
         <AssociationConnector Association="acomptec_qlthptModel.CHUCVUCHITIET_CHUCVU" />
         <EntityTypeShape EntityType="acomptec_qlthptModel.HOCKY" Width="1.5" PointX="6.625" PointY="8.375" />
-        <AssociationConnector Association="acomptec_qlthptModel.HOCKYSODANHGIA" />
         <EntityTypeShape EntityType="acomptec_qlthptModel.KHENTHUONGCB" Width="1.5" PointX="3.875" PointY="18.75" />
         <EntityTypeShape EntityType="acomptec_qlthptModel.KYLUATCB" Width="1.5" PointX="3.875" PointY="15.75" />
         <AssociationConnector Association="acomptec_qlthptModel.MONHOCTHOIKHOABIEU" />
@@ -71,10 +70,11 @@
         <AssociationConnector Association="acomptec_qlthptModel.KHENTHUONGCBCANBO" />
         <AssociationConnector Association="acomptec_qlthptModel.CANBOTHOIKHOABIEU" />
         <AssociationConnector Association="acomptec_qlthptModel.THONGTINDAOTAOCANBO" />
-        <AssociationConnector Association="acomptec_qlthptModel.NAMHOCTHOIKHOABIEU" />
         <AssociationConnector Association="acomptec_qlthptModel.HOCKYTHOIKHOABIEU" />
         <AssociationConnector Association="acomptec_qlthptModel.KHOIHOCSINH" />
         <AssociationConnector Association="acomptec_qlthptModel.THONGTINLUONGCANBO" />
+        <AssociationConnector Association="acomptec_qlthptModel.NAMHOCSODANHGIA" />
+        <AssociationConnector Association="acomptec_qlthptModel.MONHOCCHITIETDANHGIA" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
