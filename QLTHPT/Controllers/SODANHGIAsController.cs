@@ -17,7 +17,7 @@ namespace QLTHPT.Controllers
         // GET: SODANHGIAs
         public ActionResult Index()
         {
-            var sODANHGIAs = db.SODANHGIAs.Include(s => s.HOCKY);
+            var sODANHGIAs = db.SODANHGIAs.Include(s => s.NAMHOC);
             return View(sODANHGIAs.ToList());
         }
 
@@ -39,7 +39,7 @@ namespace QLTHPT.Controllers
         // GET: SODANHGIAs/Create
         public ActionResult Create()
         {
-            ViewBag.HOCKY_HK_MA = new SelectList(db.HOCKies, "HK_MA", "HK_TEN");
+            ViewBag.NAMHOC_NH_MA = new SelectList(db.NAMHOCs, "NH_MA", "NH_NAMHOC");
             return View();
         }
 
@@ -48,7 +48,7 @@ namespace QLTHPT.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "SDG_MA,SDG_DIEM,SDG_GHICHU,HOCKY_HK_MA")] SODANHGIA sODANHGIA)
+        public ActionResult Create([Bind(Include = "SDG_MA,SDG_DIEM,SDG_GHICHU,NAMHOC_NH_MA ")] SODANHGIA sODANHGIA)
         {
             if (ModelState.IsValid)
             {
@@ -57,7 +57,7 @@ namespace QLTHPT.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.HOCKY_HK_MA = new SelectList(db.HOCKies, "HK_MA", "HK_TEN", sODANHGIA.HOCKY_HK_MA);
+            ViewBag.NAMHOC_NH_MA = new SelectList(db.NAMHOCs, "NH_MA", "NH_NAMHOC", sODANHGIA.NAMHOC_NH_MA);
             return View(sODANHGIA);
         }
 
@@ -73,7 +73,7 @@ namespace QLTHPT.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.HOCKY_HK_MA = new SelectList(db.HOCKies, "HK_MA", "HK_TEN", sODANHGIA.HOCKY_HK_MA);
+            ViewBag.NAMHOC_NH_MA = new SelectList(db.NAMHOCs, "NH_MA", "NH_NAMHOC", sODANHGIA.NAMHOC_NH_MA);
             return View(sODANHGIA);
         }
 
@@ -90,7 +90,7 @@ namespace QLTHPT.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.HOCKY_HK_MA = new SelectList(db.HOCKies, "HK_MA", "HK_TEN", sODANHGIA.HOCKY_HK_MA);
+            ViewBag.NAMHOC_NH_MA = new SelectList(db.NAMHOCs, "NH_MA", "NH_NAMHOC", sODANHGIA.NAMHOC_NH_MA);
             return View(sODANHGIA);
         }
 

@@ -23,9 +23,11 @@ namespace QLTHPT.Models
         public string CTDG_MA { get; set; }
         public Nullable<System.DateTime> CTDG_NGAYDG { get; set; }
         public string SODANHGIA_SDG_MA { get; set; }
+        public string MONHOC_MH_MA { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HOCSINH> HOCSINHs { get; set; }
+        public virtual MONHOC MONHOC { get; set; }
         public virtual SODANHGIA SODANHGIA { get; set; }
     }
 }

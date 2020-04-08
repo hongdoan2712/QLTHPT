@@ -5,87 +5,42 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="data-table-area mg-b-15">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="sparkline13-list shadow-reset">
-                    <div class="sparkline13-hd">
-                        <div class="main-sparkline13-hd">
-                            <h4><strong>SỔ ĐÁNH GIÁ</strong></h4>
-                            <div class="sparkline13-outline-icon">
-                                <span class="sparkline13-collapse-link"><i class="fa fa-chevron-up"></i></span>
-                                <span class="sparkline13-collapse-close"><i class="fa fa-times"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="sparkline13-graph">
-                        <div class="datatable-dashv1-list custom-datatable-overright">
-                            <div id="toolbar">
-                                <strong>@Html.ActionLink("Tạo Mới", "Create")</strong>
+<h2>Index</h2>
 
-                            </div>
-                            <table id="table" data-toggle="table" data-search="true" data-key-events="true" data-resizable="true" data-cookie="true" data-cookie-id-table="saveId" data-click-to-select="true" data-toolbar="#toolbar">
-                                <thead>
-                                    <tr>
-                                        <th>
-                                            Mã
-                                        </th>
-                                        <th>
-                                            Điểm
-                                        </th>
-                                        <th>
-                                            Ghi Chú
-                                        </th>
-                                        <th>
-                                            Học Kỳ
-                                        </th>
-                                       @* <th>
-                                            Môn Học
-                                        </th>*@
-                                        <th>
-                                            Tùy Chọn
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SDG_DIEM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SDG_GHICHU)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NAMHOC.NH_NAMHOC)
+        </th>
+        <th></th>
+    </tr>
 
-                                    @foreach (var item in Model)
-                                    {
-                                    <tr>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.SDG_MA)
-                                        </td>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.SDG_DIEM)
-                                        </td>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.SDG_GHICHU)
-                                        </td>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.HOCKY_HK_MA)
-                                        </td>
-                                        @*
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.MONHOC.MH_TEN)
-                                        </td>*@
-                                        <td>
-                                            <a href="@Url.Action("Details", "SODANHGIAs", new { id = item.SDG_MA })" class="btn btn-custon-rounded-three btn-success"><i class="fa fa-info-circle"></i></a>
-                                            <a href="@Url.Action("Edit", "SODANHGIAs", new { id = item.SDG_MA })" class="btn btn-custon-rounded-three btn-warning"><i class="fa fa-edit"></i></a>
-                                            <a href="@Url.Action("Delete", "SODANHGIAs", new { id = item.SDG_MA })" class="btn btn-custon-rounded-three btn-danger"><i class="fa fa-trash"></i></a>
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SDG_DIEM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SDG_GHICHU)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NAMHOC.NH_NAMHOC)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.SDG_MA }) |
+            @Html.ActionLink("Details", "Details", new { id=item.SDG_MA }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.SDG_MA })
+        </td>
+    </tr>
+}
 
-                                        </td>
-                                    </tr>
-                                    }
-
-                                </tbody>
-                            </table>
-
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+</table>

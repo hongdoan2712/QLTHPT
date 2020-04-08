@@ -17,7 +17,7 @@ namespace QLTHPT.Controllers
         // GET: THOIKHOABIEUx
         public ActionResult Index()
         {
-            var tHOIKHOABIEUx = db.THOIKHOABIEUx.Include(t => t.CANBO).Include(t => t.HOCKY).Include(t => t.LOP).Include(t => t.MONHOC).Include(t => t.NAMHOC).Include(t => t.THU).Include(t => t.TIETHOC);
+            var tHOIKHOABIEUx = db.THOIKHOABIEUx.Include(t => t.CANBO).Include(t => t.HOCKY).Include(t => t.LOP).Include(t => t.MONHOC).Include(t => t.THU).Include(t => t.TIETHOC);
             return View(tHOIKHOABIEUx.ToList());
         }
 
@@ -67,7 +67,7 @@ namespace QLTHPT.Controllers
             ViewBag.HOCKY_HK_MA = new SelectList(db.HOCKies, "HK_MA", "HK_TEN", tHOIKHOABIEU.HOCKY_HK_MA);
             ViewBag.LOP_LOP_MA = new SelectList(db.LOPs, "LOP_MA", "LOP_TEN", tHOIKHOABIEU.LOP_LOP_MA);
             ViewBag.MONHOC_MH_MA = new SelectList(db.MONHOCs, "MH_MA", "MH_TEN", tHOIKHOABIEU.MONHOC_MH_MA);
-            ViewBag.NAMHOC_NH_MA = new SelectList(db.NAMHOCs, "NH_MA", "NH_NAMHOC", tHOIKHOABIEU.NAMHOC_NH_MA);
+            
             ViewBag.THU_THU_MA = new SelectList(db.THUs, "THU_MA", "THU_TEN", tHOIKHOABIEU.THU_THU_MA);
             ViewBag.TIETHOC_TH_MA = new SelectList(db.TIETHOCs, "TH_MA", "TH_TEN", tHOIKHOABIEU.TIETHOC_TH_MA);
             return View(tHOIKHOABIEU);
@@ -89,7 +89,7 @@ namespace QLTHPT.Controllers
             ViewBag.HOCKY_HK_MA = new SelectList(db.HOCKies, "HK_MA", "HK_TEN", tHOIKHOABIEU.HOCKY_HK_MA);
             ViewBag.LOP_LOP_MA = new SelectList(db.LOPs, "LOP_MA", "LOP_TEN", tHOIKHOABIEU.LOP_LOP_MA);
             ViewBag.MONHOC_MH_MA = new SelectList(db.MONHOCs, "MH_MA", "MH_TEN", tHOIKHOABIEU.MONHOC_MH_MA);
-            ViewBag.NAMHOC_NH_MA = new SelectList(db.NAMHOCs, "NH_MA", "NH_NAMHOC", tHOIKHOABIEU.NAMHOC_NH_MA);
+            
             ViewBag.THU_THU_MA = new SelectList(db.THUs, "THU_MA", "THU_TEN", tHOIKHOABIEU.THU_THU_MA);
             ViewBag.TIETHOC_TH_MA = new SelectList(db.TIETHOCs, "TH_MA", "TH_TEN", tHOIKHOABIEU.TIETHOC_TH_MA);
             return View(tHOIKHOABIEU);
@@ -112,7 +112,7 @@ namespace QLTHPT.Controllers
             ViewBag.HOCKY_HK_MA = new SelectList(db.HOCKies, "HK_MA", "HK_TEN", tHOIKHOABIEU.HOCKY_HK_MA);
             ViewBag.LOP_LOP_MA = new SelectList(db.LOPs, "LOP_MA", "LOP_TEN", tHOIKHOABIEU.LOP_LOP_MA);
             ViewBag.MONHOC_MH_MA = new SelectList(db.MONHOCs, "MH_MA", "MH_TEN", tHOIKHOABIEU.MONHOC_MH_MA);
-            ViewBag.NAMHOC_NH_MA = new SelectList(db.NAMHOCs, "NH_MA", "NH_NAMHOC", tHOIKHOABIEU.NAMHOC_NH_MA);
+           
             ViewBag.THU_THU_MA = new SelectList(db.THUs, "THU_MA", "THU_TEN", tHOIKHOABIEU.THU_THU_MA);
             ViewBag.TIETHOC_TH_MA = new SelectList(db.TIETHOCs, "TH_MA", "TH_TEN", tHOIKHOABIEU.TIETHOC_TH_MA);
             return View(tHOIKHOABIEU);
