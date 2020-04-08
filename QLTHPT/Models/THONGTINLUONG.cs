@@ -14,6 +14,12 @@ namespace QLTHPT.Models
     
     public partial class THONGTINLUONG
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public THONGTINLUONG()
+        {
+            this.CANBOes = new HashSet<CANBO>();
+        }
+    
         public string TTL_MA { get; set; }
         public string TTL_NGAYNHANLUONG { get; set; }
         public string TTL_HESOLUONG { get; set; }
@@ -22,5 +28,7 @@ namespace QLTHPT.Models
     
         public virtual BACLUONG BACLUONG { get; set; }
         public virtual NGACHLUONG NGACHLUONG { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CANBO> CANBOes { get; set; }
     }
 }

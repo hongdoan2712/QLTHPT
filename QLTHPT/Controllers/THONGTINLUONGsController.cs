@@ -10,107 +10,116 @@ using QLTHPT.Models;
 
 namespace QLTHPT.Controllers
 {
-    public class KHENTHUONGCBsController : Controller
+    public class THONGTINLUONGsController : Controller
     {
         private acomptec_qlthptEntities db = new acomptec_qlthptEntities();
 
-        // GET: KHENTHUONGCBs
+        // GET: THONGTINLUONGs
         public ActionResult Index()
         {
-            return View(db.KHENTHUONGCBs.ToList());
+            var tHONGTINLUONGs = db.THONGTINLUONGs.Include(t => t.BACLUONG).Include(t => t.NGACHLUONG);
+            return View(tHONGTINLUONGs.ToList());
         }
 
-        // GET: KHENTHUONGCBs/Details/5
+        // GET: THONGTINLUONGs/Details/5
         public ActionResult Details(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            KHENTHUONGCB kHENTHUONGCB = db.KHENTHUONGCBs.Find(id);
-            if (kHENTHUONGCB == null)
+            THONGTINLUONG tHONGTINLUONG = db.THONGTINLUONGs.Find(id);
+            if (tHONGTINLUONG == null)
             {
                 return HttpNotFound();
             }
-            return View(kHENTHUONGCB);
+            return View(tHONGTINLUONG);
         }
 
-        // GET: KHENTHUONGCBs/Create
+        // GET: THONGTINLUONGs/Create
         public ActionResult Create()
         {
+            ViewBag.BACLUONG_BL_MA = new SelectList(db.BACLUONGs, "BL_MA", "BL_TEN");
+            ViewBag.NGACHLUONG_NL_MA = new SelectList(db.NGACHLUONGs, "NL_MA", "NL_TEN");
             return View();
         }
 
-        // POST: KHENTHUONGCBs/Create
+        // POST: THONGTINLUONGs/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "KTCB_MA,KTCB_NGAY,KTCB_THANHTICH")] KHENTHUONGCB kHENTHUONGCB)
+        public ActionResult Create([Bind(Include = "TTL_MA,TTL_NGAYNHANLUONG,TTL_HESOLUONG,BACLUONG_BL_MA,NGACHLUONG_NL_MA")] THONGTINLUONG tHONGTINLUONG)
         {
             if (ModelState.IsValid)
             {
-                db.KHENTHUONGCBs.Add(kHENTHUONGCB);
+                db.THONGTINLUONGs.Add(tHONGTINLUONG);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(kHENTHUONGCB);
+            ViewBag.BACLUONG_BL_MA = new SelectList(db.BACLUONGs, "BL_MA", "BL_TEN", tHONGTINLUONG.BACLUONG_BL_MA);
+            ViewBag.NGACHLUONG_NL_MA = new SelectList(db.NGACHLUONGs, "NL_MA", "NL_TEN", tHONGTINLUONG.NGACHLUONG_NL_MA);
+            return View(tHONGTINLUONG);
         }
 
-        // GET: KHENTHUONGCBs/Edit/5
+        // GET: THONGTINLUONGs/Edit/5
         public ActionResult Edit(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            KHENTHUONGCB kHENTHUONGCB = db.KHENTHUONGCBs.Find(id);
-            if (kHENTHUONGCB == null)
+            THONGTINLUONG tHONGTINLUONG = db.THONGTINLUONGs.Find(id);
+            if (tHONGTINLUONG == null)
             {
                 return HttpNotFound();
             }
-            return View(kHENTHUONGCB);
+            ViewBag.BACLUONG_BL_MA = new SelectList(db.BACLUONGs, "BL_MA", "BL_TEN", tHONGTINLUONG.BACLUONG_BL_MA);
+            ViewBag.NGACHLUONG_NL_MA = new SelectList(db.NGACHLUONGs, "NL_MA", "NL_TEN", tHONGTINLUONG.NGACHLUONG_NL_MA);
+            return View(tHONGTINLUONG);
         }
 
-        // POST: KHENTHUONGCBs/Edit/5
+        // POST: THONGTINLUONGs/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "KTCB_MA,KTCB_NGAY,KTCB_THANHTICH")] KHENTHUONGCB kHENTHUONGCB)
+        public ActionResult Edit([Bind(Include = "TTL_MA,TTL_NGAYNHANLUONG,TTL_HESOLUONG,BACLUONG_BL_MA,NGACHLUONG_NL_MA")] THONGTINLUONG tHONGTINLUONG)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(kHENTHUONGCB).State = EntityState.Modified;
+                db.Entry(tHONGTINLUONG).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(kHENTHUONGCB);
+            ViewBag.BACLUONG_BL_MA = new SelectList(db.BACLUONGs, "BL_MA", "BL_TEN", tHONGTINLUONG.BACLUONG_BL_MA);
+            ViewBag.NGACHLUONG_NL_MA = new SelectList(db.NGACHLUONGs, "NL_MA", "NL_TEN", tHONGTINLUONG.NGACHLUONG_NL_MA);
+            return View(tHONGTINLUONG);
         }
 
-        // GET: KHENTHUONGCBs/Delete/5
+        // GET: THONGTINLUONGs/Delete/5
         public ActionResult Delete(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            KHENTHUONGCB kHENTHUONGCB = db.KHENTHUONGCBs.Find(id);
-            if (kHENTHUONGCB == null)
+            THONGTINLUONG tHONGTINLUONG = db.THONGTINLUONGs.Find(id);
+            if (tHONGTINLUONG == null)
             {
                 return HttpNotFound();
             }
-            return View(kHENTHUONGCB);
+            return View(tHONGTINLUONG);
         }
 
-        // POST: KHENTHUONGCBs/Delete/5
+        // POST: THONGTINLUONGs/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string id)
         {
-            KHENTHUONGCB kHENTHUONGCB = db.KHENTHUONGCBs.Find(id);
-            db.KHENTHUONGCBs.Remove(kHENTHUONGCB);
+            THONGTINLUONG tHONGTINLUONG = db.THONGTINLUONGs.Find(id);
+            db.THONGTINLUONGs.Remove(tHONGTINLUONG);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

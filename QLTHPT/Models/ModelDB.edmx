@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="acomptec_qlthptModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="acomptec_qlthptModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="BACLUONG">
           <Key>
             <PropertyRef Name="BL_MA" />
@@ -27,6 +27,7 @@
           <Property Name="KYLUATCB_KLCB_MA" Type="varchar" MaxLength="200" Nullable="false" />
           <Property Name="KHENTHUONGCB_KTCB_MA" Type="varchar" MaxLength="200" Nullable="false" />
           <Property Name="THONGTINDAOTAO_TTDT_MA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="THONGTINLUONG_TTL_MA" Type="varchar" MaxLength="10" Nullable="false" />
         </EntityType>
         <EntityType Name="CHITIET_CHUCVU">
           <Key>
@@ -43,6 +44,7 @@
           <Property Name="CTDG_MA" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="CTDG_NGAYDG" Type="datetime" />
           <Property Name="SODANHGIA_SDG_MA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="MONHOC_MH_MA" Type="varchar" MaxLength="10" Nullable="false" />
         </EntityType>
         <EntityType Name="CHUCVU">
           <Key>
@@ -205,7 +207,7 @@
           <Property Name="SDG_MA" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="SDG_DIEM" Type="varchar" MaxLength="10" />
           <Property Name="SDG_GHICHU" Type="nvarchar" MaxLength="50" />
-          <Property Name="HOCKY_HK_MA" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="NAMHOC_NH_MA" Type="varchar" MaxLength="10" Nullable="false" />
         </EntityType>
         <EntityType Name="THIETBIDAYHOC">
           <Key>
@@ -231,7 +233,6 @@
           <Property Name="THU_THU_MA" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="TIETHOC_TH_MA" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="CANBO_CB_MA" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="NAMHOC_NH_MA" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="HOCKY_HK_MA" Type="varchar" MaxLength="200" Nullable="false" />
         </EntityType>
         <EntityType Name="THONGTINDAOTAO">
@@ -399,18 +400,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_HOCKYSODANHGIA">
-          <End Role="HOCKY" Type="Self.HOCKY" Multiplicity="1" />
-          <End Role="SODANHGIA" Type="Self.SODANHGIA" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="HOCKY">
-              <PropertyRef Name="HK_MA" />
-            </Principal>
-            <Dependent Role="SODANHGIA">
-              <PropertyRef Name="HOCKY_HK_MA" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_HOCKYTHOIKHOABIEU">
           <End Role="HOCKY" Type="Self.HOCKY" Multiplicity="1" />
           <End Role="THOIKHOABIEU" Type="Self.THOIKHOABIEU" Multiplicity="*" />
@@ -507,6 +496,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_MONHOCCHITIETDANHGIA">
+          <End Role="MONHOC" Type="Self.MONHOC" Multiplicity="1" />
+          <End Role="CHITIETDANHGIA" Type="Self.CHITIETDANHGIA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MONHOC">
+              <PropertyRef Name="MH_MA" />
+            </Principal>
+            <Dependent Role="CHITIETDANHGIA">
+              <PropertyRef Name="MONHOC_MH_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_MONHOCTHOIKHOABIEU">
           <End Role="MONHOC" Type="Self.MONHOC" Multiplicity="1" />
           <End Role="THOIKHOABIEU" Type="Self.THOIKHOABIEU" Multiplicity="*" />
@@ -519,14 +520,14 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_NAMHOCTHOIKHOABIEU">
+        <Association Name="FK_NAMHOCSODANHGIA">
           <End Role="NAMHOC" Type="Self.NAMHOC" Multiplicity="1" />
-          <End Role="THOIKHOABIEU" Type="Self.THOIKHOABIEU" Multiplicity="*" />
+          <End Role="SODANHGIA" Type="Self.SODANHGIA" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="NAMHOC">
               <PropertyRef Name="NH_MA" />
             </Principal>
-            <Dependent Role="THOIKHOABIEU">
+            <Dependent Role="SODANHGIA">
               <PropertyRef Name="NAMHOC_NH_MA" />
             </Dependent>
           </ReferentialConstraint>
@@ -624,6 +625,18 @@
             </Principal>
             <Dependent Role="THONGTINDAOTAO">
               <PropertyRef Name="HINHTHUCs_HT_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_THONGTINLUONGCANBO">
+          <End Role="THONGTINLUONG" Type="Self.THONGTINLUONG" Multiplicity="1" />
+          <End Role="CANBO" Type="Self.CANBO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="THONGTINLUONG">
+              <PropertyRef Name="TTL_MA" />
+            </Principal>
+            <Dependent Role="CANBO">
+              <PropertyRef Name="THONGTINLUONG_TTL_MA" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -768,10 +781,6 @@
             <End Role="DANTOC" EntitySet="DANTOC" />
             <End Role="HOCSINH" EntitySet="HOCSINH" />
           </AssociationSet>
-          <AssociationSet Name="FK_HOCKYSODANHGIA" Association="Self.FK_HOCKYSODANHGIA">
-            <End Role="HOCKY" EntitySet="HOCKY" />
-            <End Role="SODANHGIA" EntitySet="SODANHGIA" />
-          </AssociationSet>
           <AssociationSet Name="FK_HOCKYTHOIKHOABIEU" Association="Self.FK_HOCKYTHOIKHOABIEU">
             <End Role="HOCKY" EntitySet="HOCKY" />
             <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEU" />
@@ -804,13 +813,17 @@
             <End Role="LOP" EntitySet="LOP" />
             <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEU" />
           </AssociationSet>
+          <AssociationSet Name="FK_MONHOCCHITIETDANHGIA" Association="Self.FK_MONHOCCHITIETDANHGIA">
+            <End Role="MONHOC" EntitySet="MONHOC" />
+            <End Role="CHITIETDANHGIA" EntitySet="CHITIETDANHGIA" />
+          </AssociationSet>
           <AssociationSet Name="FK_MONHOCTHOIKHOABIEU" Association="Self.FK_MONHOCTHOIKHOABIEU">
             <End Role="MONHOC" EntitySet="MONHOC" />
             <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEU" />
           </AssociationSet>
-          <AssociationSet Name="FK_NAMHOCTHOIKHOABIEU" Association="Self.FK_NAMHOCTHOIKHOABIEU">
+          <AssociationSet Name="FK_NAMHOCSODANHGIA" Association="Self.FK_NAMHOCSODANHGIA">
             <End Role="NAMHOC" EntitySet="NAMHOC" />
-            <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEU" />
+            <End Role="SODANHGIA" EntitySet="SODANHGIA" />
           </AssociationSet>
           <AssociationSet Name="FK_NGACHLUONGTHONGTINLUONG" Association="Self.FK_NGACHLUONGTHONGTINLUONG">
             <End Role="NGACHLUONG" EntitySet="NGACHLUONG" />
@@ -844,6 +857,10 @@
             <End Role="HINHTHUC" EntitySet="HINHTHUC" />
             <End Role="THONGTINDAOTAO" EntitySet="THONGTINDAOTAO" />
           </AssociationSet>
+          <AssociationSet Name="FK_THONGTINLUONGCANBO" Association="Self.FK_THONGTINLUONGCANBO">
+            <End Role="THONGTINLUONG" EntitySet="THONGTINLUONG" />
+            <End Role="CANBO" EntitySet="CANBO" />
+          </AssociationSet>
           <AssociationSet Name="FK_THUTHOIKHOABIEU" Association="Self.FK_THUTHOIKHOABIEU">
             <End Role="THU" EntitySet="THU" />
             <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEU" />
@@ -869,8 +886,7 @@
             <End Role="HOCSINH" EntitySet="HOCSINH" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="acomptec_qlthptModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -903,6 +919,8 @@
           <NavigationProperty Name="KHENTHUONGCB" Relationship="Self.FK_KHENTHUONGCBCANBO" FromRole="CANBO" ToRole="KHENTHUONGCB" />
           <NavigationProperty Name="KYLUATCB" Relationship="Self.FK_KYLUATCBCANBO" FromRole="CANBO" ToRole="KYLUATCB" />
           <NavigationProperty Name="THONGTINDAOTAO" Relationship="Self.FK_THONGTINDAOTAOCANBO" FromRole="CANBO" ToRole="THONGTINDAOTAO" />
+          <Property Name="THONGTINLUONG_TTL_MA" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="THONGTINLUONG" Relationship="acomptec_qlthptModel.FK_THONGTINLUONGCANBO" FromRole="CANBO" ToRole="THONGTINLUONG" />
         </EntityType>
         <EntityType Name="CHITIET_CHUCVU">
           <Key>
@@ -923,6 +941,8 @@
           <Property Name="SODANHGIA_SDG_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="HOCSINHs" Relationship="Self.FK_CHITIETDANHGIAHOCSINH" FromRole="CHITIETDANHGIA" ToRole="HOCSINH" />
           <NavigationProperty Name="SODANHGIA" Relationship="Self.FK_SODANHGIACHITIETDANHGIA" FromRole="CHITIETDANHGIA" ToRole="SODANHGIA" />
+          <Property Name="MONHOC_MH_MA" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="MONHOC" Relationship="acomptec_qlthptModel.FK_MONHOCCHITIETDANHGIA" FromRole="CHITIETDANHGIA" ToRole="MONHOC" />
         </EntityType>
         <EntityType Name="CHUCVU">
           <Key>
@@ -1077,6 +1097,7 @@
           <Property Name="MH_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="MH_TEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="THOIKHOABIEUx" Relationship="Self.FK_MONHOCTHOIKHOABIEU" FromRole="MONHOC" ToRole="THOIKHOABIEU" />
+          <NavigationProperty Name="CHITIETDANHGIAs" Relationship="acomptec_qlthptModel.FK_MONHOCCHITIETDANHGIA" FromRole="MONHOC" ToRole="CHITIETDANHGIA" />
         </EntityType>
         <EntityType Name="NAMHOC">
           <Key>
@@ -1085,6 +1106,7 @@
           <Property Name="NH_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="NH_NAMHOC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="THOIKHOABIEUx" Relationship="Self.FK_NAMHOCTHOIKHOABIEU" FromRole="NAMHOC" ToRole="THOIKHOABIEU" />
+          <NavigationProperty Name="SODANHGIAs" Relationship="acomptec_qlthptModel.FK_NAMHOCSODANHGIA" FromRole="NAMHOC" ToRole="SODANHGIA" />
         </EntityType>
         <EntityType Name="NGACHLUONG">
           <Key>
@@ -1120,6 +1142,8 @@
           <Property Name="HOCKY_HK_MA" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="CHITIETDANHGIAs" Relationship="Self.FK_SODANHGIACHITIETDANHGIA" FromRole="SODANHGIA" ToRole="CHITIETDANHGIA" />
           <NavigationProperty Name="HOCKY" Relationship="Self.FK_HOCKYSODANHGIA" FromRole="SODANHGIA" ToRole="HOCKY" />
+          <Property Name="NAMHOC_NH_MA" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="NAMHOC" Relationship="acomptec_qlthptModel.FK_NAMHOCSODANHGIA" FromRole="SODANHGIA" ToRole="NAMHOC" />
         </EntityType>
         <EntityType Name="THIETBIDAYHOC">
           <Key>
@@ -1181,6 +1205,7 @@
           <Property Name="NGACHLUONG_NL_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="BACLUONG" Relationship="Self.FK_BACLUONGTHONGTINLUONG" FromRole="THONGTINLUONG" ToRole="BACLUONG" />
           <NavigationProperty Name="NGACHLUONG" Relationship="Self.FK_NGACHLUONGTHONGTINLUONG" FromRole="THONGTINLUONG" ToRole="NGACHLUONG" />
+          <NavigationProperty Name="CANBOes" Relationship="acomptec_qlthptModel.FK_THONGTINLUONGCANBO" FromRole="THONGTINLUONG" ToRole="CANBO" />
         </EntityType>
         <EntityType Name="THU">
           <Key>
@@ -1803,7 +1828,55 @@
             <End Role="VANBANG" EntitySet="VANBANGs" />
             <End Role="THONGTINDAOTAO" EntitySet="THONGTINDAOTAOs" />
           </AssociationSet>
+          <AssociationSet Name="FK_THONGTINLUONGCANBO" Association="acomptec_qlthptModel.FK_THONGTINLUONGCANBO">
+            <End Role="THONGTINLUONG" EntitySet="THONGTINLUONGs" />
+            <End Role="CANBO" EntitySet="CANBOes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MONHOCCHITIETDANHGIA" Association="acomptec_qlthptModel.FK_MONHOCCHITIETDANHGIA">
+            <End Role="MONHOC" EntitySet="MONHOCs" />
+            <End Role="CHITIETDANHGIA" EntitySet="CHITIETDANHGIAs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NAMHOCSODANHGIA" Association="acomptec_qlthptModel.FK_NAMHOCSODANHGIA">
+            <End Role="NAMHOC" EntitySet="NAMHOCs" />
+            <End Role="SODANHGIA" EntitySet="SODANHGIAs" />
+          </AssociationSet>
         </EntityContainer>
+        <Association Name="FK_THONGTINLUONGCANBO">
+          <End Type="acomptec_qlthptModel.THONGTINLUONG" Role="THONGTINLUONG" Multiplicity="1" />
+          <End Type="acomptec_qlthptModel.CANBO" Role="CANBO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="THONGTINLUONG">
+              <PropertyRef Name="TTL_MA" />
+            </Principal>
+            <Dependent Role="CANBO">
+              <PropertyRef Name="THONGTINLUONG_TTL_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MONHOCCHITIETDANHGIA">
+          <End Type="acomptec_qlthptModel.MONHOC" Role="MONHOC" Multiplicity="1" />
+          <End Type="acomptec_qlthptModel.CHITIETDANHGIA" Role="CHITIETDANHGIA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MONHOC">
+              <PropertyRef Name="MH_MA" />
+            </Principal>
+            <Dependent Role="CHITIETDANHGIA">
+              <PropertyRef Name="MONHOC_MH_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NAMHOCSODANHGIA">
+          <End Type="acomptec_qlthptModel.NAMHOC" Role="NAMHOC" Multiplicity="1" />
+          <End Type="acomptec_qlthptModel.SODANHGIA" Role="SODANHGIA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NAMHOC">
+              <PropertyRef Name="NH_MA" />
+            </Principal>
+            <Dependent Role="SODANHGIA">
+              <PropertyRef Name="NAMHOC_NH_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1821,6 +1894,7 @@
           <EntitySetMapping Name="CANBOes">
             <EntityTypeMapping TypeName="acomptec_qlthptModel.CANBO">
               <MappingFragment StoreEntitySet="CANBO">
+                <ScalarProperty Name="THONGTINLUONG_TTL_MA" ColumnName="THONGTINLUONG_TTL_MA" />
                 <ScalarProperty Name="CB_MA" ColumnName="CB_MA" />
                 <ScalarProperty Name="CB_HOTEN" ColumnName="CB_HOTEN" />
                 <ScalarProperty Name="CB_GIOITINH" ColumnName="CB_GIOITINH" />
@@ -1847,6 +1921,7 @@
           <EntitySetMapping Name="CHITIETDANHGIAs">
             <EntityTypeMapping TypeName="acomptec_qlthptModel.CHITIETDANHGIA">
               <MappingFragment StoreEntitySet="CHITIETDANHGIA">
+                <ScalarProperty Name="MONHOC_MH_MA" ColumnName="MONHOC_MH_MA" />
                 <ScalarProperty Name="CTDG_MA" ColumnName="CTDG_MA" />
                 <ScalarProperty Name="CTDG_NGAYDG" ColumnName="CTDG_NGAYDG" />
                 <ScalarProperty Name="SODANHGIA_SDG_MA" ColumnName="SODANHGIA_SDG_MA" />
@@ -2029,10 +2104,10 @@
           <EntitySetMapping Name="SODANHGIAs">
             <EntityTypeMapping TypeName="acomptec_qlthptModel.SODANHGIA">
               <MappingFragment StoreEntitySet="SODANHGIA">
+                <ScalarProperty Name="NAMHOC_NH_MA" ColumnName="NAMHOC_NH_MA" />
                 <ScalarProperty Name="SDG_MA" ColumnName="SDG_MA" />
                 <ScalarProperty Name="SDG_DIEM" ColumnName="SDG_DIEM" />
                 <ScalarProperty Name="SDG_GHICHU" ColumnName="SDG_GHICHU" />
-                <ScalarProperty Name="HOCKY_HK_MA" ColumnName="HOCKY_HK_MA" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -2061,7 +2136,6 @@
                 <ScalarProperty Name="THU_THU_MA" ColumnName="THU_THU_MA" />
                 <ScalarProperty Name="TIETHOC_TH_MA" ColumnName="TIETHOC_TH_MA" />
                 <ScalarProperty Name="CANBO_CB_MA" ColumnName="CANBO_CB_MA" />
-                <ScalarProperty Name="NAMHOC_NH_MA" ColumnName="NAMHOC_NH_MA" />
                 <ScalarProperty Name="HOCKY_HK_MA" ColumnName="HOCKY_HK_MA" />
               </MappingFragment>
             </EntityTypeMapping>
