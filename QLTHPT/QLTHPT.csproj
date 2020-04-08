@@ -142,7 +142,14 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\HOCKiesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LOPsController.cs" />
+    <Compile Include="Controllers\MONHOCsController.cs" />
+    <Compile Include="Controllers\NAMHOCsController.cs" />
+    <Compile Include="Controllers\THOIKHOABIEUxController.cs" />
+    <Compile Include="Controllers\THUsController.cs" />
+    <Compile Include="Controllers\TIETHOCsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -757,6 +764,41 @@
     <Content Include="scss\bootstrap\_utilities.scss" />
     <Content Include="scss\bootstrap\_variables.scss" />
     <Content Include="scss\style.scss" />
+    <Content Include="Views\HOCKies\Create.cshtml" />
+    <Content Include="Views\HOCKies\Delete.cshtml" />
+    <Content Include="Views\HOCKies\Details.cshtml" />
+    <Content Include="Views\HOCKies\Edit.cshtml" />
+    <Content Include="Views\HOCKies\Index.cshtml" />
+    <Content Include="Views\LOPs\Create.cshtml" />
+    <Content Include="Views\LOPs\Delete.cshtml" />
+    <Content Include="Views\LOPs\Details.cshtml" />
+    <Content Include="Views\LOPs\Edit.cshtml" />
+    <Content Include="Views\LOPs\Index.cshtml" />
+    <Content Include="Views\MONHOCs\Create.cshtml" />
+    <Content Include="Views\MONHOCs\Delete.cshtml" />
+    <Content Include="Views\MONHOCs\Details.cshtml" />
+    <Content Include="Views\MONHOCs\Edit.cshtml" />
+    <Content Include="Views\MONHOCs\Index.cshtml" />
+    <Content Include="Views\NAMHOCs\Create.cshtml" />
+    <Content Include="Views\NAMHOCs\Delete.cshtml" />
+    <Content Include="Views\NAMHOCs\Details.cshtml" />
+    <Content Include="Views\NAMHOCs\Edit.cshtml" />
+    <Content Include="Views\NAMHOCs\Index.cshtml" />
+    <Content Include="Views\TIETHOCs\Create.cshtml" />
+    <Content Include="Views\TIETHOCs\Delete.cshtml" />
+    <Content Include="Views\TIETHOCs\Details.cshtml" />
+    <Content Include="Views\TIETHOCs\Edit.cshtml" />
+    <Content Include="Views\TIETHOCs\Index.cshtml" />
+    <Content Include="Views\THUs\Create.cshtml" />
+    <Content Include="Views\THUs\Delete.cshtml" />
+    <Content Include="Views\THUs\Details.cshtml" />
+    <Content Include="Views\THUs\Edit.cshtml" />
+    <Content Include="Views\THUs\Index.cshtml" />
+    <Content Include="Views\THOIKHOABIEUx\Create.cshtml" />
+    <Content Include="Views\THOIKHOABIEUx\Delete.cshtml" />
+    <Content Include="Views\THOIKHOABIEUx\Details.cshtml" />
+    <Content Include="Views\THOIKHOABIEUx\Edit.cshtml" />
+    <Content Include="Views\THOIKHOABIEUx\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

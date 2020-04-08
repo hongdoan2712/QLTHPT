@@ -10,7 +10,7 @@ namespace QLTHPT.Controllers
 {
     public class HomeController : Controller
     {
-       acomptec_qlthptEntities obj = new acomptec_qlthptEntities();
+       acomptec_qlthptEntities1 obj = new acomptec_qlthptEntities1();
 
         public ActionResult Index()
         {
