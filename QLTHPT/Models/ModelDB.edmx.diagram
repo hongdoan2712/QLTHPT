@@ -74,9 +74,6 @@
         <AssociationConnector Association="acomptec_qlthptModel.FK_THUTHOIKHOABIEU" ManuallyRouted="false" />
         <AssociationConnector Association="acomptec_qlthptModel.FK_TIETHOCTHOIKHOABIEU" ManuallyRouted="false" />
         <AssociationConnector Association="acomptec_qlthptModel.FK_VANBANGTHONGTINDAOTAO" ManuallyRouted="false" />
-        <AssociationConnector Association="acomptec_qlthptModel.FK_THONGTINLUONGCANBO" />
-        <AssociationConnector Association="acomptec_qlthptModel.FK_MONHOCCHITIETDANHGIA" />
-        <AssociationConnector Association="acomptec_qlthptModel.FK_NAMHOCSODANHGIA" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

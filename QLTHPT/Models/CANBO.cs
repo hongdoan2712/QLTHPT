@@ -31,7 +31,6 @@ namespace QLTHPT.Models
         public string KYLUATCB_KLCB_MA { get; set; }
         public string KHENTHUONGCB_KTCB_MA { get; set; }
         public string THONGTINDAOTAO_TTDT_MA { get; set; }
-        public string THONGTINLUONG_TTL_MA { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<THOIKHOABIEU> THOIKHOABIEUx { get; set; }
@@ -40,6 +39,5 @@ namespace QLTHPT.Models
         public virtual KHENTHUONGCB KHENTHUONGCB { get; set; }
         public virtual KYLUATCB KYLUATCB { get; set; }
         public virtual THONGTINDAOTAO THONGTINDAOTAO { get; set; }
-        public virtual THONGTINLUONG THONGTINLUONG { get; set; }
     }
 }
