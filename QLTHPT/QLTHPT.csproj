@@ -142,21 +142,18 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\CHITIETDANHGIAsController.cs" />
-    <Compile Include="Controllers\HINHTHUCsController.cs" />
     <Compile Include="Controllers\HOCKiesController.cs" />
-    <Compile Include="Controllers\HOCSINHsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\KHENTHUONGCBsController.cs" />
-    <Compile Include="Controllers\KHENTHUONGsController.cs" />
-    <Compile Include="Controllers\KHOIsController.cs" />
     <Compile Include="Controllers\LOPsController.cs" />
     <Compile Include="Controllers\MONHOCsController.cs" />
 <<<<<<< .merge_file_a11092
 =======
     <Compile Include="Controllers\NAMHOCsController.cs" />
+<<<<<<< HEAD
     <Compile Include="Controllers\SODANHGIAsController.cs" />
 >>>>>>> .merge_file_a16436
+=======
+>>>>>>> parent of ace6948... Sửa lại view cho các bảng tham chiếu(bảng học sinh, khen thưởng cb, khen thưởng, sổ đánh giá, chi tiết đánh giá)
     <Compile Include="Controllers\THOIKHOABIEUxController.cs" />
     <Compile Include="Controllers\THONGTINLUONGsController.cs" />
     <Compile Include="Controllers\THUsController.cs" />
@@ -805,6 +802,7 @@
     <Content Include="Views\THOIKHOABIEUx\Details.cshtml" />
     <Content Include="Views\THOIKHOABIEUx\Edit.cshtml" />
     <Content Include="Views\THOIKHOABIEUx\Index.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\CHITIETDANHGIAs\Create.cshtml" />
     <Content Include="Views\CHITIETDANHGIAs\Delete.cshtml" />
     <Content Include="Views\CHITIETDANHGIAs\Details.cshtml" />
@@ -845,6 +843,8 @@
     <Content Include="Views\THONGTINLUONGs\Details.cshtml" />
     <Content Include="Views\THONGTINLUONGs\Edit.cshtml" />
     <Content Include="Views\THONGTINLUONGs\Index.cshtml" />
+=======
+>>>>>>> parent of ace6948... Sửa lại view cho các bảng tham chiếu(bảng học sinh, khen thưởng cb, khen thưởng, sổ đánh giá, chi tiết đánh giá)
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
