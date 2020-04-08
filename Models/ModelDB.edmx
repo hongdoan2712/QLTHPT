@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="acomptec_qlthptModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="acomptec_qlthptModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="BACLUONG">
           <Key>
             <PropertyRef Name="BL_MA" />
@@ -886,8 +886,7 @@
             <End Role="HOCSINH" EntitySet="HOCSINH" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="acomptec_qlthptModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -921,7 +920,12 @@
           <NavigationProperty Name="KHENTHUONGCB" Relationship="Self.FK_KHENTHUONGCBCANBO" FromRole="CANBO" ToRole="KHENTHUONGCB" />
           <NavigationProperty Name="KYLUATCB" Relationship="Self.FK_KYLUATCBCANBO" FromRole="CANBO" ToRole="KYLUATCB" />
           <NavigationProperty Name="THONGTINDAOTAO" Relationship="Self.FK_THONGTINDAOTAOCANBO" FromRole="CANBO" ToRole="THONGTINDAOTAO" />
+<<<<<<< HEAD:QLTHPT/Models/ModelDB.edmx
           <NavigationProperty Name="THONGTINLUONG" Relationship="Self.FK_THONGTINLUONGCANBO" FromRole="CANBO" ToRole="THONGTINLUONG" />
+=======
+          <Property Name="THONGTINLUONG_TTL_MA" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="THONGTINLUONG" Relationship="acomptec_qlthptModel.FK_THONGTINLUONGCANBO" FromRole="CANBO" ToRole="THONGTINLUONG" />
+>>>>>>> ef4a19d4ecc2602c2d63d0bc2587774ef2fc4dcd:Models/ModelDB.edmx
         </EntityType>
         <EntityType Name="CHITIET_CHUCVU">
           <Key>
@@ -944,6 +948,8 @@
           <NavigationProperty Name="HOCSINHs" Relationship="Self.FK_CHITIETDANHGIAHOCSINH" FromRole="CHITIETDANHGIA" ToRole="HOCSINH" />
           <NavigationProperty Name="MONHOC" Relationship="Self.FK_MONHOCCHITIETDANHGIA" FromRole="CHITIETDANHGIA" ToRole="MONHOC" />
           <NavigationProperty Name="SODANHGIA" Relationship="Self.FK_SODANHGIACHITIETDANHGIA" FromRole="CHITIETDANHGIA" ToRole="SODANHGIA" />
+          <Property Name="MONHOC_MH_MA" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="MONHOC" Relationship="acomptec_qlthptModel.FK_MONHOCCHITIETDANHGIA" FromRole="CHITIETDANHGIA" ToRole="MONHOC" />
         </EntityType>
         <EntityType Name="CHUCVU">
           <Key>
@@ -1098,6 +1104,7 @@
           <Property Name="MH_TEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="CHITIETDANHGIAs" Relationship="Self.FK_MONHOCCHITIETDANHGIA" FromRole="MONHOC" ToRole="CHITIETDANHGIA" />
           <NavigationProperty Name="THOIKHOABIEUx" Relationship="Self.FK_MONHOCTHOIKHOABIEU" FromRole="MONHOC" ToRole="THOIKHOABIEU" />
+          <NavigationProperty Name="CHITIETDANHGIAs" Relationship="acomptec_qlthptModel.FK_MONHOCCHITIETDANHGIA" FromRole="MONHOC" ToRole="CHITIETDANHGIA" />
         </EntityType>
         <EntityType Name="NAMHOC">
           <Key>
@@ -1105,7 +1112,12 @@
           </Key>
           <Property Name="NH_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="NH_NAMHOC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+<<<<<<< HEAD:QLTHPT/Models/ModelDB.edmx
           <NavigationProperty Name="SODANHGIAs" Relationship="Self.FK_NAMHOCSODANHGIA" FromRole="NAMHOC" ToRole="SODANHGIA" />
+=======
+          <NavigationProperty Name="THOIKHOABIEUx" Relationship="Self.FK_NAMHOCTHOIKHOABIEU" FromRole="NAMHOC" ToRole="THOIKHOABIEU" />
+          <NavigationProperty Name="SODANHGIAs" Relationship="acomptec_qlthptModel.FK_NAMHOCSODANHGIA" FromRole="NAMHOC" ToRole="SODANHGIA" />
+>>>>>>> ef4a19d4ecc2602c2d63d0bc2587774ef2fc4dcd:Models/ModelDB.edmx
         </EntityType>
         <EntityType Name="NGACHLUONG">
           <Key>
@@ -1140,7 +1152,13 @@
           <Property Name="SDG_GHICHU" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="NAMHOC_NH_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="CHITIETDANHGIAs" Relationship="Self.FK_SODANHGIACHITIETDANHGIA" FromRole="SODANHGIA" ToRole="CHITIETDANHGIA" />
+<<<<<<< HEAD:QLTHPT/Models/ModelDB.edmx
           <NavigationProperty Name="NAMHOC" Relationship="Self.FK_NAMHOCSODANHGIA" FromRole="SODANHGIA" ToRole="NAMHOC" />
+=======
+          <NavigationProperty Name="HOCKY" Relationship="Self.FK_HOCKYSODANHGIA" FromRole="SODANHGIA" ToRole="HOCKY" />
+          <Property Name="NAMHOC_NH_MA" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="NAMHOC" Relationship="acomptec_qlthptModel.FK_NAMHOCSODANHGIA" FromRole="SODANHGIA" ToRole="NAMHOC" />
+>>>>>>> ef4a19d4ecc2602c2d63d0bc2587774ef2fc4dcd:Models/ModelDB.edmx
         </EntityType>
         <EntityType Name="THIETBIDAYHOC">
           <Key>
@@ -1201,6 +1219,7 @@
           <NavigationProperty Name="BACLUONG" Relationship="Self.FK_BACLUONGTHONGTINLUONG" FromRole="THONGTINLUONG" ToRole="BACLUONG" />
           <NavigationProperty Name="CANBOes" Relationship="Self.FK_THONGTINLUONGCANBO" FromRole="THONGTINLUONG" ToRole="CANBO" />
           <NavigationProperty Name="NGACHLUONG" Relationship="Self.FK_NGACHLUONGTHONGTINLUONG" FromRole="THONGTINLUONG" ToRole="NGACHLUONG" />
+          <NavigationProperty Name="CANBOes" Relationship="acomptec_qlthptModel.FK_THONGTINLUONGCANBO" FromRole="THONGTINLUONG" ToRole="CANBO" />
         </EntityType>
         <EntityType Name="THU">
           <Key>
@@ -1839,7 +1858,55 @@
             <End Role="VANBANG" EntitySet="VANBANGs" />
             <End Role="THONGTINDAOTAO" EntitySet="THONGTINDAOTAOs" />
           </AssociationSet>
+          <AssociationSet Name="FK_THONGTINLUONGCANBO" Association="acomptec_qlthptModel.FK_THONGTINLUONGCANBO">
+            <End Role="THONGTINLUONG" EntitySet="THONGTINLUONGs" />
+            <End Role="CANBO" EntitySet="CANBOes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MONHOCCHITIETDANHGIA" Association="acomptec_qlthptModel.FK_MONHOCCHITIETDANHGIA">
+            <End Role="MONHOC" EntitySet="MONHOCs" />
+            <End Role="CHITIETDANHGIA" EntitySet="CHITIETDANHGIAs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NAMHOCSODANHGIA" Association="acomptec_qlthptModel.FK_NAMHOCSODANHGIA">
+            <End Role="NAMHOC" EntitySet="NAMHOCs" />
+            <End Role="SODANHGIA" EntitySet="SODANHGIAs" />
+          </AssociationSet>
         </EntityContainer>
+        <Association Name="FK_THONGTINLUONGCANBO">
+          <End Type="acomptec_qlthptModel.THONGTINLUONG" Role="THONGTINLUONG" Multiplicity="1" />
+          <End Type="acomptec_qlthptModel.CANBO" Role="CANBO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="THONGTINLUONG">
+              <PropertyRef Name="TTL_MA" />
+            </Principal>
+            <Dependent Role="CANBO">
+              <PropertyRef Name="THONGTINLUONG_TTL_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MONHOCCHITIETDANHGIA">
+          <End Type="acomptec_qlthptModel.MONHOC" Role="MONHOC" Multiplicity="1" />
+          <End Type="acomptec_qlthptModel.CHITIETDANHGIA" Role="CHITIETDANHGIA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MONHOC">
+              <PropertyRef Name="MH_MA" />
+            </Principal>
+            <Dependent Role="CHITIETDANHGIA">
+              <PropertyRef Name="MONHOC_MH_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NAMHOCSODANHGIA">
+          <End Type="acomptec_qlthptModel.NAMHOC" Role="NAMHOC" Multiplicity="1" />
+          <End Type="acomptec_qlthptModel.SODANHGIA" Role="SODANHGIA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NAMHOC">
+              <PropertyRef Name="NH_MA" />
+            </Principal>
+            <Dependent Role="SODANHGIA">
+              <PropertyRef Name="NAMHOC_NH_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1857,6 +1924,7 @@
           <EntitySetMapping Name="CANBOes">
             <EntityTypeMapping TypeName="acomptec_qlthptModel.CANBO">
               <MappingFragment StoreEntitySet="CANBO">
+                <ScalarProperty Name="THONGTINLUONG_TTL_MA" ColumnName="THONGTINLUONG_TTL_MA" />
                 <ScalarProperty Name="CB_MA" ColumnName="CB_MA" />
                 <ScalarProperty Name="CB_HOTEN" ColumnName="CB_HOTEN" />
                 <ScalarProperty Name="CB_GIOITINH" ColumnName="CB_GIOITINH" />
@@ -1884,6 +1952,7 @@
           <EntitySetMapping Name="CHITIETDANHGIAs">
             <EntityTypeMapping TypeName="acomptec_qlthptModel.CHITIETDANHGIA">
               <MappingFragment StoreEntitySet="CHITIETDANHGIA">
+                <ScalarProperty Name="MONHOC_MH_MA" ColumnName="MONHOC_MH_MA" />
                 <ScalarProperty Name="CTDG_MA" ColumnName="CTDG_MA" />
                 <ScalarProperty Name="CTDG_NGAYDG" ColumnName="CTDG_NGAYDG" />
                 <ScalarProperty Name="SODANHGIA_SDG_MA" ColumnName="SODANHGIA_SDG_MA" />
@@ -2067,10 +2136,14 @@
           <EntitySetMapping Name="SODANHGIAs">
             <EntityTypeMapping TypeName="acomptec_qlthptModel.SODANHGIA">
               <MappingFragment StoreEntitySet="SODANHGIA">
+                <ScalarProperty Name="NAMHOC_NH_MA" ColumnName="NAMHOC_NH_MA" />
                 <ScalarProperty Name="SDG_MA" ColumnName="SDG_MA" />
                 <ScalarProperty Name="SDG_DIEM" ColumnName="SDG_DIEM" />
                 <ScalarProperty Name="SDG_GHICHU" ColumnName="SDG_GHICHU" />
+<<<<<<< HEAD:QLTHPT/Models/ModelDB.edmx
                 <ScalarProperty Name="NAMHOC_NH_MA" ColumnName="NAMHOC_NH_MA" />
+=======
+>>>>>>> ef4a19d4ecc2602c2d63d0bc2587774ef2fc4dcd:Models/ModelDB.edmx
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

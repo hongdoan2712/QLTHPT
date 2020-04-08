@@ -146,8 +146,19 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LOPsController.cs" />
     <Compile Include="Controllers\MONHOCsController.cs" />
+<<<<<<< .merge_file_a11092
+=======
     <Compile Include="Controllers\NAMHOCsController.cs" />
+<<<<<<< HEAD:QLTHPT/QLTHPT.csproj
+=======
+<<<<<<< HEAD
+    <Compile Include="Controllers\SODANHGIAsController.cs" />
+>>>>>>> .merge_file_a16436
+=======
+>>>>>>> parent of ace6948... Sửa lại view cho các bảng tham chiếu(bảng học sinh, khen thưởng cb, khen thưởng, sổ đánh giá, chi tiết đánh giá)
+>>>>>>> ef4a19d4ecc2602c2d63d0bc2587774ef2fc4dcd:QLTHPT.csproj
     <Compile Include="Controllers\THOIKHOABIEUxController.cs" />
+    <Compile Include="Controllers\THONGTINLUONGsController.cs" />
     <Compile Include="Controllers\THUsController.cs" />
     <Compile Include="Controllers\TIETHOCsController.cs" />
     <Compile Include="Global.asax.cs">
@@ -779,11 +790,19 @@
     <Content Include="Views\MONHOCs\Details.cshtml" />
     <Content Include="Views\MONHOCs\Edit.cshtml" />
     <Content Include="Views\MONHOCs\Index.cshtml" />
+<<<<<<< HEAD:QLTHPT/QLTHPT.csproj
     <Content Include="Views\NAMHOCs\Create.cshtml" />
     <Content Include="Views\NAMHOCs\Delete.cshtml" />
     <Content Include="Views\NAMHOCs\Details.cshtml" />
     <Content Include="Views\NAMHOCs\Edit.cshtml" />
     <Content Include="Views\NAMHOCs\Index.cshtml" />
+=======
+    <Content Include="Views\THUs\Create.cshtml" />
+    <Content Include="Views\THUs\Delete.cshtml" />
+    <Content Include="Views\THUs\Details.cshtml" />
+    <Content Include="Views\THUs\Edit.cshtml" />
+    <Content Include="Views\THUs\Index.cshtml" />
+>>>>>>> ef4a19d4ecc2602c2d63d0bc2587774ef2fc4dcd:QLTHPT.csproj
     <Content Include="Views\TIETHOCs\Create.cshtml" />
     <Content Include="Views\TIETHOCs\Delete.cshtml" />
     <Content Include="Views\TIETHOCs\Details.cshtml" />
@@ -799,6 +818,52 @@
     <Content Include="Views\THOIKHOABIEUx\Details.cshtml" />
     <Content Include="Views\THOIKHOABIEUx\Edit.cshtml" />
     <Content Include="Views\THOIKHOABIEUx\Index.cshtml" />
+<<<<<<< HEAD:QLTHPT/QLTHPT.csproj
+=======
+<<<<<<< HEAD
+    <Content Include="Views\CHITIETDANHGIAs\Create.cshtml" />
+    <Content Include="Views\CHITIETDANHGIAs\Delete.cshtml" />
+    <Content Include="Views\CHITIETDANHGIAs\Details.cshtml" />
+    <Content Include="Views\CHITIETDANHGIAs\Edit.cshtml" />
+    <Content Include="Views\CHITIETDANHGIAs\Index.cshtml" />
+    <Content Include="Views\HINHTHUCs\Create.cshtml" />
+    <Content Include="Views\HINHTHUCs\Delete.cshtml" />
+    <Content Include="Views\HINHTHUCs\Details.cshtml" />
+    <Content Include="Views\HINHTHUCs\Edit.cshtml" />
+    <Content Include="Views\HINHTHUCs\Index.cshtml" />
+    <Content Include="Views\HOCSINHs\Create.cshtml" />
+    <Content Include="Views\HOCSINHs\Delete.cshtml" />
+    <Content Include="Views\HOCSINHs\Details.cshtml" />
+    <Content Include="Views\HOCSINHs\Edit.cshtml" />
+    <Content Include="Views\HOCSINHs\Index.cshtml" />
+    <Content Include="Views\KHENTHUONGs\Create.cshtml" />
+    <Content Include="Views\KHENTHUONGs\Delete.cshtml" />
+    <Content Include="Views\KHENTHUONGs\Details.cshtml" />
+    <Content Include="Views\KHENTHUONGs\Edit.cshtml" />
+    <Content Include="Views\KHENTHUONGs\Index.cshtml" />
+    <Content Include="Views\KHENTHUONGCBs\Create.cshtml" />
+    <Content Include="Views\KHENTHUONGCBs\Delete.cshtml" />
+    <Content Include="Views\KHENTHUONGCBs\Details.cshtml" />
+    <Content Include="Views\KHENTHUONGCBs\Edit.cshtml" />
+    <Content Include="Views\KHENTHUONGCBs\Index.cshtml" />
+    <Content Include="Views\KHOIs\Create.cshtml" />
+    <Content Include="Views\KHOIs\Delete.cshtml" />
+    <Content Include="Views\KHOIs\Details.cshtml" />
+    <Content Include="Views\KHOIs\Edit.cshtml" />
+    <Content Include="Views\KHOIs\Index.cshtml" />
+    <Content Include="Views\SODANHGIAs\Create.cshtml" />
+    <Content Include="Views\SODANHGIAs\Delete.cshtml" />
+    <Content Include="Views\SODANHGIAs\Details.cshtml" />
+    <Content Include="Views\SODANHGIAs\Edit.cshtml" />
+    <Content Include="Views\SODANHGIAs\Index.cshtml" />
+    <Content Include="Views\THONGTINLUONGs\Create.cshtml" />
+    <Content Include="Views\THONGTINLUONGs\Delete.cshtml" />
+    <Content Include="Views\THONGTINLUONGs\Details.cshtml" />
+    <Content Include="Views\THONGTINLUONGs\Edit.cshtml" />
+    <Content Include="Views\THONGTINLUONGs\Index.cshtml" />
+=======
+>>>>>>> parent of ace6948... Sửa lại view cho các bảng tham chiếu(bảng học sinh, khen thưởng cb, khen thưởng, sổ đánh giá, chi tiết đánh giá)
+>>>>>>> ef4a19d4ecc2602c2d63d0bc2587774ef2fc4dcd:QLTHPT.csproj
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

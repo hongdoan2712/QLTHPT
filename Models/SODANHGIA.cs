@@ -12,18 +12,29 @@ namespace QLTHPT.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class NAMHOC
+    public partial class SODANHGIA
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public NAMHOC()
+        public SODANHGIA()
         {
-            this.SODANHGIAs = new HashSet<SODANHGIA>();
+            this.CHITIETDANHGIAs = new HashSet<CHITIETDANHGIA>();
         }
     
-        public string NH_MA { get; set; }
-        public string NH_NAMHOC { get; set; }
+        public string SDG_MA { get; set; }
+        public string SDG_DIEM { get; set; }
+        public string SDG_GHICHU { get; set; }
+<<<<<<< HEAD:QLTHPT/Models/SODANHGIA.cs
+=======
+        public string HOCKY_HK_MA { get; set; }
+>>>>>>> ef4a19d4ecc2602c2d63d0bc2587774ef2fc4dcd:Models/SODANHGIA.cs
+        public string NAMHOC_NH_MA { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<SODANHGIA> SODANHGIAs { get; set; }
+        public virtual ICollection<CHITIETDANHGIA> CHITIETDANHGIAs { get; set; }
+<<<<<<< HEAD:QLTHPT/Models/SODANHGIA.cs
+=======
+        public virtual HOCKY HOCKY { get; set; }
+>>>>>>> ef4a19d4ecc2602c2d63d0bc2587774ef2fc4dcd:Models/SODANHGIA.cs
+        public virtual NAMHOC NAMHOC { get; set; }
     }
 }

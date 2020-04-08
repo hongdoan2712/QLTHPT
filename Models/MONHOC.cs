@@ -19,6 +19,7 @@ namespace QLTHPT.Models
         {
             this.CHITIETDANHGIAs = new HashSet<CHITIETDANHGIA>();
             this.THOIKHOABIEUx = new HashSet<THOIKHOABIEU>();
+            this.CHITIETDANHGIAs = new HashSet<CHITIETDANHGIA>();
         }
     
         public string MH_MA { get; set; }
@@ -28,5 +29,7 @@ namespace QLTHPT.Models
         public virtual ICollection<CHITIETDANHGIA> CHITIETDANHGIAs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<THOIKHOABIEU> THOIKHOABIEUx { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CHITIETDANHGIA> CHITIETDANHGIAs { get; set; }
     }
 }

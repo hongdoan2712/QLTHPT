@@ -12,21 +12,25 @@ namespace QLTHPT.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class SODANHGIA
+    public partial class THONGTINLUONG
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public SODANHGIA()
+        public THONGTINLUONG()
         {
-            this.CHITIETDANHGIAs = new HashSet<CHITIETDANHGIA>();
+            this.CANBOes = new HashSet<CANBO>();
         }
     
-        public string SDG_MA { get; set; }
-        public string SDG_DIEM { get; set; }
-        public string SDG_GHICHU { get; set; }
-        public string NAMHOC_NH_MA { get; set; }
+        public string TTL_MA { get; set; }
+        public string TTL_NGAYNHANLUONG { get; set; }
+        public string TTL_HESOLUONG { get; set; }
+        public string BACLUONG_BL_MA { get; set; }
+        public string NGACHLUONG_NL_MA { get; set; }
     
+        public virtual BACLUONG BACLUONG { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CHITIETDANHGIA> CHITIETDANHGIAs { get; set; }
-        public virtual NAMHOC NAMHOC { get; set; }
+        public virtual ICollection<CANBO> CANBOes { get; set; }
+        public virtual NGACHLUONG NGACHLUONG { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CANBO> CANBOes { get; set; }
     }
 }

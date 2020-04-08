@@ -12,22 +12,27 @@ namespace QLTHPT.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class CHITIETDANHGIA
+    public partial class NAMHOC
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public CHITIETDANHGIA()
+        public NAMHOC()
         {
-            this.HOCSINHs = new HashSet<HOCSINH>();
+<<<<<<< HEAD:QLTHPT/Models/NAMHOC.cs
+=======
+            this.THOIKHOABIEUx = new HashSet<THOIKHOABIEU>();
+>>>>>>> ef4a19d4ecc2602c2d63d0bc2587774ef2fc4dcd:Models/NAMHOC.cs
+            this.SODANHGIAs = new HashSet<SODANHGIA>();
         }
     
-        public string CTDG_MA { get; set; }
-        public Nullable<System.DateTime> CTDG_NGAYDG { get; set; }
-        public string SODANHGIA_SDG_MA { get; set; }
-        public string MONHOC_MH_MA { get; set; }
+        public string NH_MA { get; set; }
+        public string NH_NAMHOC { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<HOCSINH> HOCSINHs { get; set; }
-        public virtual MONHOC MONHOC { get; set; }
-        public virtual SODANHGIA SODANHGIA { get; set; }
+<<<<<<< HEAD:QLTHPT/Models/NAMHOC.cs
+=======
+        public virtual ICollection<THOIKHOABIEU> THOIKHOABIEUx { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+>>>>>>> ef4a19d4ecc2602c2d63d0bc2587774ef2fc4dcd:Models/NAMHOC.cs
+        public virtual ICollection<SODANHGIA> SODANHGIAs { get; set; }
     }
 }
