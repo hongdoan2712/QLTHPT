@@ -155,6 +155,7 @@
     <Compile Include="Controllers\NAMHOCsController.cs" />
     <Compile Include="Controllers\SODANHGIAsController.cs" />
     <Compile Include="Controllers\THOIKHOABIEUxController.cs" />
+    <Compile Include="Controllers\THONGTINLUONGsController.cs" />
     <Compile Include="Controllers\THUsController.cs" />
     <Compile Include="Controllers\TIETHOCsController.cs" />
     <Compile Include="Global.asax.cs">
@@ -841,6 +842,11 @@
     <Content Include="Views\SODANHGIAs\Details.cshtml" />
     <Content Include="Views\SODANHGIAs\Edit.cshtml" />
     <Content Include="Views\SODANHGIAs\Index.cshtml" />
+    <Content Include="Views\THONGTINLUONGs\Create.cshtml" />
+    <Content Include="Views\THONGTINLUONGs\Delete.cshtml" />
+    <Content Include="Views\THONGTINLUONGs\Details.cshtml" />
+    <Content Include="Views\THONGTINLUONGs\Edit.cshtml" />
+    <Content Include="Views\THONGTINLUONGs\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
