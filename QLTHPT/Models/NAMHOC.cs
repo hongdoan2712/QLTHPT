@@ -17,13 +17,13 @@ namespace QLTHPT.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public NAMHOC()
         {
-            this.THOIKHOABIEUx = new HashSet<THOIKHOABIEU>();
+            this.SODANHGIAs = new HashSet<SODANHGIA>();
         }
     
         public string NH_MA { get; set; }
         public string NH_NAMHOC { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<THOIKHOABIEU> THOIKHOABIEUx { get; set; }
+        public virtual ICollection<SODANHGIA> SODANHGIAs { get; set; }
     }
 }
