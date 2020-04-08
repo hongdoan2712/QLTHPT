@@ -43,7 +43,6 @@ namespace QLTHPT.Controllers
             ViewBag.HOCKY_HK_MA = new SelectList(db.HOCKies, "HK_MA", "HK_TEN");
             ViewBag.LOP_LOP_MA = new SelectList(db.LOPs, "LOP_MA", "LOP_TEN");
             ViewBag.MONHOC_MH_MA = new SelectList(db.MONHOCs, "MH_MA", "MH_TEN");
-            ViewBag.NAMHOC_NH_MA = new SelectList(db.NAMHOCs, "NH_MA", "NH_NAMHOC");
             ViewBag.THU_THU_MA = new SelectList(db.THUs, "THU_MA", "THU_TEN");
             ViewBag.TIETHOC_TH_MA = new SelectList(db.TIETHOCs, "TH_MA", "TH_TEN");
             return View();
@@ -100,7 +99,7 @@ namespace QLTHPT.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "TKB_MA,LOP_LOP_MA,MONHOC_MH_MA,THU_THU_MA,TIETHOC_TH_MA,CANBO_CB_MA,NAMHOC_NH_MA,HOCKY_HK_MA")] THOIKHOABIEU tHOIKHOABIEU)
+        public ActionResult Edit([Bind(Include = "TKB_MA,LOP_LOP_MA,MONHOC_MH_MA,THU_THU_MA,TIETHOC_TH_MA,CANBO_CB_MA,HOCKY_HK_MA")] THOIKHOABIEU tHOIKHOABIEU)
         {
             if (ModelState.IsValid)
             {
