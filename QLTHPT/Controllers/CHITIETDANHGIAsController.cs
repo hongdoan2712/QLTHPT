@@ -6,114 +6,116 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using QLTHPT.App_Start;
 using QLTHPT.Models;
 
 namespace QLTHPT.Controllers
 {
-    public class NAMHOCsController : Controller
+    public class CHITIETDANHGIAsController : Controller
     {
         private acomptec_qlthptEntities db = new acomptec_qlthptEntities();
 
-        // GET: NAMHOCs
+        // GET: CHITIETDANHGIAs
         public ActionResult Index()
         {
-            return View(db.NAMHOCs.ToList());
+            var cHITIETDANHGIAs = db.CHITIETDANHGIAs.Include(c => c.SODANHGIA);
+            return View(cHITIETDANHGIAs.ToList());
         }
 
-        // GET: NAMHOCs/Details/5
+        // GET: CHITIETDANHGIAs/Details/5
         public ActionResult Details(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            NAMHOC nAMHOC = db.NAMHOCs.Find(id);
-            if (nAMHOC == null)
+            CHITIETDANHGIA cHITIETDANHGIA = db.CHITIETDANHGIAs.Find(id);
+            if (cHITIETDANHGIA == null)
             {
                 return HttpNotFound();
             }
-            return View(nAMHOC);
+            return View(cHITIETDANHGIA);
         }
 
-        // GET: NAMHOCs/Create
+        // GET: CHITIETDANHGIAs/Create
         public ActionResult Create()
         {
-            NAMHOC obj = new NAMHOC();
-            obj.NH_MA = CreateID.CreateID_ByteText();
-            return View(obj);
+            ViewBag.SODANHGIA_SDG_MA = new SelectList(db.SODANHGIAs, "SDG_MA", "SDG_DIEM");
+            return View();
         }
 
-        // POST: NAMHOCs/Create
+        // POST: CHITIETDANHGIAs/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "NH_MA,NH_NAMHOC")] NAMHOC nAMHOC)
+        public ActionResult Create([Bind(Include = "CTDG_MA,CTDG_NGAYDG,SODANHGIA_SDG_MA")] CHITIETDANHGIA cHITIETDANHGIA)
         {
             if (ModelState.IsValid)
             {
-                db.NAMHOCs.Add(nAMHOC);
+                db.CHITIETDANHGIAs.Add(cHITIETDANHGIA);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(nAMHOC);
+            ViewBag.SODANHGIA_SDG_MA = new SelectList(db.SODANHGIAs, "SDG_MA", "SDG_DIEM", cHITIETDANHGIA.SODANHGIA_SDG_MA);
+            return View(cHITIETDANHGIA);
         }
 
-        // GET: NAMHOCs/Edit/5
+        // GET: CHITIETDANHGIAs/Edit/5
         public ActionResult Edit(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            NAMHOC nAMHOC = db.NAMHOCs.Find(id);
-            if (nAMHOC == null)
+            CHITIETDANHGIA cHITIETDANHGIA = db.CHITIETDANHGIAs.Find(id);
+            if (cHITIETDANHGIA == null)
             {
                 return HttpNotFound();
             }
-            return View(nAMHOC);
+            ViewBag.SODANHGIA_SDG_MA = new SelectList(db.SODANHGIAs, "SDG_MA", "SDG_DIEM", cHITIETDANHGIA.SODANHGIA_SDG_MA);
+            return View(cHITIETDANHGIA);
         }
 
-        // POST: NAMHOCs/Edit/5
+        // POST: CHITIETDANHGIAs/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "NH_MA,NH_NAMHOC")] NAMHOC nAMHOC)
+        public ActionResult Edit([Bind(Include = "CTDG_MA,CTDG_NGAYDG,SODANHGIA_SDG_MA")] CHITIETDANHGIA cHITIETDANHGIA)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(nAMHOC).State = EntityState.Modified;
+                db.Entry(cHITIETDANHGIA).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(nAMHOC);
+            ViewBag.SODANHGIA_SDG_MA = new SelectList(db.SODANHGIAs, "SDG_MA", "SDG_DIEM", cHITIETDANHGIA.SODANHGIA_SDG_MA);
+            return View(cHITIETDANHGIA);
         }
 
-        // GET: NAMHOCs/Delete/5
+        // GET: CHITIETDANHGIAs/Delete/5
         public ActionResult Delete(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            NAMHOC nAMHOC = db.NAMHOCs.Find(id);
-            if (nAMHOC == null)
+            CHITIETDANHGIA cHITIETDANHGIA = db.CHITIETDANHGIAs.Find(id);
+            if (cHITIETDANHGIA == null)
             {
                 return HttpNotFound();
             }
-            return View(nAMHOC);
+            return View(cHITIETDANHGIA);
         }
 
-        // POST: NAMHOCs/Delete/5
+        // POST: CHITIETDANHGIAs/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string id)
         {
-            NAMHOC nAMHOC = db.NAMHOCs.Find(id);
-            db.NAMHOCs.Remove(nAMHOC);
+            CHITIETDANHGIA cHITIETDANHGIA = db.CHITIETDANHGIAs.Find(id);
+            db.CHITIETDANHGIAs.Remove(cHITIETDANHGIA);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

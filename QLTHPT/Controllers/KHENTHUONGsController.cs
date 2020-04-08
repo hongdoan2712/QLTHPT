@@ -6,114 +6,111 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using QLTHPT.App_Start;
 using QLTHPT.Models;
 
 namespace QLTHPT.Controllers
 {
-    public class NAMHOCsController : Controller
+    public class KHENTHUONGsController : Controller
     {
         private acomptec_qlthptEntities db = new acomptec_qlthptEntities();
 
-        // GET: NAMHOCs
+        // GET: KHENTHUONGs
         public ActionResult Index()
         {
-            return View(db.NAMHOCs.ToList());
+            return View(db.KHENTHUONGs.ToList());
         }
 
-        // GET: NAMHOCs/Details/5
+        // GET: KHENTHUONGs/Details/5
         public ActionResult Details(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            NAMHOC nAMHOC = db.NAMHOCs.Find(id);
-            if (nAMHOC == null)
+            KHENTHUONG kHENTHUONG = db.KHENTHUONGs.Find(id);
+            if (kHENTHUONG == null)
             {
                 return HttpNotFound();
             }
-            return View(nAMHOC);
+            return View(kHENTHUONG);
         }
 
-        // GET: NAMHOCs/Create
+        // GET: KHENTHUONGs/Create
         public ActionResult Create()
         {
-            NAMHOC obj = new NAMHOC();
-            obj.NH_MA = CreateID.CreateID_ByteText();
-            return View(obj);
+            return View();
         }
 
-        // POST: NAMHOCs/Create
+        // POST: KHENTHUONGs/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "NH_MA,NH_NAMHOC")] NAMHOC nAMHOC)
+        public ActionResult Create([Bind(Include = "KT_MA,KT_THANHTICH,KT_NGAYKHENTHUONG,KT_GHICHU")] KHENTHUONG kHENTHUONG)
         {
             if (ModelState.IsValid)
             {
-                db.NAMHOCs.Add(nAMHOC);
+                db.KHENTHUONGs.Add(kHENTHUONG);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(nAMHOC);
+            return View(kHENTHUONG);
         }
 
-        // GET: NAMHOCs/Edit/5
+        // GET: KHENTHUONGs/Edit/5
         public ActionResult Edit(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            NAMHOC nAMHOC = db.NAMHOCs.Find(id);
-            if (nAMHOC == null)
+            KHENTHUONG kHENTHUONG = db.KHENTHUONGs.Find(id);
+            if (kHENTHUONG == null)
             {
                 return HttpNotFound();
             }
-            return View(nAMHOC);
+            return View(kHENTHUONG);
         }
 
-        // POST: NAMHOCs/Edit/5
+        // POST: KHENTHUONGs/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "NH_MA,NH_NAMHOC")] NAMHOC nAMHOC)
+        public ActionResult Edit([Bind(Include = "KT_MA,KT_THANHTICH,KT_NGAYKHENTHUONG,KT_GHICHU")] KHENTHUONG kHENTHUONG)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(nAMHOC).State = EntityState.Modified;
+                db.Entry(kHENTHUONG).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(nAMHOC);
+            return View(kHENTHUONG);
         }
 
-        // GET: NAMHOCs/Delete/5
+        // GET: KHENTHUONGs/Delete/5
         public ActionResult Delete(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            NAMHOC nAMHOC = db.NAMHOCs.Find(id);
-            if (nAMHOC == null)
+            KHENTHUONG kHENTHUONG = db.KHENTHUONGs.Find(id);
+            if (kHENTHUONG == null)
             {
                 return HttpNotFound();
             }
-            return View(nAMHOC);
+            return View(kHENTHUONG);
         }
 
-        // POST: NAMHOCs/Delete/5
+        // POST: KHENTHUONGs/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string id)
         {
-            NAMHOC nAMHOC = db.NAMHOCs.Find(id);
-            db.NAMHOCs.Remove(nAMHOC);
+            KHENTHUONG kHENTHUONG = db.KHENTHUONGs.Find(id);
+            db.KHENTHUONGs.Remove(kHENTHUONG);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

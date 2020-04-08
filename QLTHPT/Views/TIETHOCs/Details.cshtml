@@ -1,4 +1,4 @@
-﻿@model QLTHPT.Models.NAMHOC
+﻿@model QLTHPT.Models.TIETHOC
 
 @{
     ViewBag.Title = "Details";
@@ -36,10 +36,10 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            @Html.DisplayFor(model => model.NH_MA)
+                                            @Html.DisplayFor(model => model.TH_MA)
                                         </td>
                                         <td>
-                                            @Html.DisplayFor(model => model.NH_NAMHOC)
+                                            @Html.DisplayFor(model => model.TH_TEN)
                                         </td>
 
                                     </tr>
@@ -54,7 +54,6 @@
     </div>
 </div>
 <p>
-    <a href="@Url.Action("Edit", "NAMHOCs", new { id = Model.NH_MA})" class="btn btn-custon-rounded-three btn-warning"><i class="fa fa-edit"></i></a> |
-    <a href="@Url.Action("Index", "NAMHOCs")" class=" btn btn-custon-rounded-three btn-primary"><i class="fa fa-undo"></i></a>
+    <a href="@Url.Action("Edit", "TIETHOCs", new { id = Model.TH_MA})" class="btn btn-custon-rounded-three btn-warning"><i class="fa fa-edit"></i></a> |
+    <a href="@Url.Action("Index", "TIETHOCs")" class=" btn btn-custon-rounded-three btn-primary"><i class="fa fa-undo"></i></a>
 </p>
-

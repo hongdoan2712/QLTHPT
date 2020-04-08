@@ -11,109 +11,109 @@ using QLTHPT.Models;
 
 namespace QLTHPT.Controllers
 {
-    public class NAMHOCsController : Controller
+    public class TIETHOCsController : Controller
     {
         private acomptec_qlthptEntities db = new acomptec_qlthptEntities();
 
-        // GET: NAMHOCs
+        // GET: TIETHOCs
         public ActionResult Index()
         {
-            return View(db.NAMHOCs.ToList());
+            return View(db.TIETHOCs.ToList());
         }
 
-        // GET: NAMHOCs/Details/5
+        // GET: TIETHOCs/Details/5
         public ActionResult Details(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            NAMHOC nAMHOC = db.NAMHOCs.Find(id);
-            if (nAMHOC == null)
+            TIETHOC tIETHOC = db.TIETHOCs.Find(id);
+            if (tIETHOC == null)
             {
                 return HttpNotFound();
             }
-            return View(nAMHOC);
+            return View(tIETHOC);
         }
 
-        // GET: NAMHOCs/Create
+        // GET: TIETHOCs/Create
         public ActionResult Create()
         {
-            NAMHOC obj = new NAMHOC();
-            obj.NH_MA = CreateID.CreateID_ByteText();
+            TIETHOC obj = new TIETHOC();
+            obj.TH_MA = CreateID.CreateID_ByteText();
             return View(obj);
         }
 
-        // POST: NAMHOCs/Create
+        // POST: TIETHOCs/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "NH_MA,NH_NAMHOC")] NAMHOC nAMHOC)
+        public ActionResult Create([Bind(Include = "TH_MA,TH_TEN")] TIETHOC tIETHOC)
         {
             if (ModelState.IsValid)
             {
-                db.NAMHOCs.Add(nAMHOC);
+                db.TIETHOCs.Add(tIETHOC);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(nAMHOC);
+            return View(tIETHOC);
         }
 
-        // GET: NAMHOCs/Edit/5
+        // GET: TIETHOCs/Edit/5
         public ActionResult Edit(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            NAMHOC nAMHOC = db.NAMHOCs.Find(id);
-            if (nAMHOC == null)
+            TIETHOC tIETHOC = db.TIETHOCs.Find(id);
+            if (tIETHOC == null)
             {
                 return HttpNotFound();
             }
-            return View(nAMHOC);
+            return View(tIETHOC);
         }
 
-        // POST: NAMHOCs/Edit/5
+        // POST: TIETHOCs/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "NH_MA,NH_NAMHOC")] NAMHOC nAMHOC)
+        public ActionResult Edit([Bind(Include = "TH_MA,TH_TEN")] TIETHOC tIETHOC)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(nAMHOC).State = EntityState.Modified;
+                db.Entry(tIETHOC).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(nAMHOC);
+            return View(tIETHOC);
         }
 
-        // GET: NAMHOCs/Delete/5
+        // GET: TIETHOCs/Delete/5
         public ActionResult Delete(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            NAMHOC nAMHOC = db.NAMHOCs.Find(id);
-            if (nAMHOC == null)
+            TIETHOC tIETHOC = db.TIETHOCs.Find(id);
+            if (tIETHOC == null)
             {
                 return HttpNotFound();
             }
-            return View(nAMHOC);
+            return View(tIETHOC);
         }
 
-        // POST: NAMHOCs/Delete/5
+        // POST: TIETHOCs/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string id)
         {
-            NAMHOC nAMHOC = db.NAMHOCs.Find(id);
-            db.NAMHOCs.Remove(nAMHOC);
+            TIETHOC tIETHOC = db.TIETHOCs.Find(id);
+            db.TIETHOCs.Remove(tIETHOC);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

@@ -1,7 +1,9 @@
-﻿@model QLTHPT.Models.NAMHOC
+﻿@model QLTHPT.Models.HINHTHUC
 
 @{
-    ViewBag.Title = "Create";
+    /**/
+
+    ViewBag.Title = "Edit";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -13,7 +15,7 @@
                 <div class="sparkline13-list shadow-reset">
                     <div class="sparkline13-hd">
                         <div class="main-sparkline13-hd">
-                            <h4><strong>Tạo Mới</strong></h4>
+                            <h4><strong>Chỉnh Sửa</strong></h4>
 
                         </div>
                     </div>
@@ -24,29 +26,27 @@
 
                             <div class="form-horizontal">
                                 @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                @Html.HiddenFor(model => model.HT_MA)
                                 <div class="form-group-inner">
-                                    @Html.LabelFor(model => model.NH_MA, "Mã", htmlAttributes: new { @class = "control-label col-md-2" })
+                                    @Html.LabelFor(model => model.HT_MA, "Mã", htmlAttributes: new { @class = "control-label col-md-2" })
                                     <div class="col-md-10">
-                                        @Html.EditorFor(model => model.NH_MA, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                                        @Html.EditorFor(model => model.HT_MA, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
                                         <br />
-                                        @Html.ValidationMessageFor(model => model.NH_MA, "", new { @class = "text-danger" })
+                                        @Html.ValidationMessageFor(model => model.HT_MA, "", new { @class = "text-danger" })
                                     </div>
                                 </div>
-
                                 <div class="form-group-inner">
-                                    @Html.LabelFor(model => model.NH_NAMHOC, "Tên", htmlAttributes: new { @class = "control-label col-md-2" })
+                                    @Html.LabelFor(model => model.HT_TEN, "Tên Hình Thức", htmlAttributes: new { @class = "control-label col-md-2" })
                                     <div class="col-md-10">
-                                        @Html.EditorFor(model => model.NH_NAMHOC, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.EditorFor(model => model.HT_TEN, new { htmlAttributes = new { @class = "form-control" } })
                                         <br />
-                                        @Html.ValidationMessageFor(model => model.NH_NAMHOC, "", new { @class = "text-danger" })
+                                        @Html.ValidationMessageFor(model => model.HT_TEN, "", new { @class = "text-danger" })
                                     </div>
                                 </div>
-
-
                                 <div class="form-group">
                                     <div class="col-md-offset-2 col-md-10">
-                                        <input type="submit" value="Tạo" class="btn btn-default" /> |
-                                        <a href="@Url.Action("Index", "NAMHOCs")" class=" btn btn-custon-rounded-three btn-primary"><i class="fa fa-undo"></i></a>
+                                        <input type="submit" value="Lưu" class="btn btn-default" /> |
+                                        <a href="@Url.Action("Index", "HINHTHUCs")" class=" btn btn-custon-rounded-three btn-primary"><i class="fa fa-undo"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -57,4 +57,3 @@
         </div>
     </div>
 </div>
-

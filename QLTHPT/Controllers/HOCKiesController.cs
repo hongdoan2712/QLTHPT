@@ -11,109 +11,109 @@ using QLTHPT.Models;
 
 namespace QLTHPT.Controllers
 {
-    public class NAMHOCsController : Controller
+    public class HOCKiesController : Controller
     {
         private acomptec_qlthptEntities db = new acomptec_qlthptEntities();
 
-        // GET: NAMHOCs
+        // GET: HOCKies
         public ActionResult Index()
         {
-            return View(db.NAMHOCs.ToList());
+            return View(db.HOCKies.ToList());
         }
 
-        // GET: NAMHOCs/Details/5
+        // GET: HOCKies/Details/5
         public ActionResult Details(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            NAMHOC nAMHOC = db.NAMHOCs.Find(id);
-            if (nAMHOC == null)
+            HOCKY hOCKY = db.HOCKies.Find(id);
+            if (hOCKY == null)
             {
                 return HttpNotFound();
             }
-            return View(nAMHOC);
+            return View(hOCKY);
         }
 
-        // GET: NAMHOCs/Create
+        // GET: HOCKies/Create
         public ActionResult Create()
         {
-            NAMHOC obj = new NAMHOC();
-            obj.NH_MA = CreateID.CreateID_ByteText();
+            HOCKY obj = new HOCKY();
+            obj.HK_MA = CreateID.CreateID_ByteText();
             return View(obj);
         }
 
-        // POST: NAMHOCs/Create
+        // POST: HOCKies/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "NH_MA,NH_NAMHOC")] NAMHOC nAMHOC)
+        public ActionResult Create([Bind(Include = "HK_MA,HK_TEN")] HOCKY hOCKY)
         {
             if (ModelState.IsValid)
             {
-                db.NAMHOCs.Add(nAMHOC);
+                db.HOCKies.Add(hOCKY);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(nAMHOC);
+            return View(hOCKY);
         }
 
-        // GET: NAMHOCs/Edit/5
+        // GET: HOCKies/Edit/5
         public ActionResult Edit(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            NAMHOC nAMHOC = db.NAMHOCs.Find(id);
-            if (nAMHOC == null)
+            HOCKY hOCKY = db.HOCKies.Find(id);
+            if (hOCKY == null)
             {
                 return HttpNotFound();
             }
-            return View(nAMHOC);
+            return View(hOCKY);
         }
 
-        // POST: NAMHOCs/Edit/5
+        // POST: HOCKies/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "NH_MA,NH_NAMHOC")] NAMHOC nAMHOC)
+        public ActionResult Edit([Bind(Include = "HK_MA,HK_TEN")] HOCKY hOCKY)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(nAMHOC).State = EntityState.Modified;
+                db.Entry(hOCKY).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(nAMHOC);
+            return View(hOCKY);
         }
 
-        // GET: NAMHOCs/Delete/5
+        // GET: HOCKies/Delete/5
         public ActionResult Delete(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            NAMHOC nAMHOC = db.NAMHOCs.Find(id);
-            if (nAMHOC == null)
+            HOCKY hOCKY = db.HOCKies.Find(id);
+            if (hOCKY == null)
             {
                 return HttpNotFound();
             }
-            return View(nAMHOC);
+            return View(hOCKY);
         }
 
-        // POST: NAMHOCs/Delete/5
+        // POST: HOCKies/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string id)
         {
-            NAMHOC nAMHOC = db.NAMHOCs.Find(id);
-            db.NAMHOCs.Remove(nAMHOC);
+            HOCKY hOCKY = db.HOCKies.Find(id);
+            db.HOCKies.Remove(hOCKY);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

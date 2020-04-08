@@ -1,4 +1,4 @@
-﻿@model QLTHPT.Models.NAMHOC
+﻿@model QLTHPT.Models.CHITIETDANHGIA
 
 @{
     ViewBag.Title = "Details";
@@ -18,7 +18,10 @@
                                 </strong>
                             </h4>
 
-
+                            <div class="sparkline13-outline-icon">
+                                <span class="sparkline13-collapse-link"><i class="fa fa-chevron-up"></i></span>
+                                <span class="sparkline13-collapse-close"><i class="fa fa-times"></i></span>
+                            </div>
                         </div>
                     </div>
                     <div class="sparkline10-graph">
@@ -27,21 +30,25 @@
                                 <thead>
                                     <tr>
                                         <th>
-                                            Mã
+                                            Mã Chi Tiết Đánh Giá:
                                         </th>
                                         <th>
-                                            Tên
+                                            Ngày Đánh Giá:
                                         </th>
-
+                                        <th>
+                                            Sổ Đánh Giá:
+                                        </th>
                                     </tr>
                                     <tr>
                                         <td>
-                                            @Html.DisplayFor(model => model.NH_MA)
+                                            @Html.DisplayFor(model => model.CTDG_MA)
                                         </td>
                                         <td>
-                                            @Html.DisplayFor(model => model.NH_NAMHOC)
+                                            @Html.DisplayFor(model => model.CTDG_NGAYDG)
                                         </td>
-
+                                        <td>
+                                            @Html.DisplayFor(model => model.SODANHGIA_SDG_MA)
+                                        </td>
                                     </tr>
                                 </thead>
 
@@ -54,7 +61,6 @@
     </div>
 </div>
 <p>
-    <a href="@Url.Action("Edit", "NAMHOCs", new { id = Model.NH_MA})" class="btn btn-custon-rounded-three btn-warning"><i class="fa fa-edit"></i></a> |
-    <a href="@Url.Action("Index", "NAMHOCs")" class=" btn btn-custon-rounded-three btn-primary"><i class="fa fa-undo"></i></a>
+    <a href="@Url.Action("Edit", "CHITIETDANHGIAs", new { id = Model.CTDG_MA })" class="btn btn-custon-rounded-three btn-warning"><i class="fa fa-edit"></i></a> |
+    <a href="@Url.Action("Index", "CHITIETDANHGIAs")" class=" btn btn-custon-rounded-three btn-primary"><i class="fa fa-undo"></i></a>
 </p>
-

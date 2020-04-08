@@ -6,114 +6,116 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using QLTHPT.App_Start;
 using QLTHPT.Models;
 
 namespace QLTHPT.Controllers
 {
-    public class NAMHOCsController : Controller
+    public class SODANHGIAsController : Controller
     {
         private acomptec_qlthptEntities db = new acomptec_qlthptEntities();
 
-        // GET: NAMHOCs
+        // GET: SODANHGIAs
         public ActionResult Index()
         {
-            return View(db.NAMHOCs.ToList());
+            var sODANHGIAs = db.SODANHGIAs.Include(s => s.NAMHOC);
+            return View(sODANHGIAs.ToList());
         }
 
-        // GET: NAMHOCs/Details/5
+        // GET: SODANHGIAs/Details/5
         public ActionResult Details(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            NAMHOC nAMHOC = db.NAMHOCs.Find(id);
-            if (nAMHOC == null)
+            SODANHGIA sODANHGIA = db.SODANHGIAs.Find(id);
+            if (sODANHGIA == null)
             {
                 return HttpNotFound();
             }
-            return View(nAMHOC);
+            return View(sODANHGIA);
         }
 
-        // GET: NAMHOCs/Create
+        // GET: SODANHGIAs/Create
         public ActionResult Create()
         {
-            NAMHOC obj = new NAMHOC();
-            obj.NH_MA = CreateID.CreateID_ByteText();
-            return View(obj);
+            ViewBag.NAMHOC_NH_MA = new SelectList(db.NAMHOCs, "NH_MA", "NH_NAMHOC");
+            return View();
         }
 
-        // POST: NAMHOCs/Create
+        // POST: SODANHGIAs/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "NH_MA,NH_NAMHOC")] NAMHOC nAMHOC)
+        public ActionResult Create([Bind(Include = "SDG_MA,SDG_DIEM,SDG_GHICHU,NAMHOC_NH_MA ")] SODANHGIA sODANHGIA)
         {
             if (ModelState.IsValid)
             {
-                db.NAMHOCs.Add(nAMHOC);
+                db.SODANHGIAs.Add(sODANHGIA);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(nAMHOC);
+            ViewBag.NAMHOC_NH_MA = new SelectList(db.NAMHOCs, "NH_MA", "NH_NAMHOC", sODANHGIA.NAMHOC_NH_MA);
+            return View(sODANHGIA);
         }
 
-        // GET: NAMHOCs/Edit/5
+        // GET: SODANHGIAs/Edit/5
         public ActionResult Edit(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            NAMHOC nAMHOC = db.NAMHOCs.Find(id);
-            if (nAMHOC == null)
+            SODANHGIA sODANHGIA = db.SODANHGIAs.Find(id);
+            if (sODANHGIA == null)
             {
                 return HttpNotFound();
             }
-            return View(nAMHOC);
+            ViewBag.NAMHOC_NH_MA = new SelectList(db.NAMHOCs, "NH_MA", "NH_NAMHOC", sODANHGIA.NAMHOC_NH_MA);
+            return View(sODANHGIA);
         }
 
-        // POST: NAMHOCs/Edit/5
+        // POST: SODANHGIAs/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "NH_MA,NH_NAMHOC")] NAMHOC nAMHOC)
+        public ActionResult Edit([Bind(Include = "SDG_MA,SDG_DIEM,SDG_GHICHU,HOCKY_HK_MA")] SODANHGIA sODANHGIA)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(nAMHOC).State = EntityState.Modified;
+                db.Entry(sODANHGIA).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(nAMHOC);
+            ViewBag.NAMHOC_NH_MA = new SelectList(db.NAMHOCs, "NH_MA", "NH_NAMHOC", sODANHGIA.NAMHOC_NH_MA);
+            return View(sODANHGIA);
         }
 
-        // GET: NAMHOCs/Delete/5
+        // GET: SODANHGIAs/Delete/5
         public ActionResult Delete(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            NAMHOC nAMHOC = db.NAMHOCs.Find(id);
-            if (nAMHOC == null)
+            SODANHGIA sODANHGIA = db.SODANHGIAs.Find(id);
+            if (sODANHGIA == null)
             {
                 return HttpNotFound();
             }
-            return View(nAMHOC);
+            return View(sODANHGIA);
         }
 
-        // POST: NAMHOCs/Delete/5
+        // POST: SODANHGIAs/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string id)
         {
-            NAMHOC nAMHOC = db.NAMHOCs.Find(id);
-            db.NAMHOCs.Remove(nAMHOC);
+            SODANHGIA sODANHGIA = db.SODANHGIAs.Find(id);
+            db.SODANHGIAs.Remove(sODANHGIA);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

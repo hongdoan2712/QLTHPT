@@ -1,4 +1,4 @@
-﻿@model IEnumerable<QLTHPT.Models.NAMHOC>
+﻿@model IEnumerable<QLTHPT.Models.HOCKY>
 
 @{
     ViewBag.Title = "Index";
@@ -12,7 +12,7 @@
                     <div class="sparkline13-list shadow-reset">
                         <div class="sparkline13-hd">
                             <div class="main-sparkline13-hd">
-                                <h4><strong>NĂM HỌC</strong></h4>
+                                <h4><strong>HỌC KỲ</strong></h4>
 
                             </div>
                         </div>
@@ -40,16 +40,16 @@
                                         {
                                             <tr>
                                                 <td>
-                                                    @Html.DisplayFor(modelItem => item.NH_MA)
+                                                    @Html.DisplayFor(modelItem => item.HK_MA)
                                                 </td>
                                                 <td>
-                                                    @Html.DisplayFor(modelItem => item.NH_NAMHOC)
+                                                    @Html.DisplayFor(modelItem => item.HK_TEN)
                                                 </td>
 
                                                 <td>
-                                                    <a href="@Url.Action("Details", "NAMHOCs", new { id = item.NH_MA })" class="btn btn-custon-rounded-three btn-success"><i class="fa fa-info-circle"></i></a>
-                                                    <a href="@Url.Action("Edit", "NAMHOCs", new { id = item.NH_MA })" class="btn btn-custon-rounded-three btn-warning"><i class="fa fa-edit"></i></a>
-                                                    <a href="@Url.Action("Delete", "NAMHOCs", new { id = item.NH_MA })" class="btn btn-custon-rounded-three btn-danger"><i class="fa fa-trash"></i></a>
+                                                    <a href="@Url.Action("Details", "HOCKies", new { id = item.HK_MA })" class="btn btn-custon-rounded-three btn-success"><i class="fa fa-info-circle"></i></a>
+                                                    <a href="@Url.Action("Edit", "HOCKies", new { id = item.HK_MA })" class="btn btn-custon-rounded-three btn-warning"><i class="fa fa-edit"></i></a>
+                                                    <a href="@Url.Action("Delete", "HOCKies", new { id = item.HK_MA })" class="btn btn-custon-rounded-three btn-danger"><i class="fa fa-trash"></i></a>
 
                                                 </td>
                                             </tr>
