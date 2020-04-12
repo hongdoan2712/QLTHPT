@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using QLTHPT.App_Start;
 using QLTHPT.Models;
 
 namespace QLTHPT.Controllers
@@ -38,7 +39,9 @@ namespace QLTHPT.Controllers
         // GET: HINHTHUCs/Create
         public ActionResult Create()
         {
-            return View();
+            HINHTHUC obj = new HINHTHUC();
+            obj.HT_MA = CreateID.CreateID_ByteText();
+            return View(obj);
         }
 
         // POST: HINHTHUCs/Create

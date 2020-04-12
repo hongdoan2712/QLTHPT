@@ -9,7 +9,7 @@ namespace QLTHPT.App_Start
     {
         public static string CreateID_ByteText()
         {
-            string IDstring = DateTime.Now.ToString("yyMMddHHmmss");
+            string IDstring = DateTime.Now.ToString("yyMMddHHmm");
             return IDstring;
         }
     }

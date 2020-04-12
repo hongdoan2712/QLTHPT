@@ -5,9 +5,10 @@ using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Web;
-using System.Web.Mvc;
+using System.Web.Mvc;   
 using QLTHPT.App_Start;
 using QLTHPT.Models;
+
 
 namespace QLTHPT.Controllers
 {

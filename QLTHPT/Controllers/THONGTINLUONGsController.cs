@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using QLTHPT.App_Start;
 using QLTHPT.Models;
 
 namespace QLTHPT.Controllers
@@ -42,6 +43,9 @@ namespace QLTHPT.Controllers
             ViewBag.BACLUONG_BL_MA = new SelectList(db.BACLUONGs, "BL_MA", "BL_TEN");
             ViewBag.NGACHLUONG_NL_MA = new SelectList(db.NGACHLUONGs, "NL_MA", "NL_TEN");
             return View();
+            //THONGTINLUONG obj = new THONGTINLUONG();
+            //obj.TTL_MA = CreateID.CreateID_ByteText();
+            //return View(obj);
         }
 
         // POST: THONGTINLUONGs/Create

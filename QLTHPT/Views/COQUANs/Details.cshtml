@@ -1,0 +1,26 @@
+﻿@model QLTHPT.Models.COQUAN
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>COQUAN</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CQ_TEN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CQ_TEN)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CQ_MA }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
