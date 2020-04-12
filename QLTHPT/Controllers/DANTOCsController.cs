@@ -11,109 +11,109 @@ using QLTHPT.Models;
 
 namespace QLTHPT.Controllers
 {
-    public class BACLUONGsController : Controller
+    public class DANTOCsController : Controller
     {
         private acomptec_qlthptEntities db = new acomptec_qlthptEntities();
 
-        // GET: BACLUONGs
+        // GET: DANTOCs
         public ActionResult Index()
         {
-            return View(db.BACLUONGs.ToList());
+            return View(db.DANTOCs.ToList());
         }
 
-        // GET: BACLUONGs/Details/5
+        // GET: DANTOCs/Details/5
         public ActionResult Details(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            BACLUONG bACLUONG = db.BACLUONGs.Find(id);
-            if (bACLUONG == null)
+            DANTOC dANTOC = db.DANTOCs.Find(id);
+            if (dANTOC == null)
             {
                 return HttpNotFound();
             }
-            return View(bACLUONG);
+            return View(dANTOC);
         }
 
-        // GET: BACLUONGs/Create
+        // GET: DANTOCs/Create
         public ActionResult Create()
         {
-            BACLUONG obj = new BACLUONG();
-            obj.BL_MA = CreateID.CreateID_ByteText();
+            DANTOC obj = new DANTOC();
+            obj.DT_MA = CreateID.CreateID_ByteText();
             return View(obj);
         }
 
-        // POST: BACLUONGs/Create
+        // POST: DANTOCs/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "BL_MA,BL_TEN")] BACLUONG bACLUONG)
+        public ActionResult Create([Bind(Include = "DT_MA,DT_TEN")] DANTOC dANTOC)
         {
             if (ModelState.IsValid)
             {
-                db.BACLUONGs.Add(bACLUONG);
+                db.DANTOCs.Add(dANTOC);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(bACLUONG);
+            return View(dANTOC);
         }
 
-        // GET: BACLUONGs/Edit/5
+        // GET: DANTOCs/Edit/5
         public ActionResult Edit(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            BACLUONG bACLUONG = db.BACLUONGs.Find(id);
-            if (bACLUONG == null)
+            DANTOC dANTOC = db.DANTOCs.Find(id);
+            if (dANTOC == null)
             {
                 return HttpNotFound();
             }
-            return View(bACLUONG);
+            return View(dANTOC);
         }
 
-        // POST: BACLUONGs/Edit/5
+        // POST: DANTOCs/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "BL_MA,BL_TEN")] BACLUONG bACLUONG)
+        public ActionResult Edit([Bind(Include = "DT_MA,DT_TEN")] DANTOC dANTOC)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(bACLUONG).State = EntityState.Modified;
+                db.Entry(dANTOC).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(bACLUONG);
+            return View(dANTOC);
         }
 
-        // GET: BACLUONGs/Delete/5
+        // GET: DANTOCs/Delete/5
         public ActionResult Delete(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            BACLUONG bACLUONG = db.BACLUONGs.Find(id);
-            if (bACLUONG == null)
+            DANTOC dANTOC = db.DANTOCs.Find(id);
+            if (dANTOC == null)
             {
                 return HttpNotFound();
             }
-            return View(bACLUONG);
+            return View(dANTOC);
         }
 
-        // POST: BACLUONGs/Delete/5
+        // POST: DANTOCs/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string id)
         {
-            BACLUONG bACLUONG = db.BACLUONGs.Find(id);
-            db.BACLUONGs.Remove(bACLUONG);
+            DANTOC dANTOC = db.DANTOCs.Find(id);
+            db.DANTOCs.Remove(dANTOC);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

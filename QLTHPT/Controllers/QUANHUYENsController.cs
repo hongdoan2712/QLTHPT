@@ -11,109 +11,109 @@ using QLTHPT.Models;
 
 namespace QLTHPT.Controllers
 {
-    public class BACLUONGsController : Controller
+    public class QUANHUYENsController : Controller
     {
         private acomptec_qlthptEntities db = new acomptec_qlthptEntities();
 
-        // GET: BACLUONGs
+        // GET: QUANHUYENs
         public ActionResult Index()
         {
-            return View(db.BACLUONGs.ToList());
+            return View(db.QUANHUYENs.ToList());
         }
 
-        // GET: BACLUONGs/Details/5
+        // GET: QUANHUYENs/Details/5
         public ActionResult Details(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            BACLUONG bACLUONG = db.BACLUONGs.Find(id);
-            if (bACLUONG == null)
+            QUANHUYEN qUANHUYEN = db.QUANHUYENs.Find(id);
+            if (qUANHUYEN == null)
             {
                 return HttpNotFound();
             }
-            return View(bACLUONG);
+            return View(qUANHUYEN);
         }
 
-        // GET: BACLUONGs/Create
+        // GET: QUANHUYENs/Create
         public ActionResult Create()
         {
-            BACLUONG obj = new BACLUONG();
-            obj.BL_MA = CreateID.CreateID_ByteText();
+            QUANHUYEN obj = new QUANHUYEN();
+            obj.QH_MA = CreateID.CreateID_ByteText();
             return View(obj);
         }
 
-        // POST: BACLUONGs/Create
+        // POST: QUANHUYENs/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "BL_MA,BL_TEN")] BACLUONG bACLUONG)
+        public ActionResult Create([Bind(Include = "QH_MA,QH_TEN")] QUANHUYEN qUANHUYEN)
         {
             if (ModelState.IsValid)
             {
-                db.BACLUONGs.Add(bACLUONG);
+                db.QUANHUYENs.Add(qUANHUYEN);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(bACLUONG);
+            return View(qUANHUYEN);
         }
 
-        // GET: BACLUONGs/Edit/5
+        // GET: QUANHUYENs/Edit/5
         public ActionResult Edit(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            BACLUONG bACLUONG = db.BACLUONGs.Find(id);
-            if (bACLUONG == null)
+            QUANHUYEN qUANHUYEN = db.QUANHUYENs.Find(id);
+            if (qUANHUYEN == null)
             {
                 return HttpNotFound();
             }
-            return View(bACLUONG);
+            return View(qUANHUYEN);
         }
 
-        // POST: BACLUONGs/Edit/5
+        // POST: QUANHUYENs/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "BL_MA,BL_TEN")] BACLUONG bACLUONG)
+        public ActionResult Edit([Bind(Include = "QH_MA,QH_TEN")] QUANHUYEN qUANHUYEN)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(bACLUONG).State = EntityState.Modified;
+                db.Entry(qUANHUYEN).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(bACLUONG);
+            return View(qUANHUYEN);
         }
 
-        // GET: BACLUONGs/Delete/5
+        // GET: QUANHUYENs/Delete/5
         public ActionResult Delete(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            BACLUONG bACLUONG = db.BACLUONGs.Find(id);
-            if (bACLUONG == null)
+            QUANHUYEN qUANHUYEN = db.QUANHUYENs.Find(id);
+            if (qUANHUYEN == null)
             {
                 return HttpNotFound();
             }
-            return View(bACLUONG);
+            return View(qUANHUYEN);
         }
 
-        // POST: BACLUONGs/Delete/5
+        // POST: QUANHUYENs/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string id)
         {
-            BACLUONG bACLUONG = db.BACLUONGs.Find(id);
-            db.BACLUONGs.Remove(bACLUONG);
+            QUANHUYEN qUANHUYEN = db.QUANHUYENs.Find(id);
+            db.QUANHUYENs.Remove(qUANHUYEN);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

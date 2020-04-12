@@ -1,7 +1,8 @@
-﻿@model QLTHPT.Models.COQUAN
+﻿@model QLTHPT.Models.TINHTHANH
 
 @{
     ViewBag.Title = "Delete";
+  
 }
 
 <div class="data-table-area mg-b-15">
@@ -13,7 +14,7 @@
                         <div class="main-sparkline13-hd">
                             <h4>
                                 <strong>
-                                    Xóa Thông Tin Cơ Quan
+                                    Xóa Thông Tin Tỉnh Thành
                                 </strong>
                             </h4>
 
@@ -26,18 +27,18 @@
                                 <thead>
                                     <tr>
                                         <th>
-                                            Mã Cơ Quan
+                                            Mã Tỉnh Thành
                                         </th>
                                         <th>
-                                            Tên Cơ Quan
+                                            Tên Tỉnh Thành
                                         </th>
                                     </tr>
                                     <tr>
                                         <td>
-                                            @Html.DisplayFor(model => model.CQ_MA)
+                                            @Html.DisplayFor(model => model.TT_MA)
                                         </td>
                                         <td>
-                                            @Html.DisplayFor(model => model.CQ_TEN)
+                                            @Html.DisplayFor(model => model.TT_TEN)
                                         </td>
                                     </tr>
                                 </thead>
@@ -57,7 +58,7 @@
 
     <div class="form-actions no-color">
         <input type="submit" value="Xóa" class="btn btn-default" /> |
-        <a href="@Url.Action("Index", "COQUANs")" class=" btn btn-custon-rounded-three btn-primary"><i class="fa fa-undo"></i></a>
+        <a href="@Url.Action("Index", "TINHTHANHs")" class=" btn btn-custon-rounded-three btn-primary"><i class="fa fa-undo"></i></a>
     </div>
 }
 

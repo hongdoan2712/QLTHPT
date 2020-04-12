@@ -148,6 +148,7 @@
     <Compile Include="Controllers\CHITIET_CHUCVUController.cs" />
     <Compile Include="Controllers\CHUYENNGANHsController.cs" />
     <Compile Include="Controllers\COQUANsController.cs" />
+    <Compile Include="Controllers\DANTOCsController.cs" />
     <Compile Include="Controllers\HINHTHUCsController.cs" />
     <Compile Include="Controllers\HOCKiesController.cs" />
     <Compile Include="Controllers\HOCSINHsController.cs" />
@@ -161,13 +162,16 @@
     <Compile Include="Controllers\MONHOCsController.cs" />
     <Compile Include="Controllers\NAMHOCsController.cs" />
     <Compile Include="Controllers\NGACHLUONGsController.cs" />
+    <Compile Include="Controllers\QUANHUYENsController.cs" />
     <Compile Include="Controllers\SODANHGIAsController.cs" />
     <Compile Include="Controllers\THOIKHOABIEUxController.cs" />
     <Compile Include="Controllers\THONGTINDAOTAOsController.cs" />
     <Compile Include="Controllers\THONGTINLUONGsController.cs" />
     <Compile Include="Controllers\THUsController.cs" />
     <Compile Include="Controllers\TIETHOCsController.cs" />
+    <Compile Include="Controllers\TINHTHANHsController.cs" />
     <Compile Include="Controllers\VANBANGsController.cs" />
+    <Compile Include="Controllers\XAPHUONGsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -907,6 +911,26 @@
     <Content Include="Views\KYLUATs\Details.cshtml" />
     <Content Include="Views\KYLUATs\Edit.cshtml" />
     <Content Include="Views\KYLUATs\Index.cshtml" />
+    <Content Include="Views\DANTOCs\Create.cshtml" />
+    <Content Include="Views\DANTOCs\Delete.cshtml" />
+    <Content Include="Views\DANTOCs\Details.cshtml" />
+    <Content Include="Views\DANTOCs\Edit.cshtml" />
+    <Content Include="Views\DANTOCs\Index.cshtml" />
+    <Content Include="Views\QUANHUYENs\Create.cshtml" />
+    <Content Include="Views\QUANHUYENs\Delete.cshtml" />
+    <Content Include="Views\QUANHUYENs\Details.cshtml" />
+    <Content Include="Views\QUANHUYENs\Edit.cshtml" />
+    <Content Include="Views\QUANHUYENs\Index.cshtml" />
+    <Content Include="Views\XAPHUONGs\Create.cshtml" />
+    <Content Include="Views\XAPHUONGs\Delete.cshtml" />
+    <Content Include="Views\XAPHUONGs\Details.cshtml" />
+    <Content Include="Views\XAPHUONGs\Edit.cshtml" />
+    <Content Include="Views\XAPHUONGs\Index.cshtml" />
+    <Content Include="Views\TINHTHANHs\Create.cshtml" />
+    <Content Include="Views\TINHTHANHs\Delete.cshtml" />
+    <Content Include="Views\TINHTHANHs\Details.cshtml" />
+    <Content Include="Views\TINHTHANHs\Edit.cshtml" />
+    <Content Include="Views\TINHTHANHs\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

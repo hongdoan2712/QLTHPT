@@ -1,7 +1,8 @@
-﻿@model QLTHPT.Models.COQUAN
+﻿@model QLTHPT.Models.XAPHUONG
 
 @{
-    ViewBag.Title = "Delete";
+    ViewBag.Title = "Details";
+
 }
 
 <div class="data-table-area mg-b-15">
@@ -12,32 +13,30 @@
                     <div class="sparkline13-hd">
                         <div class="main-sparkline13-hd">
                             <h4>
-                                <strong>
-                                    Xóa Thông Tin Cơ Quan
-                                </strong>
+                                <strong>Chi Tiết Thông Tin Xã Phường</strong>
                             </h4>
+
 
                         </div>
                     </div>
-                    <h5>Bạn có chắc muốn xóa ?</h5>
                     <div class="sparkline10-graph">
                         <div class="card-body">
                             <table id="bootstrap-data-table" class="table table-striped table-bordered">
                                 <thead>
                                     <tr>
                                         <th>
-                                            Mã Cơ Quan
+                                            Mã Xã Phường
                                         </th>
                                         <th>
-                                            Tên Cơ Quan
+                                            Tên Xã Phường
                                         </th>
                                     </tr>
                                     <tr>
                                         <td>
-                                            @Html.DisplayFor(model => model.CQ_MA)
+                                            @Html.DisplayFor(model => model.XP_MA)
                                         </td>
                                         <td>
-                                            @Html.DisplayFor(model => model.CQ_TEN)
+                                            @Html.DisplayFor(model => model.XP_TEN)
                                         </td>
                                     </tr>
                                 </thead>
@@ -50,14 +49,7 @@
         </div>
     </div>
 </div>
-
-@using (Html.BeginForm())
-{
-    @Html.AntiForgeryToken()
-
-    <div class="form-actions no-color">
-        <input type="submit" value="Xóa" class="btn btn-default" /> |
-        <a href="@Url.Action("Index", "COQUANs")" class=" btn btn-custon-rounded-three btn-primary"><i class="fa fa-undo"></i></a>
-    </div>
-}
-
+<p>
+    <a href="@Url.Action("Edit", "XAPHUONGs", new { id = Model.XP_MA })" class="btn btn-custon-rounded-three btn-warning"><i class="fa fa-edit"></i></a> |
+    <a href="@Url.Action("Index", "XAPHUONGs")" class=" btn btn-custon-rounded-three btn-primary"><i class="fa fa-undo"></i></a>
+</p>

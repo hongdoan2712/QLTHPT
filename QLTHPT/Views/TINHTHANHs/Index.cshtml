@@ -1,7 +1,8 @@
-﻿@model IEnumerable<QLTHPT.Models.VANBANG>
+﻿@model IEnumerable<QLTHPT.Models.TINHTHANH>
 
 @{
     ViewBag.Title = "Index";
+   
 }
 
     <div class="data-table-area mg-b-15">
@@ -11,7 +12,7 @@
                     <div class="sparkline13-list shadow-reset">
                         <div class="sparkline13-hd">
                             <div class="main-sparkline13-hd">
-                                <h4><strong>VĂN BẰNG</strong></h4>
+                                <h4><strong>TỈNH THÀNH</strong></h4>
 
                             </div>
                         </div>
@@ -22,14 +23,13 @@
 
                                 </div>
                                 <table id="table" data-toggle="table" data-search="true" data-key-events="true" data-resizable="true" data-cookie="true" data-cookie-id-table="saveId" data-click-to-select="true" data-toolbar="#toolbar">
-
                                     <thead>
                                         <tr>
                                             <th>
                                                 Mã
                                             </th>
                                             <th>
-                                                Tên Văn Bằng
+                                                Tên Tỉnh Thành
                                             </th>
                                             <th>
                                                 Tùy Chọn
@@ -42,15 +42,15 @@
                                         {
                                             <tr>
                                                 <td>
-                                                    @Html.DisplayFor(modelItem => item.VB_MA)
+                                                    @Html.DisplayFor(modelItem => item.TT_MA)
                                                 </td>
                                                 <td>
-                                                    @Html.DisplayFor(modelItem => item.VB_TEN)
+                                                    @Html.DisplayFor(modelItem => item.TT_TEN)
                                                 </td>
                                                 <td>
-                                                    <a href="@Url.Action("Details", "VANBANGs", new { id = item.VB_MA })" class="btn btn-custon-rounded-three btn-success"><i class="fa fa-info-circle"></i></a>
-                                                    <a href="@Url.Action("Edit", "VANBANGs", new { id = item.VB_MA })" class="btn btn-custon-rounded-three btn-warning"><i class="fa fa-edit"></i></a>
-                                                    <a href="@Url.Action("Delete", "VANBANGs", new { id = item.VB_MA })" class="btn btn-custon-rounded-three btn-danger"><i class="fa fa-trash"></i></a>
+                                                    <a href="@Url.Action("Details", "TINHTHANHs", new { id = item.TT_MA })" class="btn btn-custon-rounded-three btn-success"><i class="fa fa-info-circle"></i></a>
+                                                    <a href="@Url.Action("Edit", "TINHTHANHs", new { id = item.TT_MA })" class="btn btn-custon-rounded-three btn-warning"><i class="fa fa-edit"></i></a>
+                                                    <a href="@Url.Action("Delete", "TINHTHANHs", new { id = item.TT_MA })" class="btn btn-custon-rounded-three btn-danger"><i class="fa fa-trash"></i></a>
 
                                                 </td>
                                             </tr>
