@@ -18,7 +18,7 @@ namespace QLTHPT.Controllers
         // GET: THONGTINLUONGs
         public ActionResult Index()
         {
-            var tHONGTINLUONGs = db.THONGTINLUONGs.Include(t => t.BACLUONG).Include(t => t.NGACHLUONG);
+            var tHONGTINLUONGs = db.THONGTINLUONGs.Include(t => t.BACLUONG);
             return View(tHONGTINLUONGs.ToList());
         }
 
@@ -42,10 +42,9 @@ namespace QLTHPT.Controllers
         {
             ViewBag.BACLUONG_BL_MA = new SelectList(db.BACLUONGs, "BL_MA", "BL_TEN");
             ViewBag.NGACHLUONG_NL_MA = new SelectList(db.NGACHLUONGs, "NL_MA", "NL_TEN");
-            return View();
-            //THONGTINLUONG obj = new THONGTINLUONG();
-            //obj.TTL_MA = CreateID.CreateID_ByteText();
-            //return View(obj);
+            THONGTINLUONG obj = new THONGTINLUONG();
+            obj.TTL_MA = CreateID.CreateID_ByteText();
+            return View(obj);
         }
 
         // POST: THONGTINLUONGs/Create

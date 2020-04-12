@@ -63,12 +63,13 @@
                                                 @*<td>
                                                     @Html.DisplayFor(modelItem => item.NGACHLUONG.NL_TEN)
                                                 </td>*@
-                                                <td>
-                                                    <a href="@Url.Action("Details", "THONGTINLUONGs", new { id = item.TTL_MA })" class="btn btn-custon-rounded-three btn-success"><i class="fa fa-info-circle"></i></a>
-                                                    <a href="@Url.Action("Edit", "THONGTINLUONGs", new { id = item.TTL_MA })" class="btn btn-custon-rounded-three btn-warning"><i class="fa fa-edit"></i></a>
-                                                    <a href="@Url.Action("Delete", "THONGTINLUONGs", new { id = item.TTL_MA })" class="btn btn-custon-rounded-three btn-danger"><i class="fa fa-trash"></i></a>
+                                            <td>
+                                                <a href="@Url.Action("Index", "CANBOEs", new { id = item.TTL_MA })" class="btn btn-custon-rounded-three btn-button-ct"><i class="fa fa-info-circle"></i></a>
+                                                <a href="@Url.Action("Details", "THONGTINLUONGs", new { id = item.TTL_MA })" class="btn btn-custon-rounded-three btn-success"><i class="fa fa-info-circle"></i></a>
+                                                <a href="@Url.Action("Edit", "THONGTINLUONGs", new { id = item.TTL_MA })" class="btn btn-custon-rounded-three btn-warning"><i class="fa fa-edit"></i></a>
+                                                <a href="@Url.Action("Delete", "THONGTINLUONGs", new { id = item.TTL_MA })" class="btn btn-custon-rounded-three btn-danger"><i class="fa fa-trash"></i></a>
 
-                                                </td>
+                                            </td>
                                             </tr>
                                         }
 
