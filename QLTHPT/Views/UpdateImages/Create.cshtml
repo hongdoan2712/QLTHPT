@@ -1,9 +1,10 @@
-﻿@model QLTHPT.Models.CHITIETDANHGIA
+﻿@model QLTHPT.Models.UpdateImage
 
 @{
     ViewBag.Title = "Create";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
 
 <div class="data-table-area mg-b-15">
     <div class="container-fluid">
@@ -24,38 +25,37 @@
                         <div class="form-horizontal">
                             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                             <div class="form-group-inner">
-                                @Html.LabelFor(model => model.CTDG_MA, "Mã ", htmlAttributes: new { @class = "control-label col-md-2" })
+                                @Html.LabelFor(model => model.Id,"ID", htmlAttributes: new { @class = "control-label col-md-2" })
                                 <div class="col-md-10">
-                                    @Html.EditorFor(model => model.CTDG_MA, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.EditorFor(model => model.Id, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly"} })
                                     <br />
-                                    @Html.ValidationMessageFor(model => model.CTDG_MA, "", new { @class = "text-danger" })
+                                    @Html.ValidationMessageFor(model => model.Id, "", new { @class = "text-danger" })
                                 </div>
                             </div>
 
                             <div class="form-group-inner">
-                                @Html.LabelFor(model => model.CTDG_NGAYDG, "Ngày Đánh Giá", htmlAttributes: new { @class = "control-label col-md-2" })
+                                @Html.LabelFor(model => model.Image_url,"Url", htmlAttributes: new { @class = "control-label col-md-2" })
                                 <div class="col-md-10">
-                                    @Html.EditorFor(model => model.CTDG_NGAYDG, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.EditorFor(model => model.Image_url, new { htmlAttributes = new { @class = "form-control" } })
                                     <br />
-                                    @Html.ValidationMessageFor(model => model.CTDG_NGAYDG, "", new { @class = "text-danger" })
+                                    @Html.ValidationMessageFor(model => model.Image_url, "", new { @class = "text-danger" })
                                 </div>
                             </div>
+
                             <div class="form-group-inner">
-                                @Html.LabelFor(model => model.SODANHGIA_SDG_MA, "Sổ Đánh Giá", htmlAttributes: new { @class = "control-label col-md-2" })
+                                @Html.LabelFor(model => model.Name_im,"Name", htmlAttributes: new { @class = "control-label col-md-2" })
                                 <div class="col-md-10">
-                                    @Html.DropDownList("SODANHGIA_SDG_MA", null, htmlAttributes: new { @class = "form-control" })
-                                    <br />
-                                    @Html.ValidationMessageFor(model => model.SODANHGIA_SDG_MA, "", new { @class = "text-danger" })
+                                    @Html.EditorFor(model => model.Name_im, new { htmlAttributes = new { @class = "form-control" } })
+                                   <br />
+                                    @Html.ValidationMessageFor(model => model.Name_im, "", new { @class = "text-danger" })
                                 </div>
                             </div>
+
 
                             <div class="form-group">
                                 <div class="col-md-offset-2 col-md-10">
-
                                     <input type="submit" value="Tạo" class="btn btn-default" /> |
-
-                                    <a href="@Url.Action("Index", "CHITIETDANHGIAs")" class=" btn btn-custon-rounded-three btn-primary"><i class="fa fa-undo"></i></a>
-
+                                    <a href="@Url.Action("Index", "UpdateImages")" class=" btn btn-custon-rounded-three btn-primary"><i class="fa fa-undo"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -67,3 +67,8 @@
     </div>
 </div>
 
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,9 +1,10 @@
-﻿@model QLTHPT.Models.TINHTHANH
+﻿@model QLTHPT.Models.UpdateImage
 
 @{
     ViewBag.Title = "Details";
-   
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
 
 <div class="data-table-area mg-b-15">
     <div class="container-fluid">
@@ -13,7 +14,9 @@
                     <div class="sparkline13-hd">
                         <div class="main-sparkline13-hd">
                             <h4>
-                                <strong>Chi Tiết </strong>
+                                <strong>
+                                    Chi Tiết
+                                </strong>
                             </h4>
 
 
@@ -25,19 +28,27 @@
                                 <thead>
                                     <tr>
                                         <th>
-                                            Mã Tỉnh Thành
+                                            ID
                                         </th>
                                         <th>
-                                            Tên Tỉnh Thành
+                                            Url
+                                        </th>
+                                        <th>
+                                            Name
                                         </th>
                                     </tr>
                                     <tr>
                                         <td>
-                                            @Html.DisplayFor(model => model.TT_MA)
+                                            @Html.DisplayFor(model => model.Id)
                                         </td>
                                         <td>
-                                            @Html.DisplayFor(model => model.TT_TEN)
+                                            @Html.DisplayFor(model => model.Image_url)
                                         </td>
+                                        <td>
+                                            @Html.DisplayFor(model => model.Name_im)
+
+                                        </td>
+
                                     </tr>
                                 </thead>
 
@@ -50,6 +61,6 @@
     </div>
 </div>
 <p>
-    <a href="@Url.Action("Edit", "TINHTHANHs", new { id = Model.TT_MA })" class="btn btn-custon-rounded-three btn-warning"><i class="fa fa-edit"></i></a> |
-    <a href="@Url.Action("Index", "TINHTHANHs")" class=" btn btn-custon-rounded-three btn-primary"><i class="fa fa-undo"></i></a>
+    <a href="@Url.Action("Edit", "UpdateImages", new { id = Model.Id})" class="btn btn-custon-rounded-three btn-warning"><i class="fa fa-edit"></i></a> |
+    <a href="@Url.Action("Index", "UpdateImages")" class=" btn btn-custon-rounded-three btn-primary"><i class="fa fa-undo"></i></a>
 </p>

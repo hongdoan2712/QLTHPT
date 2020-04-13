@@ -34,7 +34,7 @@
                                             <th>
                                                 Văn Bằng
                                             </th>
-                                            <th></th>
+                                       
                                             <th style="left: 743.8px;height: 194px;"></th>
                                         </tr>
                                     </thead>
@@ -47,13 +47,13 @@
                                                 @Html.DisplayFor(modelItem => item.TTDT_MA)
                                             </td>
                                             <td>
-                                                @Html.DisplayFor(modelItem => item.HINHTHUCs_HT_MA)
+                                                @Html.DisplayFor(modelItem => item.HINHTHUC.HT_TEN)
                                             </td>
                                             <td>
-                                                @Html.DisplayFor(modelItem => item.CHUYENNGANH_CN_MA)
+                                                @Html.DisplayFor(modelItem => item.CHUYENNGANH.CN_TEN)
                                             </td>
                                             <td>
-                                                @Html.DisplayFor(modelItem => item.VANBANG_VB_MA)
+                                                @Html.DisplayFor(modelItem => item.VANBANG.VB_TEN)
                                             </td>
                                             <td>
                                                 <a href="@Url.Action("Details", "THONGTINDAOTAOs", new { id = item.TTDT_MA })" class="btn btn-custon-rounded-three btn-success"><i class="fa fa-info-circle"></i></a>

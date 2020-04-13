@@ -11,109 +11,109 @@ using QLTHPT.Models;
 
 namespace QLTHPT.Controllers
 {
-    public class KHOIsController : Controller
+    public class UpdateImagesController : Controller
     {
         private acomptec_qlthptEntities db = new acomptec_qlthptEntities();
 
-        // GET: KHOIs
+        // GET: UpdateImages
         public ActionResult Index()
         {
-            return View(db.KHOIs.ToList());
+            return View(db.UpdateImages.ToList());
         }
 
-        // GET: KHOIs/Details/5
+        // GET: UpdateImages/Details/5
         public ActionResult Details(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            KHOI kHOI = db.KHOIs.Find(id);
-            if (kHOI == null)
+            UpdateImage updateImage = db.UpdateImages.Find(id);
+            if (updateImage == null)
             {
                 return HttpNotFound();
             }
-            return View(kHOI);
+            return View(updateImage);
         }
 
-        // GET: KHOIs/Create
+        // GET: UpdateImages/Create
         public ActionResult Create()
         {
-            KHOI obj = new KHOI();
-            obj.KHOI_MA = CreateID.CreateID_ByteText();
+            UpdateImage obj = new UpdateImage();
+            obj.Id = CreateID.CreateID_ByteText();
             return View(obj);
         }
 
-        // POST: KHOIs/Create
+        // POST: UpdateImages/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "KHOI_MA,KHOI_TEN")] KHOI kHOI)
+        public ActionResult Create([Bind(Include = "Id,Image_url,Name_im")] UpdateImage updateImage)
         {
             if (ModelState.IsValid)
             {
-                db.KHOIs.Add(kHOI);
+                db.UpdateImages.Add(updateImage);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(kHOI);
+            return View(updateImage);
         }
 
-        // GET: KHOIs/Edit/5
+        // GET: UpdateImages/Edit/5
         public ActionResult Edit(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            KHOI kHOI = db.KHOIs.Find(id);
-            if (kHOI == null)
+            UpdateImage updateImage = db.UpdateImages.Find(id);
+            if (updateImage == null)
             {
                 return HttpNotFound();
             }
-            return View(kHOI);
+            return View(updateImage);
         }
 
-        // POST: KHOIs/Edit/5
+        // POST: UpdateImages/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "KHOI_MA,KHOI_TEN")] KHOI kHOI)
+        public ActionResult Edit([Bind(Include = "Id,Image_url,Name_im")] UpdateImage updateImage)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(kHOI).State = EntityState.Modified;
+                db.Entry(updateImage).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(kHOI);
+            return View(updateImage);
         }
 
-        // GET: KHOIs/Delete/5
+        // GET: UpdateImages/Delete/5
         public ActionResult Delete(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            KHOI kHOI = db.KHOIs.Find(id);
-            if (kHOI == null)
+            UpdateImage updateImage = db.UpdateImages.Find(id);
+            if (updateImage == null)
             {
                 return HttpNotFound();
             }
-            return View(kHOI);
+            return View(updateImage);
         }
 
-        // POST: KHOIs/Delete/5
+        // POST: UpdateImages/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string id)
         {
-            KHOI kHOI = db.KHOIs.Find(id);
-            db.KHOIs.Remove(kHOI);
+            UpdateImage updateImage = db.UpdateImages.Find(id);
+            db.UpdateImages.Remove(updateImage);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

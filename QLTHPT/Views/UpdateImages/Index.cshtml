@@ -1,7 +1,8 @@
-﻿@model IEnumerable<QLTHPT.Models.BACLUONG>
+﻿@model IEnumerable<QLTHPT.Models.UpdateImage>
 
 @{
     ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <div class="data-table-area mg-b-15">
@@ -11,7 +12,8 @@
                 <div class="sparkline13-list shadow-reset">
                     <div class="sparkline13-hd">
                         <div class="main-sparkline13-hd">
-                            <h4><strong>BẬC LƯƠNG</strong></h4>
+                            <h4><strong>HÌNH ẢNH</strong></h4>
+
                         </div>
                     </div>
                     <div class="sparkline13-graph">
@@ -19,19 +21,19 @@
                             <div id="toolbar">
                                 <strong>@Html.ActionLink("Tạo Mới", "Create")</strong>
                             </div>
-                            @*<table id="table" data-toggle="table" data-search="true" data-key-events="true" data-resizable="true" data-cookie="true" data-cookie-id-table="saveId" data-click-to-select="true" data-toolbar="#toolbar">*@
-                            <table id="table" data-toggle="table" data-search="true" data-key-events="true" data-resizable="true" data-cookie="true" data-cookie-id-table="saveId" data-click-to-select="true" data-toolbar="#toolbar" class="table table-hover JColResizer">
-
+                            <table id="table" data-toggle="table" data-search="true" data-key-events="true" data-resizable="true" data-cookie="true" data-cookie-id-table="saveId" data-click-to-select="true" data-toolbar="#toolbar">
                                 <thead>
                                     <tr>
                                         <th>
-                                            Mã Bậc Lương
+                                            ID
                                         </th>
                                         <th>
-                                            Tên Bậc Lương
+                                            Url
                                         </th>
                                         <th>
+                                            Name
                                         </th>
+                                        <th> </th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -40,27 +42,32 @@
                                     {
                                         <tr>
                                             <td>
-                                                @Html.DisplayFor(modelItem => item.BL_MA)
+                                                @Html.DisplayFor(modelItem => item.Id)
                                             </td>
                                             <td>
-                                                @Html.DisplayFor(modelItem => item.BL_TEN)
+                                                @Html.DisplayFor(modelItem => item.Image_url)
                                             </td>
                                             <td>
-                                                <a href="@Url.Action("Details", "BACLUONGs", new { id = item.BL_MA })" class="btn btn-custon-rounded-three btn-success"><i class="fa fa-info-circle"></i></a>
-                                                <a href="@Url.Action("Edit", "BACLUONGs", new { id = item.BL_MA })" class="btn btn-custon-rounded-three btn-warning"><i class="fa fa-edit"></i></a>
-                                                <a href="@Url.Action("Delete", "BACLUONGs", new { id = item.BL_MA })" class="btn btn-custon-rounded-three btn-danger"><i class="fa fa-trash"></i></a>
+                                                @Html.DisplayFor(modelItem => item.Name_im)
+                                            </td>
+
+                                            <td>
+                                                <a href="@Url.Action("Details", "UpdateImages", new { id = item.Id})" class="btn btn-custon-rounded-three btn-success"><i class="fa fa-info-circle"></i></a>
+                                                <a href="@Url.Action("Edit", "UpdateImages", new { id = item.Id })" class="btn btn-custon-rounded-three btn-warning"><i class="fa fa-edit"></i></a>
+                                                <a href="@Url.Action("Delete", "UpdateImages", new { id = item.Id })" class="btn btn-custon-rounded-three btn-danger"><i class="fa fa-trash"></i></a>
+
                                             </td>
                                         </tr>
                                     }
+
                                 </tbody>
                             </table>
+
                         </div>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-
-

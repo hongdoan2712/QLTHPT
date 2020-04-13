@@ -170,6 +170,7 @@
     <Compile Include="Controllers\THUsController.cs" />
     <Compile Include="Controllers\TIETHOCsController.cs" />
     <Compile Include="Controllers\TINHTHANHsController.cs" />
+    <Compile Include="Controllers\UpdateImagesController.cs" />
     <Compile Include="Controllers\VANBANGsController.cs" />
     <Compile Include="Controllers\XAPHUONGsController.cs" />
     <Compile Include="Global.asax.cs">
@@ -931,6 +932,11 @@
     <Content Include="Views\TINHTHANHs\Details.cshtml" />
     <Content Include="Views\TINHTHANHs\Edit.cshtml" />
     <Content Include="Views\TINHTHANHs\Index.cshtml" />
+    <Content Include="Views\UpdateImages\Create.cshtml" />
+    <Content Include="Views\UpdateImages\Delete.cshtml" />
+    <Content Include="Views\UpdateImages\Details.cshtml" />
+    <Content Include="Views\UpdateImages\Edit.cshtml" />
+    <Content Include="Views\UpdateImages\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

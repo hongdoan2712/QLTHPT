@@ -1,9 +1,45 @@
-﻿@model QLTHPT.Models.TINHTHANH
+﻿@model QLTHPT.Models.UpdateImage
 
 @{
     ViewBag.Title = "Delete";
-  
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>UpdateImage</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Image_url)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Image_url)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name_im)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name_im)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
 
 <div class="data-table-area mg-b-15">
     <div class="container-fluid">
@@ -14,32 +50,38 @@
                         <div class="main-sparkline13-hd">
                             <h4>
                                 <strong>
-                                    Xóa 
+                                    Xóa
                                 </strong>
                             </h4>
-
                         </div>
                     </div>
                     <h5>Bạn có chắc muốn xóa ?</h5>
+
                     <div class="sparkline10-graph">
                         <div class="card-body">
                             <table id="bootstrap-data-table" class="table table-striped table-bordered">
                                 <thead>
                                     <tr>
                                         <th>
-                                            Mã Tỉnh Thành
+                                            ID
                                         </th>
                                         <th>
-                                            Tên Tỉnh Thành
+                                            Url
                                         </th>
+                                        <th>Name</th>
                                     </tr>
                                     <tr>
                                         <td>
-                                            @Html.DisplayFor(model => model.TT_MA)
+                                            @Html.DisplayFor(model => model.Id)
                                         </td>
                                         <td>
-                                            @Html.DisplayFor(model => model.TT_TEN)
+                                            @Html.DisplayFor(model => model.Image_url)
                                         </td>
+                                        <td>
+                                            @Html.DisplayFor(model => model.Name_im)
+
+                                        </td>
+
                                     </tr>
                                 </thead>
 
@@ -51,14 +93,12 @@
         </div>
     </div>
 </div>
-
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
 
     <div class="form-actions no-color">
         <input type="submit" value="Xóa" class="btn btn-default" /> |
-        <a href="@Url.Action("Index", "TINHTHANHs")" class=" btn btn-custon-rounded-three btn-primary"><i class="fa fa-undo"></i></a>
+        <a href="@Url.Action("Index", "UpdateImages")" class=" btn btn-custon-rounded-three btn-primary"><i class="fa fa-undo"></i></a>
     </div>
 }
-
