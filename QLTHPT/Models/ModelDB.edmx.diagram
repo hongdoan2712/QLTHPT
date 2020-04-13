@@ -4,10 +4,10 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="06d5f207dd3d4d929e98dbd4de599d76" Name="Diagram1" ZoomLevel="54">
-        <EntityTypeShape EntityType="acomptec_qlthptModel.CHITIETDANHGIA" Width="2.125" PointX="11.375" PointY="6.125" FillColor="128, 128, 255" />
+      <Diagram DiagramId="06d5f207dd3d4d929e98dbd4de599d76" Name="Diagram1" ZoomLevel="71">
+        <EntityTypeShape EntityType="acomptec_qlthptModel.CHITIETDANHGIA" Width="2.125" PointX="6.25" PointY="2.75" FillColor="128, 128, 255" />
         <EntityTypeShape EntityType="acomptec_qlthptModel.KHENTHUONG" Width="1.5" PointX="14.5" PointY="6.5" FillColor="128, 128, 255" />
-        <EntityTypeShape EntityType="acomptec_qlthptModel.KHOI" Width="1.5" PointX="7.5" PointY="2" FillColor="255, 128, 255" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.KHOI" Width="1.5" PointX="7.5" PointY="0.5" FillColor="255, 128, 255" />
         <EntityTypeShape EntityType="acomptec_qlthptModel.KYLUAT" Width="1.5" PointX="11.375" PointY="3.5" FillColor="128, 128, 255" />
         <EntityTypeShape EntityType="acomptec_qlthptModel.LOP" Width="1.5" PointX="5.625" PointY="0.5" FillColor="255, 128, 255" />
         <EntityTypeShape EntityType="acomptec_qlthptModel.NAMHOC" Width="1.5" PointX="5.25" PointY="5.25" FillColor="255, 128, 255" />
@@ -60,21 +60,21 @@
         <AssociationConnector Association="acomptec_qlthptModel.XAPHUONGHOCSINH" />
         <AssociationConnector Association="acomptec_qlthptModel.KYLUATHOCSINH" />
         <AssociationConnector Association="acomptec_qlthptModel.KHENTHUONGHOCSINH" />
-        <AssociationConnector Association="acomptec_qlthptModel.CHITIETDANHGIAHOCSINH" />
         <AssociationConnector Association="acomptec_qlthptModel.QUANHUYENHOCSINH" />
         <AssociationConnector Association="acomptec_qlthptModel.DANTOCHOCSINH" />
         <AssociationConnector Association="acomptec_qlthptModel.LOPHOCSINH" />
         <AssociationConnector Association="acomptec_qlthptModel.COQUANCANBO" />
-        <AssociationConnector Association="acomptec_qlthptModel.CHITIET_CHUCVUCANBO" />
         <AssociationConnector Association="acomptec_qlthptModel.KYLUATCBCANBO" />
         <AssociationConnector Association="acomptec_qlthptModel.KHENTHUONGCBCANBO" />
         <AssociationConnector Association="acomptec_qlthptModel.CANBOTHOIKHOABIEU" />
-        <AssociationConnector Association="acomptec_qlthptModel.THONGTINDAOTAOCANBO" />
         <AssociationConnector Association="acomptec_qlthptModel.HOCKYTHOIKHOABIEU" />
         <AssociationConnector Association="acomptec_qlthptModel.KHOIHOCSINH" />
-        <AssociationConnector Association="acomptec_qlthptModel.THONGTINLUONGCANBO" />
         <AssociationConnector Association="acomptec_qlthptModel.NAMHOCSODANHGIA" />
-        <AssociationConnector Association="acomptec_qlthptModel.MONHOCCHITIETDANHGIA" />
+        <AssociationConnector Association="acomptec_qlthptModel.CANBOTHONGTINLUONG" />
+        <AssociationConnector Association="acomptec_qlthptModel.CANBOTHONGTINDAOTAO" />
+        <AssociationConnector Association="acomptec_qlthptModel.CANBOCHITIET_CHUCVU" />
+        <AssociationConnector Association="acomptec_qlthptModel.HOCSINHCHITIETDANHGIA" />
+        <AssociationConnector Association="acomptec_qlthptModel.CHITIETDANHGIAMONHOC" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
