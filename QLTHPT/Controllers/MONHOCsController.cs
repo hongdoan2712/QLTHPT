@@ -49,7 +49,7 @@ namespace QLTHPT.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "MH_MA,MH_TEN")] MONHOC mONHOC)
+        public ActionResult Create([Bind(Include = "MH_MA,MH_TEN, CHITIETDANHGIA_CTDG_MA" )] MONHOC mONHOC)
         {
             if (ModelState.IsValid)
             {

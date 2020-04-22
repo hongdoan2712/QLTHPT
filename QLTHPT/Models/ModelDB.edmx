@@ -23,19 +23,16 @@
           <Property Name="CB_NGAYSINH" Type="datetime" />
           <Property Name="CB_CMND" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="COQUAN_CQ_MA" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="CHITIET_CHUCVU_CT_CV_ID" Type="time" Precision="7" Nullable="false" />
           <Property Name="KYLUATCB_KLCB_MA" Type="varchar" MaxLength="200" Nullable="false" />
           <Property Name="KHENTHUONGCB_KTCB_MA" Type="varchar" MaxLength="200" Nullable="false" />
-          <Property Name="THONGTINDAOTAO_TTDT_MA" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="THONGTINLUONG_TTL_MA" Type="varchar" MaxLength="10" Nullable="false" />
         </EntityType>
         <EntityType Name="CHITIET_CHUCVU">
           <Key>
             <PropertyRef Name="CT_CV_ID" />
           </Key>
           <Property Name="CT_CV_ID" Type="time" Precision="7" Nullable="false" />
-          <Property Name="CT_CV_TEN" Type="nvarchar(max)" Nullable="false" />
           <Property Name="CHUCVU_CV_MA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="CANBO_CB_MA" Type="varchar" MaxLength="10" Nullable="false" />
         </EntityType>
         <EntityType Name="CHITIETDANHGIA">
           <Key>
@@ -44,7 +41,7 @@
           <Property Name="CTDG_MA" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="CTDG_NGAYDG" Type="datetime" />
           <Property Name="SODANHGIA_SDG_MA" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="MONHOC_MH_MA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="HOCSINH_HS_MA" Type="varchar" MaxLength="10" Nullable="false" />
         </EntityType>
         <EntityType Name="CHUCVU">
           <Key>
@@ -112,7 +109,6 @@
           <Property Name="XAPHUONG_XP_MA" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="KYLUAT_KL_MA" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="KHENTHUONG_KT_MA" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="CHITIETDANHGIA_CTDG_MA" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="QUANHUYEN_QH_MA" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="DANTOC_DT_MA" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="LOP_LOP_MA" Type="varchar" MaxLength="10" Nullable="false" />
@@ -171,6 +167,7 @@
           </Key>
           <Property Name="MH_MA" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="MH_TEN" Type="nvarchar" MaxLength="50" />
+          <Property Name="CHITIETDANHGIA_CTDG_MA" Type="varchar" MaxLength="10" Nullable="false" />
         </EntityType>
         <EntityType Name="NAMHOC">
           <Key>
@@ -243,6 +240,7 @@
           <Property Name="HINHTHUCs_HT_MA" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="CHUYENNGANH_CN_MA" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="VANBANG_VB_MA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="CANBO_CB_MA" Type="varchar" MaxLength="10" Nullable="false" />
         </EntityType>
         <EntityType Name="THONGTINLUONG">
           <Key>
@@ -253,6 +251,7 @@
           <Property Name="TTL_HESOLUONG" Type="varchar" MaxLength="10" />
           <Property Name="BACLUONG_BL_MA" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="NGACHLUONG_NL_MA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="CANBO_CB_MA" Type="varchar" MaxLength="10" Nullable="false" />
         </EntityType>
         <EntityType Name="THU">
           <Key>
@@ -316,6 +315,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_CANBOCHITIET_CHUCVU">
+          <End Role="CANBO" Type="Self.CANBO" Multiplicity="1" />
+          <End Role="CHITIET_CHUCVU" Type="Self.CHITIET_CHUCVU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CANBO">
+              <PropertyRef Name="CB_MA" />
+            </Principal>
+            <Dependent Role="CHITIET_CHUCVU">
+              <PropertyRef Name="CANBO_CB_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_CANBOTHOIKHOABIEU">
           <End Role="CANBO" Type="Self.CANBO" Multiplicity="1" />
           <End Role="THOIKHOABIEU" Type="Self.THOIKHOABIEU" Multiplicity="*" />
@@ -328,26 +339,38 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_CHITIET_CHUCVUCANBO">
-          <End Role="CHITIET_CHUCVU" Type="Self.CHITIET_CHUCVU" Multiplicity="1" />
-          <End Role="CANBO" Type="Self.CANBO" Multiplicity="*" />
+        <Association Name="FK_CANBOTHONGTINDAOTAO">
+          <End Role="CANBO" Type="Self.CANBO" Multiplicity="1" />
+          <End Role="THONGTINDAOTAO" Type="Self.THONGTINDAOTAO" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="CHITIET_CHUCVU">
-              <PropertyRef Name="CT_CV_ID" />
+            <Principal Role="CANBO">
+              <PropertyRef Name="CB_MA" />
             </Principal>
-            <Dependent Role="CANBO">
-              <PropertyRef Name="CHITIET_CHUCVU_CT_CV_ID" />
+            <Dependent Role="THONGTINDAOTAO">
+              <PropertyRef Name="CANBO_CB_MA" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_CHITIETDANHGIAHOCSINH">
+        <Association Name="FK_CANBOTHONGTINLUONG">
+          <End Role="CANBO" Type="Self.CANBO" Multiplicity="1" />
+          <End Role="THONGTINLUONG" Type="Self.THONGTINLUONG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CANBO">
+              <PropertyRef Name="CB_MA" />
+            </Principal>
+            <Dependent Role="THONGTINLUONG">
+              <PropertyRef Name="CANBO_CB_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CHITIETDANHGIAMONHOC">
           <End Role="CHITIETDANHGIA" Type="Self.CHITIETDANHGIA" Multiplicity="1" />
-          <End Role="HOCSINH" Type="Self.HOCSINH" Multiplicity="*" />
+          <End Role="MONHOC" Type="Self.MONHOC" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="CHITIETDANHGIA">
               <PropertyRef Name="CTDG_MA" />
             </Principal>
-            <Dependent Role="HOCSINH">
+            <Dependent Role="MONHOC">
               <PropertyRef Name="CHITIETDANHGIA_CTDG_MA" />
             </Dependent>
           </ReferentialConstraint>
@@ -409,6 +432,18 @@
             </Principal>
             <Dependent Role="THOIKHOABIEU">
               <PropertyRef Name="HOCKY_HK_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HOCSINHCHITIETDANHGIA">
+          <End Role="HOCSINH" Type="Self.HOCSINH" Multiplicity="1" />
+          <End Role="CHITIETDANHGIA" Type="Self.CHITIETDANHGIA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HOCSINH">
+              <PropertyRef Name="HS_MA" />
+            </Principal>
+            <Dependent Role="CHITIETDANHGIA">
+              <PropertyRef Name="HOCSINH_HS_MA" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -493,18 +528,6 @@
             </Principal>
             <Dependent Role="THOIKHOABIEU">
               <PropertyRef Name="LOP_LOP_MA" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_MONHOCCHITIETDANHGIA">
-          <End Role="MONHOC" Type="Self.MONHOC" Multiplicity="1" />
-          <End Role="CHITIETDANHGIA" Type="Self.CHITIETDANHGIA" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="MONHOC">
-              <PropertyRef Name="MH_MA" />
-            </Principal>
-            <Dependent Role="CHITIETDANHGIA">
-              <PropertyRef Name="MONHOC_MH_MA" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -604,18 +627,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_THONGTINDAOTAOCANBO">
-          <End Role="THONGTINDAOTAO" Type="Self.THONGTINDAOTAO" Multiplicity="1" />
-          <End Role="CANBO" Type="Self.CANBO" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="THONGTINDAOTAO">
-              <PropertyRef Name="TTDT_MA" />
-            </Principal>
-            <Dependent Role="CANBO">
-              <PropertyRef Name="THONGTINDAOTAO_TTDT_MA" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_THONGTINDAOTAOHINHTHUC">
           <End Role="HINHTHUC" Type="Self.HINHTHUC" Multiplicity="1" />
           <End Role="THONGTINDAOTAO" Type="Self.THONGTINDAOTAO" Multiplicity="*" />
@@ -625,18 +636,6 @@
             </Principal>
             <Dependent Role="THONGTINDAOTAO">
               <PropertyRef Name="HINHTHUCs_HT_MA" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_THONGTINLUONGCANBO">
-          <End Role="THONGTINLUONG" Type="Self.THONGTINLUONG" Multiplicity="1" />
-          <End Role="CANBO" Type="Self.CANBO" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="THONGTINLUONG">
-              <PropertyRef Name="TTL_MA" />
-            </Principal>
-            <Dependent Role="CANBO">
-              <PropertyRef Name="THONGTINLUONG_TTL_MA" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -753,17 +752,25 @@
             <End Role="BACLUONG" EntitySet="BACLUONG" />
             <End Role="THONGTINLUONG" EntitySet="THONGTINLUONG" />
           </AssociationSet>
+          <AssociationSet Name="FK_CANBOCHITIET_CHUCVU" Association="Self.FK_CANBOCHITIET_CHUCVU">
+            <End Role="CANBO" EntitySet="CANBO" />
+            <End Role="CHITIET_CHUCVU" EntitySet="CHITIET_CHUCVU" />
+          </AssociationSet>
           <AssociationSet Name="FK_CANBOTHOIKHOABIEU" Association="Self.FK_CANBOTHOIKHOABIEU">
             <End Role="CANBO" EntitySet="CANBO" />
             <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEU" />
           </AssociationSet>
-          <AssociationSet Name="FK_CHITIET_CHUCVUCANBO" Association="Self.FK_CHITIET_CHUCVUCANBO">
-            <End Role="CHITIET_CHUCVU" EntitySet="CHITIET_CHUCVU" />
+          <AssociationSet Name="FK_CANBOTHONGTINDAOTAO" Association="Self.FK_CANBOTHONGTINDAOTAO">
             <End Role="CANBO" EntitySet="CANBO" />
+            <End Role="THONGTINDAOTAO" EntitySet="THONGTINDAOTAO" />
           </AssociationSet>
-          <AssociationSet Name="FK_CHITIETDANHGIAHOCSINH" Association="Self.FK_CHITIETDANHGIAHOCSINH">
+          <AssociationSet Name="FK_CANBOTHONGTINLUONG" Association="Self.FK_CANBOTHONGTINLUONG">
+            <End Role="CANBO" EntitySet="CANBO" />
+            <End Role="THONGTINLUONG" EntitySet="THONGTINLUONG" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CHITIETDANHGIAMONHOC" Association="Self.FK_CHITIETDANHGIAMONHOC">
             <End Role="CHITIETDANHGIA" EntitySet="CHITIETDANHGIA" />
-            <End Role="HOCSINH" EntitySet="HOCSINH" />
+            <End Role="MONHOC" EntitySet="MONHOC" />
           </AssociationSet>
           <AssociationSet Name="FK_CHUCVUCHITIET_CHUCVU" Association="Self.FK_CHUCVUCHITIET_CHUCVU">
             <End Role="CHUCVU" EntitySet="CHUCVU" />
@@ -784,6 +791,10 @@
           <AssociationSet Name="FK_HOCKYTHOIKHOABIEU" Association="Self.FK_HOCKYTHOIKHOABIEU">
             <End Role="HOCKY" EntitySet="HOCKY" />
             <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEU" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HOCSINHCHITIETDANHGIA" Association="Self.FK_HOCSINHCHITIETDANHGIA">
+            <End Role="HOCSINH" EntitySet="HOCSINH" />
+            <End Role="CHITIETDANHGIA" EntitySet="CHITIETDANHGIA" />
           </AssociationSet>
           <AssociationSet Name="FK_KHENTHUONGCBCANBO" Association="Self.FK_KHENTHUONGCBCANBO">
             <End Role="KHENTHUONGCB" EntitySet="KHENTHUONGCB" />
@@ -812,10 +823,6 @@
           <AssociationSet Name="FK_LOPTHOIKHOABIEU" Association="Self.FK_LOPTHOIKHOABIEU">
             <End Role="LOP" EntitySet="LOP" />
             <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEU" />
-          </AssociationSet>
-          <AssociationSet Name="FK_MONHOCCHITIETDANHGIA" Association="Self.FK_MONHOCCHITIETDANHGIA">
-            <End Role="MONHOC" EntitySet="MONHOC" />
-            <End Role="CHITIETDANHGIA" EntitySet="CHITIETDANHGIA" />
           </AssociationSet>
           <AssociationSet Name="FK_MONHOCTHOIKHOABIEU" Association="Self.FK_MONHOCTHOIKHOABIEU">
             <End Role="MONHOC" EntitySet="MONHOC" />
@@ -849,17 +856,9 @@
             <End Role="THIETBIGIANGDAY" EntitySet="THIETBIGIANGDAY" />
             <End Role="COSOVATCHAT" EntitySet="COSOVATCHAT" />
           </AssociationSet>
-          <AssociationSet Name="FK_THONGTINDAOTAOCANBO" Association="Self.FK_THONGTINDAOTAOCANBO">
-            <End Role="THONGTINDAOTAO" EntitySet="THONGTINDAOTAO" />
-            <End Role="CANBO" EntitySet="CANBO" />
-          </AssociationSet>
           <AssociationSet Name="FK_THONGTINDAOTAOHINHTHUC" Association="Self.FK_THONGTINDAOTAOHINHTHUC">
             <End Role="HINHTHUC" EntitySet="HINHTHUC" />
             <End Role="THONGTINDAOTAO" EntitySet="THONGTINDAOTAO" />
-          </AssociationSet>
-          <AssociationSet Name="FK_THONGTINLUONGCANBO" Association="Self.FK_THONGTINLUONGCANBO">
-            <End Role="THONGTINLUONG" EntitySet="THONGTINLUONG" />
-            <End Role="CANBO" EntitySet="CANBO" />
           </AssociationSet>
           <AssociationSet Name="FK_THUTHOIKHOABIEU" Association="Self.FK_THUTHOIKHOABIEU">
             <End Role="THU" EntitySet="THU" />
@@ -931,13 +930,21 @@
             <End Role="BACLUONG" EntitySet="BACLUONGs" />
             <End Role="THONGTINLUONG" EntitySet="THONGTINLUONGs" />
           </AssociationSet>
+          <AssociationSet Name="FK_CANBOCHITIET_CHUCVU" Association="acomptec_qlthptModel.FK_CANBOCHITIET_CHUCVU">
+            <End Role="CANBO" EntitySet="CANBOes" />
+            <End Role="CHITIET_CHUCVU" EntitySet="CHITIET_CHUCVU" />
+          </AssociationSet>
           <AssociationSet Name="FK_CANBOTHOIKHOABIEU" Association="acomptec_qlthptModel.FK_CANBOTHOIKHOABIEU">
             <End Role="CANBO" EntitySet="CANBOes" />
             <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEUx" />
           </AssociationSet>
-          <AssociationSet Name="FK_CHITIET_CHUCVUCANBO" Association="acomptec_qlthptModel.FK_CHITIET_CHUCVUCANBO">
-            <End Role="CHITIET_CHUCVU" EntitySet="CHITIET_CHUCVU" />
+          <AssociationSet Name="FK_CANBOTHONGTINDAOTAO" Association="acomptec_qlthptModel.FK_CANBOTHONGTINDAOTAO">
             <End Role="CANBO" EntitySet="CANBOes" />
+            <End Role="THONGTINDAOTAO" EntitySet="THONGTINDAOTAOs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CANBOTHONGTINLUONG" Association="acomptec_qlthptModel.FK_CANBOTHONGTINLUONG">
+            <End Role="CANBO" EntitySet="CANBOes" />
+            <End Role="THONGTINLUONG" EntitySet="THONGTINLUONGs" />
           </AssociationSet>
           <AssociationSet Name="FK_COQUANCANBO" Association="acomptec_qlthptModel.FK_COQUANCANBO">
             <End Role="COQUAN" EntitySet="COQUANs" />
@@ -951,24 +958,16 @@
             <End Role="KYLUATCB" EntitySet="KYLUATCBs" />
             <End Role="CANBO" EntitySet="CANBOes" />
           </AssociationSet>
-          <AssociationSet Name="FK_THONGTINDAOTAOCANBO" Association="acomptec_qlthptModel.FK_THONGTINDAOTAOCANBO">
-            <End Role="THONGTINDAOTAO" EntitySet="THONGTINDAOTAOs" />
-            <End Role="CANBO" EntitySet="CANBOes" />
-          </AssociationSet>
-          <AssociationSet Name="FK_THONGTINLUONGCANBO" Association="acomptec_qlthptModel.FK_THONGTINLUONGCANBO">
-            <End Role="THONGTINLUONG" EntitySet="THONGTINLUONGs" />
-            <End Role="CANBO" EntitySet="CANBOes" />
-          </AssociationSet>
           <AssociationSet Name="FK_CHUCVUCHITIET_CHUCVU" Association="acomptec_qlthptModel.FK_CHUCVUCHITIET_CHUCVU">
             <End Role="CHUCVU" EntitySet="CHUCVUs" />
             <End Role="CHITIET_CHUCVU" EntitySet="CHITIET_CHUCVU" />
           </AssociationSet>
-          <AssociationSet Name="FK_CHITIETDANHGIAHOCSINH" Association="acomptec_qlthptModel.FK_CHITIETDANHGIAHOCSINH">
+          <AssociationSet Name="FK_CHITIETDANHGIAMONHOC" Association="acomptec_qlthptModel.FK_CHITIETDANHGIAMONHOC">
             <End Role="CHITIETDANHGIA" EntitySet="CHITIETDANHGIAs" />
-            <End Role="HOCSINH" EntitySet="HOCSINHs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_MONHOCCHITIETDANHGIA" Association="acomptec_qlthptModel.FK_MONHOCCHITIETDANHGIA">
             <End Role="MONHOC" EntitySet="MONHOCs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HOCSINHCHITIETDANHGIA" Association="acomptec_qlthptModel.FK_HOCSINHCHITIETDANHGIA">
+            <End Role="HOCSINH" EntitySet="HOCSINHs" />
             <End Role="CHITIETDANHGIA" EntitySet="CHITIETDANHGIAs" />
           </AssociationSet>
           <AssociationSet Name="FK_SODANHGIACHITIETDANHGIA" Association="acomptec_qlthptModel.FK_SODANHGIACHITIETDANHGIA">
@@ -1083,27 +1082,24 @@
           <Property Name="CB_NGAYSINH" Type="DateTime" Precision="3" />
           <Property Name="CB_CMND" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="COQUAN_CQ_MA" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Name="CHITIET_CHUCVU_CT_CV_ID" Type="Time" Nullable="false" Precision="7" />
           <Property Name="KYLUATCB_KLCB_MA" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
           <Property Name="KHENTHUONGCB_KTCB_MA" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
-          <Property Name="THONGTINDAOTAO_TTDT_MA" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Name="THONGTINLUONG_TTL_MA" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="CHITIET_CHUCVU" Relationship="acomptec_qlthptModel.FK_CANBOCHITIET_CHUCVU" FromRole="CANBO" ToRole="CHITIET_CHUCVU" />
           <NavigationProperty Name="THOIKHOABIEUx" Relationship="acomptec_qlthptModel.FK_CANBOTHOIKHOABIEU" FromRole="CANBO" ToRole="THOIKHOABIEU" />
-          <NavigationProperty Name="CHITIET_CHUCVU" Relationship="acomptec_qlthptModel.FK_CHITIET_CHUCVUCANBO" FromRole="CANBO" ToRole="CHITIET_CHUCVU" />
+          <NavigationProperty Name="THONGTINDAOTAOs" Relationship="acomptec_qlthptModel.FK_CANBOTHONGTINDAOTAO" FromRole="CANBO" ToRole="THONGTINDAOTAO" />
+          <NavigationProperty Name="THONGTINLUONGs" Relationship="acomptec_qlthptModel.FK_CANBOTHONGTINLUONG" FromRole="CANBO" ToRole="THONGTINLUONG" />
           <NavigationProperty Name="COQUAN" Relationship="acomptec_qlthptModel.FK_COQUANCANBO" FromRole="CANBO" ToRole="COQUAN" />
           <NavigationProperty Name="KHENTHUONGCB" Relationship="acomptec_qlthptModel.FK_KHENTHUONGCBCANBO" FromRole="CANBO" ToRole="KHENTHUONGCB" />
           <NavigationProperty Name="KYLUATCB" Relationship="acomptec_qlthptModel.FK_KYLUATCBCANBO" FromRole="CANBO" ToRole="KYLUATCB" />
-          <NavigationProperty Name="THONGTINDAOTAO" Relationship="acomptec_qlthptModel.FK_THONGTINDAOTAOCANBO" FromRole="CANBO" ToRole="THONGTINDAOTAO" />
-          <NavigationProperty Name="THONGTINLUONG" Relationship="acomptec_qlthptModel.FK_THONGTINLUONGCANBO" FromRole="CANBO" ToRole="THONGTINLUONG" />
         </EntityType>
         <EntityType Name="CHITIET_CHUCVU">
           <Key>
             <PropertyRef Name="CT_CV_ID" />
           </Key>
           <Property Name="CT_CV_ID" Type="Time" Nullable="false" Precision="7" />
-          <Property Name="CT_CV_TEN" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="CHUCVU_CV_MA" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="CANBOes" Relationship="acomptec_qlthptModel.FK_CHITIET_CHUCVUCANBO" FromRole="CHITIET_CHUCVU" ToRole="CANBO" />
+          <Property Name="CANBO_CB_MA" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="CANBO" Relationship="acomptec_qlthptModel.FK_CANBOCHITIET_CHUCVU" FromRole="CHITIET_CHUCVU" ToRole="CANBO" />
           <NavigationProperty Name="CHUCVU" Relationship="acomptec_qlthptModel.FK_CHUCVUCHITIET_CHUCVU" FromRole="CHITIET_CHUCVU" ToRole="CHUCVU" />
         </EntityType>
         <EntityType Name="CHITIETDANHGIA">
@@ -1113,9 +1109,9 @@
           <Property Name="CTDG_MA" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="CTDG_NGAYDG" Type="DateTime" Precision="3" />
           <Property Name="SODANHGIA_SDG_MA" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Name="MONHOC_MH_MA" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="HOCSINHs" Relationship="acomptec_qlthptModel.FK_CHITIETDANHGIAHOCSINH" FromRole="CHITIETDANHGIA" ToRole="HOCSINH" />
-          <NavigationProperty Name="MONHOC" Relationship="acomptec_qlthptModel.FK_MONHOCCHITIETDANHGIA" FromRole="CHITIETDANHGIA" ToRole="MONHOC" />
+          <Property Name="HOCSINH_HS_MA" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="MONHOCs" Relationship="acomptec_qlthptModel.FK_CHITIETDANHGIAMONHOC" FromRole="CHITIETDANHGIA" ToRole="MONHOC" />
+          <NavigationProperty Name="HOCSINH" Relationship="acomptec_qlthptModel.FK_HOCSINHCHITIETDANHGIA" FromRole="CHITIETDANHGIA" ToRole="HOCSINH" />
           <NavigationProperty Name="SODANHGIA" Relationship="acomptec_qlthptModel.FK_SODANHGIACHITIETDANHGIA" FromRole="CHITIETDANHGIA" ToRole="SODANHGIA" />
         </EntityType>
         <EntityType Name="CHUCVU">
@@ -1194,12 +1190,11 @@
           <Property Name="XAPHUONG_XP_MA" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="KYLUAT_KL_MA" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="KHENTHUONG_KT_MA" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Name="CHITIETDANHGIA_CTDG_MA" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="QUANHUYEN_QH_MA" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="DANTOC_DT_MA" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="LOP_LOP_MA" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="KHOI_KHOI_MA" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="CHITIETDANHGIA" Relationship="acomptec_qlthptModel.FK_CHITIETDANHGIAHOCSINH" FromRole="HOCSINH" ToRole="CHITIETDANHGIA" />
+          <NavigationProperty Name="CHITIETDANHGIAs" Relationship="acomptec_qlthptModel.FK_HOCSINHCHITIETDANHGIA" FromRole="HOCSINH" ToRole="CHITIETDANHGIA" />
           <NavigationProperty Name="DANTOC" Relationship="acomptec_qlthptModel.FK_DANTOCHOCSINH" FromRole="HOCSINH" ToRole="DANTOC" />
           <NavigationProperty Name="KHENTHUONG" Relationship="acomptec_qlthptModel.FK_KHENTHUONGHOCSINH" FromRole="HOCSINH" ToRole="KHENTHUONG" />
           <NavigationProperty Name="KHOI" Relationship="acomptec_qlthptModel.FK_KHOIHOCSINH" FromRole="HOCSINH" ToRole="KHOI" />
@@ -1269,7 +1264,8 @@
           </Key>
           <Property Name="MH_MA" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="MH_TEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="CHITIETDANHGIAs" Relationship="acomptec_qlthptModel.FK_MONHOCCHITIETDANHGIA" FromRole="MONHOC" ToRole="CHITIETDANHGIA" />
+          <Property Name="CHITIETDANHGIA_CTDG_MA" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="CHITIETDANHGIA" Relationship="acomptec_qlthptModel.FK_CHITIETDANHGIAMONHOC" FromRole="MONHOC" ToRole="CHITIETDANHGIA" />
           <NavigationProperty Name="THOIKHOABIEUx" Relationship="acomptec_qlthptModel.FK_MONHOCTHOIKHOABIEU" FromRole="MONHOC" ToRole="THOIKHOABIEU" />
         </EntityType>
         <EntityType Name="NAMHOC">
@@ -1357,7 +1353,8 @@
           <Property Name="HINHTHUCs_HT_MA" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="CHUYENNGANH_CN_MA" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="VANBANG_VB_MA" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="CANBOes" Relationship="acomptec_qlthptModel.FK_THONGTINDAOTAOCANBO" FromRole="THONGTINDAOTAO" ToRole="CANBO" />
+          <Property Name="CANBO_CB_MA" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="CANBO" Relationship="acomptec_qlthptModel.FK_CANBOTHONGTINDAOTAO" FromRole="THONGTINDAOTAO" ToRole="CANBO" />
           <NavigationProperty Name="CHUYENNGANH" Relationship="acomptec_qlthptModel.FK_CHUYENNGANHTHONGTINDAOTAO" FromRole="THONGTINDAOTAO" ToRole="CHUYENNGANH" />
           <NavigationProperty Name="HINHTHUC" Relationship="acomptec_qlthptModel.FK_THONGTINDAOTAOHINHTHUC" FromRole="THONGTINDAOTAO" ToRole="HINHTHUC" />
           <NavigationProperty Name="VANBANG" Relationship="acomptec_qlthptModel.FK_VANBANGTHONGTINDAOTAO" FromRole="THONGTINDAOTAO" ToRole="VANBANG" />
@@ -1371,8 +1368,9 @@
           <Property Name="TTL_HESOLUONG" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="BACLUONG_BL_MA" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="NGACHLUONG_NL_MA" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="CANBO_CB_MA" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="BACLUONG" Relationship="acomptec_qlthptModel.FK_BACLUONGTHONGTINLUONG" FromRole="THONGTINLUONG" ToRole="BACLUONG" />
-          <NavigationProperty Name="CANBOes" Relationship="acomptec_qlthptModel.FK_THONGTINLUONGCANBO" FromRole="THONGTINLUONG" ToRole="CANBO" />
+          <NavigationProperty Name="CANBO" Relationship="acomptec_qlthptModel.FK_CANBOTHONGTINLUONG" FromRole="THONGTINLUONG" ToRole="CANBO" />
           <NavigationProperty Name="NGACHLUONG" Relationship="acomptec_qlthptModel.FK_NGACHLUONGTHONGTINLUONG" FromRole="THONGTINLUONG" ToRole="NGACHLUONG" />
         </EntityType>
         <EntityType Name="THU">
@@ -1443,6 +1441,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_CANBOCHITIET_CHUCVU">
+          <End Type="acomptec_qlthptModel.CANBO" Role="CANBO" Multiplicity="1" />
+          <End Type="acomptec_qlthptModel.CHITIET_CHUCVU" Role="CHITIET_CHUCVU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CANBO">
+              <PropertyRef Name="CB_MA" />
+            </Principal>
+            <Dependent Role="CHITIET_CHUCVU">
+              <PropertyRef Name="CANBO_CB_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_CANBOTHOIKHOABIEU">
           <End Type="acomptec_qlthptModel.CANBO" Role="CANBO" Multiplicity="1" />
           <End Type="acomptec_qlthptModel.THOIKHOABIEU" Role="THOIKHOABIEU" Multiplicity="*" />
@@ -1455,15 +1465,27 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_CHITIET_CHUCVUCANBO">
-          <End Type="acomptec_qlthptModel.CHITIET_CHUCVU" Role="CHITIET_CHUCVU" Multiplicity="1" />
-          <End Type="acomptec_qlthptModel.CANBO" Role="CANBO" Multiplicity="*" />
+        <Association Name="FK_CANBOTHONGTINDAOTAO">
+          <End Type="acomptec_qlthptModel.CANBO" Role="CANBO" Multiplicity="1" />
+          <End Type="acomptec_qlthptModel.THONGTINDAOTAO" Role="THONGTINDAOTAO" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="CHITIET_CHUCVU">
-              <PropertyRef Name="CT_CV_ID" />
+            <Principal Role="CANBO">
+              <PropertyRef Name="CB_MA" />
             </Principal>
-            <Dependent Role="CANBO">
-              <PropertyRef Name="CHITIET_CHUCVU_CT_CV_ID" />
+            <Dependent Role="THONGTINDAOTAO">
+              <PropertyRef Name="CANBO_CB_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CANBOTHONGTINLUONG">
+          <End Type="acomptec_qlthptModel.CANBO" Role="CANBO" Multiplicity="1" />
+          <End Type="acomptec_qlthptModel.THONGTINLUONG" Role="THONGTINLUONG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CANBO">
+              <PropertyRef Name="CB_MA" />
+            </Principal>
+            <Dependent Role="THONGTINLUONG">
+              <PropertyRef Name="CANBO_CB_MA" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1503,30 +1525,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_THONGTINDAOTAOCANBO">
-          <End Type="acomptec_qlthptModel.THONGTINDAOTAO" Role="THONGTINDAOTAO" Multiplicity="1" />
-          <End Type="acomptec_qlthptModel.CANBO" Role="CANBO" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="THONGTINDAOTAO">
-              <PropertyRef Name="TTDT_MA" />
-            </Principal>
-            <Dependent Role="CANBO">
-              <PropertyRef Name="THONGTINDAOTAO_TTDT_MA" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_THONGTINLUONGCANBO">
-          <End Type="acomptec_qlthptModel.THONGTINLUONG" Role="THONGTINLUONG" Multiplicity="1" />
-          <End Type="acomptec_qlthptModel.CANBO" Role="CANBO" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="THONGTINLUONG">
-              <PropertyRef Name="TTL_MA" />
-            </Principal>
-            <Dependent Role="CANBO">
-              <PropertyRef Name="THONGTINLUONG_TTL_MA" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_CHUCVUCHITIET_CHUCVU">
           <End Type="acomptec_qlthptModel.CHUCVU" Role="CHUCVU" Multiplicity="1" />
           <End Type="acomptec_qlthptModel.CHITIET_CHUCVU" Role="CHITIET_CHUCVU" Multiplicity="*" />
@@ -1539,27 +1537,27 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_CHITIETDANHGIAHOCSINH">
+        <Association Name="FK_CHITIETDANHGIAMONHOC">
           <End Type="acomptec_qlthptModel.CHITIETDANHGIA" Role="CHITIETDANHGIA" Multiplicity="1" />
-          <End Type="acomptec_qlthptModel.HOCSINH" Role="HOCSINH" Multiplicity="*" />
+          <End Type="acomptec_qlthptModel.MONHOC" Role="MONHOC" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="CHITIETDANHGIA">
               <PropertyRef Name="CTDG_MA" />
             </Principal>
-            <Dependent Role="HOCSINH">
+            <Dependent Role="MONHOC">
               <PropertyRef Name="CHITIETDANHGIA_CTDG_MA" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_MONHOCCHITIETDANHGIA">
-          <End Type="acomptec_qlthptModel.MONHOC" Role="MONHOC" Multiplicity="1" />
+        <Association Name="FK_HOCSINHCHITIETDANHGIA">
+          <End Type="acomptec_qlthptModel.HOCSINH" Role="HOCSINH" Multiplicity="1" />
           <End Type="acomptec_qlthptModel.CHITIETDANHGIA" Role="CHITIETDANHGIA" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="MONHOC">
-              <PropertyRef Name="MH_MA" />
+            <Principal Role="HOCSINH">
+              <PropertyRef Name="HS_MA" />
             </Principal>
             <Dependent Role="CHITIETDANHGIA">
-              <PropertyRef Name="MONHOC_MH_MA" />
+              <PropertyRef Name="HOCSINH_HS_MA" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1839,7 +1837,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -1856,11 +1854,8 @@
           <EntitySetMapping Name="CANBOes">
             <EntityTypeMapping TypeName="acomptec_qlthptModel.CANBO">
               <MappingFragment StoreEntitySet="CANBO">
-                <ScalarProperty Name="THONGTINLUONG_TTL_MA" ColumnName="THONGTINLUONG_TTL_MA" />
-                <ScalarProperty Name="THONGTINDAOTAO_TTDT_MA" ColumnName="THONGTINDAOTAO_TTDT_MA" />
                 <ScalarProperty Name="KHENTHUONGCB_KTCB_MA" ColumnName="KHENTHUONGCB_KTCB_MA" />
                 <ScalarProperty Name="KYLUATCB_KLCB_MA" ColumnName="KYLUATCB_KLCB_MA" />
-                <ScalarProperty Name="CHITIET_CHUCVU_CT_CV_ID" ColumnName="CHITIET_CHUCVU_CT_CV_ID" />
                 <ScalarProperty Name="COQUAN_CQ_MA" ColumnName="COQUAN_CQ_MA" />
                 <ScalarProperty Name="CB_CMND" ColumnName="CB_CMND" />
                 <ScalarProperty Name="CB_NGAYSINH" ColumnName="CB_NGAYSINH" />
@@ -1874,8 +1869,8 @@
           <EntitySetMapping Name="CHITIET_CHUCVU">
             <EntityTypeMapping TypeName="acomptec_qlthptModel.CHITIET_CHUCVU">
               <MappingFragment StoreEntitySet="CHITIET_CHUCVU">
+                <ScalarProperty Name="CANBO_CB_MA" ColumnName="CANBO_CB_MA" />
                 <ScalarProperty Name="CHUCVU_CV_MA" ColumnName="CHUCVU_CV_MA" />
-                <ScalarProperty Name="CT_CV_TEN" ColumnName="CT_CV_TEN" />
                 <ScalarProperty Name="CT_CV_ID" ColumnName="CT_CV_ID" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -1883,7 +1878,7 @@
           <EntitySetMapping Name="CHITIETDANHGIAs">
             <EntityTypeMapping TypeName="acomptec_qlthptModel.CHITIETDANHGIA">
               <MappingFragment StoreEntitySet="CHITIETDANHGIA">
-                <ScalarProperty Name="MONHOC_MH_MA" ColumnName="MONHOC_MH_MA" />
+                <ScalarProperty Name="HOCSINH_HS_MA" ColumnName="HOCSINH_HS_MA" />
                 <ScalarProperty Name="SODANHGIA_SDG_MA" ColumnName="SODANHGIA_SDG_MA" />
                 <ScalarProperty Name="CTDG_NGAYDG" ColumnName="CTDG_NGAYDG" />
                 <ScalarProperty Name="CTDG_MA" ColumnName="CTDG_MA" />
@@ -1957,7 +1952,6 @@
                 <ScalarProperty Name="LOP_LOP_MA" ColumnName="LOP_LOP_MA" />
                 <ScalarProperty Name="DANTOC_DT_MA" ColumnName="DANTOC_DT_MA" />
                 <ScalarProperty Name="QUANHUYEN_QH_MA" ColumnName="QUANHUYEN_QH_MA" />
-                <ScalarProperty Name="CHITIETDANHGIA_CTDG_MA" ColumnName="CHITIETDANHGIA_CTDG_MA" />
                 <ScalarProperty Name="KHENTHUONG_KT_MA" ColumnName="KHENTHUONG_KT_MA" />
                 <ScalarProperty Name="KYLUAT_KL_MA" ColumnName="KYLUAT_KL_MA" />
                 <ScalarProperty Name="XAPHUONG_XP_MA" ColumnName="XAPHUONG_XP_MA" />
@@ -2026,6 +2020,7 @@
           <EntitySetMapping Name="MONHOCs">
             <EntityTypeMapping TypeName="acomptec_qlthptModel.MONHOC">
               <MappingFragment StoreEntitySet="MONHOC">
+                <ScalarProperty Name="CHITIETDANHGIA_CTDG_MA" ColumnName="CHITIETDANHGIA_CTDG_MA" />
                 <ScalarProperty Name="MH_TEN" ColumnName="MH_TEN" />
                 <ScalarProperty Name="MH_MA" ColumnName="MH_MA" />
               </MappingFragment>
@@ -2105,6 +2100,7 @@
           <EntitySetMapping Name="THONGTINDAOTAOs">
             <EntityTypeMapping TypeName="acomptec_qlthptModel.THONGTINDAOTAO">
               <MappingFragment StoreEntitySet="THONGTINDAOTAO">
+                <ScalarProperty Name="CANBO_CB_MA" ColumnName="CANBO_CB_MA" />
                 <ScalarProperty Name="VANBANG_VB_MA" ColumnName="VANBANG_VB_MA" />
                 <ScalarProperty Name="CHUYENNGANH_CN_MA" ColumnName="CHUYENNGANH_CN_MA" />
                 <ScalarProperty Name="HINHTHUCs_HT_MA" ColumnName="HINHTHUCs_HT_MA" />
@@ -2115,6 +2111,7 @@
           <EntitySetMapping Name="THONGTINLUONGs">
             <EntityTypeMapping TypeName="acomptec_qlthptModel.THONGTINLUONG">
               <MappingFragment StoreEntitySet="THONGTINLUONG">
+                <ScalarProperty Name="CANBO_CB_MA" ColumnName="CANBO_CB_MA" />
                 <ScalarProperty Name="NGACHLUONG_NL_MA" ColumnName="NGACHLUONG_NL_MA" />
                 <ScalarProperty Name="BACLUONG_BL_MA" ColumnName="BACLUONG_BL_MA" />
                 <ScalarProperty Name="TTL_HESOLUONG" ColumnName="TTL_HESOLUONG" />
